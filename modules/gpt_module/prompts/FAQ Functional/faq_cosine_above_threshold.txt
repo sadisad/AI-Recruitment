@@ -1,0 +1,6 @@
+Apakah kata berikut bermakna sama :
+
+- <-> User Question <->
+- <-> FAQ Question <->
+
+Jawab dengan '-- YA --' atau '-- TIDAK --'. Tanpa jawaban lain darimu.

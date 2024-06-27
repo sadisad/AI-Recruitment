@@ -1,0 +1,37 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.\
+- berikan pertanyaan dalam bahasa indonesia.
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada text lain darimu.
+------
+Job Yang Dilamar : IT Developer
+Role Overview : 
+Job Description : We are seeking a skilled IT Developer to design, implement, and maintain software applications that meet our company's needs. The ideal candidate will have experience in various programming languages, strong problem-solving abilities, and the capacity to work both independently and collaboratively in a dynamic team environment.
+Job Requirement : - Work experience as IT Developer in Banking for 3-5 years
+- Highly proficient in SQL.
+- Proficient in Linux Command & Shell Scripting
+- Proficient in Programming Language (Phyton & Scala)
+- Familiar with framework: Django, Flask, Pyramid
+
+system: Here are 10 interview questions for the IT Developer position:
+
+1. Bisa Anda jelaskan pengalaman Anda dalam mengembangkan aplikasi perbankan dan bagaimana Anda mengatasi masalah teknis yang kompleks?
+2. Bagaimana Anda menggunakan SQL untuk mengoptimalkan kinerja database dalam aplikasi yang Anda kembangkan?
+3. Dalam skenario apa Anda menggunakan shell scripting, dan bagaimana Anda memanfaatkan kemampuan scripting untuk meningkatkan efisiensi pekerjaan?
+4. Berapa lama Anda memiliki pengalaman dalam menggunakan Phyton dan Scala, dan apa saja proyek-proyek yang pernah Anda tangani menggunakan bahasa pemrograman tersebut?
+5. Bagaimana Anda mengintegrasikan framework Django, Flask, atau Pyramid ke dalam aplikasi yang Anda kembangkan, dan apa kelebihan menggunakan framework tersebut?
+6. Apa saja alat-alat yang Anda gunakan untuk melakukan testing dan debugging dalam pengembangan aplikasi, dan bagaimana Anda memastikan kualitas kode yang Anda tulis?
+7. Dalam tim yang dinamis, bagaimana Anda berkolaborasi dengan anggota tim lainnya untuk mencapai target proyek, dan apa saja strategi komunikasi yang Anda gunakan?
+8. Bagaimana Anda mengatasi konflik atau perbedaan pendapat dalam tim pengembang, dan apa saja langkah-langkah yang Anda ambil untuk menyelesaikannya?
+9. Berapa tahunkah Anda memiliki pengalaman dalam mengembangkan aplikasi berbasis Linux, dan apa saja kemampuan yang Anda miliki dalam menggunakan sistem operasi tersebut?
+10. Apa saja praktik-praktik pengembangan aplikasi yang Anda ikuti, dan bagaimana Anda memastikan bahwa kode yang Anda tulis sesuai dengan standar pengembangan aplikasi yang baik?
+{'completion_tokens': 405, 'prompt_tokens': 346, 'total_tokens': 751, 'completion_time': 1.138706395, 'prompt_time': 0.116344334, 'queue_time': None, 'total_time': 1.2550507290000001}
+----------------
