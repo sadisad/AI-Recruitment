@@ -1,0 +1,4 @@
+The 'dim_loan_metric' table stores information about different metrics used to analyze and report on loans within an organization. This table is instrumental for financial analysis, providing key performance indicators for loans. The table includes the following columns:
+- id: Unique identifier for each loan metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each loan metric (string, e.g., 'LM001').
+- name: Description of the loan metric (string, e.g., 'Amount'), which includes various metrics such as total loan amount, number of loans, average amount per loan, average loan tenure, and outstanding loans.

@@ -1,0 +1,4 @@
+The 'dimensions' table stores information about different dimensions used to categorize various aspects of employment and organizational structure within an organization. This table is essential for data analysis and reporting, providing key categorization frameworks that align with business processes. The table includes the following columns:
+- id: Unique identifier for each dimension (integer, currently missing in the provided data).
+- code: Unique code assigned to each dimension (string, e.g., 'POS' for Job Position).
+- name: Description of the dimension (string, e.g., 'Job Position'), which includes dimensions such as job position, job title, job level, employment type, and service period.

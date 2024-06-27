@@ -1,0 +1,69 @@
+The 'fact_payrolls' table tracks and manages payroll-related data within the organization. This table is essential for managing payroll processing, employee compensation, and financial planning. The table includes the following columns:
+- date: Date of the payroll entry (string, e.g., '2021-07-07').
+- employee_id: Unique identifier for the employee (integer, e.g., 50665).
+- employee_name: Name of the employee (string, e.g., 'Marcelle Fairhead').
+- birth_place: Place of birth of the employee (string, e.g., 'Me?giew').
+- birth_date: Birth date of the employee (string, e.g., '1999-10-04').
+- phone: Phone number of the employee (string, e.g., '726-816-6584').
+- email_address: Email address of the employee (string, e.g., 'mfairhead1m@shinystat.com').
+- address: Residential address of the employee (string, e.g., '15 Judy Lane').
+- education_level: Education level of the employee (string, values include 'Master', 'High School', 'Bachelor', e.g., 'Master').
+- education_level_id: Identifier for the education level (string, e.g., 'EL003').
+- work_location: Workplace location of the employee (string, e.g., 'Jakarta Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Identifier for gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'IT').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Developer').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Job level of the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- age: Age of the employee (integer, e.g., 45).
+- age_range: Age range of the employee (string, e.g., '40-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AR003').
+- generation: Generation classification (string, values include 'Generation Z', 'Generation X', 'Millennials').
+- generation_id: Identifier for the generation (string, e.g., 'G002').
+- cost_center: Cost center associated with the employee (string, e.g., '1001').
+- cost_center_id: Identifier for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the company (string, e.g., '2005-07-21').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2025-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 15).
+- service_period: Duration of current service period (string, e.g., '<1 years', '1-2 years', '3-4 years', '5-6 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP005').
+- is_active: Whether the employee is currently active (boolean, e.g., True).
+- payroll_id: Unique identifier for the payroll record (string, e.g., 'PR001').
+- payroll_date: Date of the payroll calculation (string, e.g., '2021-07-07').
+- basic_salary: Basic salary component (integer, e.g., 4000).
+- net_pay: Net amount paid to the employee (integer, e.g., 4500).
+- gross_pay: Gross pay before any deductions (integer, e.g., 5000).
+- deductions: Total deductions from the payroll (integer, e.g., 500).
+- tax_withheld: Total tax withheld (integer, e.g., 300).
+- social_security_paid: Social security contributions (integer, e.g., 200).
+- health_insurance_paid: Amount paid for health insurance (integer, e.g., 150).
+- other_benefits: Other benefits provided (integer, e.g., 350).
+- payroll_status: Status of the payroll (string, e.g., 'Processed').
+- payroll_group: Group classification within the payroll (string, e.g., 'Payroll Group Regular').
+- work_group: Work group or team within the organization (string, e.g., 'IT Team').
+- shift: Shift pattern or schedule of the employee (string, e.g., 'Day Off Produksi').
+- shift_id: Identifier for the shift pattern (string, e.g., 'WS002').
+- payroll_group_id: Identifier for the payroll group (string, e.g., 'PG002').
+- work_group_id: Identifier for the work group (string, e.g., 'WG001').
+- payroll_type: Type of payroll calculation (string, e.g., 'THP', 'Non-THP').
+- payroll_type_id: Identifier for the type of payroll (string, e.g., 'PT001').
+- pay_grade: Pay grade of the employee (string, e.g., 'Grade 4').
+- pay_grade_id: Identifier for the pay grade (string, e.g., 'GR004').

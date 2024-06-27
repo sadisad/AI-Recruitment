@@ -1,0 +1,55 @@
+The 'fact_medical_reimbursement' table tracks and manages data related to medical reimbursements within the organization. This table is crucial for managing healthcare benefits, processing claims, and analyzing healthcare costs and utilization. The table includes the following columns:
+- date: Date of the data entry (string, e.g., '2020-05-11').
+- employee_nik: Unique identifier for the employee (integer, e.g., 43270).
+- employee_name: Name of the employee (string, e.g., 'Dawna Afield').
+- birth_place: Birth place of the employee (string, e.g., 'Gavinhos de Baixo').
+- birth_date: Birth date of the employee (string, e.g., '1976-03-10').
+- phone: Phone number of the employee (string, e.g., '373-730-0594').
+- email_address: Email address of the employee (string, e.g., 'dafieldf2@aol.com').
+- address: Home address of the employee (string, e.g., '125 Mockingbird Terrace').
+- education: Education level of the employee (string, values include 'Bachelor', 'High School', 'Doctor', e.g., 'Bachelor').
+- education_id: Identifier for the education level (string, e.g., 'EL002').
+- work_location: Location where the employee works (string, e.g., 'Jakarta Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Identifier for gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Married').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Level of job position (string, values include 'Senior', 'Junior', e.g., 'Senior').
+- job_level_id: Identifier for job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Sales Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP020').
+- organization: Organization unit of the employee (string, e.g., 'Sales Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corporation').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- age: Age of the employee (integer, e.g., 47).
+- age_range: Age range of the employee (string, e.g., '40-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AR003').
+- generation: Generation classification (string, e.g., 'Gen X').
+- generation_id: Identifier for the generation (string, e.g., 'G001').
+- cost_center: Cost center responsible for the employee (string, e.g., '1001').
+- cost_center_id: Identifier for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the company (string, e.g., '2005-07-21').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2025-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 18).
+- service_period: Duration of current service period (string, e.g., '15-20 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP005').
+- is_active: Active status of the employee (boolean, e.g., true).
+- status: Current employment status (string, values include 'Active', 'Inactive', e.g., 'Active').
+- status_id: Identifier for the employment status (string, e.g., 'ST001').
+- employee_id: Unique identifier for the employee (string, e.g., 'E0001').
+- claim_no: Claim number (string, e.g., '00012/HTREMR01/HRD/23042024').
+- claim_for: Claimant relation to the employee (string, values include 'Self', 'Family', 'Karyawan', 'Pasangan', 'Anak', e.g., 'Self').
+- id_pasien: Patient identifier (string, e.g., '1621-2').
+- pasien_name: Name of the patient (string, e.g., 'Dawna Afield').
+- family_relation: Relation of the patient to the employee (string, values include 'Pasangan', 'Karyawan', 'Anak', e.g., 'Pasangan').
+- medical_type: Type of medical expense (string, values include 'Pharmacy / Apotik', 'Outpatient / Rawat Jalan', 'Inpatient / Rawat Inap', e.g., 'Pharmacy / Apotik').
+- medical_type_id: Identifier for the type of medical expense (string, e.g., 'MT003').
+- source: Source of the claim data (string, values include 'ESS', 'Admin', e.g., 'ESS').
+- claim_amount: Amount of the medical claim (integer, e.g., 708698).
+- id: Unique identifier for the entry (string, e.g., '9ce0a816-972c-48e9-8112-2a6e839c59f3').

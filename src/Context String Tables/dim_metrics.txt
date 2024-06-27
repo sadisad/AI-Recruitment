@@ -1,0 +1,4 @@
+The 'dim_metrics' table catalogs different metrics employed for performance analysis and operational reporting within an organization. This table is crucial for data-driven decision-making, providing key metrics that influence strategic planning and operational efficiency. The table includes the following columns:
+- id: Unique identifier for each metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each metric (string, e.g., 'MT001').
+- name: Name of the metric (string, e.g., 'Person'), which covers various aspects such as cost, person count, and hours worked.
