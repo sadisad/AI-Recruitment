@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"a7f9cffae1814e1c896db96a49a4870c","collectionName":"cosine_faq_functional","type":"collection"}

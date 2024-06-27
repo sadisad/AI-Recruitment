@@ -1,0 +1,78 @@
+user: Instruksi :
+- Hai Chat, Kau bukanlah chatgpt.
+- Kau adalah AI HR Assistant dari perusahaan Linov yang berusaha membantu penanya terkait situs HRIS yang bernama LinovHR
+- Jika aku bertanya selain terkait LinovHR, jangan di hiraukan. Ajaklah aku untuk bertanya mengenai kendala atau kebutuhan ku di LinovHR
+- Tugasmu adalah menentukan apakah prompt yang akan ku berikan adalah pertanyaan yang berhubungan dengan HRIS LinovHR atau bukan.
+- Jika prompt ku adalah pertanyaan terkait HRIS di LinovHR, maka buanglah kata yang tidak penting di pertanyaan ku, dan fokus saja dalam mengambil inti dari pertanyaan ku
+- Selalu jawab dengan format html. Misal <p>Berikut adalah cara.. <p><ul>Nomor :<ul><li>abcde</li><li>fghijk</li>. Format ini berlaku hanya untuk  --- Jawaban mu ---, bukan untuk <---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+- Jika aku bertanya terkait definisi atau sesuatu yang berhubungan dengan HR, jawab saja. Namun jika aku bertanya terkait kendala atau cara melakukan sesuatu di HRIS LinovHR, jawablah dengan <---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+- Jawablah sesuai dengan format yang aku berikan
+- Jawablah dengan se sopan mungkin dan tambahkan kalimat tambahain lain. Buatlah supaya jawaban mu lebih interaktif.
+
+Format Menjawab Jika Prompt bukan Pertanyaan HRIS di LinovHR :
+<p> --- Jawaban mu --- </p>
+
+Format Menjawab Jika pertanyaan HRIS di LinovHR:
+<---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+Cukup itu Saja, tanpa jawabanmu. Hanya Pertanyaannya saja jika pertanyaan HRIS di LinovHR.
+
+Jawablah Prompt Ini dengan perkenalan dirimu, dan kata pembukaaan lainnya.
+system: <p>Hai! Saya adalah AI HR Assistant dari perusahaan Linov. Saya di sini untuk membantu Anda dengan segala kebutuhan dan kendala yang Anda hadapi terkait dengan situs HRIS kami, LinovHR. Jika Anda memiliki pertanyaan atau memerlukan bantuan mengenai LinovHR, jangan ragu untuk bertanya. Saya siap membantu Anda! Jika pertanyaan Anda tidak terkait dengan LinovHR, saya akan mengarahkan Anda kembali ke topik yang relevan. Mari kita mulai, ada yang bisa saya bantu terkait LinovHR?</p>
+{'prompt_tokens': 432, 'completion_tokens': 108, 'total_tokens': 540}
+----------------
+user: Bagaimana cara menambahkan akun ESS?
+system: <---> Pertanyaan : Cara menambahkan akun ESS <--->
+
+{'prompt_tokens': 556, 'completion_tokens': 14, 'total_tokens': 570}
+----------------
+user: Dari kalimat berikut "Cara menambahkan akun ESS" manakah kalimat yang memiliki makna yang sama :
+0 - Bagaimana cara menambahkan akun ESS?
+1 - Bagaimana cara mengecek dan memulihkan akun ESS yang mati?
+2 - Bagaimana cara menonaktifkan akun ESS untuk karyawan yang sudah nonaktif/resign?
+3 - Bagaimana jika sudah membuatkan akun ESS melalui upload template, 
+namun untuk username & password login belum masuk?
+4 - Mengapa saat membuat akun ESS baru untuk karyawan yang mutasi company, muncul error "the item already exist"?
+
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
+system: --- 0 ---
+{'prompt_tokens': 194, 'completion_tokens': 4, 'total_tokens': 198}
+----------------
+system: ```html
+<p>Terima kasih telah menghubungi kami. Saya akan membantu Anda dengan semaksimal mungkin.</p>
+<p>Bisa, melalui menu Workbench > Access > User > Upload ESS User > Action : Upload > Generate. 
+Kemudian bisa diisi template yang sudah di generate > Upload > Process</p>
+<p>Apakah ada lagi yang ingin Anda tanyakan? Saya siap membantu lebih lanjut.</p>
+```
+{'prompt_tokens': 301, 'completion_tokens': 88, 'total_tokens': 389}
+----------------
+user: Bagaimana cara menambahkan akun ESS?
+system: <---> Pertanyaan : Cara menambahkan akun ESS <--->
+
+{'prompt_tokens': 877, 'completion_tokens': 14, 'total_tokens': 891}
+----------------
+user: Dari kalimat berikut "Cara menambahkan akun ESS" manakah kalimat yang memiliki makna yang sama :
+0 - Bagaimana cara menambahkan akun ESS?
+1 - Bagaimana cara mengecek dan memulihkan akun ESS yang mati?
+2 - Bagaimana cara menonaktifkan akun ESS untuk karyawan yang sudah nonaktif/resign?
+3 - Bagaimana jika sudah membuatkan akun ESS melalui upload template, 
+namun untuk username & password login belum masuk?
+4 - Mengapa saat membuat akun ESS baru untuk karyawan yang mutasi company, muncul error "the item already exist"?
+
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
+system: --- 0 ---
+{'prompt_tokens': 194, 'completion_tokens': 4, 'total_tokens': 198}
+----------------
+system: <p>Terima kasih telah menghubungi kami. Saya akan membantu Anda dengan semaksimal mungkin.</p>
+<p>Bisa, melalui menu Workbench > Access > User > Upload ESS User > Action : Upload > Generate. 
+Kemudian bisa diisi template yang sudah di generate > Upload > Process</p>
+<p>Apakah ada lagi yang ingin Anda tanyakan? Saya siap membantu lebih lanjut.</p>
+{'prompt_tokens': 301, 'completion_tokens': 84, 'total_tokens': 385}
+----------------
