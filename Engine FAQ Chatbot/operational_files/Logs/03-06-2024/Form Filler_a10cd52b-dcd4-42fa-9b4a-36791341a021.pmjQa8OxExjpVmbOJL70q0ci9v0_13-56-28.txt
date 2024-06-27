@@ -1,0 +1,79 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+ Tamika Morquecho V  Page Two   EDUCATION AND TRAINING  Bachelor of Science in Management (20xx) Bellevue University, Bellevue, Nebraska  GPA: 4.00/4.00 Dean’s Scholar Graduated with Professional Honors  Associate of Applied Science in Communications Technology (20xx) Community College of the Air Force  Numerous workshops, courses and seminars dealing with leadership development, management, TQM, interpersonal communications, curriculum development and related topics Department of Defense and Air Force Training Schools  Certified as Total Quality Management Facilitator Qualified Master Air Training Command Instructor in Leadership and Management   WORK HISTORY  Various Positions of Increasing Responsibility and Leadership United States Air Force (20xx to present)  Currently serving as Squadron Operation Superintendent.  Scheduled to leave the Air Force in September 20xx.   VOLUNTEER/COMMUNITY SERVICE  Coach, Youth Soccer, Bellevue Boys Club Unit Coordinator, U.S. Savings Bond Drive   REFERENCES AVAILABLE UPON REQUEST 
+system: name : Tamika Morquecho V
+--- Field Separator ---
+summary : -
+--- Field Separator ---
+phone_number : -
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : -
+--- Field Separator ---
+email : -
+--- Field Separator ---
+experiences : [{"title" : "Various Positions of Increasing Responsibility and Leadership", "description" : "Currently serving as Squadron Operation Superintendent. Scheduled to leave the Air Force in September 20xx.", "duration" : "20xx to present"}]
+--- Field Separator ---
+educations : [{"title" : "Bachelor of Science in Management", "description" : "Bellevue University, Bellevue, Nebraska GPA: 4.00/4.00 Dean’s Scholar Graduated with Professional Honors", "duration" : "20xx"}, {"title" : "Associate of Applied Science in Communications Technology", "description" : "Community College of the Air Force Numerous workshops, courses and seminars dealing with leadership development, management, TQM, interpersonal communications, curriculum development and related topics Department of Defense and Air Force Training Schools", "duration" : "20xx"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : [{"title" : "Certified as Total Quality Management Facilitator", "description" : "Qualified Master Air Training Command Instructor in Leadership and Management", "duration" : "-"}]
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : [{"title" : "Coach, Youth Soccer", "description" : "Bellevue Boys Club", "duration" : "-"}, {"title" : "Unit Coordinator", "description" : "U.S. Savings Bond Drive", "duration" : "-"}]
+--- Field Separator ---
+languages : -
+--- Field Separator ---
+{'prompt_tokens': 602, 'completion_tokens': 365, 'total_tokens': 967}
+----------------

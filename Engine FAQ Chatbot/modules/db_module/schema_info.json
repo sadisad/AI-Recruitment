@@ -1,0 +1,19 @@
+{
+  "FAQ Functional Cosine": {
+    "table_name": "dbo.cosine_faq_functional",
+    "columns": [
+      "id_faq_functional_cosine",
+      "last_updated",
+      "chat_transcript"
+    ]
+  },
+  "FAQ Manual Chat": {
+    "table_name": "dbo.faq_manual_chat",
+    "columns": [
+      "id_faq_manual_chat",
+      "last_updated",
+      "chat_transcript_user",
+      "chat_transcript_functional"
+    ]
+  }
+}
