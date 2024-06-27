@@ -29,9 +29,9 @@ app.config["SESSION_FILE_DIR"] = "interview_session_folder"
 Session(app)
 cors = CORS(app)
 
-api = Api(app, version='1.0', title='API Linov5 CV AI',
-          description='Dokumentasi API Linov5 CV AI')
-ns = api.namespace('LinovAIRecruitment', description='API Linov5 CV AI')
+api = Api(app, version='1.0', title='API Linov5 AI',
+          description='Dokumentasi API Linov5 AI')
+ns = api.namespace('LinovAIRecruitment', description='API For AI Recruitment')
 
 def clear_sessions(signum, frame):
     session_dir = app.config["SESSION_FILE_DIR"]

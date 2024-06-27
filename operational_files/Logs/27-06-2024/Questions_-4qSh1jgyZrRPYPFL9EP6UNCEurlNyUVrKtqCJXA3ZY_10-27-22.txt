@@ -1,0 +1,84 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.
+- berikan pertanyaan dalam bahasa indonesia.
+
+formatnya seperti ini contohnya:
+
+--- Field Separator ---
+soal no 1 : bla bla bla bla
+--- Field Separator ---
+soal no 2. bla bla bla bla
+--- Field Separator ---
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada tambahan text lain darimu, cukup sesuai propmt yang saya berikan.
+berikan hasil pertanyaannya menggunakan separator "--- Field Separator ---" tiap pertanyaan.
+sebelum menampilkan pertanyaan interview tolong sisipkan format seperti ini.
+
+--- Field Separator ---
+Job Title: .......
+--- Field Separator ---
+
+dan hasilkan outputan seperti format yang saya berikan saja, tanpa menambahkan tambahan apapun.
+------
+Job Yang Dilamar : AI Engineer
+Role Overview : 
+Job Description : We are looking for an innovative AI Engineer to develop, implement, and optimize AI models and algorithms to enhance our product offerings. The successful candidate will possess strong expertise in machine learning, deep learning, and data analysis, along with the ability to collaborate effectively with cross-functional teams.
+Job Requirement : Two or more years of experience in applying AI to practical and comprehensive technology solutions
+Experience with ML, deep learning, TensorFlow, Python, NLP
+Experience in program leadership, governance, and change enablement
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations
+
+system: --- Field Separator ---
+Job Title: AI Engineer
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 1: Bagaimana Anda mengintegrasikan model-machine learning ke dalam sistem produk yang sudah ada, dan apa tantangan yang Anda hadapi dalam proses tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 2: Berikan contoh proyek AI yang Anda kerjakan sebelumnya, dan bagaimana Anda mengukur keberhasilan proyek tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 3: Apa yang Anda ketahui tentang prinsip desain objektif dan fungsi, dan bagaimana Anda menerapkan prinisp tersebut dalam pengembangan aplikasi AI?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 4: Bagaimana Anda memilih algoritma machine learning yang tepat untuk masalah tertentu, dan apa kriteria yang Anda gunakan dalam pemilihan tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 5: Berapa tahun pengalaman Anda dalam menggunakan TensorFlow dan Python untuk pengembangan model AI, dan apa kelebihan yang Anda dapatkan dari penggunaan teknologi tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 6: Bagaimana Anda mengembangkan dan mengoptimalkan model AI untuk meningkatkan kinerja produk, dan apa metrik yang Anda gunakan untuk mengukur kinerja tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 7: Berikan contoh cara Anda menangani masalah kompleksitas data dalam pengembangan model AI, dan bagaimana Anda mengatasi tantangan tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 8: Apa pengalaman Anda dalam mengembangkan API REST, dan bagaimana Anda mengoptimalkan kinerja API tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 9: Bagaimana Anda mengintegrasikan AI dengan database NoSQL dan RDBMS, dan apa kelebihan yang Anda dapatkan dari penggunaan database tersebut?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 10: Bagaimana Anda memimpin tim dalam pengembangan proyek AI, dan apa strategi yang Anda gunakan untuk menjaga kinerja tim tersebut?
+--- Field Separator ---
+{'completion_tokens': 514, 'prompt_tokens': 497, 'total_tokens': 1011, 'completion_time': 1.468571429, 'prompt_time': 0.077845352, 'queue_time': None, 'total_time': 1.546416781}
+----------------
