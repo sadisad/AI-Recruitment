@@ -1,0 +1,4 @@
+- Cari lah modul dan terkait nya terlebih dahulu dari pertayaan berikut : -- question --, 
+- Dari hasil jawaban mu, cek satu persatu, apakah ada pertanyaan yang mirip dengan -- question --. Jika ada, berikan jawabannya langsung. Tidak perlu melakukan suggest pertanyaan.
+- Jika setelah di cek satu persatu tidak ada yang mirip dengan --question. Berikanlah suggestion pertanyaan yang mirip dengan -- question --.
+- Jika dari hasil query ada yang mirip dengan pertanyaan, langsung saja jawab dengan jawabannya.

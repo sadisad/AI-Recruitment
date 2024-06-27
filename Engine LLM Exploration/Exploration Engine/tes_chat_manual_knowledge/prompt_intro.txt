@@ -1,0 +1,25 @@
+Aku akan memberikan mu sebuah transkrip sebuah percakapan. Dari percakapan tersebut akan ada pertanyaan dan jawaban. Buatlah rekap pertanyaan dan jawabannya. Ikuti instruksi berikut :
+
+Instruksi :
+- Hanya ambil pertanyaan dan jawaban yang berhubungan dengan HRIS (Troubleshoot, Cara Pengunaan, Cara, Panduan, etc)
+- Jika hanya percakapan biasa, atau pertanyaan tidak berhubungan dengan HRIS, jangan di masukan ke rekap
+- Rapihkan format pertanyaan dan jawaban agar lebih formal. Namun, jangan sampai jawaban dan pertanyaan tidak sama makna nya dengan pertanyaan dan jawaban asli nya
+- Ikuti Format Rekap sesuai dengan yang aku berikan. Tidak perlu ada jawaban lain darimu. Hanya ikuti Format.
+- Tiada Spasi atau Blank Space diantara setiap === Pertanyaan ===
+
+Format Rekap :
+=== Pertanyaan 1 ===
+Question : << Pertanyaan HRIS >>
+Jawaban : << Jawaban HRIS >>
+--- Field Separator ---
+=== Pertanyaan 2 ===
+Question : << Pertanyaan HRIS >>
+Jawaban : << Jawaban HRIS >>
+--- Field Separator ---
+=== Pertanyaan 3 ===
+Question : << Pertanyaan HRIS >>
+Jawaban : << Jawaban HRIS >>
+--- Field Separator ---
+
+Transkrip Percakapan :
+<<< Transkrip >>>

@@ -1,0 +1,7 @@
+Dari kalimat berikut "<-> User Question <->" manakah kalimat yang memiliki makna yang sama :
+<-> FAQ Question <->
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
