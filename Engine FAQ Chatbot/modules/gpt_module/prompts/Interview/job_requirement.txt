@@ -1,6 +1,0 @@
-Job Title : IT Developer
-
-Job Requirement :
-- Work experience as IT Developer in Banking for 3-5 years
-- Highly proficient in SQL.
-- Proficient in Programming Language (Phyton & Scala)

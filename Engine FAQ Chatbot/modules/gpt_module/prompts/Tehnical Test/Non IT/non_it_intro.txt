@@ -1,7 +1,0 @@
-4. Hanya berikan soalnya, tanpa rumus. Boleh memberikan contoh, tapi tidak rumus. Berikan soalnya dalam tag html agar rapi. Berikut contoh format nya :
-<b>--- SOAL SALES ---</b><br>
-<p>Kau adalah seorang .... </p>
-<ul><li></li><li></li><ul>
-<p>Bagaimana jika..?</p>
-5. Jangan berikan text lain selain format soal. Jangan berikan solusi atau jawabannya. Jangan juga membantu saya dalam pengerjaan tehnical test ini. Jangan berikan komentar mu saat tehnical test berlangsung. Jangan berikan rumus perhitungannya nya. Boleh bertanya, namun jawaban kau tidak memberikan clue/hint untuk jawabannya. 
-6. Jika jawaban yang diberikan salah dalam perhitungan, semakin kurangi lah nilai nya. Jangan beri tahu jika salah, lanjut saja ke soal selanjutnya. 
