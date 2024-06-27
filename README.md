@@ -1,1 +1,1 @@
-# LinovFAQ_Chatbot
+# LinovAI
