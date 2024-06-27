@@ -82,24 +82,21 @@ def create_parser(file_required, **extra_args):
         parser.add_argument(name, **details)
     return parser
 
-@namespace_manual_faq.route('/initialize_faq_manual')
-class initialize_faq_manual(Resource):
+@namespace_ai_faq.route('/initialize_faq_chatbot')
+class initialize_faq_chat(Resource):
     @cross_origin()
+
     def get(self):
+
         try:
-            # Inisialisasi variabel sesi untuk chat
-            session['usage'], session['bool_chat'], session['history'] = [], True, []
-
-            # Menggenerate id_chat yang unik menggunakan UUID
-            id_chat = str(uuid.uuid4())
-            session['id_chat'] = id_chat  # Menyimpan id_chat ke dalam session
-
-            # Mengatur tipe API untuk chat yang sesuai
-            initialize_api_type('FAQ Manual Chat')
+            session['usage'], session['bool_chat'] = [], True
+            initialize_api_type('FAQ Functional Cosine')
+            starting_prompt = gpt_engine.initialize_faq_cosine()
+            session['history'] = [{"role": "user", "content": starting_prompt}]
+            id_chat = session['gpt_api_type']
+            row_id, answer = query_gpt(primary_key={"id_chat" : id_chat})
             
-            # Mengembalikan response dengan id_chat yang baru digenerate
-            return {'chat_id': id_chat, 'message': 'Chat With Functional Team Has Started.'}, 200
-        
+            return {'chat_id' : id_chat, 'message': answer}, 200
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
@@ -180,14 +177,21 @@ class questions_list(Resource):
 
 @namespace_manual_faq.route('/initialize_faq_manual')
 class initialize_faq_manual(Resource):
-    
     @cross_origin()
     def get(self):
         try:
-            session['usage'], session['bool_chat'],session['history'] = [], True, []
+            # Inisialisasi variabel sesi untuk chat
+            session['usage'], session['bool_chat'], session['history'] = [], True, []
+
+            # Menggenerate id_chat yang unik menggunakan UUID
+            id_chat = str(uuid.uuid4())
+            session['id_chat'] = id_chat  # Menyimpan id_chat ke dalam session
+
+            # Mengatur tipe API untuk chat yang sesuai
             initialize_api_type('FAQ Manual Chat')
-            id_chat = session['gpt_api_type']
-            return {'chat_id' : id_chat, 'message': 'Chat With Functional Team Has Started.'}, 200
+            
+            # Mengembalikan response dengan id_chat yang baru digenerate
+            return {'chat_id': id_chat, 'message': 'Chat With Functional Team Has Started.'}, 200
         
         except Exception as e:
             print(e)

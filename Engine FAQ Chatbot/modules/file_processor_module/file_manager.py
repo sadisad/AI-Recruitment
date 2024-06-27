@@ -4,6 +4,9 @@ import fitz, os, names
 from docx import Document
 
 class FileHandler:
+    
+    def __init__(self):
+        self.dir_logs = 'operational_files\\Logs\\'
 
     def save_chat_transcript(self, dict_session):
         today = date.today().strftime("%d-%m-%Y")
