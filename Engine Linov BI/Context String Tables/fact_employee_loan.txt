@@ -1,0 +1,53 @@
+The 'fact_employee_loan' table tracks and manages data related to the loans provided to employees within the organization. This table is crucial for managing financial assistance and loan repayments. The table includes the following columns:
+- date: The date the loan record was created (YYYY-MM-DD, e.g., '2022-07-12').
+- employee_id: Numeric identifier for the employee (integer, e.g., 38980).
+- employee_name: Full name of the employee (string, e.g., 'Margit Sanders').
+- birth_place: Birthplace of the employee (string, e.g., 'Sigou').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '2000-06-08').
+- phone: Contact phone number of the employee (string, e.g., '652-574-9640').
+- email_address: Email address of the employee (string, e.g., 'msanders2g@newsvine.com').
+- address: Residential address of the employee (string, e.g., '33 La Follette Terrace').
+- education: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor', e.g., 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL004').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced', e.g., 'Single').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor', e.g., 'Full-time').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive', e.g., 'Senior').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Account Manager').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 22).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50', e.g., '20-30').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Generation X', 'Millennials', 'Generation Z', e.g., 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2018-05-21').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 5).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years', e.g., '3-5 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- loan_tenor: Original tenure of the loan in months (integer, e.g., 24).
+- loan_amount: Original amount of the loan (integer, e.g., 17410035).
+- remaining_tenor: Remaining tenure of the loan in months (integer, e.g., 18).
+- remaining_loan_amount: Remaining amount of the loan (integer, e.g., 8705018).
+- loan_type: Type of loan (string, values include 'Car Loan', 'Emergency Loan', 'Home Loan', 'Personal Loan', e.g., 'Car Loan').
+- loan_type_id: Code for the loan type (string, e.g., 'LT010').
+- id: Unique identifier for each record (string, e.g., 'a3465290-6342-4175-92db-b55ede4351c8').
+- cost_component: Component of the loan cost (string, values include 'Insurance', 'Service Fee', 'Processing Fee', 'Late Payment Fee', e.g., 'Insurance').
+- cost_component_id: Code for the cost component (string, e.g., 'CS004').
+- loan_group: Group classification of the loan (string, e.g., 'Group 2').
+- loan_group_id: Code for the loan group (string, e.g., 'LG002').

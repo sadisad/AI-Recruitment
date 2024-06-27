@@ -1,0 +1,20 @@
+The 'fact_candidate' table collects comprehensive data about candidates involved in the recruitment process of the organization. This table is crucial for analyzing and optimizing recruitment strategies, offering detailed insights into candidate profiles and application statuses. The table includes the following columns:
+- candidate_id: Unique identifier for the candidate (string, e.g., 'ce6f458d-c10d-406e-abea-ca9d7184b678').
+- candidate_name: Full name of the candidate (string, e.g., 'Mattias Mengue').
+- email: Email address of the candidate (string, e.g., 'edunkinson0@opera.com').
+- gender: Gender of the candidate (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD002').
+- phone: Contact phone number of the candidate (string, e.g., '+51 (128) 394-2052').
+- age: Age of the candidate (integer, e.g., 29).
+- age_range: Age range of the candidate (string, values include '21-25 years', '26-30 years', etc.).
+- age_range_id: Code for the age range (string, e.g., 'AR003').
+- generation: Generation classification of the candidate (string, values include 'Millennials', 'Generation Z', etc.).
+- generation_id: Code for the generation (string, e.g., 'GN002').
+- recruitment_stage: Current stage of the recruitment process for the candidate (string, values include 'Interview User', 'Offering', 'Hiring').
+- recruitment_stage_id: Code for the recruitment stage (string, e.g., 'RS0005').
+- applied_job_vacancy: Title of the job vacancy applied for (string, e.g., 'Web Developer I').
+- applied_job_vacancy_id: Code for the job vacancy (string, e.g., '21bbe5c1-c342-40fc-92cc-fb68c482e417').
+- apply_date: Date when the candidate applied (YYYY-MM-DD, e.g., '2024-04-21').
+- education: Education level of the candidate (string, values include 'Master', 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL002').
+- is_active: Indicates whether the recruitment process for the candidate is still active (boolean, e.g., True).

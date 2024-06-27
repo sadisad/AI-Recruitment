@@ -1,0 +1,48 @@
+The 'fact_competencies' table is designed to track and analyze employee competencies and performance metrics within the organization. This table is essential for HR and management teams to monitor, evaluate, and predict employee performance. The table includes the following columns:
+- date: The date the record was created or last updated (YYYY-MM-DD, e.g., '2023-12-01').
+- employee_code: Numeric identifier for the employee (integer, e.g., 93496).
+- employee_name: Full name of the employee (string, e.g., 'Taite Pancoast').
+- birth_place: Birthplace of the employee (string, e.g., 'Tiadiaye').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1982-10-26').
+- phone: Contact phone number of the employee (string, e.g., '185-536-7476').
+- email_address: Email address of the employee (string, e.g., 'tpancoastng@irs.gov').
+- address: Residential address of the employee (string, e.g., '0543 Melby Center').
+- education_level: Education level of the employee (string, values include 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Code for the education level (string, e.g., 'EL002').
+- work_location: The workplace location of the employee (string, e.g., 'Headquarters').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- employee_id: Identifier for the employee (string, e.g., 'd54e05ba-f91b-461c-afa0-08e4261fb7cc').
+- file: URL to a file or image related to the employee (string, e.g., 'https://example.com/employee/profile.jpg').
+- current_competency: Current competency score of the employee (integer, e.g., 92).
+- predictive_competency: Predicted future competency score of the employee (integer, e.g., 84).
+- id: Unique identifier for each record (string, e.g., 'dc9379b8-9f86-4e53-ad32-44148a5125c9').
+

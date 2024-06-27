@@ -1,0 +1,15 @@
+The 'characteristics' table collects and tracks various data points related to employee actions within the organization. This table includes a wealth of details for each employee, used for management reporting and analysis of employee behavior and performance. The table includes the following columns:
+- id: Unique identifier for each record (string, e.g., 'id_1').
+- date: The date of the action taken (YYYY-MM-DD, first of the month, e.g., '2024-03-01').
+- employee_id: Numeric code associated with the employee (integer, e.g., 33449).
+- employee_name: Full name of the employee (string, e.g., 'Katrina Perry').
+- action_type: Type of action taken, such as Hire, Terminate, Transfer, or Promote (string, e.g., 'Hire').
+- action_reason: Reason for the action taken, typically related to organizational needs or personal decisions (string, values include 'Performance', 'Contract End', 'Career Progression', 'Personal Reason', 'Restructuring').
+- age_in_years: Specific age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '25-34', '35-44', '45-54', etc.).
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- personnel_area: The personnel area within the organization, typically indicating a department or team (string, e.g., 'Development').
+- education_level: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master').
+- length_of_service: Duration in years the employee has been with the company (integer, e.g., 8).
+- capacity_utilization_level: A measure of how much the employee is utilized, as a percentage (integer, e.g., 80).
+- company_code: Identifier for the company within the organization (string, e.g., 'COMP001').
