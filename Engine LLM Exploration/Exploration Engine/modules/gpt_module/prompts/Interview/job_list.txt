@@ -1,0 +1,55 @@
+-----------
+Job Title : IT Developer
+
+Job Requirement :
+- Work experience as IT Developer in Banking for 3-5 years
+- Highly proficient in SQL.
+- Proficient in Linux Command & Shell Scripting 
+- Proficient in Programming Language (Phyton & Scala)
+- Familiar with framework: Django, Flask, Pyramid
+--------------
+Job Title : AI Engineer
+
+Required skills and qualifications
+Two or more years of experience in applying AI to practical and comprehensive technology solutions
+Experience with ML, deep learning, TensorFlow, Python, NLP
+Experience in program leadership, governance, and change enablement
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations
+
+Preferred skills and qualifications
+Bachelor’s or master's degree in computer science or related field
+Experience with innovation accelerators
+Experience with cloud environments
+---------------
+Job Title : Payroll Expert
+
+Job Description :
+Handling all payroll end to end process for business entities ：
+
+1. Payroll computation & Payoff
+1.1 Maintain access to timesheet data and all payroll component information;
+1.2 Responsible for payroll data into administrative databases and software programs, annually evaluating for payroll software provider is included.
+1.3 Review payroll reconciliations: salaries, benefits, tax deduction, commission ect;
+Ensure payment Bank transfer: maintaining accurate records of payroll data documentation and transaction;
+Responsible for preparing and distributing income statements/payslip;
+Handling social insurance affairs;
+
+2. Tax treatment
+2.1 Maintaining and coordinating with Tax Consultant for PPH21;
+2.2 Processing Tax Article 21 (PPH21) report to E-Bupot monthly & annually;
+2.3 Understand, maintain and always update related to all policy and regulation for payroll, tax & social insurance ect;
+
+3. Daily data provision
+3.1 Handling payroll data monthly accrue;
+3.2 Preparing periodic payroll reports for review by management;
+3.3 Responding to payroll-related inquiries and resolving concerns;
+
+Requirement : 
+Bachelor Degree in accounting, business or other related field may be preferred;
+A minimum 5 year experience working in payroll or similar role;
+Familiar with payroll system software and experience working with accounting;
+Working knowledge of basic accounting principles and payroll practice;
+Excellent communication and interpersonal skills;
+Strong organizational and time management skills;
+Detail oriented, data sensitive, honest and good attitude;

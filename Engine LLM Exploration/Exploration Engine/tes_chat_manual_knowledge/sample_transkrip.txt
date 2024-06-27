@@ -1,0 +1,37 @@
+user: Saya ingin berbicara dengan PIC dong
+system: Baik! Anda akan berbicara dengan PIC yang terkait. Mohon ditunggu sebentar.
+----------------
+pic: Halo, saya dengan Aufar dari Tim Functional LinovHR. Ada yang bisa saya bantu?
+user: Halo, saya bingung nih ngobrol dengan AI. Maaf ya sebelumnya
+----------------
+pic: Tidak masalah pak. Apakah ada kendala menggunakan LinovHR?
+user: bagaimana caranya untuk melakukan edit pada BPJS kesehatan 1% di bayarkan karyawan, di edit menjadi 2% dibayarka karyawan, karna karyawan tersebut menanggung BPJS orang Tuanya 
+----------------
+pic:  untuk melakukan pembayaran baban tambahan BPJS kesehatan karyawan bisa di inputkan melalui recurring
+user: Ohh gitu ya? Bisa lewat situ?
+----------------
+pic: bisa pak. Silahkan dicoba dahulu, jika masih bingung bisa tanya saya lagi.
+user: yaudah ntar saya cobain. Selanjutnya, saya boleh minta nomor telpon mas aufar ga? biar kalo saya bingung gausah chat disini lagi
+----------------
+pic: untuk saat ini tidak bisa pak, mohon maaf ya
+user: oke deh. Terus kemaren nih, pdf salary slip lewat ess mobile kemaren kok ga ke kirim lewat email ya? 
+----------------
+pic: Mohon pastikan email yang terdaftar di user ESS mobile sudah sesuai ya pak
+user: ohh gitu? Kayaknya sih udah sesuai. Nanti saya cek lagi
+----------------
+pic: Boleh pak. Ada lagi yang bisa saya bantu?
+user: Kalo menurut mas aufar, nanti capres cawapres nomor berapa yang menang?
+----------------
+pic: Mohon maaf pak itu topik yang agak sensitif. Jika tidak ada lagi yang bisa ditanyakan mengenai aplikasi LinovHR kami, boleh diakhiri saja pak percakapannya
+user: Oh oke baik kalau begitu. Terakhir deh
+----------------
+pic: Boleh pak, silahkan
+user: Kalo ada mutasi company yang dilakukan tidak sesuai dengan Cut off nya, itu gimana?
+----------------
+pic: apa bila dilakukan mutasi antar company diluar dari cut off yang seharusnya maka employee akan mendapatkan gaji dari 2 company, untuk company sebelumnya dan company saat ini
+user: Wah enak juga ya jadi si employee itu
+----------------
+pic: Iya pak saat ini sistem kami masih begitu ada nya
+user: Oke oke deh. Boleh lah, thanks ya info nya
+----------------
+pic: terima kasih kembali pak
