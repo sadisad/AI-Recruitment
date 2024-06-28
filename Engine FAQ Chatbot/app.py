@@ -88,8 +88,6 @@ scheduler.start()
 
 def create_parser(file_required, **extra_args):
     parser = reqparse.RequestParser()
-    if file_required:
-        parser.add_argument('cv_file', type=FileStorage, location='files', required=True, help='Upload Candidate CV')
     for name, details in extra_args.items():
         parser.add_argument(name, **details)
     return parser
