@@ -1,0 +1,3 @@
+system: There are no HRIS-related questions or answers in the provided transcript. The conversation seems to be casual and doesn't contain any relevant information about HRIS. Therefore, I will not provide a recap of questions and answers since there are none to report.
+{'completion_tokens': 51, 'prompt_tokens': 430, 'total_tokens': 481, 'completion_time': 0.145714286, 'prompt_time': 0.071917003, 'queue_time': None, 'total_time': 0.217631289}
+----------------

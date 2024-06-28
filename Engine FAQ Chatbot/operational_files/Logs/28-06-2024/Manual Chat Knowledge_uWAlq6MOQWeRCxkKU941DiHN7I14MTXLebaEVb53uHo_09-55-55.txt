@@ -1,0 +1,3 @@
+system: There is no conversation about HRIS in the provided transcript. The conversation appears to be unrelated to HRIS. Therefore, I will not provide any rekap pertanyaan and jawaban.
+{'completion_tokens': 39, 'prompt_tokens': 434, 'total_tokens': 473, 'completion_time': 0.111428571, 'prompt_time': 0.065477728, 'queue_time': None, 'total_time': 0.176906299}
+----------------

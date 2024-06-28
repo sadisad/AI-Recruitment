@@ -1,0 +1,3 @@
+system: It seems that there is no conversation related to HRIS (Troubleshoot, Cara Penggunaan, Cara, Panduan, etc) in the provided transcript. The conversation is just a greeting and an offer to help without specifying the topic. Therefore, there is no rekap to be made.
+{'completion_tokens': 61, 'prompt_tokens': 442, 'total_tokens': 503, 'completion_time': 0.174285714, 'prompt_time': 0.072424231, 'queue_time': None, 'total_time': 0.246709945}
+----------------
