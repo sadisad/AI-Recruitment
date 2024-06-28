@@ -313,9 +313,9 @@ class get_cv_scoring_analysis(Resource):
 class create_job_vacancy(Resource):
     parser = create_parser(False, job_id={'type': str, 'required': True, 'help': 'Job ID', 'location': 'form'}, 
                             job_title={'type': str, 'required': True, 'help': 'Posisi Yang Dilamar', 'location': 'form'},
-                              role_overview={'type': str, 'required': True, 'help': 'Deskripsi Singkat Pekerjaan', 'location': 'form'},
-                              responsibilities={'type': str, 'required': True, 'help': 'Tanggung Jawab dari Pekerjaan', 'location': 'form'},
-                              qualifications={'type': str, 'required': True, 'help': 'Kualifikasi Pekerjaan', 'location': 'form'})
+                            role_overview={'type': str, 'required': True, 'help': 'Deskripsi Singkat Pekerjaan', 'location': 'form'},
+                            responsibilities={'type': str, 'required': True, 'help': 'Tanggung Jawab dari Pekerjaan', 'location': 'form'},
+                            qualifications={'type': str, 'required': True, 'help': 'Kualifikasi Pekerjaan', 'location': 'form'})
     
     @api.expect(parser)
     @cross_origin()
@@ -324,11 +324,11 @@ class create_job_vacancy(Resource):
         try:
             args = self.parser.parse_args()
             db_ops.mongo_upsert_exception({"job_id" : args['job_id']}, 
-                                          {"job_title" : args['job_title'], 
-                                           "role_overview" : args['role_overview'],
-                                           "responsibilities" : args['responsibilities'],
-                                           "qualifications" : args['qualifications']},
-                                           db_ops.db_ai_mongo['job_vacancy'])
+                                        {"job_title" : args['job_title'], 
+                                        "role_overview" : args['role_overview'],
+                                        "responsibilities" : args['responsibilities'],
+                                        "qualifications" : args['qualifications']},
+                                        db_ops.db_ai_mongo['job_vacancy'])
             return {'message' : 'Create Job ' +  args['job_title'] + ' Succesful.'}, 200
         except Exception as e:
             print(e)
