@@ -1,0 +1,86 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.
+- berikan pertanyaan dalam bahasa indonesia.
+
+formatnya seperti ini contohnya:
+
+--- Field Separator ---
+soal no 1 : bla bla bla bla
+--- Field Separator ---
+soal no 2. bla bla bla bla
+--- Field Separator ---
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada tambahan text lain darimu, cukup sesuai propmt yang saya berikan.
+berikan hasil pertanyaannya menggunakan separator "--- Field Separator ---" tiap pertanyaan.
+sebelum menampilkan pertanyaan interview tolong sisipkan format seperti ini.
+
+--- Field Separator ---
+Job Title: .......
+--- Field Separator ---
+
+dan hasilkan outputan seperti format yang saya berikan saja, tanpa menambahkan tambahan apapun.
+------
+Job Yang Dilamar : AI Engineer
+Role Overview : 
+Job Description : We are looking for an innovative AI Engineer to develop, implement, and optimize AI models and algorithms to enhance our product offerings. The successful candidate will possess strong expertise in machine learning, deep learning, and data analysis, along with the ability to collaborate effectively with cross-functional teams.
+Job Requirement : Two or more years of experience in applying AI to practical and comprehensive technology solutions
+Experience with ML, deep learning, TensorFlow, Python, NLP
+Experience in program leadership, governance, and change enablement
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations
+
+system: Here are the 10 interview questions based on the job description:
+
+--- Field Separator ---
+Job Title: AI Engineer
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 1: Can you explain how you would approach developing and optimizing AI models to enhance our product offerings, and what metrics would you use to measure their effectiveness?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 2: How do you stay current with the latest developments in machine learning, deep learning, and NLP, and can you give an example of how you've applied this knowledge in a previous role?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 3: Can you walk me through a project where you had to collaborate with a cross-functional team to implement an AI solution, and what was your role in that project?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 4: How do you handle version control and collaboration when working on large-scale AI projects, and what tools do you use to facilitate this?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 5: Can you explain the concept of overfitting in machine learning, and how would you prevent it in a model?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 6: Can you describe your experience with TensorFlow and how you've used it in previous projects?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 7: How do you approach program leadership, governance, and change enablement in an AI project, and can you give an example of a successful implementation?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 8: Can you explain the basics of object-oriented and functional design principles, and how do you apply them in your AI development work?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 9: Can you describe your experience with REST API development and how you've used APIs to integrate AI models into larger systems?
+--- Field Separator ---
+
+--- Field Separator ---
+Soal no 10: How do you approach NoSQL database design and RDBMS design and optimization, and can you give an example of a successful implementation?
+--- Field Separator ---
+{'completion_tokens': 446, 'prompt_tokens': 497, 'total_tokens': 943, 'completion_time': 1.2449186540000001, 'prompt_time': 0.258002078, 'queue_time': None, 'total_time': 1.5029207320000002}
+----------------

@@ -1,0 +1,4 @@
+The 'dim_learning_method' table stores information about various methods of learning employed within an organization. This table is used to categorize and track different approaches to employee development and training. The table includes the following columns:
+- id: Unique identifier for each learning method (integer, currently missing in the provided data).
+- code: Unique code assigned to each learning method (string, e.g., 'MD001').
+- name: Name describing the learning method (string, e.g., 'By Employee').

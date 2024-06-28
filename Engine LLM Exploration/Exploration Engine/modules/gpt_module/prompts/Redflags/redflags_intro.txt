@@ -1,0 +1,15 @@
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+<-> Redflag Prompt <->
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.

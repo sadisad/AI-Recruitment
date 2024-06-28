@@ -1,0 +1,104 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.
+- berikan pertanyaan dalam bahasa indonesia.
+
+formatnya seperti ini contohnya:
+
+--- Field Separator ---
+soal no 1 : bla bla bla bla
+--- Field Separator ---
+soal no 2. bla bla bla bla
+--- Field Separator ---
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada tambahan text lain darimu, cukup sesuai propmt yang saya berikan.
+berikan hasil pertanyaannya menggunakan separator "--- Field Separator ---" tiap pertanyaan.
+sebelum menampilkan pertanyaan interview tolong sisipkan format seperti ini.
+
+--- Field Separator ---
+Job Title: .......
+--- Field Separator ---
+
+dan hasilkan outputan seperti format yang saya berikan saja, tanpa menambahkan tambahan apapun.
+------
+Job Yang Dilamar : Payroll Expert
+Role Overview : Handling multiple payroll activities
+Job Description : Handling all payroll end to end process for business entities :
+
+1. Payroll computation & Payoff
+1.1 Maintain access to timesheet data and all payroll component information;
+1.2 Responsible for payroll data into administrative databases and software programs, annually evaluating for payroll software provider is included.
+1.3 Review payroll reconciliations: salaries, benefits, tax deduction, commission ect;
+Ensure payment Bank transfer: maintaining accurate records of payroll data documentation and transaction;
+Responsible for preparing and distributing income statements/payslip;
+Handling social insurance affairs;
+
+2. Tax treatment
+2.1 Maintaining and coordinating with Tax Consultant for PPH21;
+2.2 Processing Tax Article 21 (PPH21) report to E-Bupot monthly & annually;
+2.3 Understand, maintain and always update related to all policy and regulation for payroll, tax & social insurance ect;
+
+3. Daily data provision
+3.1 Handling payroll data monthly accrue;
+3.2 Preparing periodic payroll reports for review by management;
+3.3 Responding to payroll-related inquiries and resolving concerns;
+Job Requirement : Bachelor Degree in accounting, business or other related field may be preferred;
+A minimum 5 year experience working in payroll or similar role;
+Familiar with payroll system software and experience working with accounting;
+Working knowledge of basic accounting principles and payroll practice;
+Excellent communication and interpersonal skills;
+Strong organizational and time management skills;
+Detail oriented, data sensitive, honest and good attitude;
+
+system: --- Field Separator ---
+Job Title: Payroll Expert
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 1 : Bagaimana Anda memahami proses payroll end-to-end dan bagaimana Anda akan menghandle payroll computation dan payoff dalam perusahaan ini?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 2 : Dalam menghandle timesheet data dan informasi komponen payroll, apa yang Anda lakukan untuk memastikan bahwa data tersebut akurat dan up-to-date?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 3 : Bagaimana Anda melakukan review reconciliations dan memastikan bahwa pembayaran gaji dan tunjangan lainnya dilakukan secara akurat dan tepat waktu?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 4 : Dalam menghandle social insurance affairs, apa yang Anda lakukan untuk memastikan bahwa perusahaan memenuhi kewajiban dan peraturan yang berlaku?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 5 : Bagaimana Anda menghandle PPH21 dan berkoordinasi dengan Tax Consultant untuk memastikan bahwa perusahaan memenuhi kewajiban pajak?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 6 : Dalam membuat laporan periodic payroll, apa yang Anda lakukan untuk memastikan bahwa laporan tersebut akurat dan lengkap?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 7 : Bagaimana Anda menghandle inquiry dan concern payroll-related dari karyawan atau manajemen?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 8 : Dalam menghandle payroll system software, apa yang Anda lakukan untuk memastikan bahwa software tersebut up-to-date dan compatible dengan kebutuhan perusahaan?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 9 : Bagaimana Anda mengintegrasikan pengetahuan dasar akuntansi dan praktek payroll dalam menghandle payroll data dan proses?
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 10 : Dalam menghandle data sensitive dan konfidensiil, bagaimana Anda menjaga keamanan dan kerahasiaan data tersebut?
+--- Field Separator ---
+{'completion_tokens': 473, 'prompt_tokens': 659, 'total_tokens': 1132, 'completion_time': 1.307201313, 'prompt_time': 0.117032015, 'queue_time': None, 'total_time': 1.424233328}
+----------------

@@ -1,0 +1,28 @@
+FLOW : (Semua sama saja, jadi di contohin cukup 1)
+CV Form Filler --> /start_cv_form_filler
+1. GET --> Hardcode Jawaban
+2. POST
+3. Membaca Prompting --> gpt_engine.initialize_form_filler(). Atau di API Lain, pasti ada initialize
+4. session['interview_transcript'] = ... Buat Bikin mapping awal pembicaraan
+5.  user_response = check_upload_file(request) --> Ubah File dari PDF/Word ke String
+6.  session['interview_transcript'].append({"role": "user", "content": user_response}) --> User Prompt Brainwash, System Kunci Prmpt Dia Paham, User Ngasih CV String
+7. query_gpt() Ngehit GPT
+7.1 .hit_gpt_api Ngehit API dengan session['interview_transcript']
+7.2  session['interview_transcript'].append({"role": "system", "content": answer}) --> User Prompt Brainwash, System Kunci Prmpt Dia Paham, User Ngasih CV String, System Ngasih Hasil generate Form CV nya
+7.3 log_file_content --> Naro hasil ngobrol ke TXT
+7.4 format_response_gpt --> Buat ngerapihin respons gpt, dan masukin ke dict/json
+7.5 Masukin ke Database
+8. Return Respons GPT
+---------------------
+Folder MODULES
+3 Module Utama, ada di folder modules
+1. gpt_module --> Prompting2, Hit GPT, Format Respons GPT
+2. file_procescor --> Ngesave Percakapan ke txt, Pdf/word ke string
+3. db_module --> Masukin ke DB, Baca Job Vacancy
+---------
+Folder Operational_files
+Folder CV --> check_upload_file masuk kesini, Buat Ngesave CV baik yang pdf/word maupun yang udah jadi string
+Folder Logs --> log_file_content masuk kesini
+----------
+DB BACKUP
+Restore DB di SQL Server

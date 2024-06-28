@@ -1,0 +1,48 @@
+The 'fact_rewards_punishments' table collects and tracks various data points related to rewards and punishments given to employees within the organization. This table includes a wealth of details for each employee, used for management reporting and analysis of employee performance. The table includes the following columns:
+- id: Unique identifier for each record (string, e.g., '7b1ea70c-ad26-41de-85e9-fb69990b78e0').
+- date: The date of the reward or punishment (YYYY-MM-DD, e.g., '2024-09-22').
+- employee_code: Numeric code associated with the employee (integer, e.g., 47293).
+- employee_name: Full name of the employee (string, e.g., 'Rudolf Harness').
+- birth_place: Birthplace of the employee (string, e.g., 'Balfour').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1990-04-17').
+- phone: Contact phone number of the employee (string, e.g., '523-168-7236').
+- email_address: Email address of the employee (string, e.g., 'rharness5v@state.tx.us').
+- address: Residential address of the employee (string, e.g., '74058 Macpherson Trail').
+- education_level: Education level of the employee (string, values include 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Code for the education level (string, e.g., 'EL004').
+- work_location: The workplace location of the employee (string, e.g., 'New York Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_id: Code for the gender (string, e.g., 'GEND001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS002').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP002').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- employee_id: Identifier for the employee (string, e.g., '96b0b098-b618-4c9e-ab08-96e9da348ab0').
+- category: Category of the record, either Reward or Punishment (string, e.g., 'Reward').
+- reward_punishment: Specific type of reward or punishment (string, e.g., 'Gift', 'Employee of The Month', 'Bonus', 'Verbal Warning', 'Suspension').
+- category_id: Code for the category (string, e.g., 'CG001').
+- reward_punishment_id: Code for the specific reward or punishment (string, e.g., 'RP006').

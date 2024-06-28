@@ -1,0 +1,3 @@
+The 'dim_reimbursement_metric' table stores information about different metrics used to analyze and report on reimbursements within an organization. This table is essential for financial and operational analysis, providing key indicators for assessing reimbursement processes. The table includes the following columns:
+- id: Unique identifier for each reimbursement metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each reimbursement metric (string, e.g., 'RM001').

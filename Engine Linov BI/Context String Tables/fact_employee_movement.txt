@@ -1,0 +1,47 @@
+The 'fact_employee_movement' table tracks employee movements within the organization and includes the following columns:
+- date: The date of the movement (format: YYYY-MM-DD, e.g., '2023-01-01').
+- employee_id: Unique identifier for each employee (integer, e.g., 12345).
+- employee_name: Full name of the employee (string, e.g., 'John Doe').
+- birth_place: Birthplace of the employee (string, e.g., 'New York').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '1990-01-01').
+- phone: Contact phone number of the employee (string, e.g., '123-456-7890').
+- email_address: Email address of the employee (string, e.g., 'john.doe@example.com').
+- address: Residential address of the employee (string, e.g., '123 Main St, New York, NY').
+- education_level: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Identifier for the education level (string, e.g., 'EDU001').
+- work_location: Location where the employee works (string, e.g., 'New York Office').
+- work_location_id: Identifier for the work location (string, e.g., 'LOC001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_id: Identifier for the gender (string, e.g., 'GEND001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Identifier for the marital status (string, e.g., 'MAR001').
+- employment_type: Type of employment contract (string, values include 'Part-time', 'Freelance', 'Full-time', 'Contract', 'Temporary').
+- employment_type_id: Identifier for the employment type (string, e.g., 'EMP001').
+- job_level: Level of the job held by the employee (string, values include 'Junior', 'Mid-level', 'Senior', 'Managerial').
+- job_level_id: Identifier for the job level (string, e.g., 'JOB001').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_id: Identifier for the job title (string, e.g., 'TITLE001').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_id: Identifier for the job position (string, e.g., 'POS001').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_id: Identifier for the organization (string, e.g., 'ORG001').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_id: Identifier for the company (string, e.g., 'COMP001').
+- age: Current age of the employee (integer, e.g., 30).
+- age_range: Age range category of the employee (string, values include '21-25', '26-30', '31-35', '36-40', '41-45', '46-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AGE001').
+- generation: Generational cohort of the employee (string, values include 'Millennials', 'Generation X', 'Generation Z').
+- generation_id: Identifier for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center to which the employee is assigned (string, values include 'direct', 'indirect', 'general', e.g., 'IT').
+- cost_center_id: Identifier for the cost center (string, e.g., 'COST001').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2023-01-01').
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-01-01').
+- tenure: Number of years the employee has been with the company (integer, e.g., 2).
+- service_period: Duration of service within a specific range (string, values include 'Less than 1 year', '1-2 years', etc.).
+- service_period_id: Identifier for the service period (string, e.g., 'SP001').
+- is_active: Indicates whether the employee is currently active (string, values include 'true', 'false').
+- movement_type: Type of movement the employee has undergone (string, values include 'Promotion', 'Mutation', 'Rotation').
+- movement_type_id: Identifier for the type of movement (string, e.g., 'MOVE001').
+- id: A unique identifier for each record in the table (string, e.g., 'record-12345').
+- movement_reason: Reason for the employee's movement within the company (string, values include 'Department Change', 'Career Development', 'Company Restructuring').
+- movement_reason_id: Identifier for the reason behind the movement (string, e.g., 'MR001').

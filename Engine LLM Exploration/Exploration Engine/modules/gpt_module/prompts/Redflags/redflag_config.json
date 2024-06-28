@@ -1,0 +1,48 @@
+[
+    {
+        "enabled" : "yes",
+        "title": "High Turnover",
+        "description": "Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Kualifikasi/Pendidikan yang Tidak Relevan",
+        "description": "Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Employment Overlap, bekerja di beberapa tempat secara bersamaan",
+        "description": "Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Employment Gap, celah ketenagakerjaan selama minimal 1 tahun",
+        "description": "Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat."
+    },
+    {
+        "enabled" : "no",
+        "title": "Mengecek keaslian tahun kelulusan dan pendidikan dengan di DIKTI",
+        "description": "Adanya integrasi dengan DIKTI untuk mengecek keaslian data pendidian, seperti tahun kelulusan dan pendidikan."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Durasi pendidikan",
+        "description": "Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya."
+    },
+    {
+        "enabled" : "yes",
+        "title": "GPA above 3.00, IPK minimal 3.00",
+        "description": "Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Inconsistent Career Path",
+        "description": "Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya."
+    },
+    {
+        "enabled" : "yes",
+        "title": "Non-Progressive Career Path",
+        "description": "Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag."
+    }
+  ]
+  

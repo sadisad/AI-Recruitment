@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #269062; }
+        #chatContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            height: 500px;
+            overflow-y: auto;
+            background-color: #b4dfcc;
+        }
+        .message {
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #e7e7e7;
+            max-width: 70%;
+        }
+        .userMessage {
+            align-self: flex-end;
+            background-color: #dcf8c6;
+        }
+        #responseForm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            max-width: 825px;
+        }
+
+        textarea {
+            flex-grow: 1;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #b4dfcc;
+            font-size: 16px;
+            width: 60%;
+        }
+        .file-upload-wrapper {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .file-upload {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file-btn {
+            padding: 10px 20px;
+            background-color: #0c2aa2;
+            color: white;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #0c2aa2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        textarea:disabled, button:disabled, .file-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">{{ page_title }}</h1>
+    <div id="chatContainer">
+        <!-- Messages will be appended here -->
+    </div>
+    <center>
+    <form id="responseForm" enctype="multipart/form-data">
+        <textarea id="response" name="responseText" placeholder="Type your response..." rows="2" required></textarea>
+        <button type="submit">Send</button>
+        <div class="file-upload-wrapper">
+            <input type="file" id="fileUpload" class="file-upload" name="fileUpload" accept=".pdf,.docx"/>
+            <button type="button" onclick="document.getElementById('fileUpload').click();" class="file-btn">Upload File</button>
+        </div>
+        </form>        
+    </form>
+    </center>
+
+    <script>
+        $(document).ready(function() {
+            function startInterview() {
+                $.get('{{ post_get_route }}', function(data) {
+                    appendMessage(data.next_question, false);
+                    enableInteraction();  // Enable interaction after initial question
+                });
+            }
+    
+            function appendMessage(message, isUser) {
+                const msgClass = isUser ? 'message userMessage' : 'message';
+                $('#chatContainer').append(`<div class="${msgClass}">${message}</div>`);
+                $('#chatContainer').scrollTop($('#chatContainer')[0].scrollHeight);
+            }
+    
+            function disableInteraction() {
+                $('#response').prop('disabled', true);
+                $('button').prop('disabled', true);
+            }
+    
+            function enableInteraction() {
+                $('#response').prop('disabled', false);
+                $('button').prop('disabled', false);
+            }
+    
+            startInterview();
+    
+            $('#responseForm').submit(function(e) {
+                e.preventDefault();
+                const userResponse = $('#response').val().trim(); // Get the text from textarea and trim any extra spaces
+                if (userResponse) { // Ensure we don't append empty messages
+                    appendMessage(userResponse, true);
+                }
+                disableInteraction();  // Disable input and buttons
+                submitResponse();
+            });
+    
+            function submitResponse() {
+                const formData = new FormData($('#responseForm')[0]);
+                formData.append('responseText', $('#response').val()); // Ensure responseText is included
+                $.ajax({
+                    url: '{{ post_get_route }}',
+                    type: 'POST',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function(data) {
+                        appendMessage(data.next_question, false);
+                        enableInteraction();  // Re-enable input and buttons
+                        $('#response').val('');  // Clear the textarea
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error occurred: " + error);
+                        enableInteraction();  // Re-enable input and buttons even if error occurs
+                    }
+                });
+            }
+    
+            // Handle pressing enter to submit without shift
+            $('#response').keypress(function(e) {
+                if (e.which == 13 && !e.shiftKey) {
+                    e.preventDefault();
+                    if (!$('#response').prop('disabled') && $('#response').val().trim()) { // Check also that input is not empty
+                        $('#responseForm').submit(); // Trigger form submission
+                    }
+                }
+            });
+    
+            $('#fileUpload').change(function() {
+                if ($(this).prop('files').length > 0) {
+                    const fileData = $('#fileUpload').prop('files')[0];
+                    appendMessage("Uploading file: " + fileData.name, true);
+                    disableInteraction();  // Disable interactions while file is being handled
+                    $('#responseForm').submit();
+                }
+            });
+        });
+    </script>    
+    
+</body>
+</html>

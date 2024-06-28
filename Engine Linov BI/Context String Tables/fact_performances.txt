@@ -1,0 +1,46 @@
+The 'fact_performances' table tracks and manages performance-related data within the organization. This table is essential for evaluating employee effectiveness, assessing performance trends, and supporting development initiatives. The table includes the following columns:
+- date: Date of the performance record (string, e.g., '2023-12-01').
+- employee_code: Unique code assigned to each employee (integer, e.g., 93496).
+- employee_name: Name of the employee (string, e.g., 'Taite Pancoast').
+- birth_place: Place of birth of the employee (string, e.g., 'Tiadiaye').
+- birth_date: Birth date of the employee (string, e.g., '1982-10-26').
+- phone: Contact phone number of the employee (string, e.g., '185-536-7476').
+- email_address: Email address of the employee (string, e.g., 'tpancoastng@irs.gov').
+- address: Residential address of the employee (string, e.g., '0543 Melby Center').
+- education_level: Education level attained by the employee (string, values include 'Bachelor', 'Master', 'Doctor', e.g., 'Bachelor').
+- education_level_id: Identifier for the education level (string, e.g., 'EL002').
+- work_location: Workplace location of the employee (string, e.g., 'Head Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Identifier for the gender of the employee (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for the marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for the nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'Finance').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Analyst').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Level of the job held by the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- join_date: Date the employee joined the company (string, e.g., '2020-11-07').
+- end_date: Date the employment is expected to end or contract termination date (string, e.g., '2024-07-12').
+- tenure: Number of years the employee has been with the company (integer, e.g., 3).
+- service_period: Service period within the company (string, e.g., '3-4 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP003').
+- is_active: Indicates if the employee is currently active within the company (boolean, e.g., True).
+- employee_id: Unique identifier for the employee (string, e.g., 'd54e05ba-f91b-461c-afa0-08e4261fb7cc').
+- file: Link to the employee's file or image (string, URL format, e.g., 'https://example.com/image.jpg').
+- current_performance: Current performance rating of the employee (integer, e.g., 92).
+- predictive_performance: Predicted future performance rating (integer, e.g., 84).
+- id: Unique identifier for the record (string, e.g., 'dc9379b8-9f86-4e53-ad32-44148a5125c9').

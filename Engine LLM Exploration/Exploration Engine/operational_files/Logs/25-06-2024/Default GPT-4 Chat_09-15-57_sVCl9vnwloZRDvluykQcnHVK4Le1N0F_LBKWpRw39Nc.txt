@@ -1,0 +1,4 @@
+user: Hai Chat!
+system: Hello! How can I assist you today?
+{'prompt_tokens': 10, 'completion_tokens': 9, 'total_tokens': 19}
+----------------

@@ -1,0 +1,4 @@
+The 'dim_training_method' table catalogs different methods of training employed within an organization. This table is utilized to classify and monitor various approaches to employee development and skill enhancement. The table includes the following columns:
+- id: Unique identifier for each training method (integer, currently missing in the provided data).
+- code: Unique code assigned to each training method (string, e.g., 'TM001').
+- name: Name describing the training method (string, e.g., 'By Employee'), which includes various formats such as training by employee, points system, etc.

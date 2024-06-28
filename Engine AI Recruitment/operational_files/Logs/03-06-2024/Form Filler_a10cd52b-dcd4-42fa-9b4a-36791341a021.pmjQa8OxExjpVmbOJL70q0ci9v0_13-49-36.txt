@@ -1,0 +1,39 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+blood_type : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+                     MOHAMMAD AUFAR, S.Kom.   CONTACT ME   Phone: 0817-7413-2920 (WA, Telegram)  Email: m.aufar12@gmail.com Address: Gudang Peluru Selatan II Blok N/341, Kebon Baru, Tebet, Jakarta Selatan, 12830  TECHNICAL SKILLS   PYTHON (Flask, Machine Learning, etc)  DOCKER (Linux, Containers) SQL (SQL Server, Postgre, MongoDB, MySQL, SQLite)  Microsoft Power (PowerBI, PowerAutomate, PowerApps) LLM Generative AI (OpenAI) ROBOT FRAMEWORK (RPA, Automation Testing, Selenium) CHATBOT FRAMEWORK (Rasa, Botpress) MICROSOFT TOOLS (Word, Excel, etc) ETL SOFTWARE (Apache Airflow)  CERTIFICATIONS   • Microsoft Technology Associate: Database Fundamentals • EPrT (English Proficiency Test) with a final score of 550 • Alison: Machine Learning in Python Environment • Dicoding: Cloud Practitioner Essentials (AWS Cloud)    LANGUAGES   INDONESIAN  ENGLISH   PROJECTS   github.com/Aufar12 EXPERIENCES   ESAP Tutor | Telkom University’s Language Center August 2018 – August 2019 | Bandung  • Keyrole : Teach freshmen of Telkom University basic English, both in Classes or ESAP Course.  • Teach foreigners student in Telkom University how to speak in Indonesian language properly.  Laboratory Assistant | EAD (Enterprise Application Development) Laboratory January 2017 – May 2020 | Bandung  • Keyrole : To Create practicum modules, Recap practicum’s student scores and presence, and Maintain EAD Lab’s Facility.  • Conducting application research and must Participate in Community Service and Programming Competition.  System Analyst Intern | PT. Infomedia Nusantara May 2019 – July 2019 | South Jakarta  • Keyrole : Ensure the project finishes on time and the product’s quality meets the customer requirement. • Prioritize tasks and schedule the task according to the task level. • Do testing and documentation of the project given to measure its quality.  Python & RPA Developer | PT. Astra Graphia IT, Tbk August 2020 – July 2022 | North Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Automation Program using Robot Framework (Robotic Process Automation)  • Creates Chatbots, Text-to-Speech Applications  Python Engineer | PT. Inti Corpora Teknologi July 2022 – Aug 2023 | Central Jakarta  • Keyrole : Develop Custom Python Modules using Front Arena Treasury Tools • Creates ATF (Arena Testing Framework) Automation Scripts using Robot Framework, Python and AEF Modules  • Creates Tasks and Reports such as excel, pdf, etc using Python, HTML, and XSLFO  Python Developer | PT. Hiro Amadeus Semesta Sep 2023 – Present | South Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Chatbot Engine using LLM OpenAI • Develop Scheduler Algorithm for NMS2 Fuel Delivery System • Develop and Maintain API’s for Multiple Engines    EDUCATION  2016 - 2020  Information System Student at Telkom University, Bandung   ACHIEVEMENTS & AWARDS  • Finalist in HOLOGY 2019, Competitive Programming Contest  • Participant in COMPSPHERE 2019, Programming Rush Competition   • Graduated with an accumulative GPA of 3.82  • Published an international scientific paper on ICoDSA 2020 (International Conference on Data Science and Its Applications) • Final Thesis is about Web Scraping, Web Development, and Machine Learning • Able to do freelance while doing full-time work at a company • Implementing Email Automation as a solution with various methods 
+system: name : MOHAMMAD AUFAR, S.Kom.
+--- Field Separator ---
+phone_number : 0817-7413-2920
+--- Field Separator ---
+blood_type : -
+--- Field Separator ---
+experiences : [{"title" : "ESAP Tutor", "description" : "Teach freshmen of Telkom University basic English, both in Classes or ESAP Course. Teach foreigners student in Telkom University how to speak in Indonesian language properly.", "duration" : "August 2018 – August 2019"}, {"title" : "Laboratory Assistant", "description" : "To Create practicum modules, Recap practicum’s student scores and presence, and Maintain EAD Lab’s Facility. Conducting application research and must Participate in Community Service and Programming Competition.", "duration" : "January 2017 – May 2020"}, {"title" : "System Analyst Intern", "description" : "Ensure the project finishes on time and the product’s quality meets the customer requirement. Prioritize tasks and schedule the task according to the task level. Do testing and documentation of the project given to measure its quality.", "duration" : "May 2019 – July 2019"}, {"title" : "Python & RPA Developer", "description" : "Developing Programs and Applications using Python. Creates Automation Program using Robot Framework (Robotic Process Automation). Creates Chatbots, Text-to-Speech Applications.", "duration" : "August 2020 – July 2022"}, {"title" : "Python Engineer", "description" : "Develop Custom Python Modules using Front Arena Treasury Tools. Creates ATF (Arena Testing Framework) Automation Scripts using Robot Framework, Python and AEF Modules. Creates Tasks and Reports such as excel, pdf, etc using Python, HTML, and XSLFO.", "duration" : "July 2022 – Aug 2023"}, {"title" : "Python Developer", "description" : "Developing Programs and Applications using Python. Creates Chatbot Engine using LLM OpenAI. Develop Scheduler Algorithm for NMS2 Fuel Delivery System. Develop and Maintain API’s for Multiple Engines.", "duration" : "Sep 2023 – Present"}]
+--- Field Separator ---
+{'prompt_tokens': 1119, 'completion_tokens': 452, 'total_tokens': 1571}
+----------------

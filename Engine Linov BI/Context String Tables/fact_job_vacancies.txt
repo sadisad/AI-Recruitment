@@ -1,0 +1,15 @@
+The 'fact_job_vacancies' table tracks and manages data related to job vacancies within the organization. This table is vital for managing recruitment processes and analyzing workforce requirements. The table includes the following columns:
+- id: Unique identifier for each job vacancy record (string, e.g., '59ca54ec-805a-4e77-bd25-97a6d9004efb').
+- job_vacancy_name: Title or name of the job vacancy (string, e.g., 'Legal Assistant').
+- salary_min: Minimum salary offered for the job vacancy (integer, e.g., 6000000).
+- salary_max: Maximum salary offered for the job vacancy (integer, e.g., 12000000).
+- publish_date: Date the job vacancy was published (string, format 'MM/DD/YYYY', e.g., '4/6/2024').
+- job_vacancy_status: Status of the job vacancy (string, values include 'OPEN', 'CLOSE', e.g., 'CLOSE').
+- organization: Name of the organization department or division advertising the vacancy (string, e.g., 'Operations').
+- organization_id: Code for the organization department or division (string, e.g., 'OR006').
+- company: Name of the company where the job vacancy is located (string, e.g., 'Johnson Enterprises').
+- company_id: Code for the company (string, e.g., 'CO004').
+- job_position: Position offered in the job vacancy (string, e.g., 'Manager').
+- job_position_id: Code for the job position (string, e.g., 'JP002').
+
+This table allows HR departments to effectively monitor open roles, track the status of various job postings, and manage hiring processes in a structured manner.
