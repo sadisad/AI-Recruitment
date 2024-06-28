@@ -82,24 +82,21 @@ def create_parser(file_required, **extra_args):
         parser.add_argument(name, **details)
     return parser
 
-@namespace_manual_faq.route('/initialize_faq_manual')
-class initialize_faq_manual(Resource):
+@namespace_ai_faq.route('/initialize_faq_chatbot')
+class initialize_faq_chat(Resource):
     @cross_origin()
+
     def get(self):
+
         try:
-            # Inisialisasi variabel sesi untuk chat
-            session['usage'], session['bool_chat'], session['history'] = [], True, []
-
-            # Menggenerate id_chat yang unik menggunakan UUID
-            id_chat = str(uuid.uuid4())
-            session['id_chat'] = id_chat  # Menyimpan id_chat ke dalam session
-
-            # Mengatur tipe API untuk chat yang sesuai
-            initialize_api_type('FAQ Manual Chat')
+            session['usage'], session['bool_chat'] = [], True
+            initialize_api_type('FAQ Functional Cosine')
+            starting_prompt = gpt_engine.initialize_faq_cosine()
+            session['history'] = [{"role": "user", "content": starting_prompt}]
+            id_chat = session['gpt_api_type']
+            row_id, answer = query_gpt(primary_key={"id_chat" : id_chat})
             
-            # Mengembalikan response dengan id_chat yang baru digenerate
-            return {'chat_id': id_chat, 'message': 'Chat With Functional Team Has Started.'}, 200
-        
+            return {'chat_id' : id_chat, 'message': answer}, 200
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
@@ -181,13 +178,29 @@ class questions_list(Resource):
 @namespace_manual_faq.route('/initialize_faq_manual')
 class initialize_faq_manual(Resource):
     
+    parser = reqparse.RequestParser().add_argument('question_context', type=str,required=True, help='Please insert question context', location='form')
+    @api.expect(parser)
     @cross_origin()
-    def get(self):
+    def post(self):
         try:
-            session['usage'], session['bool_chat'],session['history'] = [], True, []
-            initialize_api_type('FAQ Manual Chat')
-            id_chat = session['gpt_api_type']
-            return {'chat_id' : id_chat, 'message': 'Chat With Functional Team Has Started.'}, 200
+            args = self.parser.parse_args()
+            question_context = args['question_context']
+            
+            # Inisialisasi variabel sesi untuk chat
+            session['usage'], session['bool_chat'], session['history'] = [], True, []
+
+            # Menggenerate id_chat yang unik menggunakan UUID
+            id_chat = str(uuid.uuid4())
+            session['id_chat'] = id_chat  # Menyimpan id_chat ke dalam session
+            
+            # Mengatur tipe API untuk chat yang sesuai
+            initialize_api_type('FAQ Chat Room')
+            
+            # create room di db
+            db_ops.create_room_chat('FAQ Chat Room', id_chat, question_context)
+            
+            # Mengembalikan response dengan id_chat yang baru digenerate
+            return {'chat_id': id_chat, 'message': 'Terima Kasih atas pesan anda. Mohon menunggu untuk sementara waktu. Tiket anda sedang dalam proses penugasan ke tim Customer Service kami.'}, 200
         
         except Exception as e:
             print(e)
@@ -195,9 +208,10 @@ class initialize_faq_manual(Resource):
 
 def create_parser():
     parser = reqparse.RequestParser()
-    parser.add_argument('id_chat', type=str, required=True, help='ID Chat is required', location='form')
-    parser.add_argument('message', type=str, required=True, help='Message is required', location='form')
+    parser.add_argument('room_chat', type=str, required=True, help='ID Room Chat is required', location='form')
     parser.add_argument('role', type=str, required=True, help='Role must be either user or functional', location='form', choices=('user', 'functional'))
+    parser.add_argument('user_id', type=str, required=True, help='User Id is required', location='form')
+    parser.add_argument('message', type=str, required=True, help='Message is required', location='form')
     return parser
 
 @namespace_manual_faq.route('/faq_manual/chat', methods=['POST'])
@@ -209,57 +223,44 @@ class FAQChat(Resource):
     def post(self):
         try:
             args = self.parser.parse_args()
-            id_chat = args['id_chat']
-            message = args['message']
+            room_chat = args['room_chat']
             role = args['role']
+            user_id = args['user_id']
+            message = args['message']
 
-            db_ops.upsert_manual_chat('FAQ Manual Chat', id_chat, message, role)
-            return {'chat_id': id_chat, 'message': message, 'status': 'Success'}, 200
+            insert_to_db = db_ops.upsert_manual_chat('FAQ Chat Room', room_chat, message, role, user_id)
+            print(insert_to_db)
 
+            if isinstance(insert_to_db, str) and "Success" in insert_to_db:
+                return {'room_chat': room_chat, 'message': message, 'status': 'Success'}, 200
+            else:
+                return {'message': 'Room ID not found in the database'}, 404
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
 
-@namespace_manual_faq.route('/faq_manual/<string:id_chat>')
+@namespace_manual_faq.route('/faq_manual/<string:room_id>')
 class get_faq_manual_chat(Resource):
     @cross_origin()
-    def get(self, id_chat):
+    def get(self, room_id):
         try:
             # Using id_chat to fetch data
-            result = db_ops.get_row_data({"id_chat": id_chat}, 'faq_manual_chat', all_row=False)
+            result = db_ops.get_row_data({"room_id": room_id}, 'faq_manual_chat', all_row=False)
             if result and 'chat_transcripts' in result:
                 transcripts = result['chat_transcripts']
+                question_context = result.get('question_context', 'No context available')
                 sorted_transcripts = {k: transcripts[k] for k in sorted(transcripts)}
-                return sorted_transcripts, 200
+                response = {
+                    "room_id": room_id,
+                    "question_context": question_context,
+                    "chat_transcripts": sorted_transcripts
+                }
+                return jsonify(response), 200
             else:
-                return {'message': "Chat history not found"}, 404
+                return jsonify({"message": "Chat history not found"}), 404
         except Exception as e:
             print(e)
-            return {'message': str(e)}, 400
-
-# @namespace_manual_faq.route('/faq_manual/get_knowledge/<string:id_chat>')
-# class get_faq_manual_chat_knowledge(Resource):
-#     @cross_origin()
-#     def get(self, id_chat):
-
-#         try:
-#             session['usage'], session['bool_chat'], session['history'] = [], True, []
-#             initialize_api_type('Manual Chat Knowledge')
-        
-#             result = db_ops.get_row_data({"id_chat" : id_chat}, 'faq_manual_chat', all_row=False)
-#             chat_transcript_user, faq_chat_functional = result['chat_transcript_user'], result['chat_transcript_functional']
-#             all_chat = {**chat_transcript_user, **faq_chat_functional}
-#             sorted_all_chat = dict(OrderedDict(sorted(all_chat.items())))
-
-#             gpt_engine.initialize_faq_cosine()
-#             prompt_knowledge = gpt_engine.faq_chat_manual.replace('<<< Transkrip >>>', str(sorted_all_chat))
-#             row_id, answer = query_gpt(primary_key={"id_chat" : id_chat}, one_time_message=prompt_knowledge)
-            
-#             return answer
-        
-#         except Exception as e:
-#             print(e)
-#             return {'message': str(e)}, 400
+            return jsonify({"message": str(e)}), 400
         
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(host='0.0.0.0', port=55555, debug=True)

@@ -111,7 +111,30 @@ class DatabaseOperations:
         
 ##### ===================== FAQ MANUAL CHAT ===================== #####
 
-    def upsert_manual_chat(self, engine_type, id_chat, message, role):
+    def create_room_chat(self, engine_type, room_id, question_context):
+        config = self.session_types[engine_type]
+        table_name = config['table_name'].replace('dbo.', '')
+        tbl_mongo_ai = self.db_ai_mongo[table_name]
+        
+        print(table_name)
+        
+        last_updated = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        timestamp_key = last_updated.replace(':', '_').replace('-', '_').replace(' ', '_')
+        
+        try:
+            result = tbl_mongo_ai.update_one(
+                {"room_id": room_id},
+                {"$set": {"question_context": question_context}},
+                upsert=True
+            )
+            return "Success" if result.modified_count or result.upserted_id else "No changes made"
+        except Exception as e:
+            print(f"MongoDB - Error in create_room_chat: {str(e)}")
+            return str(e)
+        
+        
+
+    def upsert_manual_chat(self, engine_type, room_id, message, role, user_id):
         config = self.session_types[engine_type]
         table_name = config['table_name'].replace('dbo.', '')
         tbl_mongo_ai = self.db_ai_mongo[table_name]
@@ -121,20 +144,26 @@ class DatabaseOperations:
 
         # Prepare the update with a separate id_chat field
         chat_entry = {
-            f"chat_transcripts.{timestamp_key}.content": message,
             f"chat_transcripts.{timestamp_key}.role": role,
-            "last_updated": last_updated,
-            "id_chat": id_chat  # Adding the id_chat field
+            f"chat_transcripts.{timestamp_key}.user_id": user_id,
+            f"chat_transcripts.{timestamp_key}.content": message,
+            "last_updated": last_updated
         }
 
         try:
-            # Use id_chat for filtering and avoid using it as _id directly
-            result = tbl_mongo_ai.update_one(
-                {"id_chat": id_chat},  # Filter documents by id_chat
-                {'$set': chat_entry},
-                upsert=True
-            )
-            return "Success" if result.modified_count or result.upserted_id else "No changes made"
+            # Check if room_id exists
+            existing_record = tbl_mongo_ai.find_one({"room_id": room_id})
+            
+            if existing_record:
+                # Use id_chat for filtering and avoid using it as _id directly
+                result = tbl_mongo_ai.update_one(
+                    {"room_id": room_id},
+                    {"$set": chat_entry},
+                    upsert=False 
+                )
+                return "Success" if result.modified_count else "No changes made"
+            else:
+                return "Room ID not found in the database", 404
         except Exception as e:
             print(f"MongoDB - Error in upsert_manual_chat: {str(e)}")
             return str(e)
