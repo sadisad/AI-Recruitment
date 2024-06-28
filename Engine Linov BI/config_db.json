@@ -1,0 +1,8 @@
+{
+    "username" : "hiramsa",
+    "password" : "473669761379bef52638ea19f59e8ecf7c7f039b006866a0d2bb3dedcb01a18c",
+    "host" : "147.139.166.89",
+    "port" : "3754",
+    "database_name" : "dwh",
+    "schema" : "hra003"
+}

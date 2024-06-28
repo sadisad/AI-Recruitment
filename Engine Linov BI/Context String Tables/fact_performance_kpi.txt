@@ -1,0 +1,44 @@
+The 'fact_performance_kpi' table tracks and manages performance-related data within the organization. This table is crucial for monitoring employee performance, managing KPI assessments, and guiding development efforts. The table includes the following columns:
+- employee_code: Unique code for each employee (integer, e.g., 81411).
+- employee_name: Name of the employee (string, e.g., 'Hyatt Goggins').
+- birth_place: Place of birth of the employee (string, e.g., 'Governor’s Harbour').
+- birth_date: Birth date of the employee (string, e.g., '1992-02-12').
+- phone: Phone number of the employee (string, e.g., '756-729-5462').
+- email_address: Email address of the employee (string, e.g., 'hgoggins0@joomla.org').
+- address: Residential address of the employee (string, e.g., '0134 Golden Leaf Court').
+- education_level: Education level of the employee (string, values include 'High School', 'Doctor', 'Master', 'Bachelor', e.g., 'High School').
+- education_level_id: Identifier for the education level (string, e.g., 'EL001').
+- work_location: Workplace location of the employee (string, e.g., 'South Jakarta').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Identifier for the gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for the nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'IT').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Developer').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Job level of the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- join_date: Date the employee joined the company (string, e.g., '2020-11-07').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2023-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 3).
+- service_period: Duration of current service period (string, e.g., '3-4 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP003').
+- is_active: Whether the employee is currently active (boolean, e.g., True).
+- date: Date of the KPI record (string, e.g., '2021-04-13').
+- current_kpi: Current KPI score of the employee (decimal, e.g., 97.0).
+- target: Target KPI score for the employee (decimal, e.g., 100.0).
+- id: Unique identifier for the KPI record (string, e.g., '3c3bbc41-bb4e-4959-9beb-04738c363bff').

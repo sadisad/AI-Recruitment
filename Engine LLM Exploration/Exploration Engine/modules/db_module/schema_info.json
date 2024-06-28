@@ -1,0 +1,128 @@
+{
+    "Interview": {
+      "table_name": "dbo.interview_transcripts",
+      "columns": [
+        "id_interview",
+        "last_updated",
+        "chat_transcript",
+        "nama_kandidat",
+        "kelebihan",
+        "kekurangan",
+        "skor",
+        "status_kelulusan",
+        "alasan_kelulusan"
+      ]
+    },
+    "Form Filler": {
+      "table_name": "dbo.cv_form_filler",
+      "columns": [
+        "id_form_filler",
+        "last_updated",
+        "name",
+        "current_job_title",
+        "summary",
+        "phone_number",
+        "birth_of_date",
+        "address",
+        "email",
+        "experiences",
+        "educations",
+        "projects",
+        "certifications",
+        "awards",
+        "publications",
+        "volunteers",
+        "languages"
+      ]
+    },
+    "Redflags_old": {
+      "table_name": "dbo.cv_redflags_old",
+      "columns": [
+        "id_redflags",
+        "last_updated",
+        "name",
+        "employment_overlap",
+        "employment_gap",
+        "high_turnover",
+        "non_progressive_career_path",
+        "inconsistent_career_path",
+        "absence_of_organization_activity",
+        "absence_of_endorsement_reference"
+      ]
+    },
+    "Redflags": {
+      "table_name": "dbo.cv_redflags",
+      "columns": [
+        "id_redflags",
+        "last_updated",
+        "name",
+        "high_turnover_status",
+        "high_turnover_desc",
+        "relevant_background_status",
+        "relevant_background_desc",
+        "employment_overlap_status",
+        "employment_overlap_desc",
+        "employment_gap_status",
+        "employment_gap_desc",
+        "dikti_status",
+        "dikti_desc",
+        "years_edu_status",
+        "years_edu_desc",
+        "gpa_status",
+        "gpa_desc",
+        "non_progressive_career_path_status",
+        "non_progressive_career_path_desc",
+        "inconsistent_career_path_status",
+        "inconsistent_career_path_desc"
+      ]
+    },
+    "CV Ranker": {
+      "table_name": "dbo.cv_ranker",
+      "columns": [
+        "id_cv_ranker",
+        "last_updated",
+        "job_title",
+        "job_requirement",
+        "rank_1",
+        "rank_2",
+        "rank_3",
+        "rank_lainnya"
+      ]
+    },
+    "Tehnical Test": {
+      "table_name": "dbo.tehnical_test",
+      "columns": [
+        "id_tehnical_test",
+        "last_updated",
+        "chat_transcript",
+        "skor",
+        "status_kelulusan",
+        "kesimpulan"
+      ]
+    },
+    "One CV Reviewer": {
+      "table_name": "dbo.cv_scorer",
+      "columns": [
+        "id_cv_score",
+        "last_updated",
+        "fk_job_id",
+        "job_title",
+        "candidate_name",
+        "total_masa_kerja_relevan",
+        "skills",
+        "kelebihan",
+        "kekurangan",
+        "skor",
+        "alasan_skor",
+        "kesimpulan"
+      ]
+    },
+    "FAQ Functional Cosine": {
+      "table_name": "dbo.cosine_faq_functional",
+      "columns": [
+        "id_faq_functional_cosine",
+        "last_updated",
+        "chat_transcript"
+      ]
+    }
+  }

@@ -1,0 +1,91 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Job Yang Dilamar : Payroll Expert
+Role Overview : Handling multiple payroll activities
+Job Description : Handling all payroll end to end process for business entities :
+
+1. Payroll computation & Payoff
+1.1 Maintain access to timesheet data and all payroll component information;
+1.2 Responsible for payroll data into administrative databases and software programs, annually evaluating for payroll software provider is included.
+1.3 Review payroll reconciliations: salaries, benefits, tax deduction, commission ect;
+Ensure payment Bank transfer: maintaining accurate records of payroll data documentation and transaction;
+Responsible for preparing and distributing income statements/payslip;
+Handling social insurance affairs;
+
+2. Tax treatment
+2.1 Maintaining and coordinating with Tax Consultant for PPH21;
+2.2 Processing Tax Article 21 (PPH21) report to E-Bupot monthly & annually;
+2.3 Understand, maintain and always update related to all policy and regulation for payroll, tax & social insurance ect;
+
+3. Daily data provision
+3.1 Handling payroll data monthly accrue;
+3.2 Preparing periodic payroll reports for review by management;
+3.3 Responding to payroll-related inquiries and resolving concerns;
+Job Requirement : Bachelor Degree in accounting, business or other related field may be preferred;
+A minimum 5 year experience working in payroll or similar role;
+Familiar with payroll system software and experience working with accounting;
+Working knowledge of basic accounting principles and payroll practice;
+Excellent communication and interpersonal skills;
+Strong organizational and time management skills;
+Detail oriented, data sensitive, honest and good attitude;
+
+------
+CV:
+Bima Aji SaktiEast Java, Indonesia • ajisaktibimo@gmail.com • +62 895339022461 • https://www.linkedin.com/in/bima-aji-sakti/EXPERIENCEOBJECTIVE:HIGHLY SKILLED COMPUTER VISION PROFESSIONAL WITH 1 YEAR OF EXPERIENCE IN YOLO, TENSORFLOW, PYTORCH, AND OPENCV. SEEKING ACHALLENGING ROLE TO LEVERAGE MY EXPERTISE AND CONTRIBUTE TO CUTTING-EDGE PROJECTS IN THE FIELD OF COMPUTER VISION.SKILLS:- COMPUTER VISION: YOLO, TENSORFLOW, PYTORCH, OPENCV- PROGRAMMING LANGUAGES: PYTHON, C++- DEEP LEARNING: CONVOLUTIONAL NEURAL NETWORKS (CNNS), RECURRENT NEURAL NETWORKS (RNNS)- IMAGE PROCESSING: FEATURE EXTRACTION, OBJECT DETECTION, IMAGE SEGMENTATION- DATA ANALYSIS AND VISUALIZATION: NUMPY, PANDAS, MATPLOTLIB- SOFTWARE TOOLS: GIT, JUPYTER NOTEBOOK, VISUAL STUDIO CODETAMATECH INDONUSAJakarta Selatan(Remote)Artiﬁcial Intelligence Engineer2022-Present●Developed and implemented computer vision algorithms object detection and tracking.●Collaborated with cross-functional teams to gather requirements, address challenges, and deliver high-qualitycomputer vision solutions.●Conducted experiments and evaluated model performance using relevant metrics and benchmarks includetraining with CUDA to improve model detection.Project Experience●E-Tilang-Optimized models for real-time performance and accuracy, achieving [provide speciﬁc results, improveddetection accuracy by 10% from 85% True Positive with 5% False Positive to 93% True Positive with 2.5%False Positive].-Implement working on speed detection with object tracking and using new algorithms to ensure moreaccuracy and precision.-Improved Object Detection speed using multithreading process to achieve 60 fps .-Increase Plate Recognition, Make And Model Recognition And Other Technologies Into Our ProductEDUCATIONCISCO NETWORKING ACADEMY & PYTHON INSTITUTE2022PROGRAMMING ESSENTIAL IN PYTHONIoT Fundamentals: Big Data & AnalyticsDIPONEGORO UNIVERSITYSemarang, Jawa TengahDIPLOMA 3, Instrumentation and Electronics Engineer2016-2021ADDITIONAL INFORMATION●Technical Skills: •OOAD • Vision Development• C++ • PyTorch • Tensorﬂow • Deep Learning •Data Science • Recurrent Neural Networks (RNN) • Artiﬁcial Intelligence (AI) • Deep Neural Networks(DNN) • SQL •●Certiﬁcations: Data Science Bootcamp (2022), Passed Resume Worded examinations●Final Year Project: Digital Adjustable 0-100 Volt Circuit Breaker Tester
+system: Here is the evaluation of the CV based on the provided criteria:
+
+Name: Bima Aji Sakti
+--- Field Separator ---
+high_turnover: Safe
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan: Red Flag <-> The candidate's education background is in Instrumentation and Electronics Engineering, and their work experience is in computer vision and artificial intelligence, which is not directly relevant to the Payroll Expert role being applied for.
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan: Safe
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun: Safe
+--- Field Separator ---
+durasi_pendidikan: Safe
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3: Red Flag <-> The candidate's GPA is not mentioned, which raises a red flag.
+--- Field Separator ---
+inconsistent_career_path: Red Flag <-> The candidate's career path is inconsistent, moving from an Instrumentation and Electronics Engineering background to a Computer Vision/AI Engineer role, and now applying for a Payroll Expert position.
+--- Field Separator ---
+non-progressive_career_path: Safe
+{'completion_time': 0.700302, 'completion_tokens': 253, 'prompt_time': 0.25605171, 'prompt_tokens': 1710, 'queue_time': None, 'total_time': 0.9563537099999999, 'total_tokens': 1963}
+----------------

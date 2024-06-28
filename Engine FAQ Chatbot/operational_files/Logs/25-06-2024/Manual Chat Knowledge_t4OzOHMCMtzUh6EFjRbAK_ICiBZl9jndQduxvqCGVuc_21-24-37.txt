@@ -1,0 +1,5 @@
+system: Tidak ada percakapan yang berhubungan dengan HRIS dalam transkrip percakapan yang diberikan. Oleh karena itu, rekap pertanyaan dan jawaban tidak dapat dibuat.
+
+ jika ada transkrip percakapan lain yang berhubungan dengan HRIS, saya siap membantu membuat rekap pertanyaan dan jawaban nya.
+{'completion_tokens': 77, 'prompt_tokens': 450, 'total_tokens': 527, 'completion_time': 0.22, 'prompt_time': 0.075805649, 'queue_time': None, 'total_time': 0.295805649}
+----------------
