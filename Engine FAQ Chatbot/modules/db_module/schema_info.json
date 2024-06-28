@@ -12,8 +12,17 @@
     "columns": [
       "id_faq_manual_chat",
       "last_updated",
-      "chat_transcript_user",
-      "chat_transcript_functional"
+      "question_context",
+      "chat_transcripts"
+    ]
+  },
+  "FAQ Chat Room": {
+    "table_name": "dbo.faq_manual_chat",
+    "columns": [
+      "room_id",
+      "last_updated",
+      "question_context",
+      "chat_transcripts"
     ]
   }
 }
