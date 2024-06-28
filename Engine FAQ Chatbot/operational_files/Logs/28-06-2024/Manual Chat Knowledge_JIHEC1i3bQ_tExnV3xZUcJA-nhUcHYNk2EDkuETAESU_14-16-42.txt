@@ -1,0 +1,3 @@
+system: Karena transkrip percakapan tidak berhubungan dengan HRIS, maka rekap pertanyaan dan jawaban tidak ada.
+{'completion_tokens': 29, 'prompt_tokens': 444, 'total_tokens': 473, 'completion_time': 0.082857143, 'prompt_time': 0.079510485, 'queue_time': None, 'total_time': 0.16236762799999999}
+----------------
