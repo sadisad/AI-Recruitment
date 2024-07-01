@@ -101,7 +101,10 @@ class InitializeFaqChat(Resource):
             initialize_api_type('FAQ Functional Cosine')
             starting_prompt = gpt_engine.initialize_faq_cosine()
             session['history'] = [{"role": "user", "content": starting_prompt}]
-            id_chat = session['gpt_api_type']
+            
+            id_chat = str(uuid.uuid4())
+            session['id_chat'] = id_chat
+            
             row_id, answer = query_gpt(primary_key={"id_chat": id_chat})
             last_activity_dict[id_chat] = datetime.now()
             return {'chat_id': id_chat, 'message': answer}, 200
@@ -118,10 +121,12 @@ class FaqChatbot(Resource):
         try:
             args = self.parser.parse_args()
             user_response = args['user_answer']
-            id_chat = session['gpt_api_type']
-            if id_chat not in last_activity_dict:
+            
+            if 'id_chat' not in session or id_chat not in last_activity_dict:
                 return {'message': 'Session not found or has expired.'}, 400
-
+            
+            id_chat = session['id_chat']
+            
             session['history'].append({"role": "user", "content": user_response})
             row_id, result = query_gpt(primary_key={"id_chat": id_chat})
             last_activity_dict[id_chat] = datetime.now()
@@ -174,6 +179,21 @@ class QuestionsList(Resource):
             print(e)
             return {'message': str(e)}, 400
 
+@namespace_ai_faq.route('/faq_chatbot/end_session/<string:id_chat>')
+class EndFaqManualSession(Resource):
+    @cross_origin()
+    def get(self, id_chat):
+        try:
+            # Clear the session data for the given chat ID
+            last_activity_dict.pop(id_chat, None)
+            with app.app_context():
+                if 'id_chat' in session and session['id_chat'] == id_chat:
+                    session.clear()
+            return {'message': 'Session ended successfully.'}, 200
+        except Exception as e:
+            print(e)
+            return {'message': str(e)}, 400
+        
 ##### ===================== FAQ MANUAL CHAT ===================== #####
 
 @namespace_manual_faq.route('/initialize_faq_manual')
