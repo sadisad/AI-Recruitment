@@ -53,6 +53,9 @@ signal.signal(signal.SIGTERM, clear_sessions)
 def initialize_api_type(api_type):
     current_time = datetime.now().strftime("%H-%M-%S")
     session['gpt_api_type'] = api_type + '_' + str(session.sid) + '_' + current_time
+    
+    session_id = session.sid
+    session['session_id'] = session_id
 
 def query_gpt(primary_key={}, additional_dict={}, one_time_message=''):
     answer, json_response = gpt_engine.hit_groq_api(session, one_time_message)
@@ -102,12 +105,12 @@ class InitializeFaqChat(Resource):
             starting_prompt = gpt_engine.initialize_faq_cosine()
             session['history'] = [{"role": "user", "content": starting_prompt}]
             
-            id_chat = str(uuid.uuid4())
-            session['id_chat'] = id_chat
+            room_id = str(uuid.uuid4())
+            session['room_id'] = room_id
             
-            row_id, answer = query_gpt(primary_key={"id_chat": id_chat})
-            last_activity_dict[id_chat] = datetime.now()
-            return {'chat_id': id_chat, 'message': answer}, 200
+            row_id, answer = query_gpt(primary_key={"room_id": room_id})
+            last_activity_dict[room_id] = datetime.now()
+            return {'room_id': room_id, 'message': answer}, 200
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
@@ -122,34 +125,34 @@ class FaqChatbot(Resource):
             args = self.parser.parse_args()
             user_response = args['user_answer']
             
-            if 'id_chat' not in session or id_chat not in last_activity_dict:
+            if 'session_id' not in session:
                 return {'message': 'Session not found or has expired.'}, 400
             
-            id_chat = session['id_chat']
+            room_id = session['room_id']
             
             session['history'].append({"role": "user", "content": user_response})
-            row_id, result = query_gpt(primary_key={"id_chat": id_chat})
-            last_activity_dict[id_chat] = datetime.now()
+            row_id, result = query_gpt(primary_key={"room_id": room_id})
+            last_activity_dict[room_id] = datetime.now()
 
             if '<--->' in result and 'Pertanyaan' in result:
                 result = result.replace('<--->', '').replace('Pertanyaan :', '').strip()
                 session['user_question'] = result
                 result, session['list_cosine'], session['question_str'] = gpt_engine.faq_cosine_similarity(result)
                 session['history'].append({"role": "user", "content": result})
-                row_id, result = query_gpt(primary_key={"id_chat": id_chat}, one_time_message=result)
-                row_id, result = query_gpt(primary_key={"id_chat": id_chat}, one_time_message=result)
+                row_id, result = query_gpt(primary_key={"room_id": room_id}, one_time_message=result)
+                row_id, result = query_gpt(primary_key={"room_id": room_id}, one_time_message=result)
             
-            return {'chat_id': id_chat, 'message': result}, 200
+            return {'room_id': room_id, 'message': result}, 200
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
 
-@namespace_ai_faq.route('/faq_chatbot/<string:id_chat>')
+@namespace_ai_faq.route('/faq_chatbot/<string:room_id>')
 class GetFaqChatbotChat(Resource):
     @cross_origin()
-    def get(self, id_chat):
+    def get(self, room_id):
         try:
-            result = db_ops.get_row_data({"id_chat": id_chat}, 'cosine_faq_functional', all_row=False)
+            result = db_ops.get_row_data({"room_id": room_id}, 'cosine_faq_functional', all_row=False)
             chat_history, pattern = [], r'---.*---'
             
             for i in ast.literal_eval(result['chat_history']):
@@ -179,15 +182,15 @@ class QuestionsList(Resource):
             print(e)
             return {'message': str(e)}, 400
 
-@namespace_ai_faq.route('/faq_chatbot/end_session/<string:id_chat>')
+@namespace_ai_faq.route('/faq_chatbot/end_session/<string:room_id>')
 class EndFaqManualSession(Resource):
     @cross_origin()
-    def get(self, id_chat):
+    def get(self, room_id):
         try:
             # Clear the session data for the given chat ID
-            last_activity_dict.pop(id_chat, None)
+            last_activity_dict.pop(room_id, None)
             with app.app_context():
-                if 'id_chat' in session and session['id_chat'] == id_chat:
+                if 'room_id' in session and session['room_id'] == room_id:
                     session.clear()
             return {'message': 'Session ended successfully.'}, 200
         except Exception as e:
@@ -211,18 +214,18 @@ class InitializeFaqManual(Resource):
             session['usage'], session['bool_chat'], session['history'] = [], True, []
 
             # Menggenerate id_chat yang unik menggunakan UUID
-            id_chat = str(uuid.uuid4())
-            session['id_chat'] = id_chat  # Menyimpan id_chat ke dalam session
+            room_id = str(uuid.uuid4())
+            session['room_id'] = room_id  # Menyimpan id_chat ke dalam session
             
             # Mengatur tipe API untuk chat yang sesuai
             initialize_api_type('FAQ Chat Room')
             
             # create room di db
-            db_ops.create_room_chat('FAQ Chat Room', id_chat, question_context)
+            db_ops.create_room_chat('FAQ Chat Room', room_id, question_context)
             
             # Mengembalikan response dengan id_chat yang baru digenerate
-            last_activity_dict[id_chat] = datetime.now()
-            return {'chat_id': id_chat, 'message': 'Terima Kasih atas pesan anda. Mohon menunggu untuk sementara waktu. Tiket anda sedang dalam proses penugasan ke tim Customer Service kami.'}, 200
+            last_activity_dict[room_id] = datetime.now()
+            return {'room_id': room_id, 'message': 'Terima Kasih atas pesan anda. Mohon menunggu untuk sementara waktu. Tiket anda sedang dalam proses penugasan ke tim Customer Service kami.'}, 200
         
         except Exception as e:
             print(e)
@@ -265,15 +268,15 @@ class FAQChat(Resource):
             print(e)
             return {'message': str(e)}, 400
 
-@namespace_manual_faq.route('/faq_manual/end_session/<string:id_chat>')
+@namespace_manual_faq.route('/faq_manual/end_session/<string:room_id>')
 class EndFaqManualSession(Resource):
     @cross_origin()
-    def get(self, id_chat):
+    def get(self, room_id):
         try:
             # Clear the session data for the given chat ID
-            last_activity_dict.pop(id_chat, None)
+            last_activity_dict.pop(room_id, None)
             with app.app_context():
-                if 'id_chat' in session and session['id_chat'] == id_chat:
+                if 'room_id' in session and session['room_id'] == room_id:
                     session.clear()
             return {'message': 'Session ended successfully.'}, 200
         except Exception as e:
@@ -303,18 +306,18 @@ class GetFaqManualChat(Resource):
             print(e)
             return jsonify({"message": str(e)}), 400
 
-@namespace_manual_faq.route('/faq_manual/get_knowledge/<string:id_chat>')
+@namespace_manual_faq.route('/faq_manual/get_knowledge/<string:room_id>')
 class GetFaqManualChatKnowledge(Resource):
     @cross_origin()
-    def get(self, id_chat):
+    def get(self, room_id):
         try:
             session['usage'], session['bool_chat'], session['history'] = [], True, []
             initialize_api_type('Manual Chat Knowledge')
             
-            result = db_ops.get_row_data({"room_id": id_chat}, 'faq_manual_chat', all_row=False)
+            result = db_ops.get_row_data({"room_id": room_id}, 'faq_manual_chat', all_row=False)
             
             # Log the retrieved result for debugging
-            print(f"Retrieved result for id_chat {id_chat}: {result}")
+            print(f"Retrieved result for room_id {room_id}: {result}")
 
             if not result or 'chat_transcripts' not in result:
                 return {'message': 'Chat transcripts not found or incomplete'}, 404
@@ -326,13 +329,13 @@ class GetFaqManualChatKnowledge(Resource):
             prompt_knowledge = gpt_engine.faq_chat_manual.replace('<<< Transkrip >>>', str(sorted_chat_transcripts))
             
             # Capture the response from query_gpt function
-            response = query_gpt(primary_key={"id_chat": id_chat}, one_time_message=prompt_knowledge)
+            response = query_gpt(primary_key={"room_id": room_id}, one_time_message=prompt_knowledge)
             print(f"query_gpt response: {response}")
 
             # Handle the response appropriately
             if len(response) == 2:
                 row_id, answer = response
-                return {'chat_id': id_chat, 'message': answer}, 200
+                return {'room_id': room_id, 'message': answer}, 200
             else:
                 return {'message': 'Unexpected response from query_gpt'}, 500
         
