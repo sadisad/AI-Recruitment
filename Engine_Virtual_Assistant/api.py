@@ -41,17 +41,14 @@ ns = api.namespace('virtual assistant', description='API For virtual assistant')
 class api_demo(Resource):
     @cross_origin()
     def post(self):
-        print(request.data)
         try:
-            if request.data:
-                payload = request.json
-                
-                db_ops.upsert_dummy_data('virtual ai test', payload)
-            return  {'message': 'success'}, 200
-        
+            payload = request.json
+            db_ops.upsert_dummy_data('Virtual Assistant', payload)
+            return {'message': 'success'}, 200
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
+
         
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

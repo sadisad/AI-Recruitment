@@ -79,23 +79,21 @@ def transcribe_audio(file_path):
         return transcription.text
 
 def automate_demo(file_path):
-    
     transcribed_text = transcribe_audio(file_path)
-    
     print(f"Transcribed Text: {transcribed_text}")
     
     startingPrompt = ai_engine.initialize_prompt(transcribed_text)
-
     result = ai_engine.generate_response(startingPrompt)
     
     print(f"Result: {result}")
     
     try:
-        requests.post('http://192.168.30.130:5000/virtual assistant/test', data=result)
-    except Exception as e:
+        response = requests.post('http://192.168.30.130:5000/virtual%20assistant/test', json=result)
+        response.raise_for_status()
+        print(f"Response: {response.json()}")
+    except requests.exceptions.RequestException as e:
         print(f"Error sending request: {e}")
-        
-        
+
 
     
 

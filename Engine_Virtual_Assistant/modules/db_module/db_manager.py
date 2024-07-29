@@ -19,7 +19,11 @@ class DatabaseOperations:
         port = int(credentials['port'])
         host = credentials['host']
         
-        
+        print('------------')
+        print(username)
+        print(password)
+        print(db_name) 
+        print('------------')
         
         if username != '':
             uri = f"mongodb://{username}:{password}@{host}:{port}/{db_name}"
@@ -44,11 +48,12 @@ class DatabaseOperations:
         dummy_entry = input
 
         try:
-            result = tbl_mongo_ai.update_one(
+            result = tbl_mongo_ai.find_one_and_update(
+                {"identifier_field": dummy_entry.get("identifier_field", "default_value")},  # Replace with appropriate identifier field
                 {"$set": dummy_entry},
-                upsert=False
+                upsert=True
             )
-            return "Success" if result.modified_count else "No changes made"
+            return "Success" if result else "No changes made"
         except Exception as e:
-            print(f"MongoDB - Error in upsert_manual_chat: {str(e)}")
+            print(f"message: {str(e)}")
             return str(e)
