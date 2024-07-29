@@ -10,13 +10,21 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "hiramsa2024_gpt4"  # Replace with a real secret key
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SESSION_FILE_DIR"] = "bi_gpt_session_folder"
+app.config['APPLICATION_ROOT'] = '/bigpt'  # Set the application root to /bigpt
 Session(app)
-cors = CORS(app)
+
+# Configure CORS
+cors = CORS(app, resources={r"/bigpt/*": {"origins": "*"}})
+
+# Initialize bi_gpt_from_db instance
 bi_gpt = bi_gpt_from_db()
 
+# Initialize API with custom prefix
 api = Api(app, version='1.0', title='API Linov5 BI-GPT',
-        description='Dokumentasi API Linov5 BI-GPT')
-ns = api.namespace('LinovAIRecruitment', description='API Linov5 BI-GPT')
+          description='Dokumentasi API Linov5 BI-GPT', prefix='/bigpt')
+
+# Define namespace
+ns = api.namespace('LinovBIGPT', description='API Linov5 BI-GPT')
 
 def create_parser(file_required, **extra_args):
     parser = reqparse.RequestParser()
@@ -27,23 +35,35 @@ def create_parser(file_required, **extra_args):
     return parser
 
 @ns.route('/bi-gpt')
-class create_cv_extractor(Resource):
-    parser = create_parser(False,                              
-                        question={'type': str, 'required': True, 'help': 'Question to Ask', 'location': 'form'},
-                        table_name={'type': str, 'required': True, 'help': 'Nama Tabel Yang Ingin di Query', 'location': 'form'})
+class CreateCVExtractor(Resource):
+    parser = create_parser(False,
+                           question={'type': str, 'required': True, 'help': 'Question to Ask', 'location': 'form'})
+
     @api.expect(parser)
     @cross_origin()
-
     def post(self):
         try:
             args = self.parser.parse_args()
-            question, table_name = args['question'], args['table_name']
-            result = bi_gpt.answer_question(question, table_name)
+            question = args['question']
+            
+            starting_prompt = bi_gpt.initialize_relevant_tables(question)
+            
+            session['history'] = [{"role": "user", "content": starting_prompt}]
+            
+            answer, json_response, table_names = bi_gpt.hit_openai_api(session, starting_prompt)
+            
+            print(answer)
+            # print(json_response)
+            
+            for name in table_names:
+                print(name)
+            
+            result = bi_gpt.answer_question(question, table_names)
+            
             return result, 200
-        
         except Exception as e:
             print(e)
             return {'message': str(e)}, 400
-        
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=54321, debug=True)

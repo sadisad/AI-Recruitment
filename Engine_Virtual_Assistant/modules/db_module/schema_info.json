@@ -1,5 +1,9 @@
 {
-    "uri": "mongodb://localhost:27017/",
-    "database": "LinovAI-VirtualAssistant",
-    "collection": "absences"
+    "virtual ai test": {
+        "table_name": "dbo.virtual_assistant_test",
+        "columns": [
+            "nama",
+            "pesan"
+        ]
+    }
 }

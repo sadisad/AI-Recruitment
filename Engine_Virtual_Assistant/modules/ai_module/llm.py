@@ -1,19 +1,65 @@
 import json
 from groq import Groq
+import ast
 import os
 
 class LanguageModel:
     def __init__(self):
         config_path = os.path.join(os.path.dirname(__file__), 'groq_config_llm.json')
         with open(config_path, 'r') as f:
-            config = json.load(f)
-        self.client = Groq(api_key=config['api_key'])
-        self.model = config['model']
+            self.configllm = json.load(f)
+        self.client = Groq(api_key=self.configllm['api_key'])
+        self.model = self.configllm['model']
+        
+        self.dir_path = os.path.dirname(os.path.realpath(__file__))
     
     def generate_response(self, text):
-        response = self.client.completions.create(
-            prompt=text,
-            model=self.model,
-            max_tokens=150
+        chat_completion = self.client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": text
+                }
+            ],
+            model=self.configllm['model'],
         )
-        return response['choices'][0]['text']
+        
+        message = chat_completion.choices[0].message.content
+        
+        dict_form = self.format_response(message)
+        
+        return dict_form
+    
+    def read_intro_prompt(self, file_name):
+        f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")
+        str_prompt = f.read()
+        f.close()
+        return str_prompt
+    
+    def initialize_prompt(self, command):
+        prompt = self.read_intro_prompt('prompt/intro_prompt.txt')
+        prompt = prompt.replace('<-----command----->', command)
+        
+        jsonformat = self.read_intro_prompt('payload/demo.txt')
+        prompt = prompt.replace('<--json format-->', jsonformat)
+        
+        return prompt
+    
+    def format_response(self, response):
+        dict_form = {}
+        result = response.split('--- Field Separator ---')
+
+        for i in result:
+
+            if i:
+                key, value = i.split(':', 1)
+                key, value = key.strip('\n').strip(), value.strip('\n').strip()
+    
+                try:
+                    dict_form[key] = ast.literal_eval(value)
+                except:
+                    dict_form[key] = value
+
+        return dict_form
+        
+

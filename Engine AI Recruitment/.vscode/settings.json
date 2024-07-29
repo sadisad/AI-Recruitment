@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./modules/db_module",
+        "./modules/file_processor_module",
+        "./modules/gpt_module"
+    ]
+}
