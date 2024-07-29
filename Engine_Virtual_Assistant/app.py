@@ -5,50 +5,56 @@ from datetime import datetime
 import sys
 import os
 from groq import Groq
+import requests
 
+from flask import jsonify
 # Tambahkan subdirektori ke sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'modules', 'db_module'))
 
-from db_manager import save_absence
+# Memuat file konfigurasi LLM
+config_llm_path = os.path.join(os.path.dirname(__file__), 'modules', 'ai_module', 'groq_config_llm.json')
+
+from modules.ai_module.llm import LanguageModel
+ai_engine = LanguageModel()
 
 # Perekaman Suara
-def record_audio(output_filename, duration=5):
-    chunk = 1024  # Record in chunks of 1024 samples
-    sample_format = pyaudio.paInt16  # 16 bits per sample
-    channels = 1
-    fs = 44100  # Record at 44100 samples per second
-    p = pyaudio.PyAudio()  # Create an interface to PortAudio
+# def record_audio(output_filename, duration=5):
+#     chunk = 1024  # Record in chunks of 1024 samples
+#     sample_format = pyaudio.paInt16  # 16 bits per sample
+#     channels = 1
+#     fs = 44100  # Record at 44100 samples per second
+#     p = pyaudio.PyAudio()  # Create an interface to PortAudio
 
-    print('Recording')
+#     print('Recording')
 
-    stream = p.open(format=sample_format,
-                    channels=channels,
-                    rate=fs,
-                    frames_per_buffer=chunk,
-                    input=True)
+#     stream = p.open(format=sample_format,
+#                     channels=channels,
+#                     rate=fs,
+#                     frames_per_buffer=chunk,
+#                     input=True)
 
-    frames = []  # Initialize array to store frames
+#     frames = []  # Initialize array to store frames
 
-    # Store data in chunks for the specified duration
-    for _ in range(0, int(fs / chunk * duration)):
-        data = stream.read(chunk)
-        frames.append(data)
+#     # Store data in chunks for the specified duration
+#     for _ in range(0, int(fs / chunk * duration)):
+#         data = stream.read(chunk)
+#         frames.append(data)
 
-    # Stop and close the stream
-    stream.stop_stream()
-    stream.close()
-    # Terminate the PortAudio interface
-    p.terminate()
+#     # Stop and close the stream
+#     stream.stop_stream()
+#     stream.close()
+#     # Terminate the PortAudio interface
+#     p.terminate()
 
-    print('Finished recording')
+#     print('Finished recording')
 
-    # Save the recorded data as a WAV file
-    wf = wave.open(output_filename, 'wb')
-    wf.setnchannels(channels)
-    wf.setsampwidth(p.get_sample_size(sample_format))
-    wf.setframerate(fs)
-    wf.writeframes(b''.join(frames))
-    wf.close()
+#     # Save the recorded data as a WAV file
+#     wf = wave.open(output_filename, 'wb')
+#     wf.setnchannels(channels)
+#     wf.setsampwidth(p.get_sample_size(sample_format))
+#     wf.setframerate(fs)
+#     wf.writeframes(b''.join(frames))
+#     wf.close()
 
 # Konversi Suara Menjadi Teks
 config_path = os.path.join(os.path.dirname(__file__), 'modules', 'ai_module', 'groq_config_whisper.json')
@@ -67,34 +73,33 @@ def transcribe_audio(file_path):
             model=model,
             prompt="",  # Optional
             response_format="json",  # Optional
-            language="en",  # Optional
+            language="id",  # Optional
             temperature=0.0  # Optional
         )
         return transcription.text
 
-# Otomatisasi Pengajuan Absen
-def automate_absence_submission(file_path):
-    text = transcribe_audio(file_path)
-    if text is not None:
-        print("Recognized Text:", text)
+def automate_demo(file_path):
+    
+    transcribed_text = transcribe_audio(file_path)
+    
+    print(f"Transcribed Text: {transcribed_text}")
+    
+    startingPrompt = ai_engine.initialize_prompt(transcribed_text)
 
-        # Contoh parsing dari teks yang dikenali
-        text_lower = text.lower()
-        if "absen" in text_lower or "izin" in text_lower or "cuti" in text_lower:
-            name = "Alief"  # Parsing nama dari teks, bisa ditingkatkan dengan regex atau NLP
-            date = datetime.now().strftime("%Y-%m-%d")  # Menggunakan tanggal saat ini
-            reason = "Medical Leave"  # Parsing alasan dari teks, bisa ditingkatkan dengan regex atau NLP
+    result = ai_engine.generate_response(startingPrompt)
+    
+    print(f"Result: {result}")
+    
+    try:
+        requests.post('http://192.168.30.130:5000/virtual assistant/test', data=result)
+    except Exception as e:
+        print(f"Error sending request: {e}")
+        
+        
 
-            # Simpan ke MongoDB
-            save_absence(name, date, reason)
-
-            print("Pengajuan absen otomatis berhasil")
-        else:
-            print("Tidak ada permintaan absen yang terdeteksi")
-    else:
-        print("Tidak ada teks yang dikenali")
+    
 
 # Langkah-langkah Pengujian
 output_filename = 'test_absence.wav'
-record_audio(output_filename, duration=10)
-automate_absence_submission(output_filename)
+# record_audio(output_filename, duration=10)
+automate_demo(output_filename)

@@ -1,0 +1,1146 @@
+i have several table separated with "===============================" below
+
+===============================
+The 'dim_learning_method' table stores information about various methods of learning employed within an organization. This table is used to categorize and track different approaches to employee development and training. The table includes the following columns:
+- id: Unique identifier for each learning method (integer, currently missing in the provided data).
+- code: Unique code assigned to each learning method (string, e.g., 'MD001').
+- name: Name describing the learning method (string, e.g., 'By Employee').
+===============================
+The 'dim_loan_metric' table stores information about different metrics used to analyze and report on loans within an organization. This table is instrumental for financial analysis, providing key performance indicators for loans. The table includes the following columns:
+- id: Unique identifier for each loan metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each loan metric (string, e.g., 'LM001').
+- name: Description of the loan metric (string, e.g., 'Amount'), which includes various metrics such as total loan amount, number of loans, average amount per loan, average loan tenure, and outstanding loans.
+===============================
+The 'dim_metrics' table catalogs different metrics employed for performance analysis and operational reporting within an organization. This table is crucial for data-driven decision-making, providing key metrics that influence strategic planning and operational efficiency. The table includes the following columns:
+- id: Unique identifier for each metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each metric (string, e.g., 'MT001').
+- name: Name of the metric (string, e.g., 'Person'), which covers various aspects such as cost, person count, and hours worked.
+===============================
+The 'dim_reimbursement_metric' table stores information about different metrics used to analyze and report on reimbursements within an organization. This table is essential for financial and operational analysis, providing key indicators for assessing reimbursement processes. The table includes the following columns:
+- id: Unique identifier for each reimbursement metric (integer, currently missing in the provided data).
+- code: Unique code assigned to each reimbursement metric (string, e.g., 'RM001').
+===============================
+The 'dim_training_method' table catalogs different methods of training employed within an organization. This table is utilized to classify and monitor various approaches to employee development and skill enhancement. The table includes the following columns:
+- id: Unique identifier for each training method (integer, currently missing in the provided data).
+- code: Unique code assigned to each training method (string, e.g., 'TM001').
+- name: Name describing the training method (string, e.g., 'By Employee'), which includes various formats such as training by employee, points system, etc.
+===============================
+The 'dimensions' table stores information about different dimensions used to categorize various aspects of employment and organizational structure within an organization. This table is essential for data analysis and reporting, providing key categorization frameworks that align with business processes. The table includes the following columns:
+- id: Unique identifier for each dimension (integer, currently missing in the provided data).
+- code: Unique code assigned to each dimension (string, e.g., 'POS' for Job Position).
+- name: Description of the dimension (string, e.g., 'Job Position'), which includes dimensions such as job position, job title, job level, employment type, and service period.
+===============================
+The 'fact_attendances' table contains employee attendance records with the following columns:
+- date: The date of attendance (e.g., '2024-01-01')
+- employee_code: A unique identifier for the employee (e.g., '49792')
+- employee_name: The name of the employee (e.g., 'Carlyn Purton')
+- birth_place: The birthplace of the employee (e.g., 'Qiaonan')
+- birth_date: The birth date of the employee (e.g., '1991-07-05')
+- phone: The phone number of the employee (e.g., '558-648-7782')
+- email_address: The email address of the employee (e.g., 'cpurtonk@home.pl')
+- address: The address of the employee (e.g., '6 Northview Place')
+- education_level: The education level of the employee (e.g., 'Doctor')
+- education_level_id: The ID for the education level (e.g., 'EL004')
+- work_location: The work location of the employee (e.g., 'West Jakarta')
+- work_location_id: The ID for the work location (e.g., 'WL002')
+- gender: The gender of the employee (e.g., 'Female')
+- gender_id: The ID for the gender (e.g., 'GD002')
+- marital_status: The marital status of the employee (e.g., 'Married')
+- marital_status_id: The ID for the marital status (e.g., 'MS002')
+- employment_type: The type of employment (e.g., 'Full-Time')
+- employment_type_id: The ID for the employment type (e.g., 'ET001')
+- job_level: The job level of the employee (e.g., 'Senior Level')
+- job_level_id: The ID for the job level (e.g., 'JL003')
+- job_title: The job title of the employee (e.g., 'Manager')
+- job_title_id: The ID for the job title (e.g., 'JT002')
+- job_position: The job position of the employee (e.g., 'Manager')
+- job_position_id: The ID for the job position (e.g., 'JP001')
+- organization: The organization the employee works for (e.g., 'Sales')
+- organization_id: The ID for the organization (e.g., 'OR001')
+- company: The company the employee works for (e.g., 'Smith & Co.')
+- company_id: The ID for the company (e.g., 'CO003')
+- age: The age of the employee (e.g., '33')
+- age_range: The age range of the employee (e.g., '31-35 years')
+- age_range_id: The ID for the age range (e.g., 'AR004')
+- generation: The generation of the employee (e.g., 'Millennials')
+- generation_id: The ID for the generation (e.g., 'GN002')
+- cost_center: The cost center the employee belongs to (e.g., 'Indirect')
+- cost_center_id: The ID for the cost center (e.g., 'CC002')
+- join_date: The join date of the employee (e.g., '2020-10-10')
+- end_date: The end date of the employee's contract (e.g., '2025-04-30')
+- tenure: The tenure of the employee in years (e.g., '5')
+- service_period: The service period of the employee (e.g., '5-6 years')
+- service_period_id: The ID for the service period (e.g., 'SP004')
+- is_active: The active status of the employee (e.g., 'true')
+- total_duration_breakdown: The total duration breakdown of the attendance (e.g., 'on time')
+- method: The method used to record attendance (e.g., 'Face Recognition')
+- attendance_type: The type of attendance recorded (e.g., 'Late')
+- attendance_source: The source of the attendance record (e.g., 'Mobile ESS')
+- attendance_source_id: The ID for the attendance source (e.g., 'AS001')
+- attendance_type_id: The ID for the attendance type (e.g., 'AT003')
+- method_id: The ID for the method used to record attendance (e.g., 'AM002')
+- total_duration_breakdown_id: The ID for the total duration breakdown (e.g., 'TB002')
+- employee_id: A unique identifier for the employee (e.g., '87814b7c-f211-4e60-87d-cc59b0669a...')
+- id: A unique identifier for the record (e.g., '87814b7c-f211-4e60-87d-cc59b0669a...')
+- clock_in: The clock-in time of the employee (e.g., '09:01:00')
+- clock_out: The clock-out time of the employee (e.g., '18:00:00')
+- attendance_location: The location where the attendance was recorded (e.g., 'WFO')
+- work_group: The work group the employee belongs to (e.g., 'Direksi Team')
+- work_group_id: The ID for the work group (e.g., 'WG004')
+- attendance_location_id: The ID for the attendance location (e.g., 'AL001')
+- fte: The full-time equivalent (e.g., '96').
+===============================
+The 'fact_business_trip_list_reimbursement' table contains records related to employee business trips and reimbursements with the following columns:
+- date: The date of the record entry (e.g., '2024-01-01')
+- employee_nik: A unique identifier for the employee (e.g., '66822')
+- employee_name: The name of the employee (e.g., 'Rowney Pegden')
+- birth_place: The birthplace of the employee (e.g., 'Szczawnica')
+- birth_date: The birth date of the employee (e.g., '1983-10-21')
+- phone: The phone number of the employee (e.g., '280-550-2915')
+- email_address: The email address of the employee (e.g., 'rpegden2x@a8.net')
+- address: The address of the employee (e.g., '83 Shasta Court')
+- education: The education level of the employee (e.g., 'High School')
+- education_id: The ID for the education level (e.g., 'EL001')
+- work_location: The work location of the employee (e.g., 'East Jakarta')
+- work_location_id: The ID for the work location (e.g., 'WL002')
+- gender: The gender of the employee (e.g., 'Male')
+- gender_id: The ID for the gender (e.g., 'GD001')
+- marital_status: The marital status of the employee (e.g., 'Married')
+- marital_status_id: The ID for the marital status (e.g., 'MS002')
+- employment_type: The type of employment (e.g., 'Full-Time')
+- employment_type_id: The ID for the employment type (e.g., 'ET001')
+- job_level: The job level of the employee (e.g., 'Mid Level')
+- job_level_id: The ID for the job level (e.g., 'JL002')
+- job_title: The job title of the employee (e.g., 'Senior Analyst')
+- job_title_id: The ID for the job title (e.g., 'JT003')
+- job_position: The job position of the employee (e.g., 'Analyst')
+- job_position_id: The ID for the job position (e.g., 'JP002')
+- organization: The organization the employee works for (e.g., 'Finance')
+- organization_id: The ID for the organization (e.g., 'OR002')
+- company: The company the employee works for (e.g., 'Smith & Co.')
+- company_id: The ID for the company (e.g., 'CO001')
+- age: The age of the employee (e.g., '40')
+- age_range: The age range of the employee (e.g., '36-40 years')
+- age_range_id: The ID for the age range (e.g., 'AR003')
+- generation: The generation of the employee (e.g., 'Generation X')
+- generation_id: The ID for the generation (e.g., 'GN001')
+- cost_center: The cost center the employee belongs to (e.g., 'Direct')
+- cost_center_id: The ID for the cost center (e.g., 'CC001')
+- join_date: The join date of the employee (e.g., '2015-06-15')
+- end_date: The end date of the employee's contract (e.g., '2025-12-31')
+- tenure: The tenure of the employee in years (e.g., '10')
+- service_period: The service period of the employee (e.g., '9-10 years')
+- service_period_id: The ID for the service period (e.g., 'SP003')
+- is_active: The active status of the employee (e.g., 'true')
+- status: The current status of the reimbursement (e.g., 'Approved')
+- status_id: The ID for the status (e.g., 'ST001')
+- employee_id: A unique identifier for the employee (e.g., '45d09f93-1c2e-49f0-a8ce-06d44fa3383c')
+- transaction_no: The transaction number associated with the reimbursement (e.g., '22')
+- application: The application through which the trip was organized (e.g., '-')
+- destination: The destination of the business trip (e.g., 'Luar Negeri - Japan')
+- overseas_type: The type of overseas trip (e.g., 'Japan')
+- overseas_japan: Specific location in Japan (e.g., 'Tokyo')
+- date_of_departure: The departure date for the trip (e.g., '2020-11-20')
+- id: A unique identifier for the record (e.g., '809cb1e5-a892-42e6-9446-d0eea660e7e0')
+- domestic_type: The type of domestic trip (e.g., '-')
+- claim_amount: The amount claimed for reimbursement (e.g., '3527112')
+===============================
+The 'fact_business_trip_settlement_reimbursement' table collects and tracks extensive data related to business trips and their associated reimbursements within the organization. This table is pivotal for management reporting and analysis of business travel expenses and employee trip details. The table includes the following columns:
+- date: The date the record was created (YYYY-MM-DD, e.g., '2024-03-01').
+- employee_nik: Numeric identifier for the employee (integer).
+- employee_name: Full name of the employee (string, e.g., 'Osbert Atwel').
+- birth_place: Birthplace of the employee (string, e.g., 'Jinfeng').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1976-10-18').
+- phone: Contact phone number of the employee (string, e.g., '753-929-5207').
+- email_address: Email address of the employee (string, e.g., 'oatwel3v@chronoengine.com').
+- address: Residential address of the employee (string, e.g., '85450 Autumn Leaf Avenue').
+- education: Education level of the employee (string, values include 'Bachelor', 'Master', 'High School').
+- education_id: Code for the education level (string, e.g., 'EL002').
+- work_location: The workplace location of the employee (string, e.g., 'Headquarters').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_id: Code for the gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- status: Current status of the employee (string, e.g., 'Active').
+- status_id: Code for the status (string, e.g., 'ST001').
+- employee_id: Identifier for the employee (string, e.g., '96b0b098-b618-4c9e-ab08-96e9da348ab0').
+- transaction_number: Transaction number associated with the reimbursement (string, e.g., 'TN123456').
+- destination: Destination of the business trip (string, e.g., 'Tokyo').
+- domestic_type: Type of domestic trip (string, e.g., 'Local').
+- overseas_type: Type of overseas trip (string, e.g., 'International').
+- date_departure: Departure date of the business trip (YYYY-MM-DD, e.g., '2025-10-27').
+- time_departure: Departure time of the business trip (string, e.g., '15:00').
+- date_arrival: Arrival date of the business trip (YYYY-MM-DD, e.g., '2025-08-19').
+- time_arrival: Arrival time of the business trip (string, e.g., '08:00').
+- days/nights: Duration of the trip in days/nights (string, e.g., '4/3').
+- overseas_japan: Specific location in Japan, if applicable (string, e.g., 'Tokyo').
+- id: Unique identifier for each record (string, e.g., 'e8a95fa1-9b05-49af-8023-11a7fda19eed').
+- claim_amount: Amount claimed for the trip (integer, e.g., 1781734).
+===============================
+The 'fact_candidate' table collects comprehensive data about candidates involved in the recruitment process of the organization. This table is crucial for analyzing and optimizing recruitment strategies, offering detailed insights into candidate profiles and application statuses. The table includes the following columns:
+- candidate_id: Unique identifier for the candidate (string, e.g., 'ce6f458d-c10d-406e-abea-ca9d7184b678').
+- candidate_name: Full name of the candidate (string, e.g., 'Mattias Mengue').
+- email: Email address of the candidate (string, e.g., 'edunkinson0@opera.com').
+- gender: Gender of the candidate (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD002').
+- phone: Contact phone number of the candidate (string, e.g., '+51 (128) 394-2052').
+- age: Age of the candidate (integer, e.g., 29).
+- age_range: Age range of the candidate (string, values include '21-25 years', '26-30 years', etc.).
+- age_range_id: Code for the age range (string, e.g., 'AR003').
+- generation: Generation classification of the candidate (string, values include 'Millennials', 'Generation Z', etc.).
+- generation_id: Code for the generation (string, e.g., 'GN002').
+- recruitment_stage: Current stage of the recruitment process for the candidate (string, values include 'Interview User', 'Offering', 'Hiring').
+- recruitment_stage_id: Code for the recruitment stage (string, e.g., 'RS0005').
+- applied_job_vacancy: Title of the job vacancy applied for (string, e.g., 'Web Developer I').
+- applied_job_vacancy_id: Code for the job vacancy (string, e.g., '21bbe5c1-c342-40fc-92cc-fb68c482e417').
+- apply_date: Date when the candidate applied (YYYY-MM-DD, e.g., '2024-04-21').
+- education: Education level of the candidate (string, values include 'Master', 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL002').
+- is_active: Indicates whether the recruitment process for the candidate is still active (boolean, e.g., True).
+===============================
+The 'fact_competencies' table is designed to track and analyze employee competencies and performance metrics within the organization. This table is essential for HR and management teams to monitor, evaluate, and predict employee performance. The table includes the following columns:
+- date: The date the record was created or last updated (YYYY-MM-DD, e.g., '2023-12-01').
+- employee_code: Numeric identifier for the employee (integer, e.g., 93496).
+- employee_name: Full name of the employee (string, e.g., 'Taite Pancoast').
+- birth_place: Birthplace of the employee (string, e.g., 'Tiadiaye').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1982-10-26').
+- phone: Contact phone number of the employee (string, e.g., '185-536-7476').
+- email_address: Email address of the employee (string, e.g., 'tpancoastng@irs.gov').
+- address: Residential address of the employee (string, e.g., '0543 Melby Center').
+- education_level: Education level of the employee (string, values include 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Code for the education level (string, e.g., 'EL002').
+- work_location: The workplace location of the employee (string, e.g., 'Headquarters').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- employee_id: Identifier for the employee (string, e.g., 'd54e05ba-f91b-461c-afa0-08e4261fb7cc').
+- file: URL to a file or image related to the employee (string, e.g., 'https://example.com/employee/profile.jpg').
+- current_competency: Current competency score of the employee (integer, e.g., 92).
+- predictive_competency: Predicted future competency score of the employee (integer, e.g., 84).
+- id: Unique identifier for each record (string, e.g., 'dc9379b8-9f86-4e53-ad32-44148a5125c9').
+===============================
+The 'fact_donation_reimbursement' table tracks and manages data related to employee donation claims and reimbursements. This table is crucial for the financial management of donations made by employees and their subsequent reimbursements. The table includes the following columns:
+- date: The date the reimbursement record was created (YYYY-MM-DD, e.g., '2022-03-17').
+- employee_nik: Numeric identifier for the employee (integer, e.g., 65651).
+- employee_name: Full name of the employee (string, e.g., 'Edouard Warren').
+- birth_place: Birthplace of the employee (string, e.g., 'Almalagués').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1983-01-29').
+- phone: Contact phone number of the employee (string, e.g., '770-852-4539').
+- email_address: Email address of the employee (string, e.g., 'ewarrend@goo.gl').
+- address: Residential address of the employee (string, e.g., '4 Dapin Place').
+- education: Education level of the employee (string, values include 'High School', 'Master', 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL001').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- status: Current status of the employee (string, e.g., 'Approved').
+- status_id: Code for the status (string, e.g., 'ST001').
+- employee_id: Identifier for the employee (string, e.g., '54a36f8e-97e7-4ba1-8aeb-78199d0e9f00').
+- donation_request_no: Donation request number (string, e.g., 'KRM/HTREDR01/06052024/0003').
+- donation_type: Type of donation made (string, values include 'Bencana Alam', 'Pernikahan', 'Hiburan').
+- claim_amount: Amount claimed for the donation (integer, e.g., 3682452).
+- paid_amount: Amount paid out for the donation (integer, e.g., 5147787).
+- payroll_period: Payroll period when the donation was processed (string, e.g., 'MARCH 2022').
+- id: Unique identifier for each record (string, e.g., 'c0c7ce88-8e03-4fd3-b687-3fc009a5fde0').
+===============================
+The 'fact_employee_gap_competency' table is pivotal in HR management, focusing on tracking and analyzing employee competencies and their development within the organization. It aids in identifying competency gaps and planning necessary training or development interventions. The table includes the following columns:
+- date: The date on which the competency assessment was recorded (YYYY-MM-DD, e.g., '2020-02-28').
+- employee_id: Numeric identifier for the employee (integer, e.g., 81196).
+- employee_name: Full name of the employee (string, e.g., 'Jorry McGeachy').
+- birth_place: Birthplace of the employee (string, e.g., 'Mojogajeh').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1976-08-18').
+- phone: Contact phone number of the employee (string, e.g., '479-472-2168').
+- email_address: Email address of the employee (string, e.g., 'jmcgeachyy@sbwire.com').
+- address: Residential address of the employee (string, e.g., '72 5th Park').
+- education: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL003').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- competency_name: Name of the competency being assessed (string, e.g., 'Komunikasi').
+- target_competency_score: Target competency score that the employee should achieve (integer, e.g., 5).
+- current_competency_score: Current competency score of the employee (integer, e.g., 2).
+- gap_competency: The gap between the current and target competency scores (integer, e.g., 3).
+- id: Unique identifier for each record (string, e.g., 'fb8a3bd7-3f40-4636-bf9a-d6d178d1ae89').
+===============================
+The 'fact_employee_hires' table contains employee hire records with the following columns:
+- date: The date of the hire (e.g., '2023-01-01')
+- employee_id: A unique identifier for the employee (e.g., '12345')
+- employee_name: The name of the employee (e.g., 'John Doe')
+- birth_place: The birthplace of the employee (e.g., 'New York')
+- birth_date: The birth date of the employee (e.g., '1990-01-01')
+- phone: The phone number of the employee (e.g., '123-456-7890')
+- email_address: The email address of the employee (e.g., 'john.doe@example.com')
+- address: The address of the employee (e.g., '123 Main St, New York, NY')
+- education_level: The education level of the employee (e.g., 'Bachelor')
+- education_level_id: The ID for the education level (e.g., 'EDU001')
+- work_location: The work location of the employee (e.g., 'New York Office')
+- work_location_id: The ID for the work location (e.g., 'LOC001')
+- gender: The gender of the employee (e.g., 'Male')
+- gender_id: The ID for the gender (e.g., 'GEND001')
+- marital_status: The marital status of the employee (e.g., 'Single')
+- marital_status_id: The ID for the marital status (e.g., 'MAR001')
+- employment_type: The type of employment (e.g., 'Permanent')
+- employment_type_id: The ID for the employment type (e.g., 'EMP001')
+- job_level: The job level of the employee (e.g., 'Junior')
+- job_level_id: The ID for the job level (e.g., 'JOB001')
+- job_title: The job title of the employee (e.g., 'Software Engineer')
+- job_title_id: The ID for the job title (e.g., 'TITLE001')
+- job_position: The job position of the employee (e.g., 'Developer')
+- job_position_id: The ID for the job position (e.g., 'POS001')
+- organization: The organization the employee works for (e.g., 'IT Department')
+- organization_id: The ID for the organization (e.g., 'ORG001')
+- company: The company the employee works for (e.g., 'Tech Corp')
+- company_id: The ID for the company (e.g., 'COMP001')
+- age: The age of the employee (e.g., '30')
+- age_range: The age range of the employee (e.g., '30-35')
+- age_range_id: The ID for the age range (e.g., 'AGE001')
+- generation: The generation of the employee (e.g., 'Millennial')
+- generation_id: The ID for the generation (e.g., 'GEN001')
+- cost_center: The cost center the employee belongs to (e.g., 'IT')
+- cost_center_id: The ID for the cost center (e.g., 'COST001')
+- join_date: The join date of the employee (e.g., '2023-01-01')
+- end_date: The end date of the employee's contract (e.g., '2025-01-01')
+- tenure: The tenure of the employee in years (e.g., '2')
+- service_period: The service period of the employee (e.g., '2-3 years')
+- service_period_id: The ID for the service period (e.g., 'SP001')
+- is_active: The active status of the employee (e.g., 'true')
+- event_reason: The reason for the hiring event (e.g., 'New Hire')
+- id: A unique identifier for the record (e.g., 'record-12345')
+===============================
+The 'fact_employee_learning' table tracks and manages data related to the learning and development activities of employees within the organization. This table is essential for overseeing employee training programs and their completion status. The table includes the following columns:
+- date: The date the learning record was created (YYYY-MM-DD, e.g., '2022-02-12').
+- employee_id: Numeric identifier for the employee (integer, e.g., 72890).
+- employee_name: Full name of the employee (string, e.g., 'Jerrome Cairney').
+- birth_place: Birthplace of the employee (string, e.g., 'Lorut').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1979-06-30').
+- phone: Contact phone number of the employee (string, e.g., '333-459-0427').
+- email_address: Email address of the employee (string, e.g., 'jcairney5b@angelfire.com').
+- address: Residential address of the employee (string, e.g., '8905 Merrick Place').
+- education: Education level of the employee (string, values include 'High School', 'Master', 'Doctor', e.g., 'High School').
+- education_id: Code for the education level (string, e.g., 'EL001').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced', e.g., 'Married').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor', e.g., 'Full-time').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive', e.g., 'Mid').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50', e.g., '31-40').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z', e.g., 'Millennials').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years', e.g., '3-5 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- progress_status: Current status of the employee's learning progress (string, e.g., 'On Progress').
+- learning_list: List of learning programs the employee is enrolled in (string, e.g., 'Employee Engagement').
+- learning_list_id: Code for the learning list (string, e.g., 'LL003').
+- progress_status_id: Code for the progress status (string, e.g., 'PS002').
+- realization_score: Score realized by the employee on completion of learning (integer, e.g., 76).
+- id: Unique identifier for each record (string, e.g., '9da1d143-680d-44c4-b05c-bf579073f9d6').
+- target_score: Target score set for the employee in the learning program (integer, e.g., 110).
+
+===============================
+The 'fact_employee_loan' table tracks and manages data related to the loans provided to employees within the organization. This table is crucial for managing financial assistance and loan repayments. The table includes the following columns:
+- date: The date the loan record was created (YYYY-MM-DD, e.g., '2022-07-12').
+- employee_id: Numeric identifier for the employee (integer, e.g., 38980).
+- employee_name: Full name of the employee (string, e.g., 'Margit Sanders').
+- birth_place: Birthplace of the employee (string, e.g., 'Sigou').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '2000-06-08').
+- phone: Contact phone number of the employee (string, e.g., '652-574-9640').
+- email_address: Email address of the employee (string, e.g., 'msanders2g@newsvine.com').
+- address: Residential address of the employee (string, e.g., '33 La Follette Terrace').
+- education: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor', e.g., 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL004').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced', e.g., 'Single').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor', e.g., 'Full-time').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive', e.g., 'Senior').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Account Manager').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 22).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50', e.g., '20-30').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Generation X', 'Millennials', 'Generation Z', e.g., 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2018-05-21').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 5).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years', e.g., '3-5 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- loan_tenor: Original tenure of the loan in months (integer, e.g., 24).
+- loan_amount: Original amount of the loan (integer, e.g., 17410035).
+- remaining_tenor: Remaining tenure of the loan in months (integer, e.g., 18).
+- remaining_loan_amount: Remaining amount of the loan (integer, e.g., 8705018).
+- loan_type: Type of loan (string, values include 'Car Loan', 'Emergency Loan', 'Home Loan', 'Personal Loan', e.g., 'Car Loan').
+- loan_type_id: Code for the loan type (string, e.g., 'LT010').
+- id: Unique identifier for each record (string, e.g., 'a3465290-6342-4175-92db-b55ede4351c8').
+- cost_component: Component of the loan cost (string, values include 'Insurance', 'Service Fee', 'Processing Fee', 'Late Payment Fee', e.g., 'Insurance').
+- cost_component_id: Code for the cost component (string, e.g., 'CS004').
+- loan_group: Group classification of the loan (string, e.g., 'Group 2').
+- loan_group_id: Code for the loan group (string, e.g., 'LG002').
+
+===============================
+The 'fact_employee_movement' table tracks employee movements within the organization and includes the following columns:
+- date: The date of the movement (format: YYYY-MM-DD, e.g., '2023-01-01').
+- employee_id: Unique identifier for each employee (integer, e.g., 12345).
+- employee_name: Full name of the employee (string, e.g., 'John Doe').
+- birth_place: Birthplace of the employee (string, e.g., 'New York').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '1990-01-01').
+- phone: Contact phone number of the employee (string, e.g., '123-456-7890').
+- email_address: Email address of the employee (string, e.g., 'john.doe@example.com').
+- address: Residential address of the employee (string, e.g., '123 Main St, New York, NY').
+- education_level: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Identifier for the education level (string, e.g., 'EDU001').
+- work_location: Location where the employee works (string, e.g., 'New York Office').
+- work_location_id: Identifier for the work location (string, e.g., 'LOC001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_id: Identifier for the gender (string, e.g., 'GEND001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Identifier for the marital status (string, e.g., 'MAR001').
+- employment_type: Type of employment contract (string, values include 'Part-time', 'Freelance', 'Full-time', 'Contract', 'Temporary').
+- employment_type_id: Identifier for the employment type (string, e.g., 'EMP001').
+- job_level: Level of the job held by the employee (string, values include 'Junior', 'Mid-level', 'Senior', 'Managerial').
+- job_level_id: Identifier for the job level (string, e.g., 'JOB001').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_id: Identifier for the job title (string, e.g., 'TITLE001').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_id: Identifier for the job position (string, e.g., 'POS001').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_id: Identifier for the organization (string, e.g., 'ORG001').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_id: Identifier for the company (string, e.g., 'COMP001').
+- age: Current age of the employee (integer, e.g., 30).
+- age_range: Age range category of the employee (string, values include '21-25', '26-30', '31-35', '36-40', '41-45', '46-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AGE001').
+- generation: Generational cohort of the employee (string, values include 'Millennials', 'Generation X', 'Generation Z').
+- generation_id: Identifier for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center to which the employee is assigned (string, values include 'direct', 'indirect', 'general', e.g., 'IT').
+- cost_center_id: Identifier for the cost center (string, e.g., 'COST001').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2023-01-01').
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-01-01').
+- tenure: Number of years the employee has been with the company (integer, e.g., 2).
+- service_period: Duration of service within a specific range (string, values include 'Less than 1 year', '1-2 years', etc.).
+- service_period_id: Identifier for the service period (string, e.g., 'SP001').
+- is_active: Indicates whether the employee is currently active (string, values include 'true', 'false').
+- movement_type: Type of movement the employee has undergone (string, values include 'Promotion', 'Mutation', 'Rotation').
+- movement_type_id: Identifier for the type of movement (string, e.g., 'MOVE001').
+- id: A unique identifier for each record in the table (string, e.g., 'record-12345').
+- movement_reason: Reason for the employee's movement within the company (string, values include 'Department Change', 'Career Development', 'Company Restructuring').
+- movement_reason_id: Identifier for the reason behind the movement (string, e.g., 'MR001').
+===============================
+The 'fact_employee_overtime' table captures detailed records of employee overtime in the 'hra003' schema and includes relevant columns:
+- id: A unique identifier for each record in the table (string, e.g., '0920bdbf-acbf-4e8b-859c-82dc4f91ac1e').
+- employee_id: Unique identifier for each employee (string, e.g., 'c96eb41d-54b9-4bfb-a2a3-d269b9a5f1f3').
+- employee_code: Unique code assigned to the employee (integer, e.g., 27890).
+- employee_name: Full name of the employee (string, e.g., 'Aileen Liversley').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '1988-11-10').
+- birth_place: Birthplace of the employee (string, e.g., 'Zagórów').
+- phone: Contact phone number of the employee (string, e.g., '707-989-9930').
+- email_address: Email address of the employee (string, e.g., 'aliversley6r@shutterfly.com').
+- address: Residential address of the employee (string, e.g., '606 Dixon Plaza').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_code: Identifier for the gender (string, e.g., 'GEND001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_code: Identifier for the marital status (string, e.g., 'MAR001').
+- employment_type: Type of employment contract (string, values include 'Part-time', 'Freelance', 'Full-time', 'Contract', 'Temporary').
+- employment_type_code: Identifier for the employment type (string, e.g., 'EMP001').
+- job_level: Level of the job held by the employee (string, values include 'Junior', 'Mid-level', 'Senior', 'Managerial').
+- job_level_code: Identifier for the job level (string, e.g., 'JOB001').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_code: Identifier for the job title (string, e.g., 'TITLE001').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_code: Identifier for the job position (string, e.g., 'POS001').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_code: Identifier for the organization (string, e.g., 'ORG001').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_code: Identifier for the company (string, e.g., 'COMP001').
+- age: Current age of the employee (integer, e.g., 30).
+- age_range: Age range category of the employee (string, values include '21-25', '26-30', '31-35', '36-40', '41-45', '46-50').
+- age_range_code: Identifier for the age range (string, e.g., 'AGE001').
+- generation: Generational cohort of the employee (string, values include 'Millennials', 'Generation X', 'Generation Z').
+- generation_code: Identifier for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center to which the employee is assigned (string, e.g., 'Direct', 'Indirect', 'General').
+- cost_center_code: Identifier for the cost center (string, e.g., 'COST001').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2023-01-01').
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-01-01').
+- tenure: Number of years the employee has been with the company (integer, e.g., 2).
+- service_period: Duration of service within a specific range (string, values include 'Less than 1 year', '1-2 years', etc.).
+- service_period_code: Identifier for the service period (string, e.g., 'SP001').
+- is_active: Indicates whether the employee is currently active (string, values include 'true', 'false').
+- is_dayoff: Indicates whether the overtime occurred on a day off (string, values include 'true', 'false').
+- overtime_date: The date when the overtime occurred (format: YYYY-MM-DD, e.g., '2024-04-24' This column is crucial for queries filtering records by specific day, month, years).
+- overtime_type: Type of overtime worked (string, e.g., 'Overtime Regular', 'Holiday Overtime').
+- overtime_type_code: Identifier for the type of overtime (string, e.g., 'OR0001').
+- overtime_duration: Duration of the overtime in hours (Represents the duration of overtime worked, in hours. It is used to calculate the total overtime hours. integer, values include '1', '2', '3', '4', '5', '6', e.g., 2).
+- category: Category of the employee's department (string, e.g., 'Produksi', 'Non Produksi').
+- category_id: Identifier for the category (string, e.g., 'CG002').
+- overtime_cost: Cost associated with the overtime (integer, e.g., 251297).
+fix error message like this 'Unfortunately, the query provided is invalid, and I'm assuming it's because the database schema is not properly referenced. However, I can provide an answer based on the assumption that the correct schema and table names are used.' dont use assumption, answer based generated query.
+the Answer should be like this Answer: " ." without adding text like this Based on the query results, here is a synthesized response:
+
+===============================
+The 'fact_employee_separation' table captures detailed records of employee separations in the 'hra003' schema and includes relevant columns:
+- id: A unique identifier for each record in the table (string, e.g., '1ca201ec-d84b-452c-8050-d15672a77a43').
+- employee_id: Derived from employee_code (string, e.g., '19655').
+- employee_name: Full name of the employee (string, e.g., 'Garrott Conibear').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '1988-04-09').
+- birth_place: Birthplace of the employee (string, e.g., 'Amu Gulang Baolige').
+- phone: Contact phone number of the employee (string, e.g., '127-886-9274').
+- email_address: Email address of the employee (string, e.g., 'gconibear6@wikimedia.org').
+- address: Residential address of the employee (string, e.g., '287 Thierer Parkway').
+- gender: Gender of the employee (string, values include 'Male', 'Female').
+- gender_code: Identifier for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_code: Identifier for the marital status (string, e.g., 'MAR001').
+- employment_type: Type of employment contract (string, values include 'Part-time', 'Freelance', 'Full-time', 'Contract', 'Temporary').
+- employment_type_code: Identifier for the employment type (string, e.g., 'EMP001').
+- job_level: Level of the job held by the employee (string, values include 'Entry Level', 'Mid Level', 'Senior Level', 'Executive', ).
+- job_level_code: Identifier for the job level (string, e.g., 'JOB001').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_code: Identifier for the job title (string, e.g., 'TITLE001').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_code: Identifier for the job position (string, e.g., 'POS001').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_code: Identifier for the organization (string, e.g., 'ORG001').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_code: Identifier for the company (string, e.g., 'COMP001').
+- age: Current age of the employee (integer, e.g., 30).
+- age_range: Age range category of the employee (string, values include '21-25', '26-30', '31-35', '36-40', '41-45', '46-50').
+- age_range_code: Identifier for the age range (string, e.g., 'AGE001').
+- generation: Generational cohort of the employee (string, values include 'Millennials', 'Generation X', 'Generation Z').
+- generation_code: Identifier for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center to which the employee is assigned (string, e.g., 'Direct', 'Indirect', 'General').
+- cost_center_code: Identifier for the cost center (string, e.g., 'COST001').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2023-01-01').
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-01-01').
+- separation_date: Date of employee's separation from the company (format: YYYY-MM-DD, e.g., '2024-04-24').
+- separation_type: Type of separation (string, e.g., 'PHK', 'Resign', 'Sakit Keras', 'Pensiun Dini', 'Passed Away').
+- separation_type_code: Identifier for the separation type (string, e.g., 'ST001').
+- separation_reason: Reason for the employee's separation (string, e.g., 'Keinginan Pribadi', 'Termination', 'Keluarga').
+- separation_reason_code: Identifier for the separation reason (string, e.g., 'SR001').
+- is_active: Indicates whether the employee is currently active (string, values include 'true', 'false').
+- work_location: Location of the employee's work (string, e.g., 'South Jakarta').
+- work_location_code: Identifier for the work location (string, e.g., 'WL004').
+- education_level: Education level of the employee (string, e.g., 'High School', 'Bachelor', 'Master', 'Doctor').
+- education_level_code: Identifier for the education level (string, e.g., 'ED001').
+- service_period: Duration of service within a specific range (string, values include '<1 year', '1-2 years', '3-4 years', '5-6 years', '7-8 years', '9-10 years', '>10 years', etc.).
+- service_period_code: Identifier for the service period (string, e.g., 'SP001').
+===============================
+The 'fact_employee_succesion' table tracks and manages data related to the succession planning of employees within the organization. This table is crucial for identifying and developing future leaders by assessing their potential and performance. The table includes the following columns:
+- date: The date the succession record was created (YYYY-MM-DD, e.g., '2021-07-13').
+- employee_id: Numeric identifier for the employee (integer, e.g., 60157).
+- employee_name: Full name of the employee (string, e.g., 'Erinn Haylett').
+- birth_place: Birthplace of the employee (string, e.g., 'Karangsuko').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1984-04-04').
+- phone: Contact phone number of the employee (string, e.g., '167-112-0220').
+- email_address: Email address of the employee (string, e.g., 'ehaylettw@exblog.jp').
+- address: Residential address of the employee (string, e.g., '4 Lawn Plaza').
+- education: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor', e.g., 'Doctor').
+- education_id: Code for the education level (string, e.g., 'EL004').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced', e.g., 'Single').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor', e.g., 'Full-time').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive', e.g., 'Senior').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Account Manager').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 38).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50', e.g., '31-40').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Generation X', 'Millennials', 'Generation Z', e.g., 'Millennials').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-05-20').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years', e.g., '3-5 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- nine_boxes: Classification of the employee based on performance and potential (string, e.g., 'Low Performance/High Potential').
+- nine_boxes_id: Code for the nine boxes classification (string, e.g., 'NB003').
+- criteria: Criteria used for the succession assessment (string, e.g., 'Potential Rating').
+- criteria_id: Code for the criteria (string, e.g., 'CR002').
+- id: Unique identifier for each record (string, e.g., '71bc3d19-9ae0-44e9-b4c2-e6660a7bcba8').
+- file: URL to a file or document associated with the record (string, e.g., 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ').
+- status: Current status of the succession planning (string, e.g., 'Closed').
+
+===============================
+The 'fact_employee_training' table tracks and manages data related to the training and development activities of employees within the organization. This table is essential for overseeing employee training programs and their completion status. The table includes the following columns:
+- date: The date the training record was created (YYYY-MM-DD, e.g., '2022-02-12').
+- employee_id: Numeric identifier for the employee (integer, e.g., 72890).
+- employee_name: Full name of the employee (string, e.g., 'Jerrome Cairney').
+- birth_place: Birthplace of the employee (string, e.g., 'Lorut').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1979-06-30').
+- phone: Contact phone number of the employee (string, e.g., '333-459-0427').
+- email_address: Email address of the employee (string, e.g., 'jcairney5b@angelfire.com').
+- address: Residential address of the employee (string, e.g., '8905 Merrick Place').
+- education: Education level of the employee (string, values include 'High School', 'Master', 'Doctor', e.g., 'High School').
+- education_id: Code for the education level (string, e.g., 'EL001').
+- work_location: The workplace location of the employee (string, e.g., 'Main Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Code for the gender (string, e.g., 'GD001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced', e.g., 'Married').
+- marital_status_id: Code for the marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor', e.g., 'Full-time').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive', e.g., 'Mid').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP001').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50', e.g., '31-40').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z', e.g., 'Millennials').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years', e.g., '3-5 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- progress_status: Current status of the employee's training progress (string, e.g., 'On Progress').
+- learning_list: List of training programs the employee is enrolled in (string, e.g., 'Employee Engagement').
+- learning_list_id: Code for the learning list (string, e.g., 'LL003').
+- progress_status_id: Code for the progress status (string, e.g., 'PS002').
+- realization_score: Score realized by the employee on completion of training (integer, e.g., 76).
+- id: Unique identifier for each record (string, e.g., '9da1d143-680d-44c4-b05c-bf579073f9d6').
+- target_score: Target score set for the employee in the training program (integer, e.g., 110).
+
+===============================
+The 'fact_employee_unattendance' table tracks various unattendance events for employees within the organization and includes the following columns:
+- id: Unique identifier for each record (string, e.g., '9329fe79-3198-4be5-b7ae-2c933e4c0bf1').
+- employee_id: Unique identifier for each employee (string, e.g., 'ad1c8b6d-eb13-4b01-a748-9529e923d69e').
+- employee_code: Numeric code associated with the employee (integer, e.g., 76606).
+- employee_name: Full name of the employee (string, e.g., 'Helsa Orton').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '1989-04-10').
+- birth_place: Birthplace of the employee (string, e.g., 'Manyava').
+- phone: Contact phone number of the employee (string, e.g., '975-863-8733').
+- email_address: Email address of the employee (string, e.g., 'hortono@free.fr').
+- address: Residential address of the employee (string, e.g., '7 Butterfield Point').
+- gender: Gender of the employee (string, e.g., 'Female').
+- gender_code: Code for the gender (string, e.g., 'GEND01').
+- marital_status: Marital status of the employee (string, e.g., 'Single', 'Married', 'Divorced', ).
+- marital_status_code: Code for the marital status (string, e.g., 'MAR01').,
+- employment_type: Type of employment contract (string, e.g., 'Full-time', 'Part-time', 'Contract', 'Freelance', 'Temporary').
+- employment_type_code: Code for the employment type (string, e.g., 'EMP01').
+- job_level: Level of the job held by the employee (string, e.g., 'Entry Level', 'Mid Level', 'Senior Level', 'Executive').
+- job_level_code: Code for the job level (string, e.g., 'JOB01').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_code: Code for the job title (string, e.g., 'TITLE01').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_code: Code for the job position (string, e.g., 'POS01').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_code: Code for the organization (string, e.g., 'ORG01').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_code: Code for the company (string, e.g., 'COMP01').
+- age: Current age of the employee (integer, e.g., 30).
+- age_range: Age range category of the employee (string, e.g., '26-30').
+- age_range_code: Code for the age range (string, e.g., 'AGE01').
+- generation: Generational cohort of the employee (string, e.g., 'Millennials').
+- generation_code: Code for the generation (string, e.g., 'GEN01').
+- cost_center: Cost center to which the employee is assigned (string, e.g., 'direct', 'indirect', 'general').
+- cost_center_code: Code for the cost center (string, e.g., 'COST01').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2023-01-01').
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-01-01').
+- unattendance_date: Date of the unattendance (format: YYYY-MM-DD, e.g., '2023-05-01').
+- unattendance_type: Type of unattendance (string, e.g., 'Annual Leave', 'Cuti Pribadi', 'No Notification', 'Sick Leave').
+- unattendance_type_code: Code for the type of unattendance (string, e.g., 'UNAT01').
+- is_active: Indicates whether the employee is currently active (string, values include 'true', 'false', e.g., 'true').
+- work_location: Location where the employee works (string, e.g., 'North Jakarta').
+- work_location_code: Code for the work location (string, e.g., 'WL001').
+- education_level: Education level of the employee (string, values include 'High School', 'Bachelor', 'Master', 'Doctor' e.g., 'Bachelor').
+- education_level_code: Code for the education level (string, e.g., 'EDU01').
+- service_period: Duration of service within a specific range (string, e.g., '1-2 years').
+- service_period_code: Code for the service period (string, e.g., 'SP01').
+- leave_type: Type of leave taken by the employee (string, e.g., 'Annual Leave').
+- leave_type_id: Identifier for the type of leave (string, e.g., 'LT001').
+- file: A URL to an associated file (string, URL format, e.g., 'https://example.com/file.pdf').
+- percentage: Percentage of the leave taken (integer, e.g., 8).
+===============================
+The 'fact_head_counts' table tracks various data points related to employee demographics, job details, and employment status within the organization. It includes a wealth of details for each employee and is used for headcount analysis and management reporting. The table includes the following columns:
+- id: Unique identifier for each record (string, e.g., '497b3a16-6f74-4687-b0fe-7daff3b793f7').
+- employee_code: Numeric code associated with the employee (integer, e.g., 88311).
+- employee_name: Full name of the employee (string, e.g., 'Olivette Parchment').
+- birth_place: Birthplace of the employee (string, e.g., 'Ansheng').
+- birth_date: Birth date of the employee (format: YYYY-MM-DD, e.g., '2000-08-16').
+- phone: Contact phone number of the employee (string, e.g., '185-737-0278').
+- email_address: Email address of the employee (string, e.g., 'oparchment1p@dot.gov').
+- address: Residential address of the employee (string, e.g., '63 Duke Center').
+- education_level: Education level of the employee (string, e.g., 'Bachelor').
+- education_level_code: Code for the education level (string, e.g., 'EL002').
+- work_location: Location where the employee works (string, e.g., 'Central Jakarta').
+- gender: Gender of the employee (string, e.g., 'Female').
+- gender_code: Code for the gender (string, e.g., 'GEND01').
+- marital_status: Marital status of the employee (string, e.g., 'Single').
+- marital_status_code: Code for the marital status (string, e.g., 'MAR01').
+- employment_type: Type of employment contract (string, e.g., 'Full-time').
+- employment_type_code: Code for the employment type (string, e.g., 'EMP01').
+- job_level: Level of the job held by the employee (string, e.g., 'Mid Level').
+- job_level_code: Code for the job level (string, e.g., 'JOB01').
+- job_title: Official job title of the employee (string, e.g., 'Software Engineer').
+- job_title_code: Code for the job title (string, e.g., 'TITLE01').
+- job_position: Specific position held by the employee within the company (string, e.g., 'Developer').
+- job_position_code: Code for the job position (string, e.g., 'POS01').
+- organization: Department or unit the employee belongs to (string, e.g., 'IT Department').
+- organization_code: Code for the organization (string, e.g., 'ORG01').
+- company: Name of the company employing the individual (string, e.g., 'Tech Corp').
+- company_code: Code for the company (string, e.g., 'COMP01').
+- cost_center: Cost center to which the employee is assigned (string, e.g., 'indirect').
+- cost_center_code: Code for the cost center (string, e.g., 'CC002').
+- join_date: Date the employee joined the company (format: YYYY-MM-DD, e.g., '2022-11-26', The first employee joined on January 3, 2020, and the most recent employee joined on December 11, 2022. ).
+- end_date: Date the employee's contract ends (format: YYYY-MM-DD, e.g., '2025-02-19').
+- tenure: Duration in years the employee has worked (integer, e.g., 2).
+- service_period: Duration of service within a specific range (string, e.g., '1-2 years').
+- service_period_code: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- count: Numerical count (integer, e.g., 1).
+===============================
+The 'fact_job_vacancies' table tracks and manages data related to job vacancies within the organization. This table is vital for managing recruitment processes and analyzing workforce requirements. The table includes the following columns:
+- id: Unique identifier for each job vacancy record (string, e.g., '59ca54ec-805a-4e77-bd25-97a6d9004efb').
+- job_vacancy_name: Title or name of the job vacancy (string, e.g., 'Legal Assistant').
+- salary_min: Minimum salary offered for the job vacancy (integer, e.g., 6000000).
+- salary_max: Maximum salary offered for the job vacancy (integer, e.g., 12000000).
+- publish_date: Date the job vacancy was published (string, format 'MM/DD/YYYY', e.g., '4/6/2024').
+- job_vacancy_status: Status of the job vacancy (string, values include 'OPEN', 'CLOSE', e.g., 'CLOSE').
+- organization: Name of the organization department or division advertising the vacancy (string, e.g., 'Operations').
+- organization_id: Code for the organization department or division (string, e.g., 'OR006').
+- company: Name of the company where the job vacancy is located (string, e.g., 'Johnson Enterprises').
+- company_id: Code for the company (string, e.g., 'CO004').
+- job_position: Position offered in the job vacancy (string, e.g., 'Manager').
+- job_position_id: Code for the job position (string, e.g., 'JP002').
+
+This table allows HR departments to effectively monitor open roles, track the status of various job postings, and manage hiring processes in a structured manner.
+
+===============================
+The 'fact_medical_reimbursement' table tracks and manages data related to medical reimbursements within the organization. This table is crucial for managing healthcare benefits, processing claims, and analyzing healthcare costs and utilization. The table includes the following columns:
+- date: Date of the data entry (string, e.g., '2020-05-11').
+- employee_nik: Unique identifier for the employee (integer, e.g., 43270).
+- employee_name: Name of the employee (string, e.g., 'Dawna Afield').
+- birth_place: Birth place of the employee (string, e.g., 'Gavinhos de Baixo').
+- birth_date: Birth date of the employee (string, e.g., '1976-03-10').
+- phone: Phone number of the employee (string, e.g., '373-730-0594').
+- email_address: Email address of the employee (string, e.g., 'dafieldf2@aol.com').
+- address: Home address of the employee (string, e.g., '125 Mockingbird Terrace').
+- education: Education level of the employee (string, values include 'Bachelor', 'High School', 'Doctor', e.g., 'Bachelor').
+- education_id: Identifier for the education level (string, e.g., 'EL002').
+- work_location: Location where the employee works (string, e.g., 'Jakarta Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Identifier for gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Married').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS001').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Level of job position (string, values include 'Senior', 'Junior', e.g., 'Senior').
+- job_level_id: Identifier for job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Sales Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP020').
+- organization: Organization unit of the employee (string, e.g., 'Sales Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corporation').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- age: Age of the employee (integer, e.g., 47).
+- age_range: Age range of the employee (string, e.g., '40-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AR003').
+- generation: Generation classification (string, e.g., 'Gen X').
+- generation_id: Identifier for the generation (string, e.g., 'G001').
+- cost_center: Cost center responsible for the employee (string, e.g., '1001').
+- cost_center_id: Identifier for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the company (string, e.g., '2005-07-21').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2025-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 18).
+- service_period: Duration of current service period (string, e.g., '15-20 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP005').
+- is_active: Active status of the employee (boolean, e.g., true).
+- status: Current employment status (string, values include 'Active', 'Inactive', e.g., 'Active').
+- status_id: Identifier for the employment status (string, e.g., 'ST001').
+- employee_id: Unique identifier for the employee (string, e.g., 'E0001').
+- claim_no: Claim number (string, e.g., '00012/HTREMR01/HRD/23042024').
+- claim_for: Claimant relation to the employee (string, values include 'Self', 'Family', 'Karyawan', 'Pasangan', 'Anak', e.g., 'Self').
+- id_pasien: Patient identifier (string, e.g., '1621-2').
+- pasien_name: Name of the patient (string, e.g., 'Dawna Afield').
+- family_relation: Relation of the patient to the employee (string, values include 'Pasangan', 'Karyawan', 'Anak', e.g., 'Pasangan').
+- medical_type: Type of medical expense (string, values include 'Pharmacy / Apotik', 'Outpatient / Rawat Jalan', 'Inpatient / Rawat Inap', e.g., 'Pharmacy / Apotik').
+- medical_type_id: Identifier for the type of medical expense (string, e.g., 'MT003').
+- source: Source of the claim data (string, values include 'ESS', 'Admin', e.g., 'ESS').
+- claim_amount: Amount of the medical claim (integer, e.g., 708698).
+- id: Unique identifier for the entry (string, e.g., '9ce0a816-972c-48e9-8112-2a6e839c59f3').
+===============================
+The 'fact_payrolls' table tracks and manages payroll-related data within the organization. This table is essential for managing payroll processing, employee compensation, and financial planning. The table includes the following columns:
+- date: Date of the payroll entry (string, e.g., '2021-07-07').
+- employee_id: Unique identifier for the employee (integer, e.g., 50665).
+- employee_name: Name of the employee (string, e.g., 'Marcelle Fairhead').
+- birth_place: Place of birth of the employee (string, e.g., 'Me?giew').
+- birth_date: Birth date of the employee (string, e.g., '1999-10-04').
+- phone: Phone number of the employee (string, e.g., '726-816-6584').
+- email_address: Email address of the employee (string, e.g., 'mfairhead1m@shinystat.com').
+- address: Residential address of the employee (string, e.g., '15 Judy Lane').
+- education_level: Education level of the employee (string, values include 'Master', 'High School', 'Bachelor', e.g., 'Master').
+- education_level_id: Identifier for the education level (string, e.g., 'EL003').
+- work_location: Workplace location of the employee (string, e.g., 'Jakarta Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Female').
+- gender_id: Identifier for gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'IT').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Developer').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Job level of the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- age: Age of the employee (integer, e.g., 45).
+- age_range: Age range of the employee (string, e.g., '40-50').
+- age_range_id: Identifier for the age range (string, e.g., 'AR003').
+- generation: Generation classification (string, values include 'Generation Z', 'Generation X', 'Millennials').
+- generation_id: Identifier for the generation (string, e.g., 'G002').
+- cost_center: Cost center associated with the employee (string, e.g., '1001').
+- cost_center_id: Identifier for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the company (string, e.g., '2005-07-21').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2025-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 15).
+- service_period: Duration of current service period (string, e.g., '<1 years', '1-2 years', '3-4 years', '5-6 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP005').
+- is_active: Whether the employee is currently active (boolean, e.g., True).
+- payroll_id: Unique identifier for the payroll record (string, e.g., 'PR001').
+- payroll_date: Date of the payroll calculation (string, e.g., '2021-07-07').
+- basic_salary: Basic salary component (integer, e.g., 4000).
+- net_pay: Net amount paid to the employee (integer, e.g., 4500).
+- gross_pay: Gross pay before any deductions (integer, e.g., 5000).
+- deductions: Total deductions from the payroll (integer, e.g., 500).
+- tax_withheld: Total tax withheld (integer, e.g., 300).
+- social_security_paid: Social security contributions (integer, e.g., 200).
+- health_insurance_paid: Amount paid for health insurance (integer, e.g., 150).
+- other_benefits: Other benefits provided (integer, e.g., 350).
+- payroll_status: Status of the payroll (string, e.g., 'Processed').
+- payroll_group: Group classification within the payroll (string, e.g., 'Payroll Group Regular').
+- work_group: Work group or team within the organization (string, e.g., 'IT Team').
+- shift: Shift pattern or schedule of the employee (string, e.g., 'Day Off Produksi').
+- shift_id: Identifier for the shift pattern (string, e.g., 'WS002').
+- payroll_group_id: Identifier for the payroll group (string, e.g., 'PG002').
+- work_group_id: Identifier for the work group (string, e.g., 'WG001').
+- payroll_type: Type of payroll calculation (string, e.g., 'THP', 'Non-THP').
+- payroll_type_id: Identifier for the type of payroll (string, e.g., 'PT001').
+- pay_grade: Pay grade of the employee (string, e.g., 'Grade 4').
+- pay_grade_id: Identifier for the pay grade (string, e.g., 'GR004').
+
+===============================
+The 'fact_performance_kpi' table tracks and manages performance-related data within the organization. This table is crucial for monitoring employee performance, managing KPI assessments, and guiding development efforts. The table includes the following columns:
+- employee_code: Unique code for each employee (integer, e.g., 81411).
+- employee_name: Name of the employee (string, e.g., 'Hyatt Goggins').
+- birth_place: Place of birth of the employee (string, e.g., 'Governor’s Harbour').
+- birth_date: Birth date of the employee (string, e.g., '1992-02-12').
+- phone: Phone number of the employee (string, e.g., '756-729-5462').
+- email_address: Email address of the employee (string, e.g., 'hgoggins0@joomla.org').
+- address: Residential address of the employee (string, e.g., '0134 Golden Leaf Court').
+- education_level: Education level of the employee (string, values include 'High School', 'Doctor', 'Master', 'Bachelor', e.g., 'High School').
+- education_level_id: Identifier for the education level (string, e.g., 'EL001').
+- work_location: Workplace location of the employee (string, e.g., 'South Jakarta').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Identifier for the gender (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for the nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'IT').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Developer').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Job level of the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- join_date: Date the employee joined the company (string, e.g., '2020-11-07').
+- end_date: Date the employee left the company or contract ended (string, e.g., '2023-12-31').
+- tenure: Total tenure of the employee in years (integer, e.g., 3).
+- service_period: Duration of current service period (string, e.g., '3-4 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP003').
+- is_active: Whether the employee is currently active (boolean, e.g., True).
+- date: Date of the KPI record (string, e.g., '2021-04-13').
+- current_kpi: Current KPI score of the employee (decimal, e.g., 97.0).
+- target: Target KPI score for the employee (decimal, e.g., 100.0).
+- id: Unique identifier for the KPI record (string, e.g., '3c3bbc41-bb4e-4959-9beb-04738c363bff').
+===============================
+The 'fact_performances' table tracks and manages performance-related data within the organization. This table is essential for evaluating employee effectiveness, assessing performance trends, and supporting development initiatives. The table includes the following columns:
+- date: Date of the performance record (string, e.g., '2023-12-01').
+- employee_code: Unique code assigned to each employee (integer, e.g., 93496).
+- employee_name: Name of the employee (string, e.g., 'Taite Pancoast').
+- birth_place: Place of birth of the employee (string, e.g., 'Tiadiaye').
+- birth_date: Birth date of the employee (string, e.g., '1982-10-26').
+- phone: Contact phone number of the employee (string, e.g., '185-536-7476').
+- email_address: Email address of the employee (string, e.g., 'tpancoastng@irs.gov').
+- address: Residential address of the employee (string, e.g., '0543 Melby Center').
+- education_level: Education level attained by the employee (string, values include 'Bachelor', 'Master', 'Doctor', e.g., 'Bachelor').
+- education_level_id: Identifier for the education level (string, e.g., 'EL002').
+- work_location: Workplace location of the employee (string, e.g., 'Head Office').
+- work_location_id: Identifier for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', e.g., 'Male').
+- gender_id: Identifier for the gender of the employee (string, e.g., 'G001').
+- marital_status: Marital status of the employee (string, values include 'Married', 'Single', e.g., 'Single').
+- marital_status_id: Identifier for the marital status (string, e.g., 'MS002').
+- nationality: Nationality of the employee (string, e.g., 'Indonesian').
+- nationality_id: Identifier for the nationality (string, e.g., 'N002').
+- department: Department where the employee works (string, e.g., 'Finance').
+- department_id: Identifier for the department (string, e.g., 'D002').
+- position: Job position of the employee (string, e.g., 'Analyst').
+- position_id: Identifier for the job position (string, e.g., 'P002').
+- employment_type: Type of employment (string, values include 'Permanent', 'Contract', e.g., 'Permanent').
+- employment_type_id: Identifier for employment type (string, e.g., 'ET001').
+- job_level: Level of the job held by the employee (string, e.g., 'Senior').
+- job_level_id: Identifier for the job level (string, e.g., 'JL003').
+- job_title: Job title of the employee (string, e.g., 'Senior Manager').
+- job_title_id: Identifier for the job title (string, e.g., 'JT001').
+- job_position: Specific job position of the employee (string, e.g., 'Manager').
+- job_position_id: Identifier for the job position (string, e.g., 'JP001').
+- organization: Organization of the employee (string, e.g., 'HR Department').
+- organization_id: Identifier for the organization (string, e.g., 'O001').
+- company: Company name (string, e.g., 'ABC Corp').
+- company_id: Identifier for the company (string, e.g., 'C001').
+- join_date: Date the employee joined the company (string, e.g., '2020-11-07').
+- end_date: Date the employment is expected to end or contract termination date (string, e.g., '2024-07-12').
+- tenure: Number of years the employee has been with the company (integer, e.g., 3).
+- service_period: Service period within the company (string, e.g., '3-4 years').
+- service_period_id: Identifier for the service period (string, e.g., 'SP003').
+- is_active: Indicates if the employee is currently active within the company (boolean, e.g., True).
+- employee_id: Unique identifier for the employee (string, e.g., 'd54e05ba-f91b-461c-afa0-08e4261fb7cc').
+- file: Link to the employee's file or image (string, URL format, e.g., 'https://example.com/image.jpg').
+- current_performance: Current performance rating of the employee (integer, e.g., 92).
+- predictive_performance: Predicted future performance rating (integer, e.g., 84).
+- id: Unique identifier for the record (string, e.g., 'dc9379b8-9f86-4e53-ad32-44148a5125c9').
+===============================
+The 'fact_rewards_punishments' table collects and tracks various data points related to rewards and punishments given to employees within the organization. This table includes a wealth of details for each employee, used for management reporting and analysis of employee performance. The table includes the following columns:
+- id: Unique identifier for each record (string, e.g., '7b1ea70c-ad26-41de-85e9-fb69990b78e0').
+- date: The date of the reward or punishment (YYYY-MM-DD, e.g., '2024-09-22').
+- employee_code: Numeric code associated with the employee (integer, e.g., 47293).
+- employee_name: Full name of the employee (string, e.g., 'Rudolf Harness').
+- birth_place: Birthplace of the employee (string, e.g., 'Balfour').
+- birth_date: Birth date of the employee (YYYY-MM-DD, e.g., '1990-04-17').
+- phone: Contact phone number of the employee (string, e.g., '523-168-7236').
+- email_address: Email address of the employee (string, e.g., 'rharness5v@state.tx.us').
+- address: Residential address of the employee (string, e.g., '74058 Macpherson Trail').
+- education_level: Education level of the employee (string, values include 'Bachelor', 'Master', 'Doctor').
+- education_level_id: Code for the education level (string, e.g., 'EL004').
+- work_location: The workplace location of the employee (string, e.g., 'New York Office').
+- work_location_id: Code for the work location (string, e.g., 'WL001').
+- gender: Gender of the employee (string, values include 'Male', 'Female', 'Other').
+- gender_id: Code for the gender (string, e.g., 'GEND001').
+- marital_status: Marital status of the employee (string, values include 'Single', 'Married', 'Divorced').
+- marital_status_id: Code for the marital status (string, e.g., 'MS002').
+- employment_type: Type of employment (string, values include 'Full-time', 'Part-time', 'Contractor').
+- employment_type_id: Code for the employment type (string, e.g., 'ET001').
+- job_level: Level of the job within the organization (string, values include 'Entry', 'Mid', 'Senior', 'Executive').
+- job_level_id: Code for the job level (string, e.g., 'JL003').
+- job_title: Title of the job (string, e.g., 'Software Engineer').
+- job_title_id: Code for the job title (string, e.g., 'JT001').
+- job_position: Position of the job within the organization (string, e.g., 'Department Head').
+- job_position_id: Code for the job position (string, e.g., 'JP002').
+- organization: Name of the organization (string, e.g., 'ABC Corp').
+- organization_id: Code for the organization (string, e.g., 'ORG001').
+- company: Name of the company (string, e.g., 'XYZ Ltd.').
+- company_id: Code for the company (string, e.g., 'COMP001').
+- age: Age of the employee (integer, e.g., 34).
+- age_range: Age range of the employee (string, values include '20-30', '31-40', '41-50').
+- age_range_id: Code for the age range (string, e.g., 'AR001').
+- generation: Generation classification of the employee (string, values include 'Baby Boomer', 'Generation X', 'Millennials', 'Generation Z').
+- generation_id: Code for the generation (string, e.g., 'GEN001').
+- cost_center: Cost center within the organization (string, e.g., 'Finance Department').
+- cost_center_id: Code for the cost center (string, e.g., 'CC001').
+- join_date: Date the employee joined the organization (YYYY-MM-DD, e.g., '2015-06-01').
+- end_date: Date the employee left the organization, if applicable (YYYY-MM-DD, e.g., '2023-12-31').
+- tenure: Duration in years the employee has been with the company (integer, e.g., 8).
+- service_period: Duration of service within a specific range (string, values include '1-2 years', '3-5 years', '6-10 years').
+- service_period_id: Code for the service period (string, e.g., 'SP002').
+- is_active: Indicates whether the employee is currently active (boolean, e.g., True).
+- employee_id: Identifier for the employee (string, e.g., '96b0b098-b618-4c9e-ab08-96e9da348ab0').
+- category: Category of the record, either Reward or Punishment (string, e.g., 'Reward').
+- reward_punishment: Specific type of reward or punishment (string, e.g., 'Gift', 'Employee of The Month', 'Bonus', 'Verbal Warning', 'Suspension').
+- category_id: Code for the category (string, e.g., 'CG001').
+- reward_punishment_id: Code for the specific reward or punishment (string, e.g., 'RP006').
+===============================
