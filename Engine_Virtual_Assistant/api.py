@@ -71,8 +71,11 @@ class Test(Resource):
     def post(self):
         try:
             payload = request.json
-            db_ops.upsert_dummy_data('Virtual Assistant', payload)
-            return {'message': 'success'}, 200
+            result = db_ops.save_interaction(payload)
+            if result == "Success":
+                return {'message': 'success'}, 200
+            else:
+                return {'message': result}, 500
         except Exception as e:
             print(f"Exception in /test: {e}")
             return {'message': str(e)}, 400
