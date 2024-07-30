@@ -9,6 +9,9 @@ import requests
 import pyttsx3
 import speech_recognition as sr
 
+from gtts import gTTS
+import playsound
+
 from modules.ai_module.llm import LanguageModel
 
 # Memuat konfigurasi dari groq_config_llm.json
@@ -23,6 +26,9 @@ def initialize_session():
     response = requests.post('http://127.0.0.1:5000/virtual_assistant/initialize')
     if response.status_code == 200:
         data = response.json()
+        
+        print(data['llm_response'])
+        
         return data['user_id'], data['room_id'], data['llm_response']
     else:
         print("Failed to initialize session")
@@ -76,5 +82,10 @@ def automate_interaction(user_id, room_id, llm_response):
 
 # Inisialisasi sesi
 user_id, room_id, llm_response = initialize_session()
+
+tts = gTTS(text=llm_response, lang='id')
+
+playsound.playsound(tts)
+
 if user_id and room_id:
     automate_interaction(user_id, room_id, llm_response)

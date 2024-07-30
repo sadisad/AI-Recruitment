@@ -21,12 +21,14 @@ class LanguageModel:
                     "content": text
                 }
             ],
-            model=self.configllm['model'],
+            model=self.configllm['model']
         )
         
         message = chat_completion.choices[0].message.content
         
-        dict_form = self.format_response(message)
+        
+        # dict_form = self.format_response(message)
+        dict_form = ''
         
         return message, dict_form
     
@@ -36,9 +38,9 @@ class LanguageModel:
         f.close()
         return str_prompt
     
-    def initialize_prompt(self, command):
+    def initialize_prompt(self):
         prompt = self.read_intro_prompt('prompt/intro_prompt.txt')
-        prompt = prompt.replace('<-----command----->', command)
+        # prompt = prompt.replace('<-----command----->', command)
         
         return prompt
     

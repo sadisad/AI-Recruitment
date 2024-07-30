@@ -39,9 +39,12 @@ class Initialize(Resource):
             user_id = str(uuid.uuid4())
             room_id = str(uuid.uuid4())
             
-            prompt = ai_engine.initialize_prompt
+            prompt = ai_engine.initialize_prompt()
+
             # Dapatkan sapaan awal dari LLM
-            llm_response = ai_engine.generate_response(prompt)
+            llm_response, dict = ai_engine.generate_response(prompt)
+            
+            print(llm_response, dict)
             
             # Simpan sesi pengguna
             result = db_ops.save_user_session(user_id, room_id)
