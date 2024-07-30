@@ -10,8 +10,7 @@ import pyttsx3
 import speech_recognition as sr
 
 from gtts import gTTS
-from playsound import playsound
-
+from pydub import AudioSegment
 from modules.ai_module.llm import LanguageModel
 
 # Memuat konfigurasi dari groq_config_llm.json
@@ -37,10 +36,41 @@ def initialize_session():
 # Fungsi untuk mengubah teks menjadi suara
 def text_to_speech(text):
     tts = gTTS(text=text, lang='id')
-    filename = "speech.wav"
-    tts.save(filename)
-    playsound(filename)
-    os.remove(filename)
+    mp3_filename = "speech.mp3"
+    wav_filename = "speech.wav"
+    tts.save(mp3_filename)
+
+    # Konversi file mp3 ke wav menggunakan pydub
+    AudioSegment.from_mp3(mp3_filename).export(wav_filename, format="wav")
+
+    # Memainkan file wav
+    chunk = 1024
+    wf = wave.open(wav_filename, 'rb')
+    p = pyaudio.PyAudio()
+
+    # Open stream
+    stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                    channels=wf.getnchannels(),
+                    rate=wf.getframerate(),
+                    output=True)
+
+    # Read data in chunks and play
+    data = wf.readframes(chunk)
+    while data:
+        stream.write(data)
+        data = wf.readframes(chunk)
+
+    # Stop and close stream
+    stream.stop_stream()
+    stream.close()
+
+    # Close PyAudio
+    p.terminate()
+    wf.close()
+
+    # Remove the files after playing
+    os.remove(mp3_filename)
+    os.remove(wav_filename)
 
 # Fungsi untuk merekam suara pengguna dan mengkonversinya menjadi teks
 def record_and_transcribe(duration=10):
@@ -63,14 +93,14 @@ def record_and_transcribe(duration=10):
 
 # Fungsi untuk mengotomatisasi interaksi dengan LLM
 def automate_interaction(user_id, room_id, llm_response):
-    # Tampilkan sapaan awal dari LLM
-    print(f"Initial LLM Response: {llm_response}")
-    text_to_speech(llm_response, 'initial_response.wav')
-    
+
     user_response = record_and_transcribe()
     
-    startingPrompt = ai_engine.initialize_prompt(user_response)
+    startingPrompt = ai_engine.initialize_prompt()
     result = ai_engine.generate_response(startingPrompt)
+    
+    if isinstance(result, tuple):
+        result = {"response": result[0]}
     
     result.update({"user_id": user_id, "room_id": room_id})
     
@@ -85,7 +115,7 @@ def automate_interaction(user_id, room_id, llm_response):
 
 # Inisialisasi sesi
 user_id, room_id, llm_response = initialize_session()
-text_to_speech (llm_response)
+text_to_speech(llm_response)
 
 if user_id and room_id:
     automate_interaction(user_id, room_id, llm_response)
