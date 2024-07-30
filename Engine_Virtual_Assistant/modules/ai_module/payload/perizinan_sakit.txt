@@ -1,0 +1,6 @@
+--- Field Separator ---
+nama: 
+--- Field Separator ---
+tanggal tidak masuk:
+--- Field Separator ---
+alasan tidak masuk:
