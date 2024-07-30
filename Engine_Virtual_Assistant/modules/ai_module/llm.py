@@ -31,7 +31,7 @@ class LanguageModel:
         # dict_form = self.format_response(message)
         dict_form = ''
         
-        return message, dict_form
+        return message, {}
     
     def read_intro_prompt(self, file_name):
         f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")

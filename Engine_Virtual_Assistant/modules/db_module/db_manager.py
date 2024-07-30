@@ -61,3 +61,11 @@ class DatabaseOperations:
         except Exception as e:
             print(f"Exception in save_user_session: {e}")
             return str(e)
+
+    def save_interaction(self, interaction):
+            try:
+                self.db_ai_mongo["interactions"].insert_one(interaction)
+                return "Success"
+            except Exception as e:
+                print(f"Exception in save_interaction: {e}")
+                return str(e)

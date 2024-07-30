@@ -91,25 +91,45 @@ def record_and_transcribe(duration=10):
 
 # Fungsi untuk mengotomatisasi interaksi dengan LLM
 def automate_interaction(user_id, room_id, llm_response):
+    keep_talking = True
+    while keep_talking:
+        user_response = record_and_transcribe()
+        
+        # Kirimkan transcribed text ke AI engine untuk mendapatkan response
+        ai_response, dict_form = ai_engine.generate_response(user_response)
+        
+        # Konversi AI response ke suara dan putar
+        text_to_speech(ai_response)
+        
+        # Cetak hasil response AI
+        print(f"AI Response: {ai_response}")
+        
+        # Kriteria untuk berhenti, misalnya user berkata 'selesai' atau 'stop'
+        if 'selesai' in user_response.lower() or 'stop' in user_response.lower():
+            keep_talking = False
+        
+        # Simpan interaksi ke database
+        result = {
+            "user_id": user_id,
+            "room_id": room_id,
+            "user_response": user_response,
+            "ai_response": ai_response,
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        try:
+            response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
+            response.raise_for_status()
+            print(f"Response: {response.json()}")
+        except requests.exceptions.RequestException as e:
+            print(f"Error sending request: {e}")
 
-    user_response = record_and_transcribe()
-    
-    startingPrompt = ai_engine.initialize_prompt()
-    result = ai_engine.generate_response(startingPrompt)
-    
-    if isinstance(result, tuple):
-        result = {"response": result[0]}
-    
-    result.update({"user_id": user_id, "room_id": room_id})
-    
-    print(f"Result: {result}")
-    
-    try:
-        response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
-        response.raise_for_status()
-        print(f"Response: {response.json()}")
-    except requests.exceptions.RequestException as e:
-        print(f"Error sending request: {e}")
+# Inisialisasi sesi
+user_id, room_id, llm_response = initialize_session()
+text_to_speech(llm_response)
+
+if user_id and room_id:
+    automate_interaction(user_id, room_id, llm_response)
+
 
 # Inisialisasi sesi
 user_id, room_id, llm_response = initialize_session()
