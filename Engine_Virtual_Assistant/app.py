@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 import sys
 import os
+import time
 from groq import Groq
 import requests
 import pyttsx3
@@ -71,29 +72,37 @@ def text_to_speech(text):
     # Remove the files after playing
 
 # Fungsi untuk merekam suara pengguna dan mengkonversinya menjadi teks
-def record_and_transcribe(duration=10):
+def record_and_transcribe():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Silakan bicara...")
-        audio = recognizer.listen(source, timeout=duration)
-        print("Rekaman selesai.")
-
-    try:
-        transcribed_text = recognizer.recognize_google(audio, language="id-ID")
-        print(f"Transcribed Text: {transcribed_text}")
-        return transcribed_text
-    except sr.UnknownValueError:
-        print("Google Speech Recognition tidak dapat mengenali audio")
-        return ""
-    except sr.RequestError as e:
-        print(f"Could not request results from Google Speech Recognition service; {e}")
-        return ""
+        recognizer.adjust_for_ambient_noise(source)
+        try:
+            audio = recognizer.listen(source, timeout=10, phrase_time_limit=10)
+            print("Rekaman selesai.")
+            transcribed_text = recognizer.recognize_google(audio, language="id-ID")
+            print(f"Transcribed Text: {transcribed_text}")
+            return transcribed_text
+        except sr.WaitTimeoutError:
+            print("Tidak ada suara yang terdeteksi dalam 10 detik, penghentian otomatis.")
+            return ""
+        except sr.UnknownValueError:
+            print("Google Speech Recognition tidak dapat mengenali audio")
+            return ""
+        except sr.RequestError as e:
+            print(f"Could not request results from Google Speech Recognition service; {e}")
+            return ""
 
 # Fungsi untuk mengotomatisasi interaksi dengan LLM
 def automate_interaction(user_id, room_id, llm_response):
     keep_talking = True
     while keep_talking:
         user_response = record_and_transcribe()
+        
+        if user_response.strip() == "":
+            keep_talking = False
+            print("Penghentian interaksi karena tidak ada jawaban.")
+            break
         
         # Kirimkan transcribed text ke AI engine untuk mendapatkan response
         ai_response, dict_form = ai_engine.generate_response(user_response)
@@ -103,10 +112,6 @@ def automate_interaction(user_id, room_id, llm_response):
         
         # Cetak hasil response AI
         print(f"AI Response: {ai_response}")
-        
-        # Kriteria untuk berhenti, misalnya user berkata 'selesai' atau 'stop'
-        if 'selesai' in user_response.lower() or 'stop' in user_response.lower():
-            keep_talking = False
         
         # Simpan interaksi ke database
         result = {
@@ -122,14 +127,6 @@ def automate_interaction(user_id, room_id, llm_response):
             print(f"Response: {response.json()}")
         except requests.exceptions.RequestException as e:
             print(f"Error sending request: {e}")
-
-# Inisialisasi sesi
-user_id, room_id, llm_response = initialize_session()
-text_to_speech(llm_response)
-
-if user_id and room_id:
-    automate_interaction(user_id, room_id, llm_response)
-
 
 # Inisialisasi sesi
 user_id, room_id, llm_response = initialize_session()
