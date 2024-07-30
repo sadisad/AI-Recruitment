@@ -28,7 +28,7 @@ class LanguageModel:
         
         dict_form = self.format_response(message)
         
-        return dict_form
+        return message, dict_form
     
     def read_intro_prompt(self, file_name):
         f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")
@@ -39,9 +39,6 @@ class LanguageModel:
     def initialize_prompt(self, command):
         prompt = self.read_intro_prompt('prompt/intro_prompt.txt')
         prompt = prompt.replace('<-----command----->', command)
-        
-        jsonformat = self.read_intro_prompt('payload/demo.txt')
-        prompt = prompt.replace('<--json format-->', jsonformat)
         
         return prompt
     
@@ -62,4 +59,3 @@ class LanguageModel:
 
         return dict_form
         
-

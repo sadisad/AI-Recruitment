@@ -8,8 +8,6 @@ class DatabaseOperations:
         dir_path = os.path.dirname(os.path.realpath(__file__))
         self.session_types = self.read_json_file(dir_path + '/schema_info.json')
         self.db_ai_mongo = self.connect_mongodb('mongo_db_virtual_assistant', dir_path)
-        ### Jangan pernah cursor di atas begini, bikin cursor, langsung close tiap query. Jgn 1 cursor buat banyak query
-        # self.cursor = self.conn.cursor() 
     
     def connect_mongodb(self, conn_name, dir_path):
         credentials = self.read_json_file(dir_path + '/db_config.json')[conn_name]
@@ -18,12 +16,6 @@ class DatabaseOperations:
         db_name = credentials['database']
         port = int(credentials['port'])
         host = credentials['host']
-        
-        print('------------')
-        print(username)
-        print(password)
-        print(db_name) 
-        print('------------')
         
         if username != '':
             uri = f"mongodb://{username}:{password}@{host}:{port}/{db_name}"
@@ -35,9 +27,8 @@ class DatabaseOperations:
         return db_mongo
 
     def read_json_file(self, file_name):
-        f = open(file_name)
-        file_content = json.load(f)
-        f.close()
+        with open(file_name) as f:
+            file_content = json.load(f)
         return file_content
     
     def upsert_dummy_data(self, engine_type, input):
@@ -49,13 +40,13 @@ class DatabaseOperations:
 
         try:
             result = tbl_mongo_ai.find_one_and_update(
-                {"identifier_field": dummy_entry.get("identifier_field", "default_value")},  # Replace with appropriate identifier field
+                {"identifier_field": dummy_entry.get("identifier_field", "default_value")},  # Ganti dengan field identifier yang sesuai
                 {"$set": dummy_entry},
                 upsert=True
             )
             return "Success" if result else "No changes made"
         except Exception as e:
-            print(f"message: {str(e)}")
+            print(f"Exception in upsert_dummy_data: {e}")
             return str(e)
         
     def save_user_session(self, user_id, room_id):
@@ -68,5 +59,5 @@ class DatabaseOperations:
             self.db_ai_mongo["user_sessions"].insert_one(session_data)
             return "Success"
         except Exception as e:
-            print(f"Error saving session: {str(e)}")
+            print(f"Exception in save_user_session: {e}")
             return str(e)
