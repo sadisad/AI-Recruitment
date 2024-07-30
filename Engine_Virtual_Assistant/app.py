@@ -10,7 +10,7 @@ import pyttsx3
 import speech_recognition as sr
 
 from gtts import gTTS
-import playsound
+from playsound import playsound
 
 from modules.ai_module.llm import LanguageModel
 
@@ -35,9 +35,12 @@ def initialize_session():
         return None, None, None
 
 # Fungsi untuk mengubah teks menjadi suara
-def text_to_speech(text, output_filename):
-    tts_engine.save_to_file(text, output_filename)
-    tts_engine.runAndWait()
+def text_to_speech(text):
+    tts = gTTS(text=text, lang='id')
+    filename = "speech.wav"
+    tts.save(filename)
+    playsound(filename)
+    os.remove(filename)
 
 # Fungsi untuk merekam suara pengguna dan mengkonversinya menjadi teks
 def record_and_transcribe(duration=10):
@@ -82,10 +85,7 @@ def automate_interaction(user_id, room_id, llm_response):
 
 # Inisialisasi sesi
 user_id, room_id, llm_response = initialize_session()
-
-tts = gTTS(text=llm_response, lang='id')
-
-playsound.playsound(tts)
+text_to_speech (llm_response)
 
 if user_id and room_id:
     automate_interaction(user_id, room_id, llm_response)

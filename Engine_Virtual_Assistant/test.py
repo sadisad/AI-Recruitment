@@ -55,7 +55,6 @@ if not transcribed_text:
     print("Tidak ada input dari mikrofon.")
     exit()
 
-
 ########################### DARI AUDIO/VIDEO FILE
 # Proses transkripsi audio menjadi teks
 # with open(filename, "rb") as file:
