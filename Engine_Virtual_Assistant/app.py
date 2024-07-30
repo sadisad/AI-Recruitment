@@ -6,6 +6,8 @@ import sys
 import os
 from groq import Groq
 import requests
+from flask import Flask, session
+from flask_session import Session
 
 from flask import jsonify
 # Tambahkan subdirektori ke sys.path
@@ -78,26 +80,34 @@ def transcribe_audio(file_path):
         )
         return transcription.text
 
-def automate_demo(file_path):
+def automate_demo(file_path, user_id, room_id):
     transcribed_text = transcribe_audio(file_path)
     print(f"Transcribed Text: {transcribed_text}")
     
     startingPrompt = ai_engine.initialize_prompt(transcribed_text)
     result = ai_engine.generate_response(startingPrompt)
     
+    result.update({"user_id": user_id, "room_id": room_id})
+    
     print(f"Result: {result}")
     
     try:
-        response = requests.post('http://192.168.30.130:5000/virtual%20assistant/test', json=result)
+        response = requests.post('http://127.0.0.1:5000/virtual%20assistant/test', json=result)
         response.raise_for_status()
         print(f"Response: {response.json()}")
     except requests.exceptions.RequestException as e:
         print(f"Error sending request: {e}")
 
-
-    
-
 # Langkah-langkah Pengujian
 output_filename = 'test_absence.wav'
 # record_audio(output_filename, duration=10)
-automate_demo(output_filename)
+
+# Inisialisasi sesi dan dapatkan user_id dan room_id
+response = requests.post('http://127.0.0.1:5000/Virtual Assistant/initialize')
+if response.status_code == 200:
+    data = response.json()
+    user_id = data['user_id']
+    room_id = data['room_id']
+    automate_demo(output_filename, user_id, room_id)
+else:
+    print("Failed to initialize session")

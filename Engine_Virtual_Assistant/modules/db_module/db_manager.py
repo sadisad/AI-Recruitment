@@ -1,7 +1,7 @@
 import pymongo
 import json
 import os
-
+import datetime
 
 class DatabaseOperations:
     def __init__(self):
@@ -56,4 +56,17 @@ class DatabaseOperations:
             return "Success" if result else "No changes made"
         except Exception as e:
             print(f"message: {str(e)}")
+            return str(e)
+        
+    def save_user_session(self, user_id, room_id):
+        session_data = {
+            "user_id": user_id,
+            "room_id": room_id,
+            "timestamp": datetime.datetime.now()
+        }
+        try:
+            self.db_ai_mongo["user_sessions"].insert_one(session_data)
+            return "Success"
+        except Exception as e:
+            print(f"Error saving session: {str(e)}")
             return str(e)
