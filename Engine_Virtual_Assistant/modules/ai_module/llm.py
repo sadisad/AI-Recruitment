@@ -2,6 +2,7 @@ import json
 from groq import Groq
 import ast
 import os
+from datetime import datetime
 
 class LanguageModel:
     def __init__(self):
@@ -39,9 +40,10 @@ class LanguageModel:
         return str_prompt
     
     def initialize_prompt(self):
+        current_time = datetime.now().time()
         prompt = self.read_intro_prompt('prompt/intro_prompt.txt')
         # prompt = prompt.replace('<-----command----->', command)
-        
+        prompt = prompt.replace('<->waktu saat ini<->', str(current_time))
         return prompt
     
     def format_response(self, response):

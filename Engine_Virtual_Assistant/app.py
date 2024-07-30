@@ -69,8 +69,6 @@ def text_to_speech(text):
     wf.close()
 
     # Remove the files after playing
-    os.remove(mp3_filename)
-    os.remove(wav_filename)
 
 # Fungsi untuk merekam suara pengguna dan mengkonversinya menjadi teks
 def record_and_transcribe(duration=10):
