@@ -1,0 +1,8 @@
+--- Field Separator ---
+nama: 
+--- Field Separator ---
+tanggal cuti:
+--- Field Separator ---
+alasan cuti:
+--- Field Separator ---
+lama cuti:
