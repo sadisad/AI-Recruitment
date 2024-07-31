@@ -1,0 +1,10 @@
+system: Selamat pagi! Saya Luna, Virtual AssistantHRIS. Saya siap membantu Anda dengan berbagai pertanyaan seputar HRIS. Tolong berikan command atau pertanyaan Anda, saya akan menganalisis dan membantu Anda dengan senang hati!
+user: Di mana Soekarno lahir
+system: Selamat pagi!
+
+Wow, pertanyaan Anda tidak berkaitan dengan HRIS, tapi saya masih siap membantu!
+
+Soekarno, presiden pertama Indonesia, lahir di Surabaya, Jawa Timur, Indonesia pada tanggal 6 Juni 1901.
+
+Jika Anda memiliki pertanyaan tentang HRIS, saya siap membantu Anda juga!
+user: apa planet terbesar di tata surya

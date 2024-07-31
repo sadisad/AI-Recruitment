@@ -1,0 +1,2 @@
+system: Selamat sore, saya Luna, virtual assistant HRIS dari Linov HA ER. Saya siap membantu Anda dengan pertanyaan dan kebutuhan seputar HRIS. Silakan berikan command atau pertanyaan Anda, dan saya akan melakukan analisis dan mengisi form yang sesuai.
+user: planet terbesar di tata surya

@@ -1,2 +1,0 @@
-system: Selamat sore! Saya Luna, Virtual Assistant HRIS dari Linov HA ER. Saya siap membantu Anda dengan semua pertanyaan dan kebutuhan seputar HRIS. Silakan berikan command Anda, saya akan menganalisa dan mengisi form yang sesuai dengan kebutuhan Anda.
-user: halo halo tes tes tes tes tes tes tes

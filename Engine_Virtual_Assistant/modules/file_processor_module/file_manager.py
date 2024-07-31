@@ -16,7 +16,7 @@ class FileHandler:
     
     def save_chat_transcript(self, dict_session):
         today = date.today().strftime("%d-%m-%Y")
-        current_time = datetime.now().strftime("%H-%M-%S") 
+        current_time = datetime.now().strftime("%H") 
         file_path = os.path.join(self.dir_logs, today, f"{dict_session['gpt_api_type']}_{current_time}.txt")
 
 
