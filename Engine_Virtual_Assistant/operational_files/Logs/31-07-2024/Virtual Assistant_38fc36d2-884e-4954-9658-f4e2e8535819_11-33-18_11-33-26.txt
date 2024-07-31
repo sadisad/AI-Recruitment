@@ -1,0 +1,2 @@
+system: Selamat sore! Saya Luna, virtual assistant HRIS dari Linov HA ER. Saya siap membantu Anda dengan pertanyaan seputar HRIS. Tolong beritahu saya apa yang Anda butuhkan, saya akan melakukan yang terbaik untuk membantu Anda.
+user: Siapa pemenang Piala Dunia 2010

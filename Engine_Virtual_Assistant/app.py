@@ -1,3 +1,4 @@
+from flask import session
 import pyaudio
 import wave
 import json
@@ -14,6 +15,10 @@ from gtts import gTTS
 from pydub import AudioSegment
 from modules.ai_module.llm import LanguageModel
 
+from modules.db_module.db_manager import DatabaseOperations
+
+db_ops = DatabaseOperations()
+
 # Memuat konfigurasi dari groq_config_llm.json
 config_llm_path = os.path.join(os.path.dirname(__file__), 'modules', 'ai_module', 'groq_config_llm.json')
 ai_engine = LanguageModel()
@@ -24,6 +29,7 @@ tts_engine = pyttsx3.init()
 # Fungsi untuk menginisialisasi sesi dan mendapatkan user_id dan room_id
 def initialize_session():
     response = requests.post('http://127.0.0.1:5000/virtual_assistant/initialize')
+    
     if response.status_code == 200:
         data = response.json()
         
@@ -96,6 +102,9 @@ def record_and_transcribe():
 # Fungsi untuk mengotomatisasi interaksi dengan LLM
 def automate_interaction(user_id, room_id, llm_response):
     keep_talking = True
+    session_data = {"history": [{"role": "system", "content": llm_response}], "bool_chat": False}
+    ai_engine.initialize_api_type('Virtual Assistant', session_data)
+
     while keep_talking:
         user_response = record_and_transcribe()
         
@@ -104,22 +113,28 @@ def automate_interaction(user_id, room_id, llm_response):
             print("Penghentian interaksi karena tidak ada jawaban.")
             break
         
-        # Kirimkan transcribed text ke AI engine untuk mendapatkan response
-        ai_response, dict_form = ai_engine.generate_response(user_response)
+        session_data['history'].append({"role": "user", "content": user_response})
         
-        # Konversi AI response ke suara dan putar
-        text_to_speech(ai_response)
+        # Send transcribed text to AI engine to get a response
+        ai_response = ai_engine.generate_response(session_data=session_data)
         
-        # Cetak hasil response AI
+        # Update the session history
+        session_data['history'].append({"role": "system", "content": ai_response})
+        
+        db_ops.upsert_conversation_transcript(room_id, llm_response, 'User')
+        
+        # Print AI response
         print(f"AI Response: {ai_response}")
         
-        # Simpan interaksi ke database
+        # Convert AI response to speech and play
+        text_to_speech(ai_response)
+        
+        # Save interaction to database
         result = {
             "user_id": user_id,
             "room_id": room_id,
             "user_response": user_response,
-            "ai_response": ai_response,
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "ai_response": ai_response
         }
         try:
             response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
@@ -128,7 +143,7 @@ def automate_interaction(user_id, room_id, llm_response):
         except requests.exceptions.RequestException as e:
             print(f"Error sending request: {e}")
 
-# Inisialisasi sesi
+# Initialize session
 user_id, room_id, llm_response = initialize_session()
 text_to_speech(llm_response)
 

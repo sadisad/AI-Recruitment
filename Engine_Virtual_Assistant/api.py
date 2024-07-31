@@ -35,24 +35,26 @@ class Initialize(Resource):
     @cross_origin()
     def post(self):
         try:
-            # Buat user_id dan room_id baru menggunakan UUID
+            session_data = {"history": [], "bool_chat": False}
+            ai_engine.initialize_api_type('Virtual Assistant', session_data)   
+            
             user_id = str(uuid.uuid4())
             room_id = str(uuid.uuid4())
             
             prompt = ai_engine.initialize_prompt()
+            session_data['history'].append({"role": "user", "content": prompt})
 
-            # Dapatkan sapaan awal dari LLM
-            llm_response, dict = ai_engine.generate_response(prompt)
+            llm_response = ai_engine.generate_response(session_data=session_data, primary_key={"room_id": room_id})
             
-            print(llm_response, dict)
+            print(llm_response)
             
-            # Simpan sesi pengguna
             result = db_ops.save_user_session(user_id, room_id)
+            db_ops.upsert_conversation_transcript(room_id, llm_response, 'AI')
+            
             if result != "Success":
                 print(f"Error saving session: {result}")
                 return {'message': result}, 500
             
-            # Simpan user_id dan room_id dalam variabel global
             user_sessions[user_id] = room_id
             
             return {
@@ -64,6 +66,7 @@ class Initialize(Resource):
         except Exception as e:
             print(f"Exception in /initialize: {e}")
             return {'message': str(e)}, 400
+
 
 @ns.route('/test', methods=['POST'])
 class Test(Resource):

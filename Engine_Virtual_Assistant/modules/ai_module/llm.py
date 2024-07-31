@@ -1,8 +1,16 @@
+from datetime import datetime
 import json
+import uuid
+from flask import session
 from groq import Groq
 import ast
 import os
-from datetime import datetime
+
+from modules.file_processor_module.file_manager import FileHandler
+from modules.db_module.db_manager import DatabaseOperations
+
+fileManager = FileHandler()
+dbManager = DatabaseOperations()
 
 class LanguageModel:
     def __init__(self):
@@ -13,25 +21,41 @@ class LanguageModel:
         self.model = self.configllm['model']
         
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
-    
-    def generate_response(self, text):
-        chat_completion = self.client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": text
-                }
-            ],
+        
+    def hit_groq_api(self, session_data, one_time_message=''):
+        prompt = [{"role": "system", "content": one_time_message}] if one_time_message else session_data['history']
+        
+        response = self.client.chat.completions.create(
+            messages=prompt,
             model=self.configllm['model']
         )
+
+        json_response = json.loads(response.json())
         
-        message = chat_completion.choices[0].message.content
+        try:
+            answer = json_response.get("choices")[0].get("message")["content"]
+        except:
+            answer = 'Maaf, saya mengalami kesalahan. Bisa diulang kembali?'
         
+        return answer, json_response
+    
+    def generate_response(self, session_data, primary_key={}, additional_dict={}, one_time_message=''):
+        answer, json_response = self.hit_groq_api(session_data, one_time_message)
         
-        # dict_form = self.format_response(message)
-        dict_form = ''
+        log_file_content = fileManager.save_chat_transcript(session_data)
+        dict_form = {**additional_dict}
+        row_id = dbManager.store_to_db(session_data['gpt_api_type'].split('_')[0],
+                                    session_data['bool_chat'],
+                                    session_data['gpt_api_type'],
+                                    log_file_content,
+                                    dict_data=dict_form,
+                                    id_dict=primary_key)
         
-        return message, {}
+        return answer
+
+    def initialize_api_type(self, api_type, session_data):
+        current_time = datetime.now().strftime("%H-%M-%S")  # Replace colons with hyphens
+        session_data['gpt_api_type'] =  api_type + '_' + str(uuid.uuid4()) + '_' +  current_time
     
     def read_intro_prompt(self, file_name):
         f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")
@@ -40,9 +64,8 @@ class LanguageModel:
         return str_prompt
     
     def initialize_prompt(self):
-        current_time = datetime.now().time()
+        current_time = datetime.now().strftime("%H-%M-%S")  # Replace colons with hyphens
         prompt = self.read_intro_prompt('prompt/intro_prompt.txt')
-        # prompt = prompt.replace('<-----command----->', command)
         prompt = prompt.replace('<->waktu saat ini<->', str(current_time))
         return prompt
     
@@ -62,4 +85,3 @@ class LanguageModel:
                     dict_form[key] = value
 
         return dict_form
-        
