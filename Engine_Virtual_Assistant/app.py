@@ -108,6 +108,8 @@ def automate_interaction(user_id, room_id, llm_response):
     while keep_talking:
         user_response = record_and_transcribe()
         
+        db_ops.upsert_conversation_transcript(room_id, user_response, 'User')
+        
         if user_response.strip() == "":
             keep_talking = False
             print("Penghentian interaksi karena tidak ada jawaban.")
@@ -121,7 +123,7 @@ def automate_interaction(user_id, room_id, llm_response):
         # Update the session history
         session_data['history'].append({"role": "system", "content": ai_response})
         
-        db_ops.upsert_conversation_transcript(room_id, llm_response, 'User')
+        db_ops.upsert_conversation_transcript(room_id, llm_response, 'AI')
         
         # Print AI response
         print(f"AI Response: {ai_response}")
