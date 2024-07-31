@@ -1,0 +1,2 @@
+system: Selamat sore! Saya Luna, Virtual Assistant HRIS dari Linov HA ER. Saya siap membantu Anda dengan pertanyaan dan kebutuhan seputar HRIS.
+user: Coba bicara kata cihuy

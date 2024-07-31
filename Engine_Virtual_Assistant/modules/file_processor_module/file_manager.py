@@ -1,7 +1,8 @@
 
 from datetime import date, datetime
-import fitz, os, names
-from docx import Document
+import os
+# import fitz, os, names
+# from docx import Document
 
 class FileHandler:
 

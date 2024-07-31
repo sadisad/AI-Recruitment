@@ -123,7 +123,7 @@ def automate_interaction(user_id, room_id, llm_response):
         # Update the session history
         session_data['history'].append({"role": "system", "content": ai_response})
         
-        db_ops.upsert_conversation_transcript(room_id, llm_response, 'AI')
+        db_ops.upsert_conversation_transcript(room_id, ai_response, 'AI')
         
         # Print AI response
         print(f"AI Response: {ai_response}")
@@ -131,19 +131,19 @@ def automate_interaction(user_id, room_id, llm_response):
         # Convert AI response to speech and play
         text_to_speech(ai_response)
         
-        # Save interaction to database
-        result = {
-            "user_id": user_id,
-            "room_id": room_id,
-            "user_response": user_response,
-            "ai_response": ai_response
-        }
-        try:
-            response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
-            response.raise_for_status()
-            print(f"Response: {response.json()}")
-        except requests.exceptions.RequestException as e:
-            print(f"Error sending request: {e}")
+        # # Save interaction to database
+        # result = {
+        #     "user_id": user_id,
+        #     "room_id": room_id,
+        #     "user_response": user_response,
+        #     "ai_response": ai_response
+        # }
+        # try:
+        #     response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
+        #     response.raise_for_status()
+        #     print(f"Response: {response.json()}")
+        # except requests.exceptions.RequestException as e:
+        #     print(f"Error sending request: {e}")
 
 # Initialize session
 user_id, room_id, llm_response = initialize_session()
