@@ -19,12 +19,10 @@ class FileHandler:
         current_time = datetime.now().strftime("%H") 
         file_path = os.path.join(self.dir_logs, today, f"{dict_session['gpt_api_type']}_{current_time}.txt")
 
-
         try:
             os.mkdir(self.dir_logs + today)
         except:
             pass
-        
         counter = 0
         with open(file_path, 'w', encoding="utf-8") as transcript_file:
             for entry in dict_session['history']:

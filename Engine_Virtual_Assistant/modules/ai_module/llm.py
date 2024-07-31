@@ -25,8 +25,10 @@ class LanguageModel:
     def hit_groq_api(self, session_data, one_time_message=''):
         prompt = [{"role": "system", "content": one_time_message}] if one_time_message else session_data['history']
         
+        print(session_data['history'])
+                
         response = self.client.chat.completions.create(
-            messages=prompt,
+            messages=session_data['history'],
             model=self.configllm['model']
         )
 
@@ -40,7 +42,9 @@ class LanguageModel:
         return answer, json_response
     
     def generate_response(self, session_data, primary_key={}, additional_dict={}, one_time_message=''):
+        
         answer, json_response = self.hit_groq_api(session_data, one_time_message)
+        session_data['history'].append({"role": "system", "content": answer})
         
         log_file_content = fileManager.save_chat_transcript(session_data)
         dict_form = {**additional_dict}
@@ -51,7 +55,8 @@ class LanguageModel:
                                     dict_data=dict_form,
                                     id_dict=primary_key)
         
-        return answer
+        
+        return answer, session_data
 
     def initialize_api_type(self, api_type, session_data):
         current_time = datetime.now().strftime("%H-%M-%S")  # Replace colons with hyphens

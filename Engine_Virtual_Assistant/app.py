@@ -35,7 +35,9 @@ def initialize_session():
         
         print(data['llm_response'])
         
-        return data['user_id'], data['room_id'], data['llm_response']
+        session_data = data['session_data']
+        
+        return data
     else:
         print("Failed to initialize session")
         return None, None, None
@@ -100,9 +102,10 @@ def record_and_transcribe():
             return ""
 
 # Fungsi untuk mengotomatisasi interaksi dengan LLM
-def automate_interaction(user_id, room_id, llm_response):
+def automate_interaction(user_id, room_id, llm_response, session):
     keep_talking = True
-    session_data = {"history": [{"role": "system", "content": llm_response}], "bool_chat": False}
+    session_data = session
+    
     ai_engine.initialize_api_type('Virtual Assistant', session_data)
 
     while keep_talking:
@@ -110,7 +113,7 @@ def automate_interaction(user_id, room_id, llm_response):
         
         db_ops.upsert_conversation_transcript(room_id, user_response, 'User')
         
-        if user_response.strip() == "":
+        if str(user_response).strip() == "":
             keep_talking = False
             print("Penghentian interaksi karena tidak ada jawaban.")
             break
@@ -118,7 +121,7 @@ def automate_interaction(user_id, room_id, llm_response):
         session_data['history'].append({"role": "user", "content": user_response})
         
         # Send transcribed text to AI engine to get a response
-        ai_response = ai_engine.generate_response(session_data=session_data)
+        ai_response, session_data = ai_engine.generate_response(session_data=session_data)
         
         # Update the session history
         session_data['history'].append({"role": "system", "content": ai_response})
@@ -131,23 +134,11 @@ def automate_interaction(user_id, room_id, llm_response):
         # Convert AI response to speech and play
         text_to_speech(ai_response)
         
-        # # Save interaction to database
-        # result = {
-        #     "user_id": user_id,
-        #     "room_id": room_id,
-        #     "user_response": user_response,
-        #     "ai_response": ai_response
-        # }
-        # try:
-        #     response = requests.post('http://127.0.0.1:5000/virtual_assistant/test', json=result)
-        #     response.raise_for_status()
-        #     print(f"Response: {response.json()}")
-        # except requests.exceptions.RequestException as e:
-        #     print(f"Error sending request: {e}")
 
 # Initialize session
-user_id, room_id, llm_response = initialize_session()
-text_to_speech(llm_response)
+data = initialize_session()
 
-if user_id and room_id:
-    automate_interaction(user_id, room_id, llm_response)
+text_to_speech(data['llm_response'])
+
+if data['user_id'] and data['room_id']:
+    automate_interaction(data['user_id'], data['room_id'], data['llm_response'], data['session_data'])

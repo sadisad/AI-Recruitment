@@ -44,7 +44,7 @@ class Initialize(Resource):
             prompt = ai_engine.initialize_prompt()
             session_data['history'].append({"role": "user", "content": prompt})
 
-            llm_response = ai_engine.generate_response(session_data=session_data, primary_key={"room_id": room_id})
+            llm_response, session_data = ai_engine.generate_response(session_data=session_data, primary_key={"room_id": room_id})
             
             print(llm_response)
             
@@ -61,7 +61,8 @@ class Initialize(Resource):
                 'message': 'Initialization successful',
                 'user_id': user_id,
                 'room_id': room_id,
-                'llm_response': llm_response
+                'llm_response': llm_response,
+                'session_data': session_data
             }, 200
         except Exception as e:
             print(f"Exception in /initialize: {e}")
