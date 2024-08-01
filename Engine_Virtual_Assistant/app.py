@@ -133,7 +133,6 @@ def automate_interaction(user_id, room_id, llm_response, session):
         
         # Convert AI response to speech and play
         text_to_speech(ai_response)
-        
 
 # Initialize session
 data = initialize_session()

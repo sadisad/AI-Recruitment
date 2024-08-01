@@ -24,8 +24,6 @@ class LanguageModel:
         
     def hit_groq_api(self, session_data, one_time_message=''):
         prompt = [{"role": "system", "content": one_time_message}] if one_time_message else session_data['history']
-        
-        print(session_data['history'])
                 
         response = self.client.chat.completions.create(
             messages=session_data['history'],
@@ -90,3 +88,11 @@ class LanguageModel:
                     dict_form[key] = value
 
         return dict_form
+
+        
+    def process_input(user_input):
+        # Logika untuk menentukan URL redirect berdasarkan input pengguna
+        if "absen" in user_input.lower():
+            return {"redirect": "https://dev5.linovhr.com/admin/dashboard"}
+        else:
+            return {"message": "Permintaan tidak dikenal."}

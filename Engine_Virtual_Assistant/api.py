@@ -84,5 +84,12 @@ class Test(Resource):
             print(f"Exception in /test: {e}")
             return {'message': str(e)}, 400
         
+@app.route('/process', methods=['POST'])
+def process():
+    data = request.json
+    user_input = data.get('input')
+    response = ai_engine.process_input(user_input)
+    return jsonify(response)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
