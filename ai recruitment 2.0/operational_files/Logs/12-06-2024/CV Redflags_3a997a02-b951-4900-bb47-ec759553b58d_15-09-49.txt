@@ -1,0 +1,107 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Job Yang Dilamar : Payroll Expert
+Role Overview : Handling multiple payroll activities
+Job Description : Handling all payroll end to end process for business entities :
+
+1. Payroll computation & Payoff
+1.1 Maintain access to timesheet data and all payroll component information;
+1.2 Responsible for payroll data into administrative databases and software programs, annually evaluating for payroll software provider is included.
+1.3 Review payroll reconciliations: salaries, benefits, tax deduction, commission ect;
+Ensure payment Bank transfer: maintaining accurate records of payroll data documentation and transaction;
+Responsible for preparing and distributing income statements/payslip;
+Handling social insurance affairs;
+
+2. Tax treatment
+2.1 Maintaining and coordinating with Tax Consultant for PPH21;
+2.2 Processing Tax Article 21 (PPH21) report to E-Bupot monthly & annually;
+2.3 Understand, maintain and always update related to all policy and regulation for payroll, tax & social insurance ect;
+
+3. Daily data provision
+3.1 Handling payroll data monthly accrue;
+3.2 Preparing periodic payroll reports for review by management;
+3.3 Responding to payroll-related inquiries and resolving concerns;
+Job Requirement : Bachelor Degree in accounting, business or other related field may be preferred;
+A minimum 5 year experience working in payroll or similar role;
+Familiar with payroll system software and experience working with accounting;
+Working knowledge of basic accounting principles and payroll practice;
+Excellent communication and interpersonal skills;
+Strong organizational and time management skills;
+Detail oriented, data sensitive, honest and good attitude;
+
+------
+CV:
+                     MOHAMMAD AUFAR, S.Kom.   CONTACT ME   Phone: 0817-7413-2920 (WA, Telegram)  Email: m.aufar12@gmail.com Address: Gudang Peluru Selatan II Blok N/341, Kebon Baru, Tebet, Jakarta Selatan, 12830  TECHNICAL SKILLS   PYTHON (Flask, Machine Learning, etc)  DOCKER (Linux, Containers) SQL (SQL Server, Postgre, MongoDB, MySQL, SQLite)  Microsoft Power (PowerBI, PowerAutomate, PowerApps) LLM Generative AI (OpenAI) ROBOT FRAMEWORK (RPA, Automation Testing, Selenium) CHATBOT FRAMEWORK (Rasa, Botpress) MICROSOFT TOOLS (Word, Excel, etc) ETL SOFTWARE (Apache Airflow)  CERTIFICATIONS   • Microsoft Technology Associate: Database Fundamentals • EPrT (English Proficiency Test) with a final score of 550 • Alison: Machine Learning in Python Environment • Dicoding: Cloud Practitioner Essentials (AWS Cloud)    LANGUAGES   INDONESIAN  ENGLISH   PROJECTS   github.com/Aufar12 EXPERIENCES   ESAP Tutor | Telkom University’s Language Center August 2018 – August 2019 | Bandung  • Keyrole : Teach freshmen of Telkom University basic English, both in Classes or ESAP Course.  • Teach foreigners student in Telkom University how to speak in Indonesian language properly.  Laboratory Assistant | EAD (Enterprise Application Development) Laboratory January 2017 – May 2020 | Bandung  • Keyrole : To Create practicum modules, Recap practicum’s student scores and presence, and Maintain EAD Lab’s Facility.  • Conducting application research and must Participate in Community Service and Programming Competition.  System Analyst Intern | PT. Infomedia Nusantara May 2019 – July 2019 | South Jakarta  • Keyrole : Ensure the project finishes on time and the product’s quality meets the customer requirement. • Prioritize tasks and schedule the task according to the task level. • Do testing and documentation of the project given to measure its quality.  Python & RPA Developer | PT. Astra Graphia IT, Tbk August 2020 – July 2022 | North Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Automation Program using Robot Framework (Robotic Process Automation)  • Creates Chatbots, Text-to-Speech Applications  Python Engineer | PT. Inti Corpora Teknologi July 2022 – Aug 2023 | Central Jakarta  • Keyrole : Develop Custom Python Modules using Front Arena Treasury Tools • Creates ATF (Arena Testing Framework) Automation Scripts using Robot Framework, Python and AEF Modules  • Creates Tasks and Reports such as excel, pdf, etc using Python, HTML, and XSLFO  Python Developer | PT. Hiro Amadeus Semesta Sep 2023 – Present | South Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Chatbot Engine using LLM OpenAI • Develop Scheduler Algorithm for NMS2 Fuel Delivery System • Develop and Maintain API’s for Multiple Engines    EDUCATION  2016 - 2020  Information System Student at Telkom University, Bandung   ACHIEVEMENTS & AWARDS  • Finalist in HOLOGY 2019, Competitive Programming Contest  • Participant in COMPSPHERE 2019, Programming Rush Competition   • Graduated with an accumulative GPA of 3.82  • Published an international scientific paper on ICoDSA 2020 (International Conference on Data Science and Its Applications) • Final Thesis is about Web Scraping, Web Development, and Machine Learning • Able to do freelance while doing full-time work at a company • Implementing Email Automation as a solution with various methods 
+system: Here is the evaluation of the CV:
+
+Name: MOHAMMAD AUFAR, S.Kom.
+
+--- Field Separator ---
+
+high_turnover: Red Flag <-> The candidate has had 5 jobs in a short period of time (2018-2023), which may indicate a potential issue with job commitment or career stability.
+
+--- Field Separator ---
+
+kualifikasi_atau_pendidikan_yang_tidak_relevan: Safe
+
+--- Field Separator ---
+
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan: Safe
+
+--- Field Separator ---
+
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun: Safe
+
+--- Field Separator ---
+
+durasi_pendidikan: Safe
+
+--- Field Separator ---
+
+gpa_above_3_ipk_minimal_3: Safe (GPA 3.82 is above the minimum requirement)
+
+--- Field Separator ---
+
+inconsistent_career_path: Red Flag <-> The candidate has had multiple roles in a short period of time, which may indicate a lack of stability or focus in their career path.
+
+--- Field Separator ---
+
+non-progressive_career_path: Safe
+{'completion_time': 0.673141771, 'completion_tokens': 241, 'prompt_time': 0.31559864, 'prompt_tokens': 1925, 'queue_time': None, 'total_time': 0.988740411, 'total_tokens': 2166}
+----------------

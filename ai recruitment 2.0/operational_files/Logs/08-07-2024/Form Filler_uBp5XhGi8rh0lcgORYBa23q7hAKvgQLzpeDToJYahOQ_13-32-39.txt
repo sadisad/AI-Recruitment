@@ -1,0 +1,230 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CONTACTSjamie.rivera@example.comjamie.rivera+1234567890San Francisco, CASKILLSDigital MarketingSEO & SEMContent CreationSocial Media StrategyMarket ResearchData AnalysisCreative CampaignsCustomer EngagementBrand ManagementEDUCATIONBachelor of Science in MarketingUniversity of California, Berkeley |Berkeley, CA2013 – 2017Jamie RiveraMarketing SpecialistMarketing CoordinatorLed a team for a successful product launch, increasing market share by 15% within thefirst quarter.Digital Marketing SpecialistSpearheaded the digital marketing strategy, enhancing online presence and doubling theengagement rates on key platforms.SEO AnalystOptimized website content for SEO, resulting in a 40% increase in organic traffic.Social Media ManagerManaged multiple social media accounts, growing follower base by over 200%.Content Marketing SpecialistDeveloped and executed a content strategy that increased web traffic by 50%.Marketing AnalystConducted market research that informed product development, leading to a successfulproduct launch.Junior Marketing AssociateAssisted in the creation and implementation of marketing campaigns, resulting in a 30%increase in customer engagement.Jamie Rivera is a dynamic and creative marketing specialist with 6 years of experienceacross various sectors. Known for innovative strategies and a knack for increasingengagement and market share, Jamie is a valuable asset to any team. With a highadaptability to market trends and a results-driven approach, Jamie has consistentlydelivered outstanding results in all positions held.EXPERIENCECreative Solutions Inc. | San Francisco, CA6 monthsProduct LaunchJan 2022 – Jun 2022Innovate Startups | San Francisco, CA6 monthsEngagement DoublingJul 2021 – Dec 2021TechAdvancers | San Francisco, CA6 monthsSEO ImprovementJan 2021 – Jun 2021BrandBoost | San Francisco, CA6 monthsFollower GrowthJul 2020 – Dec 2020MarketMovers | San Francisco, CA6 monthsTraffic IncreaseJan 2020 – Jun 2020Global Trends | San Francisco, CA6 monthsMarket ResearchJul 2019 – Dec 2019Creative Dynamics | San Francisco, CA6 monthsCampaign AssistanceJan 2019 – Jun 2019ABOUT
+system: ---
+candidateId : 
+---
+salutation : 
+---
+frontTitle : 
+---
+endTitle : 
+---
+fullName : Jamie Rivera
+---
+firstName : Jamie
+---
+vendor : 
+---
+lastName : Rivera
+---
+nickname : 
+---
+position : Marketing Specialist
+---
+status : 
+---
+gender : 
+---
+birthplace : 
+---
+birthdate : 
+---
+religion : 
+---
+nationality : 
+---
+ethnicity : 
+---
+maritalStatus : 
+---
+medicalStatus : 
+---
+bloodType : 
+---
+height : 
+---
+weight : 
+---
+houseStatus : 
+---
+note : 
+---
+country : USA
+---
+state : CA
+---
+city : San Francisco
+---
+subDistrict : 
+---
+village : 
+---
+address : 
+---
+postalCode : 
+---
+since : 
+---
+phones : [{"phoneCode" : "+1", "phoneNumber" : "234567890", "type" : "", "primary" : ""}]
+---
+emails : [{"email" : "jamie.rivera@example.com", "type" : "", "notification" : ""}]
+---
+socialMedias : []
+---
+workExperience : [{"company" : "Creative Solutions Inc.", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Marketing Specialist", "exitReason" : "", "startDate" : "Jan 2022", "current" : "false", "endDate" : "Jun 2022", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Led a team for a successful product launch, increasing market share by 15% within the first quarter."}, {"company" : "Innovate Startups", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Digital Marketing Specialist", "exitReason" : "", "startDate" : "Jul 2021", "current" : "false", "endDate" : "Dec 2021", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Spearheaded the digital marketing strategy, enhancing online presence and doubling the engagement rates on key platforms."}, {"company" : "TechAdvancers", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "SEO Analyst", "exitReason" : "", "startDate" : "Jan 2021", "current" : "false", "endDate" : "Jun 2021", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Optimized website content for SEO, resulting in a 40% increase in organic traffic."}, {"company" : "BrandBoost", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Social Media Manager", "exitReason" : "", "startDate" : "Jul 2020", "current" : "false", "endDate" : "Dec 2020", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Managed multiple social media accounts, growing follower base by over 200%."}, {"company" : "MarketMovers", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Content Marketing Specialist", "exitReason" : "", "startDate" : "Jan 2020", "current" : "false", "endDate" : "Jun 2020", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Developed and executed a content strategy that increased web traffic by 50%."}, {"company" : "Global Trends", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Marketing Analyst", "exitReason" : "", "startDate" : "Jul 2019", "current" : "false", "endDate" : "Dec 2019", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Conducted market research that informed product development, leading to a successful product launch."}, {"company" : "Creative Dynamics", "address" : "San Francisco, CA", "totalEmployee" : "", "position" : "Junior Marketing Associate", "exitReason" : "", "startDate" : "Jan 2019", "current" : "false", "endDate" : "Jun 2019", "firstSalary" : "", "lastSalary" : "", "currency" : "", "companyType" : "", "responsibility" : "Assisted in the creation and implementation of marketing campaigns, resulting in a 30% increase in customer engagement."}]
+---
+reference : []
+---
+formalEducation : [{"educationLevel" : "Bachelor", "institution" : "University of California, Berkeley", "city" : "Berkeley, CA", "major" : "Marketing", "frontTitle" : "", "endTitle" : "", "current" : "false", "startYear" : "2013", "endYear" : "2017", "graduateDate" : "", "gpa" : "", "graduate" : "", "description" : ""}]
+---
+informalEducation : []
+---
+hobbiesAndOtherActivities : 
+---
+language : {}
+---
+{'completion_tokens': 1150, 'prompt_tokens': 1409, 'total_tokens': 2559, 'completion_time': 3.285714286, 'prompt_time': 0.263196706, 'queue_time': None, 'total_time': 3.548910992}
+----------------

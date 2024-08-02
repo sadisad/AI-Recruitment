@@ -1,0 +1,281 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+SkillsPayroll ProcessingAccount ReconciliationTax ReportingCompliance & RegulationsCommunicationAttention to DetailAbout meMorgan Bailey is a highly experienced Accounting Payroll Specialist with a proven trackrecord in managing complex payroll systems. Skilled in payroll processing, accountreconciliation, tax reporting, compliance with regulations, and maintaining excellentcommunication channels with all stakeholders. Demonstrates strong attention to detail inall aspects of payroll administration.ExperienceSenior Accounting Payroll SpecialistFinanceCorpChicago, ILFull Time2020 - PresentManaged payroll for over 500 employees, ensuring accuracy and compliance with federaland state regulations. Led payroll tax reporting and reconciliation efforts, significantlyreducing errors.Accounting Payroll SpecialistBizTech SolutionsChicago, ILFull Time2017 - 2020Processed payroll for 200+ employees, including tax calculations, deductions, and year-end adjustments. Collaborated with HR to ensure accurate employee data.Payroll AssistantQuickPay ServicesChicago, ILFull Time2016 - 2017Assisted in the payroll processing of 100+ employees, gaining essential skills in payrollsystems and regulations.EducationBachelor of Science in Accounting2012 - 2016University ofIllinoisChicago, ILMorgan BaileyAccounting Payroll Specialist7 years of experiencemorgan.bailey@example.com+12345678902morgan-baileyChicago, IL
+system: {
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "Morgan Bailey",
+  "firstName": "Morgan",
+  "vendor": "",
+  "lastName": "Bailey",
+  "nickname": "",
+  "position": "Accounting Payroll Specialist",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "Chicago, IL",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "+1",
+      "phoneNumber": "2345678902",
+      "type": "Mobile",
+      "primary": "True"
+    }
+  ],
+  "emails": [
+    {
+      "email": "morgan.bailey@example.com",
+      "type": "Personal",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "LinkedIn",
+      "url": "morgan-bailey"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "FinanceCorp",
+      "address": "Chicago, IL",
+      "totalEmployee": "500",
+      "position": "Senior Accounting Payroll Specialist",
+      "exitReason": "",
+      "startDate": "2020",
+      "current": "True",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Managed payroll for over 500 employees, ensuring accuracy and compliance with federal and state regulations. Led payroll tax reporting and reconciliation efforts, significantly reducing errors."
+    },
+    {
+      "company": "BizTech Solutions",
+      "address": "Chicago, IL",
+      "totalEmployee": "200",
+      "position": "Accounting Payroll Specialist",
+      "exitReason": "",
+      "startDate": "2017",
+      "current": "False",
+      "endDate": "2020",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Processed payroll for 200+ employees, including tax calculations, deductions, and year-end adjustments. Collaborated with HR to ensure accurate employee data."
+    },
+    {
+      "company": "QuickPay Services",
+      "address": "Chicago, IL",
+      "totalEmployee": "100",
+      "position": "Payroll Assistant",
+      "exitReason": "",
+      "startDate": "2016",
+      "current": "False",
+      "endDate": "2017",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Assisted in the payroll processing of 100+ employees, gaining essential skills in payroll systems and regulations."
+    }
+  ],
+  "reference": [],
+  "formalEducation": [
+    {
+      "educationLevel": "Bachelor of Science in Accounting",
+      "institution": "University of Illinois",
+      "city": "Chicago, IL",
+      "major": "Accounting",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "False",
+      "startYear": "2012",
+      "endYear": "2016",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "True",
+      "description": ""
+    }
+  ],
+  "informalEducation": [],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+{'completion_tokens': 875, 'prompt_tokens': 1265, 'total_tokens': 2140, 'completion_time': 2.5, 'prompt_time': 0.377570637, 'queue_time': None, 'total_time': 2.877570637}
+----------------

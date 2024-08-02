@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Dan pastikan tiap field diisi sesuai data yang ada di cv, contohnya di education pisahkan gpa dengan duration jika ada.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CONTACTSalex.johnson@example.comalex-johnson+12345678901New York, NYSKILLSData AnalysisStatistical ModelingData VisualizationSQL & PythonMachine Learning BasicsBusiness Intelligence ToolsA/B TestingData WarehousingReport GenerationEDUCATIONMaster of Science in Data ScienceColumbia University | New York, NY2017 – 2019Bachelor of Science in Computer ScienceNew York University | New York, NY2013 – 2017Alex JohnsonData AnalystData AnalystLed the analytics team to optimize business processes, resulting in a 20% increase inoperational efficiency.Data AnalystDeveloped and implemented a new data visualization strategy that improved reportingtimes by 30%.Junior Data AnalystAssisted in the development of a predictive model that reduced customer churn by 15%.Data Analysis InternSupported the data analysis team in conducting market research that informed newproduct development.Data Analysis InternContributed to the improvement of data collection methods, enhancing data quality by25%.Alex Johnson is a dedicated and analytical Data Analyst with 5 years of experience.Specializing in statistical modeling, data visualization, and strategic data analysis, Alexhas consistently driven business growth and efficiency through insightful data analysis.With a strong foundation in SQL, Python, and business intelligence tools, Alex is well-equipped to tackle complex data challenges and deliver actionable insights.EXPERIENCEDataWise Solutions | New York, NY1 yearOperational Efficiency IncreaseJan 2023 – Dec 2023TechTrend Analytics | New York, NY1 yearReporting Time ImprovementJan 2022 – Dec 2022Insight Enterprises | New York, NY1 yearCustomer Churn ReductionJan 2021 – Dec 2021MarketMinds | New York, NY1 yearMarket Research SupportJan 2020 – Dec 2020FutureData | New York, NY1 yearData Collection ImprovementJan 2019 – Dec 2019ABOUT
+system: name : Alex Johnson
+--- Field Separator ---
+summary : Alex Johnson is a dedicated and analytical Data Analyst with 5 years of experience. Specializing in statistical modeling, data visualization, and strategic data analysis, Alex has consistently driven business growth and efficiency through insightful data analysis. With a strong foundation in SQL, Python, and business intelligence tools, Alex is well-equipped to tackle complex data challenges and deliver actionable insights.
+--- Field Separator ---
+phone_number : +12345678901
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : New York, NY
+--- Field Separator ---
+email : alex.johnson@example.com
+--- Field Separator ---
+experiences : [{"title" : "Data Analyst", "description" : "Led the analytics team to optimize business processes, resulting in a 20% increase in operational efficiency.", "duration" : "Jan 2023 – Dec 2023"}, {"title" : "Data Analyst", "description" : "Developed and implemented a new data visualization strategy that improved reporting times by 30%.", "duration" : "Jan 2022 – Dec 2022"}, {"title" : "Junior Data Analyst", "description" : "Assisted in the development of a predictive model that reduced customer churn by 15%.", "duration" : "Jan 2021 – Dec 2021"}, {"title" : "Data Analysis Intern", "description" : "Supported the data analysis team in conducting market research that informed new product development.", "duration" : "Jan 2020 – Dec 2020"}, {"title" : "Data Analysis Intern", "description" : "Contributed to the improvement of data collection methods, enhancing data quality by 25%.", "duration" : "Jan 2019 – Dec 2019"}]
+--- Field Separator ---
+educations : [{"title" : "Master of Science in Data Science", "description" : "-", "duration" : "2017 – 2019"}, {"title" : "Bachelor of Science in Computer Science", "description" : "-", "duration" : "2013 – 2017"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : -
+--- Field Separator ---
+languages : -
+{'completion_tokens': 483, 'prompt_tokens': 877, 'total_tokens': 1360, 'completion_time': 1.38, 'prompt_time': 0.642793033, 'queue_time': None, 'total_time': 2.022793033}
+----------------

@@ -1,0 +1,33 @@
+{
+    "sql_server_test" :{
+    "host"      : "localhost",
+    "username"  : "devnms2",
+    "password"  : "admin",
+    "database"  : "AI_GPT_HR",
+    "port"      : "-"
+    },
+    
+    "mongo_db_ai" : {   
+        "host" : "localhost",
+        "username" : "admin_linov_ai",
+        "password" : "admin",
+        "database" : "LinovAI-Test",
+        "port" : 27017
+    },
+
+    "mongo_db_ai_recruitment" : {   
+        "host" : "localhost",
+        "username" : "admin_linov_ai",
+        "password" : "admin",
+        "database" : "LinovAI-recruitment",
+        "port" : 27017
+    },
+
+    "mongo_db_chat_log" : {   
+        "host" : "localhost",
+        "username" : "",
+        "password" : "",
+        "database" : "LinovAI-ChatLog",
+        "port" : 27017
+    }
+}

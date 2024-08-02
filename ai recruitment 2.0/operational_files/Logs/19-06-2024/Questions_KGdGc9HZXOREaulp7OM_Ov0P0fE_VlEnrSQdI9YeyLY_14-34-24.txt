@@ -1,0 +1,65 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.
+- berikan pertanyaan dalam bahasa indonesia.
+
+formatnya seperti ini contohnya:
+
+--- Field Separator ---
+soal no 1 : bla bla bla bla
+--- Field Separator ---
+soal no 2. bla bla bla bla
+--- Field Separator ---
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada tambahan text lain darimu, cukup sesuai propmt yang saya berikan.
+berikan hasil pertanyaannya menggunakan separator "--- Field Separator ---" tiap pertanyaan.
+sebelum menampilkan pertanyaan interview tolong sisipkan format seperti ini.
+
+--- Field Separator ---
+Job Title: .......
+--- Field Separator ---
+
+dan hasilkan outputan seperti format yang saya berikan saja, tanpa menambahkan tambahan apapun.
+------
+Job Yang Dilamar : IT Developer
+Role Overview : 
+Job Description : We are seeking a skilled IT Developer to design, implement, and maintain software applications that meet our company's needs. The ideal candidate will have experience in various programming languages, strong problem-solving abilities, and the capacity to work both independently and collaboratively in a dynamic team environment.
+Job Requirement : - Work experience as IT Developer in Banking for 3-5 years
+- Highly proficient in SQL.
+- Proficient in Linux Command & Shell Scripting
+- Proficient in Programming Language (Phyton & Scala)
+- Familiar with framework: Django, Flask, Pyramid
+
+system: --- Field Separator ---
+Job Title: IT Developer
+--- Field Separator ---
+
+--- Field Separator ---
+soal no 1 : Bagaimana Anda mengatasi masalah teknis yang kompleks dalam pengembangan perangkat lunak, dan apa strategi yang Anda gunakan untuk memecahkan masalah tersebut?
+--- Field Separator ---
+soal no 2 : Berikan contoh pengalaman Anda dalam menerapkan pengetahuan SQL dalam proyek sebelumnya dan bagaimana Anda mengoptimalkan kinerja database.
+--- Field Separator ---
+soal no 3 : Bagaimana Anda memanfaatkan kemampuan pemrograman Python dan Scala dalam proyek-proyek sebelumnya, dan apa yang Anda dapatkan dari pengalaman tersebut?
+--- Field Separator ---
+soal no 4 : Berapa tahun pengalaman Anda dalam bekerja sebagai IT Developer di industri perbankan, dan apa yang Anda pelajari dari pengalaman tersebut?
+--- Field Separator ---
+soal no 5 : Bagaimana Anda mempertahankan keamanan dan integritas data dalam aplikasi yang Anda kembangkan, dan apa langkah-langkah yang Anda ambil untuk mencegah kebocoran data?
+--- Field Separator ---
+soal no 6 : Berikan contoh tentang bagaimana Anda menggunakan framework seperti Django, Flask, atau Pyramid dalam proyek sebelumnya, dan apa kelebihan dan kekurangan masing-masing framework.
+--- Field Separator ---
+soal no 7 : Bagaimana Anda bekerja dengan tim untuk mengembangkan proyek-proyek perangkat lunak, dan apa tanggung jawab Anda dalam tim tersebut?
+--- Field Separator ---
+soal no 8 : Bagaimana Anda mengatasi konflik atau perbedaan pendapat dengan anggota tim dalam pengembangan proyek, dan apa strategi yang Anda gunakan untuk menyelesaikannya?
+--- Field Separator ---
+soal no 9 : Berapa besar persentase waktu yang Anda gunakan untuk menguji dan memperbaiki kode dalam proyek sebelumnya, dan apa yang Anda dapatkan dari pengalaman tersebut?
+--- Field Separator ---
+soal no 10 : Bagaimana Anda memantau dan menganalisis kinerja aplikasi yang Anda kembangkan, dan apa metrik yang Anda gunakan untuk mengevaluasi kinerja tersebut?
+{'completion_tokens': 516, 'prompt_tokens': 475, 'total_tokens': 991, 'completion_time': 1.456298376, 'prompt_time': 0.166704633, 'queue_time': None, 'total_time': 1.6230030089999998}
+----------------

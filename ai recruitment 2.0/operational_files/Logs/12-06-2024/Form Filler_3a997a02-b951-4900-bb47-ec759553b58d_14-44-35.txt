@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+Bima Aji SaktiEast Java, Indonesia • ajisaktibimo@gmail.com • +62 895339022461 • https://www.linkedin.com/in/bima-aji-sakti/EXPERIENCEOBJECTIVE:HIGHLY SKILLED COMPUTER VISION PROFESSIONAL WITH 1 YEAR OF EXPERIENCE IN YOLO, TENSORFLOW, PYTORCH, AND OPENCV. SEEKING ACHALLENGING ROLE TO LEVERAGE MY EXPERTISE AND CONTRIBUTE TO CUTTING-EDGE PROJECTS IN THE FIELD OF COMPUTER VISION.SKILLS:- COMPUTER VISION: YOLO, TENSORFLOW, PYTORCH, OPENCV- PROGRAMMING LANGUAGES: PYTHON, C++- DEEP LEARNING: CONVOLUTIONAL NEURAL NETWORKS (CNNS), RECURRENT NEURAL NETWORKS (RNNS)- IMAGE PROCESSING: FEATURE EXTRACTION, OBJECT DETECTION, IMAGE SEGMENTATION- DATA ANALYSIS AND VISUALIZATION: NUMPY, PANDAS, MATPLOTLIB- SOFTWARE TOOLS: GIT, JUPYTER NOTEBOOK, VISUAL STUDIO CODETAMATECH INDONUSAJakarta Selatan(Remote)Artiﬁcial Intelligence Engineer2022-Present●Developed and implemented computer vision algorithms object detection and tracking.●Collaborated with cross-functional teams to gather requirements, address challenges, and deliver high-qualitycomputer vision solutions.●Conducted experiments and evaluated model performance using relevant metrics and benchmarks includetraining with CUDA to improve model detection.Project Experience●E-Tilang-Optimized models for real-time performance and accuracy, achieving [provide speciﬁc results, improveddetection accuracy by 10% from 85% True Positive with 5% False Positive to 93% True Positive with 2.5%False Positive].-Implement working on speed detection with object tracking and using new algorithms to ensure moreaccuracy and precision.-Improved Object Detection speed using multithreading process to achieve 60 fps .-Increase Plate Recognition, Make And Model Recognition And Other Technologies Into Our ProductEDUCATIONCISCO NETWORKING ACADEMY & PYTHON INSTITUTE2022PROGRAMMING ESSENTIAL IN PYTHONIoT Fundamentals: Big Data & AnalyticsDIPONEGORO UNIVERSITYSemarang, Jawa TengahDIPLOMA 3, Instrumentation and Electronics Engineer2016-2021ADDITIONAL INFORMATION●Technical Skills: •OOAD • Vision Development• C++ • PyTorch • Tensorﬂow • Deep Learning •Data Science • Recurrent Neural Networks (RNN) • Artiﬁcial Intelligence (AI) • Deep Neural Networks(DNN) • SQL •●Certiﬁcations: Data Science Bootcamp (2022), Passed Resume Worded examinations●Final Year Project: Digital Adjustable 0-100 Volt Circuit Breaker Tester
+system: Here is the filled form:
+
+name : Bima Aji Sakti
+--- Field Separator ---
+summary : HIGHLY SKILLED COMPUTER VISION PROFESSIONAL WITH 1 YEAR OF EXPERIENCE IN YOLO, TENSORFLOW, PYTORCH, AND OPENCV. SEEKING A CHALLENGING ROLE TO LEVERAGE MY EXPERTISE AND CONTRIBUTE TO CUTTING-EDGE PROJECTS IN THE FIELD OF COMPUTER VISION.
+--- Field Separator ---
+phone_number : +62 895339022461
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : East Java, Indonesia
+--- Field Separator ---
+email : ajisaktibimo@gmail.com
+--- Field Separator ---
+experiences : [{"title" : "Artificial Intelligence Engineer", "description" : "Developed and implemented computer vision algorithms object detection and tracking. Collaborated with cross-functional teams to gather requirements, address challenges, and deliver high-quality computer vision solutions. Conducted experiments and evaluated model performance using relevant metrics and benchmarks including training with CUDA to improve model detection.", "duration" : "2022-Present"}]
+--- Field Separator ---
+educations : [{"title" : "Programming Essentials in Python", "description" : "CISCO NETWORKING ACADEMY & PYTHON INSTITUTE", "duration" : "2022"}, {"title" : "Diploma 3, Instrumentation and Electronics Engineer", "description" : "DIPONEGORO UNIVERSITY", "duration" : "2016-2021"}]
+--- Field Separator ---
+projects/portfolios : [{"title" : "E-Tilang", "description" : "Optimized models for real-time performance and accuracy, achieving improved detection accuracy by 10%. Implemented working on speed detection with object tracking and using new algorithms to ensure more accuracy and precision. Improved Object Detection speed using multithreading process to achieve 60 fps.", "duration" : ""}]
+--- Field Separator ---
+certifications : [{"title" : "Data Science Bootcamp", "description" : "", "duration" : "2022"}]
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages :
+{'completion_time': 1.255153046, 'completion_tokens': 451, 'prompt_time': 0.170281404, 'prompt_tokens': 1028, 'queue_time': None, 'total_time': 1.42543445, 'total_tokens': 1479}
+----------------

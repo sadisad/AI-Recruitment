@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CHRONOLOGICAL (INTERNSHIP)  Daniel Edwards II   4321 South 55 Street Bellevue, Nebraska 68005 (402) 291-5432 imasample2@xxx.com   OBJECTIVE: Internship or Part-time Position in Marketing, Public Relations or related field utilizing strong academic background and excellent communication skills   EDUCATION: BS  in Business Administration with Marketing Emphasis  Bellevue University, Bellevue, NE  Expected Graduation Date:  June, 20xx  GPA to date:  3.56/4.00  Relevant Coursework  Principles of Marketing Business Communication  Internet Marketing Consumer Behavior  Public Relations Business Policy & Stretegy  WORK HISTORY: Aacademic Tutor (20xx to present)  Bellevue University, Bellevue, NE  Assist college students in overcoming deficiencies and successfully mastering academic coursework.  Senior Accounts Receivable Clerk (20xx-20xx)  Lincoln Financial Group, Omaha, NE  Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter.  Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members.  Managed and recorded daily accounts receivable deposits of up to $450,000.  Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks.  COMMUNITY   SERVICE: Advertising Coordinator, The Vue (20xx to present)  Bellevue University Student Newspaper  Volunteer, Publicity Committee (20xx, 20xx)  Brushup Nebraska Paint-A-Thon  ADDED VALUE: Language Skills: Bilingual (English/Spanish)  Computer Skills: MS Office (Word, Excel, PowerPoint), PhotoShop  REFERENCES: Available Upon Request 
+system: name : Daniel Edwards II
+--- Field Separator ---
+summary : Internship or Part-time Position in Marketing, Public Relations or related field utilizing strong academic background and excellent communication skills
+--- Field Separator ---
+phone_number : (402) 291-5432
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : 4321 South 55 Street Bellevue, Nebraska 68005
+--- Field Separator ---
+email : imasample2@xxx.com
+--- Field Separator ---
+experiences : [{"title" : "Senior Accounts Receivable Clerk", "description" : "Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter. Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members. Managed and recorded daily accounts receivable deposits of up to $450,000. Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks.", "duration" : "20xx-20xx"}, {"title" : "Aacademic Tutor", "description" : "Assist college students in overcoming deficiencies and successfully mastering academic coursework.", "duration" : "20xx to present"}]
+--- Field Separator ---
+educations : [{"title" : "BS in Business Administration with Marketing Emphasis", "description" : "Relevant Coursework: Principles of Marketing, Business Communication, Internet Marketing, Consumer Behavior, Public Relations, Business Policy & Stretegy", "duration" : "Expected Graduation Date: June, 20xx"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : [{"title" : "Advertising Coordinator, The Vue", "description" : "Bellevue University Student Newspaper", "duration" : "20xx to present"}, {"title" : "Volunteer, Publicity Committee", "description" : "Brushup Nebraska Paint-A-Thon", "duration" : "20xx, 20xx"}]
+--- Field Separator ---
+languages : [{"language" : "English", "level" : "-"}, {"language" : "Spanish", "level" : "-"}]
+--- Field Separator ---
+{'completion_tokens': 460, 'prompt_tokens': 823, 'total_tokens': 1283, 'completion_time': 1.314285714, 'prompt_time': 0.143875343, 'queue_time': None, 'total_time': 1.4581610569999999}
+----------------

@@ -1,0 +1,276 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CHRONOLOGICAL (COMPUTER/TECHNICAL)  Juanita Wolfe VIII 5432 North 97 Street Omaha, Nebraska 68134 (402) 493-1234 imasample8@xxx.com   OBJECTIVE Seeking position in Information Systems or related field utilizing solid academic background along with exceptionally strong analytical, problem solving and customer service skills.   EDUCATION BS in Computer Information Systems—Web-based Networking Bellevue University, Bellevue NE   Expected Graduation Date: January 20xx  Dean’s Scholar GPA to date: 3.86/4.00 Associate of Applied Science, Metropolitan Community College, Omaha NE (20xx)  Major: Management Information Systems   GPA: 3.45/4.00   TECHNICAL KNOWLEDGE AND SKILLS Operating Systems: Windows 19xx/20xx/XP/NT, UNIX/Linux Technical Support: Installation, Configuration & Troubleshooting of Hardware & Software Languages: Visual Basic, C, C++, Visual C++, Java, HTML, XML, ASP.NET Database Management: Relational Databases. SQL, PL/SQL, MS Access Applications: MS Office (Word, Excel, PowerPoint, Outlook), MS Project   PROFESSIONAL EXPERIENCE Computer Support Technician/Intern, Union Pacific Railroad, Omaha NE (Summer 20xx)  Assisted in systems administration and configuration in UNIX and Windows NT.  Installed and maintained local area networks, including Novell and Windows systems.  Staffed Help Desk; analyzed and resolved system problems encountered by end users.  Participated in the design and development of the department’s web site.  Assisted with the maintenance of e-mail and other Internet applications. Computer Lab Assistant, Bellevue University, Bellevue NE (20xx – 20xx)  Provided advice and guidance to college students on the effective use of PCs and various software applications.   COLLEGIATE ACTIVITIES Volunteer Contributor, Bellevue University Computer Lab Newsletter Member, Varsity Baseball Team, Bellevue University   REFERENCES AVAILABLE UPON REQUEST 
+system: {
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "VIII",
+  "endTitle": "",
+  "fullName": "Juanita Wolfe",
+  "firstName": "Juanita",
+  "vendor": "",
+  "lastName": "Wolfe",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "USA",
+  "state": "Nebraska",
+  "city": "Omaha",
+  "subDistrict": "",
+  "village": "",
+  "address": "5432 North 97 Street",
+  "postalCode": "68134",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "(402)",
+      "phoneNumber": "493-1234",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "imasample8@xxx.com",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [],
+  "workExperience": [
+    {
+      "company": "Union Pacific Railroad",
+      "address": "Omaha NE",
+      "totalEmployee": "",
+      "position": "Computer Support Technician/Intern",
+      "exitReason": "",
+      "startDate": "Summer 20xx",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Assisted in systems administration and configuration in UNIX and Windows NT. Installed and maintained local area networks, including Novell and Windows systems. Staffed Help Desk; analyzed and resolved system problems encountered by end users. Participated in the design and development of the department’s web site. Assisted with the maintenance of e-mail and other Internet applications."
+    },
+    {
+      "company": "Bellevue University",
+      "address": "Bellevue NE",
+      "totalEmployee": "",
+      "position": "Computer Lab Assistant",
+      "exitReason": "",
+      "startDate": "20xx",
+      "current": "",
+      "endDate": "20xx",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Provided advice and guidance to college students on the effective use of PCs and various software applications."
+    }
+  ],
+  "reference": [],
+  "formalEducation": [
+    {
+      "educationLevel": "BS",
+      "institution": "Bellevue University",
+      "city": "Bellevue NE",
+      "major": "Computer Information Systems—Web-based Networking",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "20xx",
+      "graduateDate": "January 20xx",
+      "gpa": "3.86/4.00",
+      "graduate": "",
+      "description": ""
+    },
+    {
+      "educationLevel": "Associate of Applied Science",
+      "institution": "Metropolitan Community College",
+      "city": "Omaha NE",
+      "major": "Management Information Systems",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "20xx",
+      "graduateDate": "",
+      "gpa": "3.45/4.00",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [],
+  "hobbiesAndOtherActivities": "Collegiate Activities: Volunteer Contributor, Bellevue University Computer Lab Newsletter Member, Varsity Baseball Team, Bellevue University",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+{'completion_tokens': 902, 'prompt_tokens': 1378, 'total_tokens': 2280, 'completion_time': 2.577142857, 'prompt_time': 0.290084422, 'queue_time': None, 'total_time': 2.867227279}
+----------------

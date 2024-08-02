@@ -1,0 +1,65 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk membuat pertanyaan interview berdasarkan detail pekerjaan yang saya berikan.
+buatkan saya pertanyaan menggunakan bahasa indonesia.
+jika saya sudah memberikan detail pekerjaan, buatkan saya 10 pertanyaan untuk interview.
+
+fungsi utama mu adalah membuat pertanyaan interview berdasarkan job requirement yang saya berikan.
+- berikan pertanyaan yang relevan dengna job description yang saya berikan.
+- berikan pertanyaan yang cocok untuk ditanyakan sesuai job description yang saya berikan.
+- berikan 10 pertanayaan untuk dijadikan pertanyaan interview berdasarkan job description yang saya berikan.
+- berikan pertanyaan dalam bahasa indonesia.
+
+formatnya seperti ini contohnya:
+
+--- Field Separator ---
+1. bla bla bla bla
+--- Field Separator ---
+2. bla bla bla bla
+--- Field Separator ---
+
+Cukup hasilkan 10 pertanyaan saja, tanpa ada tambahan text lain darimu, cukup sesuai propmt yang saya berikan.
+berikan hasil pertanyaannya menggunakan separator "--- Field Separator ---" tiap pertanyaan.
+------
+Job Yang Dilamar : AI Engineer
+Role Overview : 
+Job Description : We are looking for an innovative AI Engineer to develop, implement, and optimize AI models and algorithms to enhance our product offerings. The successful candidate will possess strong expertise in machine learning, deep learning, and data analysis, along with the ability to collaborate effectively with cross-functional teams.
+Job Requirement : Two or more years of experience in applying AI to practical and comprehensive technology solutions
+Experience with ML, deep learning, TensorFlow, Python, NLP
+Experience in program leadership, governance, and change enablement
+Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns
+Experience in REST API development, NoSQL database design, and RDBMS design and optimizations
+
+system: Here are the 10 interview questions for the AI Engineer position:
+
+--- Field Separator ---
+1. Bagaimana Anda mengintegrasikan machine learning dengan teknologi lainnya untuk meningkatkan kemampuan produk kami?
+
+--- Field Separator ---
+2. Apa pengalaman Anda dengan TensorFlow, dan bagaimana Anda menggunakan itu untuk mengembangkan model AI yang efektif?
+
+--- Field Separator ---
+3. Berikan contoh cara Anda menganalisis data kompleks dan menerapkan teknik machine learning untuk meningkatkan akurasi model?
+
+--- Field Separator ---
+4. Bagaimana Anda memastikan bahwa model AI yang dikembangkan dapat berfungsi secara efektif dengan tim yang berbeda-beda?
+
+--- Field Separator ---
+5. Apa yang Anda ketahui tentang prinsip-prinsip desain yang baik dalam pengembangan aplikasi AI, dan bagaimana Anda menerapkannya?
+
+--- Field Separator ---
+6. Berikan contoh pengalaman Anda dalam mengembangkan REST API, dan bagaimana Anda menjamin keamanan data?
+
+--- Field Separator ---
+7. Bagaimana Anda mengoptimalkan kinerja model AI dalam skala besar, dan apa teknik yang Anda gunakan?
+
+--- Field Separator ---
+8. Bagaimana Anda mengatasi masalah kelemahan data dan mengapa itu penting dalam pengembangan model AI?
+
+--- Field Separator ---
+9. Berikan contoh cara Anda mengkomunikasikan hasil analisis data kepada stakeholder yang bukan teknis, dan bagaimana Anda menjelaskan konsep AI yang kompleks?
+
+--- Field Separator ---
+10. Apa yang Anda lakukan untuk tetap up-to-date dengan perkembangan terbaru dalam teknologi AI, dan bagaimana Anda mengintegrasikan pengetahuan tersebut ke dalam pekerjaan Anda?
+{'completion_tokens': 384, 'prompt_tokens': 434, 'total_tokens': 818, 'completion_time': 1.084781458, 'prompt_time': 0.228925115, 'queue_time': None, 'total_time': 1.313706573}
+----------------

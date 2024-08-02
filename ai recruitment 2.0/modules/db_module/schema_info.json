@@ -1,0 +1,29 @@
+{
+    "Interview": {
+      "table_name": "dbo.interviewTranscripts"
+    },
+    "Form Filler": {
+      "table_name": "dbo.cvFormFiller"
+    },
+    "Redflags_old": {
+      "table_name": "dbo.cvRedflagsOld"
+    },
+    "CV Redflags": {
+      "table_name": "dbo.cvRedflags"
+    },
+    "CV Ranker": {
+      "table_name": "dbo.cvRanker"
+    },
+    "Tehnical Test": {
+      "table_name": "dbo.tehnicalTest"
+    },
+    "One CV Reviewer": {
+      "table_name": "dbo.cvScorer"
+    },
+    "FAQ Functional Cosine": {
+      "table_name": "dbo.cosineFaqFunctional"
+    },
+    "Questions": {
+      "table_name": "dbo.interviewQuestions"
+    }
+  }

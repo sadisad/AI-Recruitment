@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CHRONOLOGICAL (GRADUATE ASSISTANTSHIP)  Ethel Davis VII 4321 Country Club Road Omaha, Nebraska 68123 (402) 555-9876 imasample7@xxx.com  OBJECTIVE  To obtain a Graduate Assistantship where strong academic background and excellent communication skills can be utilized to help college students achieve their educational goals.  EDUCATION  Bachelor of Arts, Bellevue University, Bellevue NE (20xx)  Majors: Psychology, Sociology GPA: 4.00/4.00  Graduated Summa Cum Laude Dean’s Scholar National Dean’s List Relevant Coursework  Fundamentals of Guidance & Counseling Personality Theory  Psychological Assessment Learning Theory  Research Methods & Psychological Research Social Psychology  PROFESSIONAL EXPERIENCE  Writing Tutor and Test Administrator, Bellevue University, Bellevue, NE (20xx – 20xx)  Assisted in the preparation and administration of various assessment instruments, including CLEP, DANTES and placement tests.  Provided tutorial assistance to undergraduate and graduate students in the area of writing/composition.  Advised and assisted international students with writing assignments to help them strengthen their English language skills. Research Assistant, University of Nebraska Medical Center, Omaha, NE (Summer 20xx, 20xx)  Assisted child psychologist in a two-part Summer Research Enrichment Program, including observations of client behavior, data entry and preparation of research reports.  Performed literature searches and prepared summary reports for a major research project involving the study of individuals with disabilities.  COLLEGIATE HONORS AND ACTIVITIES  Listed in Who’s Who Among Students in American Colleges and Universities Member, Pi Gamma Mu and Alpha Chi Honor Societies President, Behavioral and Social Sciences Student Organization, Bellevue University Volunteer Contributor, The VUE, Bellevue University Student Newspaper Member, Bellevue University Student Advisory Council  LETTERS OF REFERENCE & TRANSCRIPT ENCLOSED 
+system: name : Ethel Davis
+--- Field Separator ---
+summary : To obtain a Graduate Assistantship where strong academic background and excellent communication skills can be utilized to help college students achieve their educational goals.
+--- Field Separator ---
+phone_number : (402) 555-9876
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : 4321 Country Club Road Omaha, Nebraska 68123
+--- Field Separator ---
+email : imasample7@xxx.com
+--- Field Separator ---
+experiences : [{"title" : "Writing Tutor and Test Administrator", "description" : "Assisted in the preparation and administration of various assessment instruments, including CLEP, DANTES and placement tests. Provided tutorial assistance to undergraduate and graduate students in the area of writing/composition. Advised and assisted international students with writing assignments to help them strengthen their English language skills.", "duration" : "20xx - 20xx"}, {"title" : "Research Assistant", "description" : "Assisted child psychologist in a two-part Summer Research Enrichment Program, including observations of client behavior, data entry and preparation of research reports. Performed literature searches and prepared summary reports for a major research project involving the study of individuals with disabilities.", "duration" : "Summer 20xx, 20xx"}]
+--- Field Separator ---
+educations : [{"title" : "Bachelor of Arts", "description" : "Psychology, Sociology", "duration" : "20xx"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : -
+--- Field Separator ---
+languages : -
+--- Field Separator ---
+{'completion_tokens': 355, 'prompt_tokens': 862, 'total_tokens': 1217, 'completion_time': 1.014285714, 'prompt_time': 0.296983078, 'queue_time': None, 'total_time': 1.311268792}
+----------------
