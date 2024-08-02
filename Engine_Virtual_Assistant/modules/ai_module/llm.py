@@ -89,10 +89,33 @@ class LanguageModel:
 
         return dict_form
 
-        
-    def process_input(user_input):
-        # Logika untuk menentukan URL redirect berdasarkan input pengguna
+    def process_input(self, user_input, session_data):
         if "absen" in user_input.lower():
-            return {"redirect": "https://dev5.linovhr.com/admin/dashboard"}
+            return self.handle_absen(session_data)
+        elif "approval" in user_input.lower():
+            return self.handle_approval(session_data)
+        elif "cuti" in user_input.lower():
+            return self.handle_custom_request('pengajuan_cuti.txt', session_data)
+        elif "sakit" in user_input.lower():
+            return self.handle_custom_request('perizinan_sakit.txt', session_data)
         else:
-            return {"message": "Permintaan tidak dikenal."}
+            response, session_data = self.generate_response(session_data)
+            return {"message": response}, session_data
+    
+    def handle_absen(self, session_data):
+        response = self.read_payload('absen.txt')
+        session_data['history'].append({"role": "system", "content": response})
+        dbManager.upsert_conversation_transcript(session_data['gpt_api_type'], response, 'AI')
+        return {"message": response}, session_data
+    
+    def handle_approval(self, session_data):
+        response = self.read_payload('approval.txt')
+        session_data['history'].append({"role": "system", "content": response})
+        dbManager.upsert_conversation_transcript(session_data['gpt_api_type'], response, 'AI')
+        return {"message": response}, session_data
+    
+    def handle_custom_request(self, filename, session_data):
+        response = self.read_payload(filename)
+        session_data['history'].append({"role": "system", "content": response})
+        dbManager.upsert_conversation_transcript(session_data['gpt_api_type'], response, 'AI')
+        return {"message": response}, session_data

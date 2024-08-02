@@ -84,12 +84,28 @@ class Test(Resource):
             print(f"Exception in /test: {e}")
             return {'message': str(e)}, 400
         
-@app.route('/process', methods=['POST'])
-def process():
-    data = request.json
-    user_input = data.get('input')
-    response = ai_engine.process_input(user_input)
-    return jsonify(response)
+@ns.route('/process', methods=['POST'])
+class Process(Resource):
+    def post(self):
+        try:
+            data = request.json
+            user_input = data.get('input')
+            
+            # Initialize session if not provided
+            session_data = data.get('session_data', {"history": [], "bool_chat": False})
+            ai_engine.initialize_api_type('Virtual Assistant', session_data)
+            
+            # Get prompt if session is new
+            if not session_data['history']:
+                prompt = ai_engine.initialize_prompt()
+                session_data['history'].append({"role": "user", "content": prompt})
+            
+            # Process user input
+            response, session_data = ai_engine.process_input(user_input, session_data)
+            
+            return jsonify(response), 200
+        except Exception as e:
+            return {'message': str(e)}, 400
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

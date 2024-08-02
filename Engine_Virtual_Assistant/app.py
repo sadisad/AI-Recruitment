@@ -41,6 +41,19 @@ def initialize_session():
     else:
         print("Failed to initialize session")
         return None, None, None
+    
+def process_input(user_input, session_data):
+    response = requests.post('http://127.0.0.1:5000/virtual_assistant/process', json={
+        'input': user_input,
+        'session_data': session_data
+    })
+    
+    if response.status_code == 200:
+        data = response.json()
+        return data
+    else:
+        print("Failed to process input")
+        return None
 
 # Fungsi untuk mengubah teks menjadi suara
 def text_to_speech(text):
@@ -141,3 +154,4 @@ text_to_speech(data['llm_response'])
 
 if data['user_id'] and data['room_id']:
     automate_interaction(data['user_id'], data['room_id'], data['llm_response'], data['session_data'])
+    
