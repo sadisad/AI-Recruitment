@@ -1,9 +1,9 @@
 import sys, os, signal
-from flask import Flask, session, request, jsonify
+import uuid
+from flask import Flask, json, session, request, jsonify
 from flask_session import Session
 from flask_cors import CORS, cross_origin
 from flask_restx import Api, Resource
-import uuid
 from modules.ai_module.llm import LanguageModel
 from modules.db_module.db_manager import DatabaseOperations
 
@@ -90,6 +90,10 @@ class Process(Resource):
             data = request.json
             user_input = data.get('input')
             
+            # Logging input data
+            print(f"Received input: {user_input}")
+            print(f"Session data: {json.dumps(data.get('session_data', {}), indent=2)}")
+            
             # Initialize session if not provided
             session_data = data.get('session_data', {"history": [], "bool_chat": False})
             ai_engine.initialize_api_type('Virtual Assistant', session_data)
@@ -97,15 +101,18 @@ class Process(Resource):
             # Get prompt if session is new
             if not session_data['history']:
                 prompt = ai_engine.initialize_prompt()
-                session_data['history'].append({"role": "user", "content": prompt})
+                session_data['history'].append({"role": "system", "content": prompt})
             
             # Process user input
             response, session_data = ai_engine.process_input(user_input, session_data)
             
-            return jsonify(response), 200
+            # Logging response
+            print(f"AI Response: {response}")
+            
+            return jsonify({'message': response, 'session_data': session_data}), 200
         except Exception as e:
-            print (str (e))
-            return {'message': str(e)}, 400
+            print(f"Exception in /process: {e}")
+            return {'message': str(e)}, 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
