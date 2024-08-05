@@ -109,7 +109,7 @@ class Process(Resource):
             # Logging response
             print(f"AI Response: {response}")
             
-            return jsonify({'message': response, 'session_data': session_data}), 200
+            return response, 200
         except Exception as e:
             print(f"Exception in /process: {e}")
             return {'message': str(e)}, 500

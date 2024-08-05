@@ -150,7 +150,7 @@ def automate_interaction(user_id, room_id, llm_response, session):
                 # Print AI response
                 print(f"AI Response: {ai_response}")
                 # Convert AI response to speech and play
-                text_to_speech(ai_response, language='id', service='elevenlabs')  # Menggunakan ElevenLabs
+                text_to_speech(ai_response, language='id', service='gtts')  # Menggunakan ElevenLabs
             else:
                 print("Error processing input")
                 break
