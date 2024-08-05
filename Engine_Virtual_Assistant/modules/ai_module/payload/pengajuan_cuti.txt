@@ -1,8 +1,10 @@
 --- Field Separator ---
-nama: 
+type: cuti
 --- Field Separator ---
-tanggal cuti:
+jenis_cuti: 
 --- Field Separator ---
-alasan cuti:
+tanggal_mulai: 
 --- Field Separator ---
-lama cuti:
+tanggal_berakhir: 
+--- Field Separator ---
+keterangan: 

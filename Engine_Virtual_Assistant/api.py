@@ -23,7 +23,7 @@ Session(app)
 cors = CORS(app)
 
 api = Api(app, version='1.0', title='API for Virtual Assistant AI',
-          description='Dokumentasi API Linov5 Virtual Assistant AI')
+        description='Dokumentasi API Linov5 Virtual Assistant AI')
 ns = api.namespace('virtual_assistant', description='API For Virtual Assistant')
 
 db_ops = DatabaseOperations()
@@ -67,7 +67,6 @@ class Initialize(Resource):
         except Exception as e:
             print(f"Exception in /initialize: {e}")
             return {'message': str(e)}, 400
-
 
 @ns.route('/test', methods=['POST'])
 class Test(Resource):

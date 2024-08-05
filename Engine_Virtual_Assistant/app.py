@@ -28,7 +28,8 @@ tts_engine = pyttsx3.init()
 
 # Fungsi untuk menginisialisasi sesi dan mendapatkan user_id dan room_id
 def initialize_session():
-    response = requests.post('http://127.0.0.1:5000/virtual_assistant/initialize')
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post('http://127.0.0.1:5000/virtual_assistant/initialize', headers=headers)
     
     if response.status_code == 200:
         data = response.json()
@@ -40,13 +41,14 @@ def initialize_session():
         return data
     else:
         print("Failed to initialize session")
-        return None, None, None
+        return None
     
 def process_input(user_input, session_data):
+    headers = {'Content-Type': 'application/json'}
     response = requests.post('http://127.0.0.1:5000/virtual_assistant/process', json={
         'input': user_input,
         'session_data': session_data
-    })
+    }, headers=headers)
     
     if response.status_code == 200:
         data = response.json()
@@ -134,18 +136,24 @@ def automate_interaction(user_id, room_id, llm_response, session):
         session_data['history'].append({"role": "user", "content": user_response})
         
         # Send transcribed text to AI engine to get a response
-        ai_response, session_data = ai_engine.generate_response(session_data=session_data)
+        response_data = process_input(user_response, session_data)
         
-        # Update the session history
-        session_data['history'].append({"role": "system", "content": ai_response})
-        
-        db_ops.upsert_conversation_transcript(room_id, ai_response, 'AI')
-        
-        # Print AI response
-        print(f"AI Response: {ai_response}")
-        
-        # Convert AI response to speech and play
-        text_to_speech(ai_response)
+        if response_data:
+            session_data = response_data['session_data']
+            ai_response = response_data['message']
+            
+            session_data['history'].append({"role": "system", "content": ai_response})
+            
+            db_ops.upsert_conversation_transcript(room_id, ai_response, 'AI')
+            
+            # Print AI response
+            print(f"AI Response: {ai_response}")
+            
+            # Convert AI response to speech and play
+            text_to_speech(ai_response)
+        else:
+            print("Error processing input")
+            break
 
 # Initialize session
 data = initialize_session()
@@ -154,4 +162,3 @@ text_to_speech(data['llm_response'])
 
 if data['user_id'] and data['room_id']:
     automate_interaction(data['user_id'], data['room_id'], data['llm_response'], data['session_data'])
-    

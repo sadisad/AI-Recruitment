@@ -19,6 +19,7 @@ class LanguageModel:
             self.configllm = json.load(f)
         self.client = Groq(api_key=self.configllm['api_key'])
         self.model = self.configllm['model']
+        self.payload_dir = os.path.join(os.path.dirname(__file__), 'payload')
         
         self.dir_path = os.path.dirname(os.path.realpath(__file__))
         
@@ -72,6 +73,13 @@ class LanguageModel:
         prompt = prompt.replace('<->waktu saat ini<->', str(current_time))
         return prompt
     
+    def read_payload(self, filename):
+        try:
+            with open(os.path.join(self.payload_dir, filename), "r", encoding="utf8") as f:
+                return f.read()
+        except FileNotFoundError:
+            return "File tidak ditemukan."
+        
     def format_response(self, response):
         dict_form = {}
         result = response.split('--- Field Separator ---')
