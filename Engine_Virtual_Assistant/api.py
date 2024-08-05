@@ -104,6 +104,7 @@ class Process(Resource):
             
             return jsonify(response), 200
         except Exception as e:
+            print (str (e))
             return {'message': str(e)}, 400
 
 if __name__ == '__main__':
