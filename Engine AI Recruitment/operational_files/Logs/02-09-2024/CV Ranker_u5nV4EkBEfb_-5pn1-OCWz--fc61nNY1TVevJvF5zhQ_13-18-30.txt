@@ -1,0 +1,86 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Berikan lah Skor tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan Skor nya.
+Perhatikan juga Skills, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada Skills yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi Skills tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Job Requirements:  Candidates must possess at least Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication) or equivalent Having experiences 3 years in Software Documentation (BRD, FSD, TSD, UAT Scenarios) Required skill(s): SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI Have experience in Financial Services Industry preferable Banking Project Have experience with Big Data and with other systems such as ODBC, MSSQL, MySQL Familiarity with Spark, machine learning, Query with use hive and Impala Have a risk management certification with the level of applicable regulations Have background knowledge about risk management or data management Good Communication and Personality Good English proficiency, especially in writing Experience as Business Analyst is required Experience in the finance industry or digital business is preferable
+------
+CV:
+Janna Gardner  4567 Main Street, Chicago, Illinois 98052 • (716) 555-0100 • janna@example.com  Human Resources Generalist with 6+ years of experience assisting with and fulfilling organization staffing needs and requirements. A proven track record of using my excellent personal, communication and organization skills to lead and improve HR departments, recruit excellent personnel, and improve department efficiencies. Team player with excellent communication skills, high quality of work, driven and highly self-motivated. Strong negotiating skills and business acumen and able to work independently. E x per i ence  20XX – PRESENT Human Resources Generalist | Lamna Healthcare Company | Chicago, Illinois Review, update, and revise company hiring practices, vacation, and other human resources policies to ensure compliance with OSHA and all local, state, and federal labor regulations. By creating and maintaining a positive and responsive work environment, we raised employee retention rates by over 10% to achieve a greater than 90% employee retention over a 2-year period. Developed recruitment programs to successfully increase minority recruitment and meet affirmative action requirements. Led development team to build and deploy a dedicated recruitment website which reduced year-over-year recruitment costs by 14%. JUNE 20XX – AUGUST 20XX Human Resources Intern | Wholeness Healthcare | Boomtown, Ohio Assisted in recruitment outreach to prospective employees. Organized and conducted several seminars for hospital employees to educate and update them regarding available employment benefit options. Arranged hospital-wide guest speakers symposia to educate management about new employment laws and workplace confidence and morale building techniques. Administrative tasks. Sk i l l s Type 96 words per minute • Proficient with project management software • Team player • Excellent time management skills • Conflict management • Public speaking • Data analytics  E duca ti o n  MAY 20XX Bachelor of Arts Human Resources Management | Jasper University | Ft. Lauderdale, FL 3.8 GPA • Member of university’s Honor Society Acti v i ti es  Literature • Environmental conservation • Art • Yoga • Skiing • Travel 
+system: Job Title : Business Analyst
+--- Field Separator ---
+Job Requirements : Candidates must possess at least Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication) or equivalent Having experiences 3 years in Software Documentation (BRD, FSD, TSD, UAT Scenarios) Required skill(s): SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI Have experience in Financial Services Industry preferable Banking Project Have experience with Big Data and with other systems such as ODBC, MSSQL, MySQL Familiarity with Spark, machine learning, Query with use hive and Impala Have a risk management certification with the level of applicable regulations Have background knowledge about risk management or data management Good Communication and Personality Good English proficiency, especially in writing Experience as Business Analyst is required Experience in the finance industry or digital business is preferable
+--- Field Separator ---
+Ranking : 1
+Name : None
+Total Masa Kerja Relevan : 0 tahun
+Skills : None
+Kelebihan : None
+Kekurangan : No relevant experience in software documentation, no skills in required technologies, no experience in financial services industry
+Skor : 0/100
+Alasan : No relevant experience and skills in software documentation and financial services industry
+Kesimpulan : Not suitable for the Business Analyst position
+--- Field Separator ---
+Ranking : 2
+Name : None
+Total Masa Kerja Relevan : None
+Skills : None
+Kelebihan : None
+Kekurangan : No CV submitted
+Skor : 0/100
+Alasan : No CV submitted
+Kesimpulan : Not suitable for the Business Analyst position
+--- Field Separator ---
+Ranking : 3
+Name : Janna Gardner
+Total Masa Kerja Relevan : 6 tahun
+Skills : None
+Kelebihan : Good communication and organization skills, strong negotiating skills and business acumen
+Kekurangan : No experience in software documentation, no skills in required technologies, no experience in financial services industry
+Skor : 30/100
+Alasan : Although having good communication and organization skills, no experience in software documentation and financial services industry
+Kesimpulan : Not suitable for the Business Analyst position
+{'completion_tokens': 470, 'prompt_tokens': 1362, 'total_tokens': 1832, 'completion_time': 1.467104195, 'prompt_time': 0.096746839, 'queue_time': 0.005032499999999995, 'total_time': 1.563851034}
+----------------

@@ -1,0 +1,94 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk job vacancy nya.
+- Berikan total masa kerja relevan, skills, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Yang Dilamar yang diberikan sebelumnya.
+- Dari semua bobot penilaian, utamakan lah relevansi si kandidat dengan Job Yang Dilamar yang di berikan. 
+- Total Masa Kerja Relevan adalah masa kerja yang relevan dengan Job Yang Dilamar yang di berikan. Jika di cv nya ia tidak memiliki pekerjaan yang sama dengan Job Yang Dilamar yang diberikan di awal, turunkan Skor CV secara drastis.
+- Misal, Job Yang Dilamar di awal adalah Senior Salesman. Namun di CV kandidat hanya berhubungan dengan IT, atau desainer. Maka sudah bisa di anggap tidak relevan. Kurangi Skor CV. Dan jangan di anggap Total Masa Kerja Relevan 
+- Misal, cv kandidat hanya memiliki pekerjaan IT. Sedangkan job yang di lamar adalah Staff Logistic. Maka tidak berhubungan, dan form Total Masa Kerja Relevan isi saja dengan 0.
+- Semakin relevan dan lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan Skor CV nya.
+- Perhatikan juga skill, proyek, serta latar belakang pendidikannya yang relevan untuk menjadi bahan pertimbangan penilaian.
+- Tambahkan Skor CV nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+- Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+- Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Berikanlah Skor CV yang sejujur nya, dengan pertimbangan kelebihan dan kekurangan nya.
+- Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+- Untuk peniliannya, pastikan memiliki 2 angka di belakang koma. (Float, bukan integer)
+- Jika kandidat tidak memiliki pengalaman kerja yang relevan atau jika keterampilan yang mereka miliki tidak sesuai dengan yang dibutuhkan oleh posisi tersebut, rendahkan saja Skor CV nya. Jika benar-benar tidak relevan, bisa diberikan Skor CV dibawah 10.
+- Untuk Form Name, jangan di tuliskan gelar nya. Cukup Nama nya saja.
+- Jangan ragu untuk memberikan nilai 0 untuk Total Masa Kerja Relevan, dan Skor CV. Periksalah baik-baik apakah kandidat pernah bekerja di role yang sama dengan Job Yang Dilamar.
+- Relevannya itu benar-benar relevan, misal kandidat pernah jadi Front End Developer, tapi Job Yang Dilamar di awal adalah Data Scientist, walaupun sama-sama IT Related, tapi itu dianggap tidak relevan. Jika begitu, tidak termasuk ke perhitungan Total Masa Kerja Relevan.
+- Total Masa Kerja Relevan yang di hitung itu adalah pengalaman kandidat di CV nya yang benar-benar sama pekerjaannya dengan Job Yang Dilamar.
+- Total Masa Kerja Relevan adalah pengalaman kerja kandidat yang membutuhkan pengetahuan dan pengalaman dalam job requirement yang sama dengan Job Yang Dilamar.
+- Berikan nilai 0 untuk form Total Masa Kerja Relevan jika ia tidak pernah bekerja dan berpengalaman dengan pekerjaan yang dilamar. 
+- Pastikan kandidat punya ilmu nya, tidak hanya tools nya untuk job yang di lamar. Harus spesifik, tidak hanya relevan.
+- Total Masa Kerja Relevan sudah pasti 0, kecuali cv kandidat punya title yang sama dengan Job yang Di Lamar di awal. Jika tidak ada, berikan 0. BERIKAN 0 jika tidak ada.
+- Jika kandidat tidak ideal untuk job yang di lamar, apalagi kurang berpengalaman, kurangi secara drastis Skor CV nya. Kurangi secara maksimal, berikan nilai maksimal 20 dari 100.
+- Jika tidak ada bukti ia pernah bekerja atau berpengalaman sesuai dengan Job yang di lamar, kurangi secara drastis Total Masa Kerja Relevan. Kurangi secara drastis Skor CV nya.
+- Jika Background Pendidikannya tidak sesuai dengan Job yang di lamar, kurangi Skor CV secara drastis, banyak pengurangan.
+- Kebutuhan pekerjaan dan menekankan bahwa kandidat harus memiliki pengalaman langsung dan spesifik dalam bidang yang sama. 
+- Misalnya, Anda bisa menekankan bahwa kandidat harus memiliki pengalaman langsung dalam Job vacancy yang di lamar
+- Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
+- Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
+
+Isilah dengan form berformat berikut tanpa ada tambahan kata darimu
+
+Cukup form yang ada di bawah ini saja, jangan ada kata "heres filled form " dari mu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['skill pertama', 'skill kedua', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['kelebihan pertama', 'kelebihan kedua', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['kekurangan pertama', 'kekurangan kedua', '3. etc', ...]
+--- Field Separator ---
+skor_cv : 70.3/100
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'v', "jobQualification" : "true", "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+
+- untuk mengisi "kelebihan" dan "kekurangan" itu berdasarkan semua list yang ada di "kriteria_pekerjaan"
+
+untuk mengisi form "kesesuaian" contohnya seperti ini :
+- jadi intinya untuk mengisi form "kesesuaian" itu dari cv ada yang sesuai tidak dengan job description
+- jadi contohnya isi jobRoleOverview harus dirangkum jika cv yang diberikan sesuai dengan job role overview yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobQualification harus dirangkum jika cv yang diberikan sesuai dengan job qualification yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobResponsibility harus dirangkum jika cv yang diberikan sesuai dengan job responsibility yang ada maka berikan "true", jika tidak sesuai berikan "false"
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job description nya :
+------
+Design and Build sophisticated and highly scalable apps using Flutter Write well-designed, efficient code also ensuring that best practices and coding standards are followed Implementing automated testing platforms and unit tests to ensure the quality of the codebase Serve as a technical lead contributing to and directing the efforts of development teams, including internal and external team members Conduct code reviews and provide constructive feedback to junior developers Collaborate with technical and business teams to determine technical requirements and provide technical specifications document based on business requirements document and functional specification document Collaborate closely with design teams to create intuitive User Interfaces Creating detailed reports on the work performed and projects completed Participating in group meetings to discuss projects and objectives Assisting other developers with troubleshooting, debugging, and coding Mentor Junior Engineers to allow for skill/knowledge development through advice, coaching, and training opportunities Ability to meet deadlines on fast-paced deliverables with no compromise on the quality of the work product
+------
+Kriteria Pekerjaan:
+5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc
+An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+------
+CV:
+ProfileI am a passionate and hard working person. I love developing mobile applications, I am always eager to see results of my efforts in the form of working products. I am focused on quality.I enjoy exploring possibilities of new technologies so that I can see their integration into everyday work and life.Professional experience (10+ years, 2011 - 2022)Tech Lead / Senior Android Developer - Tapptic January 2016 - Present (6 years)• As a tech lead, I am responsible for development, architectural designand quality of our applications. I lead development processes from atechnical perspective and coordinate efforts of developers.• I have introduced multi-platform solutions into our tech stack (KotlinNative and Flutter)• As a senior developer, I'm responsible for development of mobileapplications for our Clients in Sport, Media and Health industries. Overmy 6+ years in the Company, I have developed and led developmentof several applications reaching millions of users.• Tech stack: Android, Kotlin, Java, Kotlin Native, FlutterSenior Android Developer / Contractor - Sii  January 2016 - December 2017• Senior Android Developer - Sii contractor• Outsourced to Tapptic, later transferred to TappticAndroid developer / Freelancer - SuperVisor October 2015 - March 2016 (Part time contract)• I developed an in-house, B2B solution, using beacons, for presencecontrol inside vehicles.• Tech stack: AndroidAndroid Developer / Contractor  - Connectis (Outsourced to Blue Services) July 2015 - December 2015 (Contract)• I developed an Android banking application for one of Polish Banks. Ithandled most of day to day banking operations: transfers, basicaccount management, new product offers, simple messaging withcustomer support, etc• Tech stack: AndroidAndroid Developer - BetterSolutions December 2014 - June 2015 (Contract)• I was working on a Map & Navigation system for our B2B Customers.• I enabled our Android application to connect to the truck's onboardcomputer and exchange information.• Tech stack: AndroidPage  of 12• Kotlin & Java• Android SDK• Kotlin Native• Flutter• Swift• Java EE (Spring boot,Hibernate, PostgreSQL)• GitEducation:Bachelor's degree in Computer Science, Gdańsk University of Technology SENIOR ANDROID DEVELOPER Professional experience - continuationJava Developer - SuperVisor October 2014 - November 2014 (Contract)• Deployment and integration of Open Street Map (custom map tileserver) for company's vehicle tracking solution• Tech stack: Java EE, Linux, OSMAndroid Developer - Samsung Electronics Poland July 2014 - September 2014• I was working on development of SDK related to S-Pen• Tech stack: Android, Java, Maven, S-Pen SDK (Samsung's library)Android Developer - BetterSolutions November 2012 - June 2014• Development of mobile application with offline navigation capabilitiesfor B2B Client• I was responsible for custom integration of Open Street Map,extending and adapting the OsmAnd open source project for Client'srequirements.• Tech stack: Java, Android, Web services, Linux & Bash, OSM,OsmAnd open source project (Android)• Tech stack: Android, Java (Backend)Junior PHP Developer - KurJerzy.pl March 2011 - December 2011• https://www.kurjerzy.pl• I developed new features for existing products, maintained backendand frontend applications• Tech stack: PHP, JavaScript, JQuery, MySQL, HTML, Web FrontendPage  of 22GDPR note: Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+system: name : Profile
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi Flutter Developer, tapi memiliki pengalaman di bidang Android Developer selama 10 tahun."}
+--- Field Separator ---
+skills : ['Android', 'Kotlin', 'Java', 'Flutter', 'Kotlin Native', 'Swift', 'Java EE', 'Git', 'Map & Navigation system', 'SDK', 'S-Pen SDK', 'Open Street Map', 'OsmAnd open source project', 'Web services', 'Linux & Bash', 'PHP', 'JavaScript', 'JQuery', 'MySQL', 'HTML', 'Web Frontend']
+--- Field Separator ---
+kelebihan : ['有ahulinganasianalananan berbagaian pengalamanan kualitasasitasanan dalamanahamanan kualitasasuanan',ahasilananan besarnya ',ahulinganai berpengalamanan berbasisarancuo ',ahulingan',ahlinanini berbagaian pengalamanan,ahliunganian kualitasanuanahluhananaituian mentahuanan profesionalisme',ahliungan',ahliungan ',ahliahin ',bagaian kualitasikanan berbagaian pengalamanan kualitasu.ahliahao',ahliungan',ahliahin pengalamanan berbagaian pengalamanan kualitasaharianan kualitoananan']
+kekuranganan pertama : ['kekuranganan pertama', 'kekuranganan pertama', 'kekuranganan pertama', 'kekuranganan pertama', 'kelebihan pertama']
+kekuranganan pertama : ['kekurunganan pertama', 'kekuranganan pertama', 'kelebihan pertama', 'kekuranganan pertama : ['kekuranganan pertama']
+kelebihan :angkatanawananstensenuoanahao berbagaianasiuanana berbagaian kualoto '.ahliin ';ahliun :=ananan pertama : ['kekuranganan pertama']
+ --- Field Separator ---
+--- Field Separator ---
+utohulanan penilaahanan pertama : ['kekuranganan pertama : ['kekuranganan pertama : ['ahliin pengalamanan kualito.'.ahliinin<|start_header_id|>ahliunganan pertama : ['kekuranganan pertama : ['ahliunganannya pertamaahasandeveloperopersasijava luariko',ahliuninungan70.3/100
+{'completion_tokens': 570, 'prompt_tokens': 3156, 'total_tokens': 3726, 'completion_time': 1.823742539, 'prompt_time': 0.228169747, 'queue_time': 0.0013563080000000005, 'total_time': 2.051912286}
+----------------

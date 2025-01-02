@@ -1,0 +1,476 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "marital": {
+    "maritalStatus": "",
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  },
+  "emergencyContacts": {
+    "name" : "", 
+    "relation": : "", 
+    "phone" : "", 
+    "address" : "", 
+    "email" : "",
+    "company" : ""
+  },
+  "relationships" : {
+    "relationshipName" : "", 
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" 
+  },
+  "vehicles" : {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+  },
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+}
+
+
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+              IRSYAD DZULFIKAR   Summary As an AI Engineer with a strong academic background from INSTITUT TEKNOLOGI TELKOM, graduating with a 3.8 GPA (Cum Laude), I have actively engaged in advanced projects employing architectures like VGG-16, VGG-19, GoogleNet, and ResNet. My professional journey has been marked by the development of precise face recognition systems using the CelebA dataset and mastering cutting-edge object detection techniques such as Faster RCNN and YOLO. A highlight of my career includes spearheading a person tracking project with the COCO dataset. I am enthusiastic about contributing my specialized skills in AI and machine learning to innovative projects, seeking opportunities to drive technological advancement within a dynamic team environment.    Education • Bachelor Degree – Software Engineering, Institut Teknologi Telkom Purwokerto, Purwokerto  (Sep 2019 - Mar 2023). GPA 3.80.    Work Experiences Indonesia AI (Oct 2023 – Feb 2024) Junior AI Engineer (Computer Vision) • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications. • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions. • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives. • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.        Projects Junior AI Engineer (Oct 2023 – Feb 2024) • Axioma Project - Vehicle Detection: Successfully executed a vehicle detection project as part of the Axioma initiative, utilizing YOLOv8 to identify vehicles within complex urban environments. Achieved an impressive accuracy of 86%, showcasing the ability to handle real-time processing demands with high precision. • Axioma Project - Garbage Detection: Developed a garbage detection system that accurately identifies and categorizes waste materials. The implementation of YOLOv8 led to the attainment of 82% accuracy, demonstrating a significant impact on environmental management through AI technology.  Computer Vision Bootcamp (Feb 2023 - Aug 2023) AI Engineer At Indonesia AI, my role encompassed a variety of cutting-edge AI projects, where I utilized my expertise in Machine Learning and Deep Learning algorithms: • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging. • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing. • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques.  Full Stack Data Science Academy Bootcamp (Jul 2022 - Feb 2023) Data Scientist Participated in an intensive Full Stack Data Science Academy Bootcamp with Full Stack Bangalore, where I gained substantial knowledge and hands-on experience in data analysis using Python, data wrangling with SQL, and creating compelling data visualizations. Projects included customer segmentation analysis, classification models for predictive analytics, and regression models for trend forecasting.        Introduction AI For Gen Z (Feb 2022 - Jul 2022) Data Scientist Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura.    Key Skills and Expertise • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition. • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions. • Experience in managing and executing AI projects with a successful track record in delivering solutions. • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [specific course/certification] to stay abreast of the latest advancements in AI and machine learning.    Certification • Database Programmer Badan Nasional Sertifikasi Profesi (BNSP) • AI Career Bootcamp for Computer Vision (Indonesia AI) • Full Stack Data Science Academy (Full Stack Bangalore) • IBM Introduction to Artificial Intelligence (AI) • Supervised Machine Learning: Regression and Classification (DeepLearning.AI)    Languages • Indonesian (Native) • English 
+system: --- Field Separator ---
+fullName: IRSYAD DZULFIKAR
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+lastName: DZULFIKAR
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: 
+{
+  "isWorking": "",
+  "occupationName": "AI Engineer",
+  "position": "Junior AI Engineer (Computer Vision)",
+  "lastWorking": ""
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+marital: 
+{
+  "maritalStatus": "",
+  "mariedDate": "",
+  "separationDate": ""
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+houseStatus: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: 
+--- Field Separator ---
+state: 
+--- Field Separator ---
+city: 
+--- Field Separator ---
+subDistrict: 
+--- Field Separator ---
+village: 
+--- Field Separator ---
+address: 
+--- Field Separator ---
+postalCode: 
+--- Field Separator ---
+since: 
+--- Field Separator ---
+phones: 
+[
+  {
+    "phoneCode": "",
+    "phoneNumber": "",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator ---
+emails: 
+[
+  {
+    "email": "",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: 
+[
+  {
+    "socialMediaPlatform": "",
+    "url": ""
+  }
+]
+--- Field Separator ---
+workExperience: 
+[
+  {
+    "company": "Indonesia AI",
+    "address": "",
+    "totalEmployee": "",
+    "position": "Junior AI Engineer (Computer Vision)",
+    "exitReason": "",
+    "startDate": "Oct 2023",
+    "current": "",
+    "endDate": "Feb 2024",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Full Stack Data Science Academy Bootcamp",
+    "address": "",
+    "totalEmployee": "",
+    "position": "Data Scientist",
+    "exitReason": "",
+    "startDate": "Jul 2022",
+    "current": "",
+    "endDate": "Feb 2023",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Introduction AI For Gen Z",
+    "address": "",
+    "totalEmployee": "",
+    "position": "Data Scientist",
+    "exitReason": "",
+    "startDate": "Feb 2022",
+    "current": "",
+    "endDate": "Jul 2022",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  }
+]
+--- Field Separator ---
+reference: 
+[
+  {
+    "name": "",
+    "companyName": "",
+    "position": "",
+    "relation": "",
+    "phone": ""
+  }
+]
+--- Field Separator ---
+formalEducation: 
+[
+  {
+    "educationLevel": "Bachelor Degree",
+    "institution": "Institut Teknologi Telkom",
+    "city": "Purwokerto",
+    "major": "Software Engineering",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "Sep 2019",
+    "endYear": "Mar 2023",
+    "graduateDate": "",
+    "gpa": "3.80",
+    "graduate": "",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: 
+[
+  {
+    "institution": "Full Stack Data Science Academy Bootcamp",
+    "subject": "Data Science",
+    "city": "",
+    "startDate": "Jul 2022",
+    "endDate": "Feb 2023",
+    "current": "",
+    "graduate": "",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  },
+  {
+    "institution": "Computer Vision Bootcamp",
+    "subject": "Computer Vision",
+    "city": "",
+    "startDate": "Feb 2023",
+    "endDate": "Aug 2023",
+    "current": "",
+    "graduate": "",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  },
+  {
+    "institution": "Introduction AI For Gen Z",
+    "subject": "AI",
+    "city": "",
+    "startDate": "Feb 2022",
+    "endDate": "Jul 2022",
+    "current": "",
+    "graduate": "",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  }
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: 
+[
+  ""
+]
+--- Field Separator ---
+language: 
+{
+  "ratingListening": "",
+  "gradeListening": "",
+  "ratingWriting": "",
+  "gradeWriting": "",
+  "ratingReading": "",
+  "gradeReading": "",
+  "ratingSpeaking": "",
+  "gradeSpeaking": ""
+}
+--- Field Separator ---
+emergencyContacts: 
+{
+  "name" : "", 
+  "relation": : "", 
+  "phone" : "", 
+  "address" : "", 
+  "email" : "",
+  "company" : ""
+}
+--- Field Separator ---
+relationships: 
+{
+  "relationshipName" : "", 
+  "idPatient" : "", 
+  "name" : "", 
+  "isPassedAway" : "", 
+  "birthPlace" : "", 
+  "birthDate" : "" 
+}
+--- Field Separator ---
+vehicles: 
+{
+  "vehicleName" : "", 
+  "merk" : "", 
+  "year" : "", 
+  "lovOwnedVhclName": "", 
+  "note" : ""
+}
+--- Field Separator ---
+isStudent: 
+--- Field Separator ---
+educationLevelName: Bachelor Degree
+--- Field Separator ---
+institutionName: Institut Teknologi Telkom
+--- Field Separator ---
+majorName: Software Engineering
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["Python", "OpenCV", "NumPy", "PyTorch", "TensorFlow", "Image Classification", "Object Detection", "Face Recognition", "Data Science", "Deep Learning"]
+{'completion_tokens': 1405, 'prompt_tokens': 2361, 'total_tokens': 3766, 'completion_time': 4.014285714, 'prompt_time': 0.544036683, 'queue_time': None, 'total_time': 4.5583223969999995}
+----------------

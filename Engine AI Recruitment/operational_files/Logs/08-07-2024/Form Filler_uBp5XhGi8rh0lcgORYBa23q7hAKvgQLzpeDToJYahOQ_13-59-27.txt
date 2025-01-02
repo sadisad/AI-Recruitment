@@ -1,0 +1,298 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: {
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "Chris Taylor",
+  "firstName": "Chris",
+  "vendor": "",
+  "lastName": "Taylor",
+  "nickname": "",
+  "position": "Police Officer",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "USA",
+  "state": "FL",
+  "city": "Miami",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "+1",
+      "phoneNumber": "2345678904",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "chris.taylor@example.com",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": "chris-taylor-police"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "City of Miami Police Department",
+      "address": "Miami, FL",
+      "totalEmployee": "",
+      "position": "Community Policing Leadership",
+      "exitReason": "",
+      "startDate": "Jan 2021",
+      "current": "True",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Lead officer in community policing initiatives, significantly reducing crime rates in targeted neighborhoods."
+    },
+    {
+      "company": "Miami-Dade Police Department",
+      "address": "Miami, FL",
+      "totalEmployee": "",
+      "position": "Narcotics Investigations",
+      "exitReason": "",
+      "startDate": "Aug 2018",
+      "current": "False",
+      "endDate": "Dec 2020",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Specialized in narcotics investigations, resulting in numerous high-profile drug busts and convictions."
+    },
+    {
+      "company": "Miami Beach Police Department",
+      "address": "Miami Beach, FL",
+      "totalEmployee": "",
+      "position": "Proactive Patrols",
+      "exitReason": "",
+      "startDate": "Mar 2016",
+      "current": "False",
+      "endDate": "Jul 2018",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Enhanced public safety through proactive patrols and effective crime response."
+    },
+    {
+      "company": "Coral Gables Police Department",
+      "address": "Coral Gables, FL",
+      "totalEmployee": "",
+      "position": "Law Enforcement Training",
+      "exitReason": "",
+      "startDate": "Jan 2014",
+      "current": "False",
+      "endDate": "Feb 2016",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Completed rigorous training and engaged in various law enforcement duties under supervision."
+    }
+  ],
+  "reference": [
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "Bachelor",
+      "institution": "Florida International University",
+      "city": "Miami, FL",
+      "major": "Criminal Justice",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "False",
+      "startYear": "2010",
+      "endYear": "2013",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "True",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+{'completion_tokens': 959, 'prompt_tokens': 1312, 'total_tokens': 2271, 'completion_time': 2.74, 'prompt_time': 0.935672681, 'queue_time': None, 'total_time': 3.675672681}
+----------------

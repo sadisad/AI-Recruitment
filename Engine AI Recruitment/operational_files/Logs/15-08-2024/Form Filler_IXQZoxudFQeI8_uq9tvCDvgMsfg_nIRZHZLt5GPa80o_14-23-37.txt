@@ -1,0 +1,562 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documents" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / pasport, jadi isinya contohnya seperti ini "documents" : "ktp" jika di cv, orang tersebut mencantumkan ktp / pasport, jadi isinya cont bahwa dia memliki dokumen tersebut
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      email : "" ,
+      company : ""
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+Irsyad Zulfikar  South Jakarta • (+62) 8528-2130-793 • zulfikarirsyad@gmail.com  Innovative AI Engineer with extensive experience in data analysis, machine learning, and AI-driven solutions. Proven track record in enhancing recruitment processes and developing advanced AI models. Dedicated to leveraging AI technologies to drive innovation and operational efficiency. E x per i ence  APRIL 2024 – PRESENT AI Engineer | Lawencon International | South Jakarta, Indonesia • Led AI projects, improving candidate shortlisting accuracy by 25%. • Developed CV parsing and scoring systems, reducing manual review time by 50%. • Enhanced recruitment workflow with a live coding assessment platform, reducing assessment time by 30%. • Created AI chatbots handling over 1,000 candidate interactions monthly. • Created a Virtual Assistant for managing absences and supporting HRIS functions. AUGUST 2023 – FEBRUARY 2024 Junior AI Engineer| Indonesia AI | Jakarta, Indonesia • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications.  • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions.  • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives.  • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.             FEBRUARY 2023 – AUGUST 2023 Computer Vision Bootcamp Batch 1| Indonesia AI | Jakarta, Indonesia I participated in the Computer Vision Bootcamp Batch 1, where I gained advanced skills in Machine Learning and Deep Learning algorithms. At Indonesia AI, my role involved a range of cutting-edge AI projects, where I applied my expertise to develop innovative solutions using these technologies. • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging.  • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing.  • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques. JULY 2022 – FEBRUARY 2023 Full Stack Data Science Academy | Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) | Jakarta, Indonesia • Proficient in data science fundamentals, including business understanding, data analysis with Python, data wrangling, SQL for data science, and data visualization. • Completed real-world projects in customer segmentation, classification, and regression. FEBRUARY 2022 – JULY 2022 Introduction AI For Gen Z| Orbit Future Academy | Jakarta, Indonesia Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura. K ey  Sk i l l s  a nd E x per ti s e • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition.  • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions.  • Experience in managing and executing AI projects with a successful track record in delivering solutions.  • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [Prompt Compression and Query Optimization courses from DeepLearning.AI] to stay abreast of the latest advancements in AI and machine learning.  E duca ti o n  SEPTEMBER 2019 – MARCH 2023 Bachelor of Computer Software Engineering | Telkom University Purwokerto  GPA: 3.8 Cer fi ti ca ti o ns  Building Systems with the ChatGPT API • Data Wrangling with Python • Exploratory Data Analysis with Python for Beginners • Prompt Engineering with Llama 2&3 • Full Stack Data Science Academy • AI Career Bootcamp for Computer Vision • Supervised Machine Learning: Regression and Classification • Database Programmer (BNSP) 
+system: --- Field Separator ---
+fullName: Irsyad Zulfikar
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+homeAddress: {
+  "houseStatus": "",
+  "note": "",
+  "country": "Indonesia",
+  "state": "South Jakarta",
+  "city": "South Jakarta",
+  "subdistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": ""
+}
+--- Field Separator ---
+domicileAddress: {
+  
+}
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+firstName: Irsyad
+--- Field Separator ---
+lastName: Zulfikar
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: {
+  "isWorking": "",
+  "occupationName": "",
+  "position": "",
+  "lastWorking": ""
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+marital: {
+  "marriedDate": "",
+  "separationDate": ""
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+phones: [
+  {
+    "phoneCode": "+62",
+    "phoneNumber": "85282130793",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator ---
+emails: [
+  {
+    "email": "zulfikarirsyad@gmail.com",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: [
+  
+]
+--- Field Separator ---
+workExperience: [
+  {
+    "company": "Lawencon International",
+    "address": "South Jakarta, Indonesia",
+    "totalEmployee": "",
+    "position": "AI Engineer",
+    "exitReason": "",
+    "startDate": "2024-04",
+    "current": "True",
+    "endDate": "",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Indonesia AI",
+    "address": "Jakarta, Indonesia",
+    "totalEmployee": "",
+    "position": "Junior AI Engineer",
+    "exitReason": "",
+    "startDate": "2023-08",
+    "current": "False",
+    "endDate": "2024-02",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Indonesia AI",
+    "address": "Jakarta, Indonesia",
+    "totalEmployee": "",
+    "position": "",
+    "exitReason": "",
+    "startDate": "2023-02",
+    "current": "False",
+    "endDate": "2023-08",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA)",
+    "address": "Jakarta, Indonesia",
+    "totalEmployee": "",
+    "position": "",
+    "exitReason": "",
+    "startDate": "2022-07",
+    "current": "False",
+    "endDate": "2023-02",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Orbit Future Academy",
+    "address": "Jakarta, Indonesia",
+    "totalEmployee": "",
+    "position": "",
+    "exitReason": "",
+    "startDate": "2022-02",
+    "current": "False",
+    "endDate": "2022-07",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  }
+]
+--- Field Separator ---
+reference: [
+  
+]
+--- Field Separator ---
+formalEducation: [
+  {
+    "country": "",
+    "state": "",
+    "educationLevel": "Bachelor",
+    "institution": "Telkom University Purwokerto",
+    "city": "Purwokerto",
+    "major": "Computer Software Engineering",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "True",
+    "startYear": "2019",
+    "endYear": "2023",
+    "graduateDate": "",
+    "gpa": "3.8",
+    "graduate": "True",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: [
+  {
+    "country": "",
+    "state": "",
+    "institution": "Full Stack Data Science Academy",
+    "subject": "Data Science",
+    "city": "Jakarta",
+    "startDate": "",
+    "endDate": "",
+    "current": "True",
+    "graduate": "True",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  },
+  {
+    "country": "",
+    "state": "",
+    "institution": "Indonesia AI",
+    "subject": "Computer Vision Bootcamp Batch 1",
+    "city": "Jakarta",
+    "startDate": "2023-02",
+    "endDate": "2023-08",
+    "current": "False",
+    "graduate": "True",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  },
+  {
+    "country": "",
+    "state": "",
+    "institution": "Orbit Future Academy",
+    "subject": "Introduction AI For Gen Z",
+    "city": "Jakarta",
+    "startDate": "2022-02",
+    "endDate": "2022-07",
+    "current": "False",
+    "graduate": "True",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  }
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: [
+  
+]
+--- Field Separator ---
+languages: [
+  
+]
+--- Field Separator ---
+emergencyContacts: [
+  
+]
+--- Field Separator ---
+relationships: [
+  
+]
+--- Field Separator ---
+vehicles: [
+  
+]
+--- Field Separator ---
+isStudent: ""
+--- Field Separator ---
+educationLevelName: "Bachelor"
+--- Field Separator ---
+institutionName: "Telkom University Purwokerto"
+--- Field Separator ---
+majorName: "Computer Software Engineering"
+--- Field Separator ---
+noteInstitution: ""
+--- Field Separator ---
+skills: ["Python", "OpenCV", "NumPy", "PyTorch", "TensorFlow", "Deep Learning", "Computer Vision", "Data Science", "Machine Learning", "AI"]
+--- Field Separator ---
+documentType:
+--- Field Separator ---
+suitableJobPosition: "AI Engineer"
+--- Field Separator ---
+socialActivities: [
+  
+]
+--- Field Separator ---
+{'completion_tokens': 1509, 'prompt_tokens': 2918, 'total_tokens': 4427, 'completion_time': 4.989992637, 'prompt_time': 0.206494188, 'queue_time': 0.0016197970000000061, 'total_time': 5.196486825}
+----------------

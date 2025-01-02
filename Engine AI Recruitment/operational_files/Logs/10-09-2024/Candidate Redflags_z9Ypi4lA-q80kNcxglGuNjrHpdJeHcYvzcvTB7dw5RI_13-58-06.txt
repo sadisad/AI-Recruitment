@@ -1,0 +1,65 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Business Analyst Job Requirements:  Candidates must possess at least Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication) or equivalent Having experiences 3 years in Software Documentation (BRD, FSD, TSD, UAT Scenarios) Required skill(s): SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI Have experience in Financial Services Industry preferable Banking Project Have experience with Big Data and with other systems such as ODBC, MSSQL, MySQL Familiarity with Spark, machine learning, Query with use hive and Impala Have a risk management certification with the level of applicable regulations Have background knowledge about risk management or data management Good Communication and Personality Good English proficiency, especially in writing Experience as Business Analyst is required Experience in the finance industry or digital business is preferable
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: Name : Ahmad Aminullah Alfiyanto
+---
+high_turnover : Safe
+---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Safe
+---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Red Flag <-> Candidate worked at Google (California) from Jul 2020 - May 2022, at Amazon (Washington) from Aug 2022 - Apr 2023, and at Alibaba (Hangzhou) from Jun 2023 - Jun 2024, with unclear reasons for leaving and no gap in employment.
+---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe
+---
+durasi_pendidikan : Safe
+---
+gpa_above_3_ipk_minimal_3 : Safe
+---
+inconsistent_career_path : Safe
+---
+non-progressive_career_path : Safe
+{'completion_tokens': 189, 'prompt_tokens': 2111, 'total_tokens': 2300, 'completion_time': 0.603935577, 'prompt_time': 0.135373751, 'queue_time': 0.031984067000000005, 'total_time': 0.739309328}
+----------------

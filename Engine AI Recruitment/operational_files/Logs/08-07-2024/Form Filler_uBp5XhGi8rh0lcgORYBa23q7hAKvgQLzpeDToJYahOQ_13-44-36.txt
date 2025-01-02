@@ -1,0 +1,326 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTSdr.jordan.lee@example.comdr-jordan-lee+12345678903Los Angeles, CASKILLSPatient Care & ManagementDiagnostic ExpertiseSurgical ProceduresEmergency ResponseHealthcare AdministrationMedical Research & EducationClinical LeadershipHealth Policy AdvocacyEDUCATIONDoctor of Medicine (MD)University of California, Los Angeles(UCLA) | Los Angeles, CA2006 – 2013Bachelor of Science in BiologyStanford University | Stanford, CA2002 – 2006Dr. Jordan LeeMedical DoctorAttending PhysicianLed the emergency department, significantly reducing patient wait times and improvingcare outcomes.Medical DoctorProvided comprehensive care to a diverse patient population, with a focus on preventivemedicine and patient education.Resident DoctorSpecialized in internal medicine, participating in groundbreaking research oncardiovascular health.Junior DoctorGained extensive experience in pediatrics and emergency care, contributing to thedevelopment of new pediatric care protocols.Intern DoctorCompleted rotations in various departments, excelling in surgery and receivingcommendations for patient care excellence.Dr. Jordan Lee is a highly skilled and dedicated Medical Doctor with 10 years ofexperience across various healthcare settings. Specializing in patient care management,diagnostic procedures, and emergency response, Dr. Lee has demonstrated excellencein healthcare delivery and medical education. With a strong commitment to advancingmedical research and healthcare policy, Dr. Lee is recognized for leadership in clinicalsettings and contributions to medical science.EXPERIENCEPacific Medical Center | Los Angeles, CA2 yearsEmergency Department LeadershipJan 2022 – PresentCity Health Clinic | Los Angeles, CA2 yearsPreventive Medicine FocusJan 2020 – Dec 2021Grand Valley Hospital | Los Angeles, CA2 yearsCardiovascular Research ParticipationJan 2018 – Dec 2019Metropolitan Health | Los Angeles, CA2 yearsPediatrics and Emergency Care ExperienceJan 2016 – Dec 2017Sunshine General Hospital | Los Angeles, CA2 yearsSurgery Excellence CommendationJan 2014 – Dec 2015ABOUT
+system: {
+  "candidateId": "",
+  "salutation": "Dr.",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "Jordan Lee",
+  "firstName": "Jordan",
+  "vendor": "",
+  "lastName": "Lee",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "USA",
+  "state": "CA",
+  "city": "Los Angeles",
+  "subDistrict": "",
+  "village": "",
+  "address": "Los Angeles, CA",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "+1",
+      "phoneNumber": "2345678903",
+      "type": "mobile",
+      "primary": "true"
+    }
+  ],
+  "emails": [
+    {
+      "email": "dr.jordan.lee@example.com",
+      "type": "personal",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "linkedin",
+      "url": "linkedin.com/in/dr-jordan-lee"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "Pacific Medical Center",
+      "address": "Los Angeles, CA",
+      "totalEmployee": "",
+      "position": "Emergency Department Leadership",
+      "exitReason": "",
+      "startDate": "2022-01-01",
+      "current": "true",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Led the emergency department, significantly reducing patient wait times and improving care outcomes."
+    },
+    {
+      "company": "City Health Clinic",
+      "address": "Los Angeles, CA",
+      "totalEmployee": "",
+      "position": "Preventive Medicine Focus",
+      "exitReason": "",
+      "startDate": "2020-01-01",
+      "current": "false",
+      "endDate": "2021-12-31",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Provided comprehensive care to a diverse patient population, with a focus on preventive medicine and patient education."
+    },
+    {
+      "company": "Grand Valley Hospital",
+      "address": "Los Angeles, CA",
+      "totalEmployee": "",
+      "position": "Cardiovascular Research Participation",
+      "exitReason": "",
+      "startDate": "2018-01-01",
+      "current": "false",
+      "endDate": "2019-12-31",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Participated in groundbreaking research on cardiovascular health."
+    },
+    {
+      "company": "Metropolitan Health",
+      "address": "Los Angeles, CA",
+      "totalEmployee": "",
+      "position": "Pediatrics and Emergency Care Experience",
+      "exitReason": "",
+      "startDate": "2016-01-01",
+      "current": "false",
+      "endDate": "2017-12-31",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Gained extensive experience in pediatrics and emergency care, contributing to the development of new pediatric care protocols."
+    },
+    {
+      "company": "Sunshine General Hospital",
+      "address": "Los Angeles, CA",
+      "totalEmployee": "",
+      "position": "Surgery Excellence Commendation",
+      "exitReason": "",
+      "startDate": "2014-01-01",
+      "current": "false",
+      "endDate": "2015-12-31",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Excelled in surgery and received commendations for patient care excellence."
+    }
+  ],
+  "reference": [],
+  "formalEducation": [
+    {
+      "educationLevel": "Doctoral",
+      "institution": "University of California, Los Angeles (UCLA)",
+      "city": "Los Angeles, CA",
+      "major": "Medicine (MD)",
+      "frontTitle": "Dr.",
+      "endTitle": "",
+      "current": "false",
+      "startYear": "2006",
+      "endYear": "2013",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "true",
+      "description": ""
+    },
+    {
+      "educationLevel": "Bachelor",
+      "institution": "Stanford University",
+      "city": "Stanford, CA",
+      "major": "Biology",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "false",
+      "startYear": "2002",
+      "endYear": "2006",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "true",
+      "description": ""
+    }
+  ],
+  "informalEducation": [],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+{'completion_tokens': 1222, 'prompt_tokens': 1378, 'total_tokens': 2600, 'completion_time': 3.491428571, 'prompt_time': 0.948775038, 'queue_time': None, 'total_time': 4.440203609}
+----------------

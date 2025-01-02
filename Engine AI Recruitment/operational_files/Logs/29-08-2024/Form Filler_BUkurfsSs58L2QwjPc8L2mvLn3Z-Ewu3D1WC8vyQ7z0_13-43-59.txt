@@ -1,0 +1,493 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documentType" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / passport, jadi contohnya seperti ini "documentType" : "ktp" jika di cv, orang tersebut mencantumkan ktp atau "documentType" : "passport" passport, jadi isinya cont bahwa dia memliki dokumen tersebut.
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+jika di cv tidak terdapat apa saja yang di butuhkan untuk emergencyContacts isi dengan string kosong saja " "
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      name : "",
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      company : "",
+      email : "" ,
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+Janna Gardner  4567 Main Street, Chicago, Illinois 98052 • (716) 555-0100 • janna@example.com  Human Resources Generalist with 6+ years of experience assisting with and fulfilling organization staffing needs and requirements. A proven track record of using my excellent personal, communication and organization skills to lead and improve HR departments, recruit excellent personnel, and improve department efficiencies. Team player with excellent communication skills, high quality of work, driven and highly self-motivated. Strong negotiating skills and business acumen and able to work independently. E x per i ence  20XX – PRESENT Human Resources Generalist | Lamna Healthcare Company | Chicago, Illinois Review, update, and revise company hiring practices, vacation, and other human resources policies to ensure compliance with OSHA and all local, state, and federal labor regulations. By creating and maintaining a positive and responsive work environment, we raised employee retention rates by over 10% to achieve a greater than 90% employee retention over a 2-year period. Developed recruitment programs to successfully increase minority recruitment and meet affirmative action requirements. Led development team to build and deploy a dedicated recruitment website which reduced year-over-year recruitment costs by 14%. JUNE 20XX – AUGUST 20XX Human Resources Intern | Wholeness Healthcare | Boomtown, Ohio Assisted in recruitment outreach to prospective employees. Organized and conducted several seminars for hospital employees to educate and update them regarding available employment benefit options. Arranged hospital-wide guest speakers symposia to educate management about new employment laws and workplace confidence and morale building techniques. Administrative tasks. Sk i l l s Type 96 words per minute • Proficient with project management software • Team player • Excellent time management skills • Conflict management • Public speaking • Data analytics  E duca ti o n  MAY 20XX Bachelor of Arts Human Resources Management | Jasper University | Ft. Lauderdale, FL 3.8 GPA • Member of university’s Honor Society Acti v i ti es  Literature • Environmental conservation • Art • Yoga • Skiing • Travel 
+system: --- Field Separator ---
+fullName: Janna Gardner
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+homeAddress: 
+{
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "USA",
+  "state" : "Illinois",
+  "city" : "Chicago",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "4567 Main Street",
+  "postalCode" : "98052",
+  "since" : "",
+}
+--- Field Separator ---
+domicileAddress: 
+{
+  
+}
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+firstName: Janna
+--- Field Separator ---
+lastName: Gardner
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: 
+{
+  "isWorking": "",
+  "occupationName": "Human Resources Generalist",
+  "position": "",
+  "lastWorking": "",
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+marital: 
+{
+  "mariedDate": "",
+  "separationDate": "",
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+phones: 
+[
+  {
+    "phoneCode": "",
+    "phoneNumber": "716 555-0100",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator ---
+emails: 
+[
+  {
+    "email": "janna@example.com",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: 
+[
+  
+]
+--- Field Separator ---
+workExperience: 
+[
+  {
+    "company": "Lamna Healthcare Company",
+    "address": "Chicago, Illinois",
+    "totalEmployee": "",
+    "position": "Human Resources Generalist",
+    "exitReason": "",
+    "startDate": "20XX",
+    "current": "PRESENT",
+    "endDate": "",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Review, update, and revise company hiring practices, vacation, and other human resources policies to ensure compliance with OSHA and all local, state, and federal labor regulations."
+  },
+  {
+    "company": "Wholeness Healthcare",
+    "address": "Boomtown, Ohio",
+    "totalEmployee": "",
+    "position": "Human Resources Intern",
+    "exitReason": "",
+    "startDate": "JUNE 20XX",
+    "current": "",
+    "endDate": "AUGUST 20XX",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Assisted in recruitment outreach to prospective employees. Organized and conducted several seminars for hospital employees to educate and update them regarding available employment benefit options."
+  }
+]
+--- Field Separator ---
+reference: 
+[
+  
+]
+--- Field Separator ---
+formalEducation: 
+[
+  {
+    "country": "USA",
+    "state": "FL",
+    "educationLevel": "Bachelor",
+    "institution": "Jasper University",
+    "city": "Ft. Lauderdale",
+    "major": "Human Resources Management",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "MAY 20XX",
+    "endYear": "",
+    "graduateDate": "",
+    "gpa": "3.8",
+    "graduate": "Member of university’s Honor Society",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: 
+[
+  
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: 
+[
+  "Literature", "Environmental conservation", "Art", "Yoga", "Skiing", "Travel"
+]
+--- Field Separator ---
+languages: 
+[
+  
+]
+--- Field Separator ---
+emergencyContacts: 
+[
+  
+]
+--- Field Separator ---
+relationships: 
+[
+  
+]
+--- Field Separator ---
+vehicles: 
+[
+  
+]
+--- Field Separator ---
+isStudent: 
+--- Field Separator ---
+educationLevelName: Bachelor
+--- Field Separator ---
+institutionName: Jasper University
+--- Field Separator ---
+majorName: Human Resources Management
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["Type 96 words per minute", "Proficient with project management software", "Team player", "Excellent time management skills", "Conflict management", "Public speaking", "Data analytics"]
+--- Field Separator ---
+documentType: 
+--- Field Separator ---
+suitableJobPosition: Human Resources Generalist
+--- Field Separator ---
+socialActivities: 
+[
+  
+]
+{'completion_tokens': 1043, 'prompt_tokens': 2347, 'total_tokens': 3390, 'completion_time': 3.337500343, 'prompt_time': 0.249594957, 'queue_time': 0.060312015, 'total_time': 3.5870953}
+----------------

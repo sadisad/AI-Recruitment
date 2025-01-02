@@ -1,0 +1,57 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+Berikan ranking, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk job requirements yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan/plus yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan job requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan form berformat berikut :
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Minimal 5 kelebihan yang relevan dengan job description]
+Kekurangan : [Minimal 5 kekurangan yang relevan dengan job description]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+
+------
+Kriteria Pekerjaan:
+Candidates must possess at least Bachelor's Degree in Engineering (Computer/Telecommunication), Computer Science/Information Technology or equivalent At least 1 year of working experience in the related field is required for this position Experience in the field of business intelligence, application development, database development and ETL and/or data analysis domains with extensive SQL knowledge Required Skill(s): .NET, ASP.NET, VB, C#, SQL Server, JQUERY, MVC,HTML, CSS, Javascript , Bootstrap, Talend, Microsoft SSIS, Entity Frame Work Core Experienced in SQL Server/ Postgresql and Stored Procedure (SP) Having knowledge of Object Oriented Programming Preferably have experience in Nhibernate/ C# and ASP.NET Good in communication & interpersonal skill
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: --- Field Separator ---
+Job Title : Business Intelligence Application Developer
+--- Field Separator ---
+Job Requirements : Candidates must possess at least Bachelor's Degree in Engineering (Computer/Telecommunication), Computer Science/Information Technology or equivalent At least 1 year of working experience in the related field is required for this position Experience in the field of business intelligence, application development, database development and ETL and/or data analysis domains with extensive SQL knowledge Required Skill(s): .NET, ASP.NET, VB, C#, SQL Server, JQUERY, MVC,HTML, CSS, Javascript , Bootstrap, Talend, Microsoft SSIS, Entity Frame Work Core Experienced in SQL Server/ Postgresql and Stored Procedure (SP) Having knowledge of Object Oriented Programming Preferably have experience in Nhibernate/ C# and ASP.NET Good in communication & interpersonal skill
+--- Field Separator ---
+Ranking : 5/1
+Name : Chris Taylor
+Total Masa Kerja Relevan : 0 years
+Skills : Law Enforcement & Public Safety, Crime Prevention, Emergency Response, Investigation & Evidence Collection, Community Policing, Conflict Resolution, Firearms Proficiency, Defensive Tactics
+Kelebihan : Strong leadership, Excellent communication skill, Proactive patrols, Enhanced public safety, Commitment to public safety
+Kekurangan : No experience in business intelligence, No experience in application development, No knowledge of .NET, ASP.NET, VB, C#, SQL Server, JQUERY, MVC,HTML, CSS, Javascript , Bootstrap, Talend, Microsoft SSIS, Entity Frame Work Core, Lack of experience in database development and ETL, No experience in data analysis
+Skor : 20
+Alasan : Kandidat ini tidak memiliki pengalaman dan kemampuan yang sesuai dengan kriteria pekerjaan, membuatnya kurang sesuai untuk posisi ini.
+Kesimpulan : Kandidat ini tidak memiliki latar belakang dan pengalaman yang relevan dengan posisi Business Intelligence Application Developer.
+{'completion_tokens': 559, 'prompt_tokens': 1946, 'total_tokens': 2505, 'completion_time': 1.776514475, 'prompt_time': 0.191885791, 'queue_time': 0.0014040580000000136, 'total_time': 1.968400266}
+----------------

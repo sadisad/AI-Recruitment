@@ -1,0 +1,528 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documentType" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / passport, jadi contohnya seperti ini "documentType" : "ktp" jika di cv, orang tersebut mencantumkan ktp atau "documentType" : "passport" passport, jadi isinya cont bahwa dia memliki dokumen tersebut.
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      email : "" ,
+      company : ""
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: --- Field Separator ---
+fullName: Chris Taylor
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+homeAddress : {
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "USA",
+  "state" : "FL",
+  "city" : "Miami",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+}
+--- Field Separator ---
+domicileAddress : {
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "USA",
+  "state" : "FL",
+  "city" : "Miami",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+}
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+firstName: Chris
+--- Field Separator ---
+lastName: Taylor
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: {
+  "isWorking": "Yes",
+  "occupationName": "Law Enforcement & Public Safety",
+  "position": "Police Officer",
+  "lastWorking": "Present",
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: American
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+marital: {
+  "mariedDate": "",
+  "separationDate": "",
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: 
+--- Field Separator ---
+state: 
+--- Field Separator ---
+city: 
+--- Field Separator ---
+subDistrict: 
+--- Field Separator ---
+village: 
+--- Field Separator ---
+postalCode: 
+--- Field Separator ---
+since: 
+--- Field Separator ---
+phones: [
+  {
+    "phoneCode": "",
+    "phoneNumber": "+1234567890",
+    "type": "Mobile",
+    "primary": "Yes"
+  }
+]
+--- Field Separator ---
+emails: [
+  {
+    "email": "chris.taylor@example.com",
+    "type": "Personal",
+    "notification": "Yes"
+  }
+]
+--- Field Separator ---
+socialMedias: [
+  {
+    "socialMediaPlatform": "",
+    "url": "chris-taylor-police"
+  }
+]
+--- Field Separator ---
+workExperience: [
+  {
+    "company": "City of Miami Police Department",
+    "address": "Miami, FL",
+    "totalEmployee": "",
+    "position": "Community Policing Leadership",
+    "exitReason": "",
+    "startDate": "Jan 2021",
+    "current": "Yes",
+    "endDate": "Present",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Lead officer in community policing initiatives, significantly reducing crime rates in targeted neighborhoods."
+  },
+  {
+    "company": "Miami-Dade Police Department",
+    "address": "Miami, FL",
+    "totalEmployee": "",
+    "position": "Narcotics Investigations",
+    "exitReason": "",
+    "startDate": "Aug 2018",
+    "current": "No",
+    "endDate": "Dec 2020",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Specialized in narcotics investigations, resulting in numerous high-profile drug busts and convictions."
+  },
+  {
+    "company": "Miami Beach Police Department",
+    "address": "Miami Beach, FL",
+    "totalEmployee": "",
+    "position": "Proactive Patrols",
+    "exitReason": "",
+    "startDate": "Mar 2016",
+    "current": "No",
+    "endDate": "Jul 2018",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Enhanced public safety through proactive patrols and effective crime response."
+  },
+  {
+    "company": "Coral Gables Police Department",
+    "address": "Coral Gables, FL",
+    "totalEmployee": "",
+    "position": "Law Enforcement Training",
+    "exitReason": "",
+    "startDate": "Jan 2014",
+    "current": "No",
+    "endDate": "Feb 2016",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Completed rigorous training and engaged in various law enforcement duties under supervision."
+  }
+]
+--- Field Separator ---
+reference: [
+  
+]
+--- Field Separator ---
+formalEducation: [
+  {
+    "country": "USA",
+    "state": "FL",
+    "educationLevel": "Bachelor",
+    "institution": "Florida International University",
+    "city": "Miami",
+    "major": "Criminal Justice",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "2010",
+    "endYear": "2013",
+    "graduateDate": "",
+    "gpa": "",
+    "graduate": "Yes",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: [
+  
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: [""]
+--- Field Separator ---
+languages: [
+  
+]
+--- Field Separator ---
+emergencyContacts: [
+  
+]
+--- Field Separator ---
+relationships: [
+  
+]
+--- Field Separator ---
+vehicles: [
+  
+]
+--- Field Separator ---
+isStudent: No
+--- Field Separator ---
+educationLevelName: Bachelor
+--- Field Separator ---
+institutionName: Florida International University
+--- Field Separator ---
+majorName: Criminal Justice
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["Law Enforcement & Public Safety", "Crime Prevention", "Emergency Response", "Investigation & Evidence Collection", "Community Policing", "Conflict Resolution", "Firearms Proficiency", "Defensive Tactics"]
+--- Field Separator ---
+documentType: 
+--- Field Separator ---
+suitableJobPosition: Law Enforcement & Public Safety
+--- Field Separator ---
+socialActivities: [
+  
+]
+--- Field Separator ---
+{'completion_tokens': 1354, 'prompt_tokens': 2249, 'total_tokens': 3603, 'completion_time': 4.334325765, 'prompt_time': 0.128921303, 'queue_time': 0.004825503000000009, 'total_time': 4.463247068}
+----------------

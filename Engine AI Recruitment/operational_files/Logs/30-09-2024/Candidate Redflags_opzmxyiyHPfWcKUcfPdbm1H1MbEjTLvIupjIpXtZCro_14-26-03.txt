@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Untuk setiap kategori di bawah ini, isilah dengan "Red Flag" atau "Safe". Jika kategori dinilai "Safe", tolong tambahkan penjelasan singkat mengenai mengapa kandidat aman (misalnya, "Tidak ditemukan celah ketenagakerjaan yang mencurigakan"). Jika terdapat "Red Flag", berikan format berikut:
+
+Red Flag <-> Penjelasan Red Flag
+
+Harap gunakan format yang konsisten sebagai berikut untuk setiap kategori:
+Safe <-> Penjelasan Safe (misal: "Pengalaman kerja konsisten dan tidak ada celah ketenagakerjaan yang signifikan.")
+Red Flag <-> Penjelasan Red Flag
+
+Berikut ini adalah penjelasan default untuk status "Safe" di setiap kategori:
+
+Celah Ketenagakerjaan: Safe <-> Pengalaman kerja konsisten tanpa celah ketenagakerjaan yang mencurigakan.
+Karir Tidak Konsisten: Safe <-> Karir konsisten tanpa perpindahan pekerjaan yang sering.
+Turnover Tinggi: Safe <-> Kandidat tidak menunjukkan pola perpindahan pekerjaan yang tinggi.
+Kualifikasi/Pendidikan Tidak Relevan: Safe <-> Kualifikasi dan pendidikan kandidat relevan dengan posisi yang diinginkan.
+GPA Di Atas 3: Safe <-> IPK kandidat sesuai dengan kriteria yang diinginkan (di atas 3).
+Employment Overlap (Bekerja di Beberapa Tempat Secara Bersamaan): Safe <-> Tidak ada tanda-tanda kandidat bekerja di beberapa tempat secara bersamaan.
+
+Isilah form ini sesuai dengan format di atas, dan pastikan setiap kategori memiliki penjelasan meskipun kandidat dinilai "Safe". Di bawah ini akan saya berikan Job Vacancy dan CV String untuk Anda evaluasi.
+
+--- Field Separator ---
+------
+Job Vacancy:
+Machine Learning Engineer, A Machine Learning Engineer trains, validates and evaluates machine learning and deep learning models which perform predictive tasks in various domains such as computer vision, natural language understanding and time-series analysis. Some examples include visual recognition models, activity detection using sensor data and demand forecasting. Translate and refine business goals into appropriate machine learning objectives. Design and implement ML/DL solutions and integrate them with various Big Data platforms and architectures. Create and maintain ML pipelines that are scalable, robust, and ready for production. Collaborate with domain experts, software developers, and data scientists. Troubleshoot ML/DL model issues, including recommendations for retrain, re-validate, and improvements/optimization.
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: Here is the evaluation of the CV based on the provided criteria:
+
+Name : Chris Taylor
+--- Field Separator ---
+high_turnover : Safe <-> Kandidat tidak menunjukkan pola perpindahan pekerjaan yang tinggi.
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Red Flag <-> Kualifikasi dan pendidikan kandidat tidak relevan dengan posisi Machine Learning Engineer, background pengalaman dan pendidikan kandidat di bidang kepolisian.
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Safe <-> Tidak ada tanda-tanda kandidat bekerja di beberapa tempat secara bersamaan.
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe <-> Tidak ditemukan celah ketenagakerjaan yang mencurigakan.
+--- Field Separator ---
+durasi_pendidikan : Safe <-> Lulus dalam waktu yang sesuai dengan kriteria.
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 : Red Flag <-> IPK tidak mencantumkan.
+--- Field Separator ---
+inconsistent_career_path : Red Flag <-> Jalur karier yang inkonsisten, berganti-ganti pekerjaan dalam waktu yang singkat.
+--- Field Separator ---
+non-progressive_career_path : Safe <-> Kandidat menunjukkan kemajuan karir yang stabil.
+{'completion_tokens': 314, 'prompt_tokens': 1692, 'total_tokens': 2006, 'completion_time': 0.990466988, 'prompt_time': 0.110245844, 'queue_time': 0.004981584000000011, 'total_time': 1.100712832}
+----------------

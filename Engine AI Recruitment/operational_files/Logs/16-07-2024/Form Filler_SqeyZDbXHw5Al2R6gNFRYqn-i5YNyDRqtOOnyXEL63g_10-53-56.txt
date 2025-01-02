@@ -1,0 +1,237 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documents" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / pasport, jadi isinya contohnya seperti ini "documents" : "ktp" jika di cv, orang tersebut mencantumkan ktp / pasport, jadi isinya cont bahwa dia memliki dokumen tersebut
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+Berikut adalah form yang akan kau isi :
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": {
+
+    "name" : "", 
+    "relation": : "", 
+    "phone" : "", 
+    "address" : "", 
+    "email" : "",
+    "company" : ""
+
+  },
+  "relationships" : {
+    "relationshipName" : "", 
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" 
+  },
+  "vehicles" : {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+  },
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": ""
+}
+
+
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: {'error': 'Maaf, saya mengalami kesalahan. Bisa diulang kembali?'}
+{'prompt_tokens': 2105, 'completion_tokens': 1231, 'total_tokens': 3336}
+----------------

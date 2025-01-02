@@ -1,0 +1,110 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Dan pastikan tiap field diisi sesuai data yang ada di cv, contohnya di education pisahkan gpa dengan duration jika ada.
+Jika di cv di bagian education terdapat nama universitas dan kota universitas, maka pisahkan menjadi institution dan institution_city
+
+data yang di hasilkan seharusnya meliputi data data yang ada di bawah ini
+
+dan gunakan camel case, contohnya first_salary menjadi first_salary.
+dan jika di cv tidak ada data seperti di bawah ini maka kosongkan saja.
+
+candidateId, salutation, front_title, end_title, full_name, 
+first _name, vendor, last_name, nickname, position, photo, 
+status, tag, gender, document_type, id_number, birthplace, 
+birthdate, religion, nationality, ethnicity, marital_status, 
+medical_status, blood_type, height, weight, house_status, 
+note, country, state, city, sub_district, village, address, 
+postal_code, since, phones[phone_code, phone_number, type, primary,] 
+emails[email, type, notification], social_medias[social_media_platform, url], 
+work_experince[company, address, total_employee, position, exit_reason, 
+start_date, current, end_date, first_salary, last_salary, 
+currency, company_type, responsibility], reference[name, company_name, position, relation, phone], 
+formal_education[education_level, intitution, city, major, 
+front_title, end_title, current, start_year, end_year, 
+graduate_date, gpa, graduate, description], informal_education[intitution, subject, city, 
+start_date, end_date, current, graduate, graduate_date, score, description],
+hobbies_and_other_activities, languange[rating_listening, 
+grade_listening, rating_writing, grade_writing, rating_reading, 
+grade_reading, rating_speaking, grade_speaking]
+
+ubah menggunakan camel case
+
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CHRONOLOGICAL (INTERNSHIP)  Beverly Brown II   4321 South 55 Street Bellevue, Nebraska 68005 (402) 291-5432 imasample2@xxx.com   OBJECTIVE: Internship or Part-time Position in Marketing, Public Relations or related field utilizing strong academic background and excellent communication skills   EDUCATION: BS  in Business Administration with Marketing Emphasis  Bellevue University, Bellevue, NE  Expected Graduation Date:  June, 20xx  GPA to date:  3.56/4.00  Relevant Coursework  Principles of Marketing Business Communication  Internet Marketing Consumer Behavior  Public Relations Business Policy & Stretegy  WORK HISTORY: Aacademic Tutor (20xx to present)  Bellevue University, Bellevue, NE  Assist college students in overcoming deficiencies and successfully mastering academic coursework.  Senior Accounts Receivable Clerk (20xx-20xx)  Lincoln Financial Group, Omaha, NE  Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter.  Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members.  Managed and recorded daily accounts receivable deposits of up to $450,000.  Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks.  COMMUNITY   SERVICE: Advertising Coordinator, The Vue (20xx to present)  Bellevue University Student Newspaper  Volunteer, Publicity Committee (20xx, 20xx)  Brushup Nebraska Paint-A-Thon  ADDED VALUE: Language Skills: Bilingual (English/Spanish)  Computer Skills: MS Office (Word, Excel, PowerPoint), PhotoShop  REFERENCES: Available Upon Request 
+system: Here is the filled form:
+
+name : Beverly Brown II
+--- Field Separator ---
+summary : Internship or Part-time Position in Marketing, Public Relations or related field utilizing strong academic background and excellent communication skills
+--- Field Separator ---
+phone_number : (402) 291-5432
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : 4321 South 55 Street Bellevue, Nebraska 68005
+--- Field Separator ---
+email : imasample2@xxx.com
+--- Field Separator ---
+experiences : [{"company" : "Bellevue University", "address" : "Bellevue, NE", "position" : "Aacademic Tutor", "start_date" : "20xx", "end_date" : "present", "responsibility" : "Assist college students in overcoming deficiencies and successfully mastering academic coursework."}, {"company" : "Lincoln Financial Group", "address" : "Omaha, NE", "position" : "Senior Accounts Receivable Clerk", "start_date" : "20xx", "end_date" : "20xx", "responsibility" : "Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter. Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members. Managed and recorded daily accounts receivable deposits of up to $450,000. Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks."}]
+--- Field Separator ---
+educations : [{"education_level" : "BS", "intitution" : "Bellevue University", "city" : "Bellevue, NE", "major" : "Business Administration with Marketing Emphasis", "start_year" : "-", "end_year" : "20xx", "gpa" : "3.56/4.00", "graduate" : "-", "description" : "-"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : [{"title" : "Advertising Coordinator, The Vue", "description" : "Volunteer, Publicity Committee for Brushup Nebraska Paint-A-Thon", "duration" : "20xx to present, 20xx, 20xx"}]
+--- Field Separator ---
+languages : [{"rating_listening" : "-", "grade_listening" : "-", "rating_writing" : "-", "grade_writing" : "-", "rating_reading" : "-", "grade_reading" : "-", "rating_speaking" : "-", "grade_speaking" : "-", "language" : "English", "language" : "Spanish"}]
+{'completion_tokens': 562, 'prompt_tokens': 1233, 'total_tokens': 1795, 'completion_time': 1.605714286, 'prompt_time': 0.46763956, 'queue_time': None, 'total_time': 2.073353846}
+----------------

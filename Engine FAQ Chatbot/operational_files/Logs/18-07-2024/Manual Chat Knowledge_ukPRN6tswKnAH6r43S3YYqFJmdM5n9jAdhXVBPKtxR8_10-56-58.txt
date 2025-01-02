@@ -1,0 +1,3 @@
+system: There is no conversation transcript provided. Please provide the conversation transcript, and I'll be happy to help you create the rekap pertanyaan dan jawaban based on the instructions.
+{'completion_tokens': 37, 'prompt_tokens': 401, 'total_tokens': 438, 'completion_time': 0.110134204, 'prompt_time': 0.048746793, 'queue_time': None, 'total_time': 0.158880997}
+----------------

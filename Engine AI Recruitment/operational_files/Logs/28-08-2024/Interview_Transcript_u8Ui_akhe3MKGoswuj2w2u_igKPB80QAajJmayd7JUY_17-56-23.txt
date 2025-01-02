@@ -1,0 +1,14 @@
+system: Selamat sore, Irsyad Zulfikar. Saya LIA, Lawencon Intelligent Assistant, dan saya akan menjadi interviewer untuk posisi LLM Python Developer. Terima kasih telah hadir di sesi interview ini.
+
+Sebelum kita mulai, saya ingin memperkenalkan diri dan menjelaskan bahwa saya akan menanyakan pertanyaan-pertanyaan yang relevan dengan job requirement LLM Python Developer. Saya juga ingin memastikan bahwa Anda memahami bahwa ini adalah sesi interview yang serius dan saya akan mengevaluasi jawaban Anda dengan seksama.
+
+Pertanyaan pertama saya adalah: Dalam pengalaman Anda sebagai AI Engineer, bagaimana Anda mengembangkan solusi AI yang inovatif dan efisien? Bisa Anda berikan contoh proyek yang Anda kerjakan sebelumnya?
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+system: So you have experience in developing innovative and efficient AI solutions, such as chatbots, FAQ virtual assistants, and more. That's great!
+
+Can you please elaborate on one of your previous projects, for example, the chatbot FAQ you mentioned? What was the goal of the project, and how did you approach the development process? What AI technologies or libraries did you use to build the chatbot, and what were some of the challenges you faced during the development process?
+
+Also, what do you mean by "innovative and efficient" in the context of AI solution development? How do you measure the innovation and efficiency of your solutions?
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+{'completion_tokens': 196, 'prompt_tokens': 364, 'total_tokens': 560, 'completion_time': 0.611245895, 'prompt_time': 0.030001071, 'queue_time': 0.004722817000000001, 'total_time': 0.641246966}
+----------------

@@ -1,0 +1,27 @@
+Data yang akan saya berikan adalah feedback dari user ke customer service
+Tolong buatkan sentiment analysis dari data yang akan saya berikan dibawah ini:
+hasilkan output sama persis seperti yang ada di bawah ini jangan ada tambahan kata dari mu.
+untuk overall rating isi dengan rata rata rate yang ada
+untuk "Summary" isilah dengan kritik yang membangun darimu isilah berdasarkan field "Positive", "Negative", "Neutral" dan rating menggunakan bahasa indonesia.
+
+cukup jawab dengan format dibawah ini tanpa ada tambahan kata dari mu.
+
+jawab seperti format dibawah ini saja tanpa ada kata "Here is the sentiment analysis" darimu
+
+untuk mengisi bagian Positive sebutkan hal yang terklasifikasi sebagai Positive jika lebih dari satu
+untuk mengisi bagian Neutral sebutkan hal yang terklasifikasi sebagai Neutral jika lebih dari satu
+untuk mengisi bagian Negative sebutkan hal yang terklasifikasi sebagai Negative jika lebih dari satu
+
+--- Field Separator ---
+Positive: dapat menjawab semua pertnyaan, tanggap
+--- Field Separator ---
+Negative: lama saat menjawab, lemot
+--- Field Separator ---
+Neutral: bagus, baik
+--- Field Separator ---
+Overall Rating: 3.5
+--- Field Separator ---
+Summary: 
+--- Field Separator ---
+
+Berikut Data yang saya berikan 

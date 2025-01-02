@@ -1,0 +1,18 @@
+system: Halo Irsyad Zulfikar, selamat datang di sesi wawancara untuk posisi pekerjaan sebagai AI Engineer di Lawencon International. Saya adalah AI Interviewer dari Lawencon International, dan saya akan memimpin wawancara ini. Terima kasih telah hadir dan siap menjawab pertanyaan-pertanyaan saya.
+
+Mari kita mulai dengan pertanyaan pertama: Bagaimana Anda memahami requirement user dalam proyek-proyek AI yang Anda kerjakan sebelumnya, dan bagaimana Anda mengklarifikasi kebutuhan user tersebut? Bisa Anda jelaskan dengan contoh dari pengalaman Anda sebelumnya?
+system: Terima kasih atas kesempatan ini. Saya sangat senang dapat menjawab pertanyaan Anda.
+
+Dalam proyek-proyek AI yang saya kerjakan sebelumnya, saya memahami requirements user dengan melakukan beberapa langkah berikut: pertama, saya melakukan pengumpulan informasi dengan mengadakan diskusi dengan stakeholder dan tim yang terkait, seperti product owner, project manager, dan tim bisnis. Di dalam diskusi tersebut, saya mencari tahu tentang tujuan proyek, kebutuhan bisnis, dan harapan dari user.
+
+Kedua, saya melakukan analisis dokumen dan data yang terkait dengan proyek, seperti use case, wireframe, dan dataset untuk memahami lebih lanjut tentang requiremen user.
+
+Ketiga, saya membuat daftar pertanyaan yang spesifik untuk memastikan saya memahami dengan benar tentang requirement user. Contohnya, apa yang ingin dicapai user dengan menggunakan model AI ini, apa input dan output yang diharapkan, bagaimanamodel ini akan digunakan, dan apa batasan-batasan yang perlu dipertimbangkan.
+
+Keempat, saya mengklarifikasi kebutuhan user dengan membuat prototype atau proof of concept untuk memastikan saya memahami dengan benar tentang requirement user. Dengan demikian, saya dapat mendapatkan feedback dari user dan stakeholder sebelum melakukan pengembangan secara lebih lanjut.
+
+Contoh dari pengalaman saya sebelumnya adalah dalam proyek pengembangan sistem rekomendasi produk untuk e-commerce. Pada awalnya, saya memahami bahwa user ingin memiliki sistem yang dapat merekomendasikan produk yang relevan berdasarkan preferensi dan perilaku pembeli. Namun, setelah melakukan analisis lebih lanjut dan diskusi dengan tim bisnis, saya mendapatkan informasi bahwa user juga ingin memiliki sistem yang dapat menyesuaikan dengan perubahan perilaku pembeli dan preferensi yang berbeda-beda.
+
+Dengan demikian, saya mengklarifikasi kebutuhan user dengan membuat prototype yang dapat menyesuaikan dengan perubahan perilaku pembeli dan preferensi yang berbeda-beda. Prototype tersebut berhasil mendapatkan feedback yang positif dari user dan stakeholder, sehingga saya dapat melakukan pengembangan secara lebih lanjut dengan lebih yakin bahwa saya memahami dengan benar tentang requirement user.
+{'completion_tokens': 515, 'prompt_tokens': 162, 'total_tokens': 677, 'completion_time': 1.743650665, 'prompt_time': 0.016945092, 'queue_time': 0.0012439970000000002, 'total_time': 1.760595757}
+----------------

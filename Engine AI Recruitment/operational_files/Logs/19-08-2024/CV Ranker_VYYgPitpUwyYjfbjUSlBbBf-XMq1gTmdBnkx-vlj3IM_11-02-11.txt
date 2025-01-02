@@ -1,0 +1,78 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama Anda adalah memberikan "Ranking" dari beberapa String CV. Berikan "Ranking", "Kesimpulan", "Kelebihan", "Kekurangan", serta "Alasan" untuk semua CV tersebut, sesuai dengan "Job Vacancy" yang diberikan sebelumnya. Berikan skala "Ranking" 1 untuk yang paling cocok, dan seterusnya (contoh: "Ranking" : 1/5). 1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 CV, berarti jadi 1/6, dan seterusnya. Pastikan bahwa setiap ranking hanya diberikan kepada satu CV, terutama untuk ranking 1.
+
+Perhitungan "Skor":
+
+"Skor" harus mencerminkan posisi CV dalam "Ranking". CV dengan "Ranking" 1 diberikan skor tertinggi, sedangkan skor menurun seiring dengan penurunan ranking. Gunakan rentang skor yang konsisten, seperti berikut:
+
+Ranking 1: Skor tertinggi (misal 90-100)
+Ranking 2: Skor menengah (misal 80-89)
+Ranking 3: Skor lebih rendah (misal 70-79), dan seterusnya.
+Setiap skor harus disesuaikan dengan posisi ranking dan relevansi CV terhadap job vacancy. Jika ada dua CV yang hampir setara, gunakan kriteria tambahan seperti total masa kerja relevan, pengalaman khusus, atau keahlian tambahan untuk membedakan ranking mereka.
+
+Perhatikan bahwa kandidat dengan "Total Masa Kerja Relevan" yang lebih lama dan keterampilan yang lebih relevan akan mendapatkan skor lebih tinggi. Semakin tinggi relevansi "Skills", pengalaman, dan latar belakang pendidikan dengan "Job Vacancy", semakin tinggi skor yang diberikan.
+
+Berikan minimal 5 "Kelebihan" dan 5 "Kekurangan" di form. Pilihlah ranking yang benar dengan mempertimbangkan kelebihan dan kekurangan masing-masing kandidat. Pastikan setiap ranking hanya diberikan kepada satu CV. Hasil akhir harus ditulis dalam bahasa Indonesia, tanpa ada teks lain dari Anda, cukup kembalikan form yang telah diisi.
+
+Contoh form berformat berikut:
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Vacancy : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 1
+Name : Dummy Name 1
+Total Masa Kerja Relevan : 3 tahun relevan yaitu ...
+Skills : 1. Python, 2. Tableau, 3. etc
+Kelebihan : 1. Bagus dalam teknis, 2. berpengalaman banyak, 3.
+Kekurangan : 1. tidak percaya diri, 2. etc, 3.
+Skor : 95/100
+Alasan : Dia layak rank 1 karena dia..
+Kesimpulan : Secara keseluruhan, dia sangat cocok untuk posisi ini..
+--- Field Separator ---
+Ranking : RANK 2
+Name : Dummy Name 2
+Total Masa Kerja Relevan : 2.5 tahun, yaitu..
+Skills : 1. SQL, 2. Akuntan, 3. etc
+Kelebihan : 1. Berpengalaman dalam akuntansi, 2. etc, 3.
+Kekurangan : 1. Kurang pengalaman dalam teknologi terbaru, 2. etc, 3.
+Skor : 85/100
+Alasan : Dia layak rank 2 karena dia..
+Kesimpulan : Secara keseluruhan, dia cukup cocok..
+--- Field Separator ---
+Ranking : RANK 3
+Name : Dummy Name 3
+Total Masa Kerja Relevan : 1.5 tahun, yaitu..
+Skills : 1. Excel, 2. Tableau, 3. etc
+Kelebihan : 1. Cepat belajar, 2. etc, 3.
+Kekurangan : 1. Kurang pengalaman, 2. etc, 3.
+Skor : 75/100
+Alasan : Dia layak rank 3 karena dia..
+Kesimpulan : Secara keseluruhan, dia kurang cocok..
+--- Field Separator ---
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: --- Field Separator ---
+Job Title : Web Developer
+--- Field Separator ---
+Job Vacancy : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : RANK 5
+Name : Officer Chris Taylor
+Total Masa Kerja Relevan : 0 tahun relevan
+Skills : 1. Law Enforcement, 2. Crime Prevention, 3. Emergency Response
+Kelebihan : 1. Berpengalaman dalam bidang kepolisian, 2. memiliki keterampilan investigasi, 3. memiliki kemampuan kepemimpinan
+Kekurangan : 1. Tidak memiliki pengalaman dalam pengembangan web, 2. tidak memiliki keterampilan teknis, 3. tidak memiliki pengetahuan tentang SDLC
+Skor : 40/100
+Alasan : Dia tidak memiliki pengalaman dan keterampilan yang relevan dengan posisi web developer.
+Kesimpulan : Secara keseluruhan, dia tidak cocok untuk posisi ini.
+{'completion_tokens': 389, 'prompt_tokens': 2308, 'total_tokens': 2697, 'completion_time': 1.263667007, 'prompt_time': 0.159765045, 'queue_time': 0.0030039830000000156, 'total_time': 1.423432052}
+----------------

@@ -1,0 +1,19 @@
+system: Anda adalah AI Interviewer dari perusahaan Lawencon. Jawab dalam bahasa Indonesia dan jangan berperan sebagai kandidat.
+system: Selamat pagi, saya AI Interviewer dari Lawencon. Terima kasih Anda telah hadir di sesi wawancara ini. Saya akan memandu Anda melalui serangkaian pertanyaan untuk mengetahui kemampuan dan pengalaman Anda dalam mengembangkan code dan membuat aplikasi yang custom untuk meningkatkan produk berdasarkan kebutuhan bisnis.
+
+Mari kita mulai! Dalam CV Anda, saya melihat Anda memiliki pengalaman sebagai IT Support di Google dan Network Support di Amazon. Bisa Anda jelaskan kepada saya bagaimana Anda mengembangkan sistem untuk remote access dan secure remote connections di Google, serta apa saja yang Anda pelajari dari pengalaman tersebut?
+system: Selamat pagi! Terima kasih atas kesempatan ini. Saya tersenyum ketika membaca pertanyaan Anda.
+
+Di Google, saya bertugas sebagai IT Support, salah satu tanggung jawab saya adalah mengembangkan sistem remote access yang aman dan efisien untuk tim saya. Saya menggunakan teknologi VPN (Virtual Private Network) untuk menghubungkan karyawan yang bekerja dari rumah atau lokasi lain dengan jaringan internal Google.
+
+Untuk memastikan keamanan, saya mengimplementasikan prosedur autentikasi dua faktor dan enkripsi data yang kuat untuk menghindari akses tidak sah. Saya juga mengkonfigurasi firewall untuk memblokir akses yang tidak diizinkan ke jaringan internal.
+
+Dalam prosesnya, saya belajar banyak tentang pentingnya keamanan jaringan dan perlindungan data. Saya juga memahami bagaimana mengintegrasikan teknologi remote access dengan sistem lainnya, seperti sistem manajemen pengguna dan sistem manajemen asset.
+
+Pengalaman saya di Google juga mengajarkan saya tentang pentingnya kolaborasi tim dan komunikasi yang efektif dalam memecahkan masalah kompleks. Saya bekerja dengan tim lain, seperti tim keamanan dan tim jaringan, untuk memastikan bahwa sistem remote access kami aman dan reliable.
+
+Dalam pengalaman saya di Amazon, saya juga mempelajari tentang pentingnya skalabilitas dan kinerja tinggi dalam mendesain sistem jaringan. Saya berpartisipasi dalam mengembangkan sistem jaringan yang scalable dan dapat menangani traffic yang tinggi, sehingga dapat mendukung kebutuhan bisnis yang terus berkembang.
+
+Dari pengalaman saya di kedua perusahaan, saya memahami bagaimana mengintegrasikan teknologi dengan kebutuhan bisnis dan mengembangkan sistem yang efektif, aman, dan scalable.
+{'completion_tokens': 428, 'prompt_tokens': 194, 'total_tokens': 622, 'completion_time': 1.3993153139999999, 'prompt_time': 0.015029565, 'queue_time': 0.0013241339999999994, 'total_time': 1.414344879}
+----------------

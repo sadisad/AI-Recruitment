@@ -1,0 +1,85 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+Isi form "total_masa_kerja_relevan" dengan Hitung total masa kerja relevan, yaitu pengalaman kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor_cv secara drastis.
+
+Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor_cv.
+Kelebihan dan Kekurangan:
+
+Isi form "kelebihan dan kekurangan" dengan Memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor_cv.
+
+Isi form "skor_cv" dengan berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar, pastikan skor_cv memiliki 2 angka di belakang koma (float), jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, rendahkan "skor_cv". Jika benar-benar tidak relevan, berikan skor_cv di bawah 10.
+
+Isi form "Kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+jobRoleOverview: Berikan "true" jika sesuai, "false" jika tidak.
+jobQualification: Berikan "true" jika sesuai, "false" jika tidak.
+jobResponsibility: Berikan "true" jika sesuai, "false" jika tidak.
+
+Isi form "alasan" berdasarkan cv kandidat tersebut kecocokan dia dengan kriteria_pekerjaan dan job description.
+Isi form "suggestion" berdasarkan cv kandidat dan kecocokannya terhadap suggested_job_role dan berikan reasons nya, pertimbangkan juga match_percentage dari CV kandidat terkait suggested_job_role.
+
+Format Pengisian:
+Isilah form berikut tanpa ada tambahan kata darimu:
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+------
+Responsible for installing, configuring, testing, maintaining all system infrastructure availability, performance, and security Monitor existing systems to ensure structural integrity Oversee the development and installation of new hardware and software Install and configure operating systems and other software and routinely test installed software for glitch detection and other issues Provide technical direction to IT support staff Ensure constant availability of technical resources Design and implement security systems and redundant backups to maintain data safety Write custom scripts to reduce the need for human intervention
+------
+Kriteria Pekerjaan:
+Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+system: name : Ahmad Aminullah Alfiyanto
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 3, "desc" : "Ahmad memiliki pengalaman kerja yang relevan sebagai IT Support dan Technical Support Engineer"}
+--- Field Separator ---
+skills : ['Computer Troubleshooting', 'Computer Networking', 'Microsoft Office', 'Python', 'JavaScript', 'SQL', 'Database Management', 'Web Development']
+--- Field Separator ---
+kelebihan : ['Pengalaman kerja yang relevan', 'Pendidikan yang tinggi', 'Keterampilan yang luas', 'Pengalaman dengan teknologi canggih', 'Keterampilan dalam mengatur jaringan']
+--- Field Separator ---
+kekurangan : ['Pengalaman kerja yang kurang luas', 'Keterampilan yang perlu ditingkatkan', 'Belum memiliki pengalaman dengan Oracle WebLogic', 'Belum memiliki pengalaman dengan Docker, Jenkins, dan Kubernetes']
+--- Field Separator ---
+skor_cv : [85.50]
+--- Field Separator ---
+alasan : Ahmad memiliki keterampilan dan pengalaman yang relevan dengan kriteria pekerjaan, namun masih perlu meningkatkan keterampilan dalam beberapaarea.
+--- Field Separator ---
+kesimpulan : Ahmad memiliki potensi yang baik untuk menjadi System Engineer, namun masih perlu meningkatkan beberapa keterampilan dan pengalaman.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "true"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Bachelor\'s Degree in Engineering (Computer/Telecommunication)', 'At least 1 Year(s) of working experience as a System Engineer', 'Having experience in using Oracle WebLogic as a System Engineer', 'Willing to work in shifting', 'Hands on experience of OS (Linux, Windows, and Mainframe)']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['System Engineer', 'IT Support'], "match_percentage" : 85.50, "reasons" : ['Ahmad memiliki pengalaman kerja yang relevan', 'Ahmad memiliki keterampilan yang luas', 'Ahmad memiliki pendidikan yang tinggi']}
+{'completion_tokens': 496, 'prompt_tokens': 2380, 'total_tokens': 2876, 'completion_time': 1.571934401, 'prompt_time': 0.166915747, 'queue_time': 0.004207183000000003, 'total_time': 1.738850148}
+----------------

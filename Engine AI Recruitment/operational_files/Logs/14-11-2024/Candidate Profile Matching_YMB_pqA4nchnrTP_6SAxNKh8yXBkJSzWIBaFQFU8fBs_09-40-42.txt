@@ -1,0 +1,101 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+1. **Total Masa Kerja Relevan**:
+   - Isi form "total masa kerja relevan" dengan menghitung total masa kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor cv secara proporsional sesuai dengan relevansi pengalaman.
+
+2. **Keterampilan (Skills)**:
+   - Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor cv secara proporsional.
+
+3. **Kelebihan dan Kekurangan**:
+   - Isi form "kelebihan" dan "kekurangan" dengan memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor cv.
+
+4. **Penilaian CV (Skor CV)**:
+   - **skor cv** harus selalu diisi berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar. Jangan biarkan skor_cv kosong atau default ke 0.00 kecuali CV benar-benar tidak relevan. 
+   - Pastikan skor cv memiliki 2 angka di belakang koma (float). 
+   - Jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, berikan skor cv yang rendah, misalnya di bawah 10.00, tetapi tetap harus mencerminkan penilaian yang logis dan sesuai.
+
+5. **Kesimpulan**:
+   - Isi form "kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+6. **Kesesuaian**:
+   - Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+     - **jobRoleOverview**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobQualification**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobResponsibility**: Berikan "true" jika sesuai, "false" jika tidak.
+
+7. **Alasan**:
+   - Isi form "alasan" berdasarkan kecocokan kandidat dengan kriteria_pekerjaan dan job description.
+
+8. **Saran Job Posisi Lain (Suggestion)**:
+   - Isi form "suggestion" berdasarkan CV kandidat dan kecocokannya terhadap suggested_job_role, berikan alasan dan persentase kecocokan (match_percentage).
+
+**Format Pengisian**:
+Isilah form berikut tanpa ada tambahan kata darimu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang dilamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor cv : [0.00/100.00]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+
+------
+Job Description : Your main duties in flying with us Build and extend our backend code based on SOLID Principle and Clean Code Build APIs that serve our frontend apps – Benchmark and improve performance Maintain and extend our test suite Refactor and improve existing code to incorporate better patterns Document and write about the work Create unit test and implement self test to make sure the code is running well Assist technical lead to review and follow up code that have been developed
+------
+Kriteria Pekerjaan:
+Job Requirement : Mandatory belongings that you must prepare Bachelor degree or equivalent, preferably in Computer Science/Information Technology 0-2 years of experience in backend development Experienced in using Golang and Java Experience working with RDBMS or NoSQL is a plus Experience working with Redis and Memcached is a plus Experience with Elastic Search Experience with CI/CD, TDD, Refactor/Rewrite system Experience with Event-Driven Architecture such as Kafka or RabbitMQ Experience with Git Flow Experience with Kubernetes is a plus Knows how to analyze log Experience with pair programming is a plus Experience with Linux syntax, Docker is a plus Good sense of prioritization and product knowledge/product ownership Critical thinking, fast learner, and excellent communication skills Well-motivated, responsible for the deadline, and can work under pressure
+------
+CV:
+Ahmad Aminullah Alfiyanto aminullah.alfiyanto@gmail.com • linkedin.com/in/aaminullah • +62 812 3563 5134 WORKING EXPERIENCE Fullstack Developer, Fulltime Lawencon Internasional March 2024 – Present ● Maintained and developed features for Recruitment module of LinovHR using Java Spring Boot and Angular. ● Contributed to the development and maintenance of key features for managing master data, including templates and workflows for job vacancies, job specifications, and activity stages. ● Fixed more than 100 bugs and collaborated in a cross-functional team to create and optimize workflows to support HR operations. PROJECT Fullstack Developer LinovHR July 2024 – Present Web application for Human Resource Information System (HRIS) focused on recruitment, job vacancy management, and candidate selection stages. Job Description:  ● Developed backend services to handle recruitment-related data and ensure it was processed and stored correctly in the PostgreSQL database. ● Implemented APIs for the Recruitment module based on requirements from system analysts, allowing seamless data flow between the backend and front-end interface. ● Designed and developed front-end components for various recruitment features following UI/UX guidelines. Tools: Java Spring Boot, Hibernate, PostgreSQL, Angular, PrimeNG, REST API. Fullstack Developer SalarySync March 2024 – June 2024 Web application for monitoring payment schedules for clients and vendors within an organization, with a focus on document storage and management. Job Description:  ● Developed and implemented a document storage feature using the FTP protocol, allowing secure and efficient upload, retrieval, and management of documents related to payment schedules. ● Integrated the backend with the PostgreSQL database to store document metadata and maintain data consistency. ● Designed and developed the front-end user interface for payment schedule, ensuring ease of use and smooth interaction with the backend. Tools: Java Spring Boot, Hibernate, PostgreSQL, FTP, Angular, PrimeNG, REST API. Fullstack Developer GASBOARD February 2023 – May 2023 A web application designed to manage and visualize sales and project data within a division of a telecommunications company in Indonesia. Job Description:  ● Created and integrated interactive visualizations utilizing Chart.js to present project totals and progress in graphical form. ● Delivered key features for data analysis, including real-time sales tracking and project status monitoring for managers. ● Implemented the front-end interface using HTML, CSS, and Bootstrap, with a focus on usability and clean design for ease of navigation and Developed the backend of the GASBOARD application using Java MVC, ensuring smooth data processing and integration with MySQL for efficient data storage. Tools: Java MVC, Thymeleaf, MySQL, HTML, CSS, Bootstrap, Chart.js. EDUCATION Bachelor of Information System Universitas Indonesia August 2019 – March 2024 ● Thesis: Usability Evaluation and Development of Alternative Interface Designs for Tourism Applications: Solo Destination ● Relevant coursework: Proyek Pengembangan Sistem Informasi (Information System Development Project) SKILLS Programming Language: Java, Javascript, Typescript, SQL, Python, HTML, CSS Framework: Spring Boot, Angular, React, Hibernate, Bootstrap, PrimeNG Language: Indonesia, English 
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: name : Ahmad Aminullah Alfiyanto
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 1, "desc" : "Ia memiliki pengalaman 1 tahun sebagai full stack developer"}
+--- Field Separator ---
+skills : ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Hibernate', 'Python', 'HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'PrimeNG', 'Chart.js', 'RDBMS', 'FTP']
+--- Field Separator ---
+kelebihan : ['Memiliki pengalaman sebagai full stack developer', 'Familiar dengan teknologi backend dan frontend', 'Memiliki kemampuan analisis dan problem solving yang baik', 'Menguasai bahasa pemrograman Java dan Python', 'Memiliki pengalaman dengan database RDBMS']
+--- Field Separator ---
+kekurangan : ['Belum memiliki pengalaman dengan teknologi NoSQL', 'Belum memiliki pengalaman dengan CI/CD', 'Belum memiliki pengalaman dengan Event-Driven Architecture', 'Belum memiliki pengalaman dengan Kubernetes']
+--- Field Separator ---
+skor cv : 70.00/100.00
+--- Field Separator ---
+alasan : Kandidat memiliki pengalaman sebagai full stack developer dan familiar dengan teknologi backend dan frontend. Namun, kandidat belum memiliki pengalaman dengan teknologi NoSQL, CI/CD, dan Event-Driven Architecture.
+--- Field Separator ---
+kesimpulan : Kandidat memiliki kemampuan dan pengalaman yang sesuai dengan kriteria pekerjaan, namun perlu mempelajari teknologi yang belum dikuasai.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "true"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Bachelor degree or equivalent, preferably in Computer Science/Information Technology', '0-2 years of experience in backend development', 'Experienced in using Golang and Java', 'Experience working with RDBMS or NoSQL', 'Experience with CI/CD', 'Experience with Event-Driven Architecture']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['Backend Developer', 'Full Stack Developer'], "match_percentage" : 80.00, "reasons" : ['Memiliki pengalaman sebagai full stack developer', 'Familiar dengan teknologi backend dan frontend']}
+--- Field Separator ---
+{'completion_tokens': 521, 'prompt_tokens': 2031, 'total_tokens': 2552, 'completion_time': 1.488571429, 'prompt_time': 0.11397544, 'queue_time': 0.005865963000000002, 'total_time': 1.602546869}
+----------------

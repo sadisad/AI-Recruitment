@@ -1,0 +1,560 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documentType" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / passport, jadi contohnya seperti ini "documentType" : "ktp" jika di cv, orang tersebut mencantumkan ktp atau "documentType" : "passport" passport, jadi isinya cont bahwa dia memliki dokumen tersebut.
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+jika di cv tidak terdapat apa saja yang di butuhkan untuk emergencyContacts isi dengan string kosong saja " "
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      name : "",
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      company : "",
+      email : "" ,
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+Tenant: None
+Source: admtan001
+Company: be21929d-6337-4679-821e-cc5cfb41158f
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: --- Field Separator ---
+fullName: Angga Prihantoro
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+homeAddress : {
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "Indonesia",
+  "state" : "",
+  "city" : "Bandung",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+}
+--- Field Separator ---
+domicileAddress : {  }
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+firstName: Angga
+--- Field Separator ---
+lastName: Prihantoro
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: {
+  "isWorking": "",
+  "occupationName": "Machine Learning Trainee",
+  "position": "Machine Learning Trainee",
+  "lastWorking": "Jul 2022",
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+marital: {
+  "marriedDate": "",
+  "separationDate": "",
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: 
+--- Field Separator ---
+state: 
+--- Field Separator ---
+city: 
+--- Field Separator ---
+subDistrict: 
+--- Field Separator ---
+village: 
+--- Field Separator ---
+postalCode: 
+--- Field Separator ---
+since: 
+--- Field Separator ---
+phones: [
+  {
+    "phoneCode": "",
+    "phoneNumber": "",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator ---
+emails: [
+  {
+    "email": "anggaprihantoro3@gmail.com",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: [
+  {
+    "socialMediaPlatform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/angga-prihantoro-7b7120235"
+  }
+]
+--- Field Separator ---
+workExperience: [
+  {
+    "company": "PT Presentologics - Bangkit Academy",
+    "address": "Bandung, Indonesia",
+    "totalEmployee": "",
+    "position": "Machine Learning Trainee",
+    "exitReason": "",
+    "startDate": "Feb 2022",
+    "current": "",
+    "endDate": "Jul 2022",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Dasar Komputer Laboratory",
+    "address": "Bandung, Indonesia",
+    "totalEmployee": "",
+    "position": "Practicum Assistant",
+    "exitReason": "",
+    "startDate": "Aug 2020",
+    "current": "",
+    "endDate": "Aug 2022",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  },
+  {
+    "company": "Dasar Komputer Laboratory",
+    "address": "Bandung, Indonesia",
+    "totalEmployee": "",
+    "position": "Logistics Staff",
+    "exitReason": "",
+    "startDate": "Aug 2020",
+    "current": "",
+    "endDate": "Aug 2022",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": ""
+  }
+]
+--- Field Separator ---
+reference: [
+  {
+    "name": "",
+    "companyName": "",
+    "position": "",
+    "relation": "",
+    "phone": ""
+  }
+]
+--- Field Separator ---
+formalEducation: [
+  {
+    "country": "Indonesia",
+    "state": "",
+    "educationLevel": "Bachelor Degree",
+    "institution": "Universitas Telkom",
+    "city": "Bandung",
+    "major": "Telecommunication Engineering",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "2019",
+    "endYear": "2023",
+    "graduateDate": "",
+    "gpa": "3.53/4.00",
+    "graduate": "",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: [ ]
+--- Field Separator ---
+hobbiesAndOtherActivities: [""]
+--- Field Separator ---
+languages: [
+  {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+]
+--- Field Separator ---
+emergencyContacts: [
+  {
+    name : "",
+    relation : "" ,
+    phone : "" ,
+    address : "" ,
+    company : "",
+    email : "" ,
+  }
+]
+--- Field Separator ---
+relationships : [
+  {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+  }
+]
+--- Field Separator ---
+vehicles : [
+  {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+  }
+]
+--- Field Separator ---
+isStudent: 
+--- Field Separator ---
+educationLevelName : "Bachelor Degree"
+--- Field Separator ---
+institutionName : "Universitas Telkom"
+--- Field Separator ---
+majorName : "Telecommunication Engineering"
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["SQL", "Python", "Excel", "Tensorflow", "Tableu", "Looker", "Critical Thinking", "Active Listening", "Teamwork"]
+--- Field Separator ---
+documentType: 
+--- Field Separator ---
+suitableJobPosition: "Machine Learning Trainee"
+--- Field Separator ---
+socialActivities: [
+  {
+    "organizationName" : "",
+    "activityType" : "",
+    "position": "",
+    "year": ""
+  }
+]
+{'completion_tokens': 1459, 'prompt_tokens': 2581, 'total_tokens': 4040, 'completion_time': 4.7192943849999995, 'prompt_time': 0.151034933, 'queue_time': 0.004626209999999992, 'total_time': 4.870329318}
+----------------

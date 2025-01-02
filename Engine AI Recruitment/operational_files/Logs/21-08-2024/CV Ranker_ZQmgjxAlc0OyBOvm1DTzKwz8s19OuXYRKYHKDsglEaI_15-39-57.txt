@@ -1,0 +1,67 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Berikan lah Skor tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan Skor nya.
+Perhatikan juga Skills, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada Skills yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi Skills tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Job Title : System Engineer
+--- Field Separator ---
+Job Requirements : 
+The job requirements include a Bachelor's or Master's degree in Engineering or Computer Science, at least 1 year of experience as a System Engineer, experience with Oracle WebLogic, hands-on experience with OS, knowledge of network and security concepts, familiarity with backup and restore concept, knowledge of database structure design, experience with Atlassian products, CICD Tools, Docker, Jenkins, and Kubernetes, and proficiency in at least one programming language.
+--- Field Separator ---
+Ranking : 1
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 0 tahun
+Skills : SQL, Python, Excel, Tensorflow, Tableu, Looker
+Kelebihan : Memiliki pengalaman dalam menggunakan SQL dan Python untuk project Glaucomation App dan Foodrism App. Memiliki sertifikasi Tensorflow Developer Certification. Memiliki kemampuan Critical Thinking, Active Listening, dan Teamwork.
+Kekurangan : Tidak memiliki pengalaman yang relevan sebagai System Engineer. Tidak memiliki pengetahuan tentang Oracle WebLogic, network and security concepts, dan database structure design.
+Skor : 60/100
+Alasan : Angga Prihantoro memiliki kemampuan dalam menggunakan SQL dan Python, serta memiliki sertifikasi Tensorflow Developer Certification. Namun, ia tidak memiliki pengalaman yang relevan sebagai System Engineer dan tidak memiliki pengetahuan tentang Oracle WebLogic, network and security concepts, dan database structure design.
+Kesimpulan : Angga Prihantoro memiliki potensi untuk menjadi System Engineer, namun perlu memiliki lebih banyak pengalaman dan pengetahuan tentang teknologi yang relevan.
+{'completion_tokens': 302, 'prompt_tokens': 2067, 'total_tokens': 2369, 'completion_time': 0.943111922, 'prompt_time': 0.145500704, 'queue_time': 0.004768164999999991, 'total_time': 1.088612626}
+----------------

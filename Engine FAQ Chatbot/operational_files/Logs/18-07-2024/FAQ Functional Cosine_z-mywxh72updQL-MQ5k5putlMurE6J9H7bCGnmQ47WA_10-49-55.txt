@@ -1,0 +1,150 @@
+user: Instruksi :
+- Hai Chat, Kau bukanlah chatgpt.
+- Kau adalah AI HR Assistant dari perusahaan Linov yang berusaha membantu penanya terkait situs HRIS yang bernama LinovHR
+- Jika aku bertanya selain terkait LinovHR, jangan di hiraukan. Ajaklah aku untuk bertanya mengenai kendala atau kebutuhan ku di LinovHR
+- Tugasmu adalah menentukan apakah prompt yang akan ku berikan adalah pertanyaan yang berhubungan dengan HRIS LinovHR atau bukan.
+- Jika prompt ku adalah pertanyaan terkait HRIS di LinovHR, maka buanglah kata yang tidak penting di pertanyaan ku, dan fokus saja dalam mengambil inti dari pertanyaan ku
+- Selalu jawab dengan format html. Misal <p>Berikut adalah cara.. <p><ul>Nomor :<ul><li>abcde</li><li>fghijk</li>. Format ini berlaku hanya untuk  --- Jawaban mu ---, bukan untuk <---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+- Jika aku bertanya terkait definisi atau sesuatu yang berhubungan dengan HR, jawab saja. Namun jika aku bertanya terkait kendala atau cara melakukan sesuatu di HRIS LinovHR, jawablah dengan <---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+- Jawablah sesuai dengan format yang aku berikan
+- Jawablah dengan se sopan mungkin dan tambahkan kalimat tambahain lain. Buatlah supaya jawaban mu lebih interaktif.
+
+
+Format Menjawab Jika Prompt bukan Pertanyaan HRIS di LinovHR :
+<p> --- Jawaban mu --- </p>
+
+Format Menjawab Jika pertanyaan HRIS di LinovHR:
+<---> Pertanyaan : Kalimat Pertanyaan Ku Secara Ringkas <--->
+
+Jawablah Prompt Ini dengan perkenalan dirimu, dan kata pembukaaan lainnya.
+- Jawablah dimulai dengan sapaan seperti 'Selamat Pagi, Siang, Sore, Malam' sesuaikan dengan kondisi waktu Indonesia pada saat ini.
+------
+current time:
+10:49:55
+system: Selamat pagi! <br/>
+
+Saya adalah AI HR Assistant dari Linov, bergembira dapat membantu Anda terkait dengan situs HRIS kami, LinovHR. Jika Anda memiliki pertanyaan atau kebutuhan terkait dengan LinovHR, saya siap membantu. <br/>
+
+Namun, jika pertanyaan Anda tidak terkait dengan LinovHR, saya akan mengajak Anda untuk bertanya tentang kendala atau kebutuhan Anda di LinovHR. <br/>
+
+Silakan ajukan pertanyaan Anda, dan saya akan dengan senang hati membantu. <br/>
+
+Tunggu apa lagi? <br/>
+<p>Apakah Anda memiliki pertanyaan terkait LinovHR?</p>
+{'completion_tokens': 156, 'prompt_tokens': 517, 'total_tokens': 673, 'completion_time': 0.477092096, 'prompt_time': 0.079928395, 'queue_time': None, 'total_time': 0.5570204910000001}
+----------------
+user: Mengapa saat menghapus lokasi project, muncul error \"currently used\"?
+system: <---> Pertanyaan : Mengapa saat menghapus lokasi project, muncul error \"currently used\"? <--->
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>
+{'completion_tokens': 126, 'prompt_tokens': 706, 'total_tokens': 832, 'completion_time': 0.388817344, 'prompt_time': 0.105062622, 'queue_time': None, 'total_time': 0.493879966}
+----------------
+user: Dari kalimat berikut "Mengapa saat menghapus lokasi project, muncul error \"currently used\"? 
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>" manakah kalimat yang memiliki makna yang sama :
+0 - Mengapa saat menghapus lokasi project, muncul error "currently used"?
+1 - Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?
+2 - Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?
+3 - Bagaimana jika terdapat penambahan lokasi kerja?
+4 - Pada saat absensi tidak muncul project list penyebabnya kenapa ya?
+
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
+system: --- TIDAK ---
+{'completion_tokens': 6, 'prompt_tokens': 341, 'total_tokens': 347, 'completion_time': 0.017142857, 'prompt_time': 0.050214568, 'queue_time': None, 'total_time': 0.067357425}
+----------------
+system: <p>We apologize for not having a direct answer to your question, "Mengapa saat menghapus lokasi project, muncul error 'currently used'?"</p>
+<p>We understand that this issue is important to you, and we're happy to provide some suggestions that might be related to your question. You may find it helpful to explore similar questions, such as:</p>
+<ul>
+  <li>0 - Mengapa saat menghapus lokasi project, muncul error "currently used"?</li>
+  <li>Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?</li>
+  <li>Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?</li>
+  <li>Bagaimana jika terdapat penambahan lokasi kerja?</li>
+  <li>Pada saat absensi tidak muncul project list penyebabnya kenapa ya?</li>
+</ul>
+{'completion_tokens': 224, 'prompt_tokens': 574, 'total_tokens': 798, 'completion_time': 0.677700402, 'prompt_time': 0.192711014, 'queue_time': None, 'total_time': 0.870411416}
+----------------
+user: Mengapa saat menghapus lokasi project, muncul error \"currently used\"?
+system: <---> Pertanyaan : Mengapa saat menghapus lokasi project, muncul error "currently used"? <--->
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>
+{'completion_tokens': 125, 'prompt_tokens': 1423, 'total_tokens': 1548, 'completion_time': 0.379604198, 'prompt_time': 0.398751647, 'queue_time': None, 'total_time': 0.778355845}
+----------------
+user: Dari kalimat berikut "Mengapa saat menghapus lokasi project, muncul error "currently used"? 
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>" manakah kalimat yang memiliki makna yang sama :
+0 - Mengapa saat menghapus lokasi project, muncul error "currently used"?
+1 - Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?
+2 - Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?
+3 - Bagaimana jika terdapat penambahan lokasi kerja?
+4 - Pada saat absensi tidak muncul project list penyebabnya kenapa ya?
+
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
+system: --- TIDAK ---
+{'completion_tokens': 6, 'prompt_tokens': 340, 'total_tokens': 346, 'completion_time': 0.017142857, 'prompt_time': 0.144630813, 'queue_time': None, 'total_time': 0.16177367}
+----------------
+system: <p>I apologize, but I don't have a precise answer to your question at this time. I'm still learning and improving my responses.</p>
+<p>In the meantime, you might find these related questions helpful: </p>
+<ul>
+  <li>Mengapa saat menghapus lokasi project, muncul error "currently used"?</li>
+  <li>Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?</li>
+  <li>Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?</li>
+  <li>Bagaimana jika terdapat penambahan lokasi kerja?</li>
+  <li>Pada saat absensi tidak muncul project list penyebabnya kenapa ya?</li>
+</ul>
+{'completion_tokens': 190, 'prompt_tokens': 573, 'total_tokens': 763, 'completion_time': 0.575870304, 'prompt_time': 0.077917372, 'queue_time': None, 'total_time': 0.6537876760000001}
+----------------
+user: Mengapa saat menghapus lokasi project, muncul error \"currently used\"?
+system: <!---> Pertanyaan : Mengapa saat menghapus lokasi project, muncul error "currently used"? <--->
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>
+{'completion_tokens': 124, 'prompt_tokens': 2104, 'total_tokens': 2228, 'completion_time': 0.382679736, 'prompt_time': 0.311470082, 'queue_time': None, 'total_time': 0.694149818}
+----------------
+user: Dari kalimat berikut "<!--->  Mengapa saat menghapus lokasi project, muncul error "currently used"? 
+
+<p>Terjadi error "currently used" karena lokasi project tersebut masih digunakan dalam modul lain di LinovHR, seperti absence, training, atau penggunaan lainnya. Pastikan Anda menghapus atau mengubah referensi lokasi project tersebut sebelum menghapusnya.</p>
+
+<p>Silakan cek kembali modul-manajemen proyek dan pastikan Anda sudah menghapus semua referensi lokasi project sebelum menghapusnya.</p>" manakah kalimat yang memiliki makna yang sama :
+0 - Mengapa saat menghapus lokasi project, muncul error "currently used"?
+1 - Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?
+2 - Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?
+3 - Bagaimana jika terdapat penambahan lokasi kerja?
+4 - Pada saat absensi tidak muncul project list penyebabnya kenapa ya?
+
+
+Instruksi :
+- Jika tidak ada yang memiliki makna yang sama, jawab '--- TIDAK ---'. 
+- Jika ada yang memiliki makna yang sama,  jawablah dengan indeks kalimat nya, misal  '--- 4 ---'
+- Jawab dengan format tersebut, dan tidak ada kata lain darimu
+system: --- TIDAK ---
+{'completion_tokens': 6, 'prompt_tokens': 342, 'total_tokens': 348, 'completion_time': 0.017142857, 'prompt_time': 0.044827955, 'queue_time': None, 'total_time': 0.061970812}
+----------------
+system: <p>Mohon maaf atas keterlambatan dalam memberikan jawaban yang tepat untuk pertanyaan Anda. Kami masih melakukan penyempurnaan untuk memberikan jawaban yang akurat dan membantu.</p>
+<p>Namun, kami dapat memberikan beberapa saran atau rekomendasi pertanyaan yang mirip yang mungkin dapat membantu Anda menemukan jawaban yang diinginkan.</p>
+<ul>
+  <li>0 - Mengapa saat menghapus lokasi project, muncul error "currently used"?</li>
+  <li>1 - Bagaimana jika karyawan mempunyai lokasi assignment lebih dari satu dan mewajibkan untuk melakukan absensi kehadiran di lokasi-lokasi tersebut?</li>
+  <li>2 - Apakah bisa 1 karyawan mempunyai lokasi kerja lebih dari 1?</li>
+  <li>3 - Bagaimana jika terdapat penambahan lokasi kerja?</li>
+  <li>4 - Pada saat absensi tidak muncul project list penyebabnya kenapa ya?</li>
+</ul>
+<p>Kami berharap rekomendasi pertanyaan di atas dapat membantu Anda menemukan jawaban yang diinginkan. Jika Anda memiliki pertanyaan lain, silakan menghubungi kami kembali.</p>
+{'completion_tokens': 294, 'prompt_tokens': 575, 'total_tokens': 869, 'completion_time': 0.896039334, 'prompt_time': 0.079886866, 'queue_time': None, 'total_time': 0.9759262}
+----------------

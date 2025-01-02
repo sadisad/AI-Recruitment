@@ -1,0 +1,67 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+Berikan ranking, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk job requirements yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan/plus yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan job requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan form berformat berikut :
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Minimal 5 kelebihan yang relevan dengan job description]
+Kekurangan : [Minimal 5 kekurangan yang relevan dengan job description]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+
+------
+Kriteria Pekerjaan:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: --- Field Separator ---
+Job Title : Software Development
+--- Field Separator ---
+Job Requirements : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : 2/1
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 1 tahun 5 bulan
+Skills : Python, SQL, TensorFlow, Tableau, Looker, Excel, Google Cloud Skills Boost, MySQL
+Kelebihan : 
+1. Memiliki pengalaman membuat final project berupa aplikasi android yang terkait dengan deep learning model
+2. Memiliki sertifikasi TensorFlow Developer Certification
+3. Memiliki kemampuan dalam mengumpulkan dataset dengan web scraping
+4. Memiliki kemampuan dalam membuat deep learning model yang dapat mendeteksi makanan tradisional Indonesia
+5. Memiliki kemampuan dalam mengembangkan aplikasi berbasis android
+Kekurangan : 
+1. Tidak memiliki pengalaman langsung dalam pengembangan software development
+2. Tidak memiliki kemampuan dalam mengembangkan aplikasi berbasis web
+3. Tidak memiliki pengalaman dalam bekerja dengan tim pengembangan software
+4. Tidak memiliki kemampuan dalam mengembangkan dokumentasi SDLC
+5. Tidak memiliki kemampuan dalam mengembangkan aplikasi dengan fokus pada scalability, maintainability, security, and performance
+Skor : 75
+Alasan : Angga Prihantoro memiliki kemampuan yang relevan dengan job requirements, seperti pengalaman membuat aplikasi android dan memiliki sertifikasi TensorFlow Developer Certification. Namun, Angga Prihantoro tidak memiliki pengalaman langsung dalam pengembangan software development dan tidak memiliki kemampuan dalam mengembangkan aplikasi berbasis web.
+Kesimpulan : Angga Prihantoro memiliki potensi yang besar dalam pengembangan software development, namun masih memerlukan pembelajaran dan pengalaman lebih lanjut dalam pengembangan aplikasi berbasis web dan dokumentasi SDLC.
+{'completion_tokens': 528, 'prompt_tokens': 1896, 'total_tokens': 2424, 'completion_time': 1.7166155600000002, 'prompt_time': 0.189950406, 'queue_time': 0.004703631000000014, 'total_time': 1.906565966}
+----------------

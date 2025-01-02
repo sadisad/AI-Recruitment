@@ -1,0 +1,100 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title dan Job Requirements, jawaban harus diberikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari yang paling sesuai dengan Job Title dan Job Requirements.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama: Kandidat akan diurutkan berdasarkan Total Masa Kerja Relevan terlebih dahulu. Jika Total Masa Kerja Relevan juga sama, maka pertimbangkan skills spesifik yang sangat relevan untuk menentukan urutan.
+
+2. Skor:
+
+- Skor dihitung berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title dan Job Requirements.
+- Berikan Skor rendah jika isi CV tidak relevan dengan Job Title dan Job Requirements.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai.
+- Kandidat dengan relevansi tinggi, pengalaman kerja yang sesuai, dan keahlian yang dibutuhkan akan menerima skor yang lebih tinggi.
+
+3. Total Masa Kerja Relevan:
+
+- Isi sesuai pengalaman kerja yang sesuai dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkannya dengan Job Requirements.
+- Berikan skor tambahan jika ada Skills yang relevan dengan Job Requirements, contohnya Flask atau Laravel untuk REST API dan API Development, atau SQL untuk RDBMS dan Query.
+- Periksa relevansi dan kesamaan antara Skills yang berbeda, contohnya penggunaan SQL Server yang dapat menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus disampaikan secara deskriptif dan terintegrasi, bukan dalam bentuk daftar. Kelebihan dan kekurangan ini harus dijelaskan dalam konteks kemampuan kandidat dalam memenuhi Job Requirements yang telah ditentukan. 
+- Deskripsikan kelebihan dan kekurangan tersebut secara jelas dan detail, sehingga dapat membantu menentukan Ranking dan Skor secara lebih akurat. Hindari penggunaan format daftar atau poin; fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan Kelebihan, kekurangan, dan alasan yang mendukung Ranking dan Skor kandidat.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian keseluruhan kandidat dengan Job Title dan Job Requirements.
+- Jelaskan mengapa kandidat berada di posisi tersebut dalam Ranking, termasuk saran atau rekomendasi jika ada.
+
+Format Output:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Job Title: Machine Learning Engineer
+Job Requirements:
+Hands-on experience in building ML models deployed into real-world business applications or research. Working knowledge of ML/DL algorithms (classification, regression, clustering, hyperparameter tuning, etc). Proficiency with Python and libraries for machine learning such as scikit-learn and pandas. Good understanding of Deep learning frameworks such as Tensorflow, Keras, PyTorch, MXNet, etc. Experience in using computer vision libraries such as OpenCV, PIL.  PREFERRED: Experience working with cloud services platform (AWS or GCP) to build ML/DL pipelines.﻿ Experience in multi-GPU model training with CUDA. Experience in ML experiment tracking tools (e.g. WandB, Neptune, TensorBoard). Experience in model deployment using Docker (e.g. AWS SageMaker, Google Kubernetes Engine). Experience in model compression or quantization for on-edge-device inference. Experience with Continuous Integration and Continuous Delivery(CI/CD). Relevant certifications in machine learning and cloud technologies (e.g., AWS, Coursera) would be a plus.
+Job Description:
+A Machine Learning Engineer trains, validates and evaluates machine learning and deep learning models which perform predictive tasks in various domains such as computer vision, natural language understanding and time-series analysis. Some examples include visual recognition models, activity detection using sensor data and demand forecasting. Translate and refine business goals into appropriate machine learning objectives. Design and implement ML/DL solutions and integrate them with various Big Data platforms and architectures. Create and maintain ML pipelines that are scalable, robust, and ready for production. Collaborate with domain experts, software developers, and data scientists. Troubleshoot ML/DL model issues, including recommendations for retrain, re-validate, and improvements/optimization.
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: Job Title: Machine Learning Engineer
+---
+Job Requirements:
+Hands-on experience in building ML models deployed into real-world business applications or research. Working knowledge of ML/DL algorithms (classification, regression, clustering, hyperparameter tuning, etc). Proficiency with Python and libraries for machine learning such as scikit-learn and pandas. Good understanding of Deep learning frameworks such as Tensorflow, Keras, PyTorch, MXNet, etc. Experience in using computer vision libraries such as OpenCV, PIL.  PREFERRED: Experience working with cloud services platform (AWS or GCP) to build ML/DL pipelines.﻿ Experience in multi-GPU model training with CUDA. Experience in ML experiment tracking tools (e.g. WandB, Neptune, TensorBoard). Experience in model deployment using Docker (e.g. AWS SageMaker, Google Kubernetes Engine). Experience in model compression or quantization for on-edge-device inference. Experience with Continuous Integration and Continuous Delivery(CI/CD). Relevant certifications in machine learning and cloud technologies (e.g., AWS, Coursera) would be a plus.
+---
+Ranking : 1
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 1 tahun
+Skills : Python, SQL, Tensorflow, Deep Learning, Computer Vision, OpenCV
+Kelebihan : Angga memiliki pengalaman sebagai Machine Learning trainee di Bangkit Academy dan berpartisipasi dalam proyek "Foodrism" yang melibatkan pengembangan aplikasi android untuk mendeteksi makanan tradisional Indonesia. Ia juga memiliki pengalaman sebagai asisten praktikum di Dasar Komputer Laboratory dan memiliki kemampuan untuk mengajar mahasiswa tentang bahasa pemrograman C. Angga juga memiliki sertifikat sebagai Tensorflow Developer Certification yang menunjukkan kemampuan dan pengetahuan yang luas tentang Tensorflow.
+Kekurangan : Angga belum memiliki pengalaman kerja yang panjang dan relevan sebagai Machine Learning Engineer, sehingga mungkin memerlukan waktu untuk berkembang dan meningkatkan kemampuan dalam bidang ini. Angga juga belum memiliki pengalaman dalam menggunakan Docker untuk deployment model machine learning.
+Skor : 80/100
+Alasan : Angga memiliki kemampuan dan pengetahuan yang luas tentang Tensorflow dan Deep Learning, serta memiliki pengalaman sebagai Machine Learning trainee dan asisten praktikum. Meskipun Angga belum memiliki pengalaman kerja yang panjang dan relevan, kemampuan dan pengetahuan yang dimiliki membuatnya menjadi kandidat yang menjanjikan.
+Kesimpulan : Angga Prihantoro adalah kandidat yang menjanjikan untuk posisi Machine Learning Engineer. Meskipun Angga belum memiliki pengalaman kerja yang panjang dan relevan, kemampuan dan pengetahuan yang dimiliki membuatnya menjadi kandidat yang potensial. Dengan pengembangan dan meningkatkan kemampuan dalam bidang ini, Angga dapat menjadi Machine Learning Engineer yang efektif dan efisien.
+{'completion_tokens': 499, 'prompt_tokens': 2640, 'total_tokens': 3139, 'completion_time': 1.996, 'prompt_time': 0.688730254, 'queue_time': 0.004919313000000036, 'total_time': 2.6847302539999998}
+----------------

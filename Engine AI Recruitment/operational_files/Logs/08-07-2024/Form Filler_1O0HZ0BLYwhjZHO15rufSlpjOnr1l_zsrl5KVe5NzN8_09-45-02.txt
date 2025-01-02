@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+ Margaret Walker VI . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Page Two of Two   WORK EXPERIENCE (Continued)  Senior Computer Operator, Bergen Mercy Hospital, Omaha NE (20xx – 20xx)  Supervised shift operations and staff, trained employees, developed work schedules and monitored work performance.  Operated IBM and Digital systems; identified and resolved problems to assure smooth and efficient system operations.  EDUCATION MBA with Concentration in Management Information Systems Bellevue University, Bellevue NE Expected Graduation: June 20xx  Bachelor of Science, Bellevue University, Bellevue NE (20xx)  Major: Computer Information Systems  Minor: Business Administration  GPA: 3.45/4.00 GPA in major: 4.00/4.00 Dean’s Scholar  Certificate in Computer Programming Electronic Computer Programming Institute, Omaha NE (20xx)  TECHNICAL KNOWLEDGE AND SKILLS  C, C++, Visual Basic, COBOL   Windows 9x/200x/XP  Advanced Microcomputer Applications  UNIX/Linux  Management & Design of Database Systems  SQL  Relational Database Management   Microcomputer Graphics/Mapping MS Office (Word, Excel, PowerPoint, Outlook, Access)   REFERENCES AVAILABLE UPON REQUEST 
+system: name : Margaret Walker
+--- Field Separator ---
+summary : -
+--- Field Separator ---
+phone_number : -
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : -
+--- Field Separator ---
+email : -
+--- Field Separator ---
+experiences : [{"title" : "Senior Computer Operator", "description" : "Supervised shift operations and staff, trained employees, developed work schedules and monitored work performance. Operated IBM and Digital systems; identified and resolved problems to assure smooth and efficient system operations.", "duration" : "20xx – 20xx"}]
+--- Field Separator ---
+educations : [{"title" : "MBA with Concentration in Management Information Systems", "description" : "Bellevue University, Bellevue NE", "duration" : "Expected Graduation: June 20xx"}, {"title" : "Bachelor of Science", "description" : "Bellevue University, Bellevue NE", "duration" : "20xx"}, {"title" : "Certificate in Computer Programming", "description" : "Electronic Computer Programming Institute, Omaha NE", "duration" : "20xx"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : [{"title" : "Dean’s Scholar", "description" : "-", "duration" : "-"}]
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : -
+--- Field Separator ---
+languages : -
+--- Field Separator ---
+{'completion_tokens': 300, 'prompt_tokens': 747, 'total_tokens': 1047, 'completion_time': 0.857142857, 'prompt_time': 0.260035542, 'queue_time': None, 'total_time': 1.1171783990000002}
+----------------

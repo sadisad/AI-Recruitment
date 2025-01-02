@@ -1,0 +1,104 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk job vacancy nya.
+- Berikan total masa kerja relevan, skills, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Yang Dilamar yang diberikan sebelumnya.
+- Dari semua bobot penilaian, utamakan lah relevansi si kandidat dengan Job Yang Dilamar yang di berikan. 
+- Total Masa Kerja Relevan adalah masa kerja yang relevan dengan Job Yang Dilamar yang di berikan. Jika di cv nya ia tidak memiliki pekerjaan yang sama dengan Job Yang Dilamar yang diberikan di awal, turunkan Skor CV secara drastis.
+- Misal, Job Yang Dilamar di awal adalah Senior Salesman. Namun di CV kandidat hanya berhubungan dengan IT, atau desainer. Maka sudah bisa di anggap tidak relevan. Kurangi Skor CV. Dan jangan di anggap Total Masa Kerja Relevan 
+- Misal, cv kandidat hanya memiliki pekerjaan IT. Sedangkan job yang di lamar adalah Staff Logistic. Maka tidak berhubungan, dan form Total Masa Kerja Relevan isi saja dengan 0.
+- Semakin relevan dan lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan Skor CV nya.
+- Perhatikan juga skill, proyek, serta latar belakang pendidikannya yang relevan untuk menjadi bahan pertimbangan penilaian.
+- Tambahkan Skor CV nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+- Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+- Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Berikanlah Skor CV yang sejujur nya, dengan pertimbangan kelebihan dan kekurangan nya.
+- Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+- Untuk peniliannya, pastikan memiliki 2 angka di belakang koma. (Float, bukan integer)
+- Jika kandidat tidak memiliki pengalaman kerja yang relevan atau jika keterampilan yang mereka miliki tidak sesuai dengan yang dibutuhkan oleh posisi tersebut, rendahkan saja Skor CV nya. Jika benar-benar tidak relevan, bisa diberikan Skor CV dibawah 10.
+- Untuk Form Name, jangan di tuliskan gelar nya. Cukup Nama nya saja.
+- Jangan ragu untuk memberikan nilai 0 untuk Total Masa Kerja Relevan, dan Skor CV. Periksalah baik-baik apakah kandidat pernah bekerja di role yang sama dengan Job Yang Dilamar.
+- Relevannya itu benar-benar relevan, misal kandidat pernah jadi Front End Developer, tapi Job Yang Dilamar di awal adalah Data Scientist, walaupun sama-sama IT Related, tapi itu dianggap tidak relevan. Jika begitu, tidak termasuk ke perhitungan Total Masa Kerja Relevan.
+- Total Masa Kerja Relevan yang di hitung itu adalah pengalaman kandidat di CV nya yang benar-benar sama pekerjaannya dengan Job Yang Dilamar.
+- Total Masa Kerja Relevan adalah pengalaman kerja kandidat yang membutuhkan pengetahuan dan pengalaman dalam job requirement yang sama dengan Job Yang Dilamar.
+- Berikan nilai 0 untuk form Total Masa Kerja Relevan jika ia tidak pernah bekerja dan berpengalaman dengan pekerjaan yang dilamar. 
+- Pastikan kandidat punya ilmu nya, tidak hanya tools nya untuk job yang di lamar. Harus spesifik, tidak hanya relevan.
+- Total Masa Kerja Relevan sudah pasti 0, kecuali cv kandidat punya title yang sama dengan Job yang Di Lamar di awal. Jika tidak ada, berikan 0. BERIKAN 0 jika tidak ada.
+- Jika kandidat tidak ideal untuk job yang di lamar, apalagi kurang berpengalaman, kurangi secara drastis Skor CV nya. Kurangi secara maksimal, berikan nilai maksimal 20 dari 100.
+- Jika tidak ada bukti ia pernah bekerja atau berpengalaman sesuai dengan Job yang di lamar, kurangi secara drastis Total Masa Kerja Relevan. Kurangi secara drastis Skor CV nya.
+- Jika Background Pendidikannya tidak sesuai dengan Job yang di lamar, kurangi Skor CV secara drastis, banyak pengurangan.
+- Kebutuhan pekerjaan dan menekankan bahwa kandidat harus memiliki pengalaman langsung dan spesifik dalam bidang yang sama. 
+- Misalnya, Anda bisa menekankan bahwa kandidat harus memiliki pengalaman langsung dalam Job vacancy yang di lamar
+- Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
+- Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
+
+Isilah dengan form berformat berikut :
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : 70.3/100
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job Vacancy nya :
+------
+Job Yang Dilamar : Payroll Expert
+Role Overview : Handling multiple payroll activities
+Job Description : Handling all payroll end to end process for business entities :
+
+1. Payroll computation & Payoff
+1.1 Maintain access to timesheet data and all payroll component information;
+1.2 Responsible for payroll data into administrative databases and software programs, annually evaluating for payroll software provider is included.
+1.3 Review payroll reconciliations: salaries, benefits, tax deduction, commission ect;
+Ensure payment Bank transfer: maintaining accurate records of payroll data documentation and transaction;
+Responsible for preparing and distributing income statements/payslip;
+Handling social insurance affairs;
+
+2. Tax treatment
+2.1 Maintaining and coordinating with Tax Consultant for PPH21;
+2.2 Processing Tax Article 21 (PPH21) report to E-Bupot monthly & annually;
+2.3 Understand, maintain and always update related to all policy and regulation for payroll, tax & social insurance ect;
+
+3. Daily data provision
+3.1 Handling payroll data monthly accrue;
+3.2 Preparing periodic payroll reports for review by management;
+3.3 Responding to payroll-related inquiries and resolving concerns;
+Job Requirement : Bachelor Degree in accounting, business or other related field may be preferred;
+A minimum 5 year experience working in payroll or similar role;
+Familiar with payroll system software and experience working with accounting;
+Working knowledge of basic accounting principles and payroll practice;
+Excellent communication and interpersonal skills;
+Strong organizational and time management skills;
+Detail oriented, data sensitive, honest and good attitude;
+
+------
+CV:
+                     MOHAMMAD AUFAR, S.Kom.   CONTACT ME   Phone: 0817-7413-2920 (WA, Telegram)  Email: m.aufar12@gmail.com Address: Gudang Peluru Selatan II Blok N/341, Kebon Baru, Tebet, Jakarta Selatan, 12830  TECHNICAL SKILLS   PYTHON (Flask, Machine Learning, etc)  DOCKER (Linux, Containers) SQL (SQL Server, Postgre, MongoDB, MySQL, SQLite)  Microsoft Power (PowerBI, PowerAutomate, PowerApps) LLM Generative AI (OpenAI) ROBOT FRAMEWORK (RPA, Automation Testing, Selenium) CHATBOT FRAMEWORK (Rasa, Botpress) MICROSOFT TOOLS (Word, Excel, etc) ETL SOFTWARE (Apache Airflow)  CERTIFICATIONS   • Microsoft Technology Associate: Database Fundamentals • EPrT (English Proficiency Test) with a final score of 550 • Alison: Machine Learning in Python Environment • Dicoding: Cloud Practitioner Essentials (AWS Cloud)    LANGUAGES   INDONESIAN  ENGLISH   PROJECTS   github.com/Aufar12 EXPERIENCES   ESAP Tutor | Telkom University’s Language Center August 2018 – August 2019 | Bandung  • Keyrole : Teach freshmen of Telkom University basic English, both in Classes or ESAP Course.  • Teach foreigners student in Telkom University how to speak in Indonesian language properly.  Laboratory Assistant | EAD (Enterprise Application Development) Laboratory January 2017 – May 2020 | Bandung  • Keyrole : To Create practicum modules, Recap practicum’s student scores and presence, and Maintain EAD Lab’s Facility.  • Conducting application research and must Participate in Community Service and Programming Competition.  System Analyst Intern | PT. Infomedia Nusantara May 2019 – July 2019 | South Jakarta  • Keyrole : Ensure the project finishes on time and the product’s quality meets the customer requirement. • Prioritize tasks and schedule the task according to the task level. • Do testing and documentation of the project given to measure its quality.  Python & RPA Developer | PT. Astra Graphia IT, Tbk August 2020 – July 2022 | North Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Automation Program using Robot Framework (Robotic Process Automation)  • Creates Chatbots, Text-to-Speech Applications  Python Engineer | PT. Inti Corpora Teknologi July 2022 – Aug 2023 | Central Jakarta  • Keyrole : Develop Custom Python Modules using Front Arena Treasury Tools • Creates ATF (Arena Testing Framework) Automation Scripts using Robot Framework, Python and AEF Modules  • Creates Tasks and Reports such as excel, pdf, etc using Python, HTML, and XSLFO  Python Developer | PT. Hiro Amadeus Semesta Sep 2023 – Present | South Jakarta  • Keyrole : Developing Programs and Applications using Python • Creates Chatbot Engine using LLM OpenAI • Develop Scheduler Algorithm for NMS2 Fuel Delivery System • Develop and Maintain API’s for Multiple Engines    EDUCATION  2016 - 2020  Information System Student at Telkom University, Bandung   ACHIEVEMENTS & AWARDS  • Finalist in HOLOGY 2019, Competitive Programming Contest  • Participant in COMPSPHERE 2019, Programming Rush Competition   • Graduated with an accumulative GPA of 3.82  • Published an international scientific paper on ICoDSA 2020 (International Conference on Data Science and Its Applications) • Final Thesis is about Web Scraping, Web Development, and Machine Learning • Able to do freelance while doing full-time work at a company • Implementing Email Automation as a solution with various methods 
+system: name : Mohammad Aufar
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja sebagai Payroll Expert."}
+--- Field Separator ---
+skills : ['PYTHON', 'DOCKER', 'SQL', 'MICROSOFT POWER', 'LLM GENERATIVE AI', 'ROBOT FRAMEWORK', 'CHATBOT FRAMEWORK', 'MICROSOFT TOOLS', 'ETL SOFTWARE']
+--- Field Separator ---
+kelebihan : ['Having multiple technical skills', 'Having experience in developing programs and applications', 'Having experience in automation', 'Having knowledge in machine learning', 'Having certifications in database fundamentals and cloud practitioner essentials']
+--- Field Separator ---
+kekurangan : ['Lack of experience in payroll activities', 'Lack of direct experience in handling payroll end to end process', 'Lack of knowledge in accounting principles and payroll practice', 'No relevant experience in Payroll Expert role', 'No relevant education in accounting or business']
+--- Field Separator ---
+skor_cv : 20.5/100
+--- Field Separator ---
+alasan : Kandidat tidak memiliki pengalaman langsung sebagai Payroll Expert dan tidak memiliki latar belakang pendidikan yang sesuai dengan Job Vacancy. Meskipun kandidat memiliki banyak skill teknis, namun tidak relevan dengan posisi Payroll Expert.
+--- Field Separator ---
+kesimpulan : Kandidat tidak memenuhi syarat untuk menjadi Payroll Expert karena kurangnya pengalaman langsung dan latar belakang pendidikan yang sesuai.
+{'completion_tokens': 333, 'prompt_tokens': 2714, 'total_tokens': 3047, 'completion_time': 0.925254921, 'prompt_time': 0.69687391, 'queue_time': None, 'total_time': 1.622128831}
+----------------

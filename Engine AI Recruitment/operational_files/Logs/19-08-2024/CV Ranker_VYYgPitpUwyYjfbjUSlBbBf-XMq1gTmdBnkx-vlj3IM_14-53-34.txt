@@ -1,0 +1,67 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+Berikan ranking, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk job requirements yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan/plus yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan job requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan form berformat berikut :
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Minimal 5 kelebihan yang relevan dengan job description]
+Kekurangan : [Minimal 5 kekurangan yang relevan dengan job description]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+
+------
+Kriteria Pekerjaan:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: --- Field Separator ---
+Job Title : Software Developer
+--- Field Separator ---
+Job Requirements : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : 5/1
+Name : Officer Chris Taylor
+Total Masa Kerja Relevan : 0
+Skills : Law Enforcement & Public Safety, Crime Prevention, Emergency Response, Investigation & Evidence Collection, Community Policing, Conflict Resolution, Firearms Proficiency, Defensive Tactics
+Kelebihan :
+* Memiliki pengalaman dalam memimpin dan mengawasi tim
+* Memiliki kemampuan analisis yang baik dalam menyelesaikan masalah
+* Memiliki kemampuan komunikasi yang baik dalam berinteraksi dengan masyarakat
+* Memiliki pengalaman dalam menghadapi situasi yang kritikal
+* Memiliki kemampuan untuk bekerja dalam tim
+Kekurangan :
+* Tidak memiliki pengalaman dalam pengembangan software
+* Tidak memiliki kemampuan programming seperti Flask, Laravel, SQL, dll
+* Tidak memiliki pengalaman dalam mengembangkan aplikasi web
+* Tidak memiliki kemampuan dalam mengembangkan dokumentasi SDLC
+* Tidak memiliki pengalaman dalam mengembangkan aplikasi dengan fokus pada skalabilitas, maintainability, security, dan performance
+Skor : 20
+Alasan : Kandidat tidak memiliki pengalaman dan kemampuan yang relevan dengan job requirements.
+Kesimpulan : Kandidat ini tidak memiliki kemampuan yang sesuai dengan job requirements, sehingga tidak cocok untuk posisi Software Developer.
+{'completion_tokens': 528, 'prompt_tokens': 1896, 'total_tokens': 2424, 'completion_time': 1.7166155600000002, 'prompt_time': 0.189950406, 'queue_time': 0.004703631000000014, 'total_time': 1.906565966}
+----------------

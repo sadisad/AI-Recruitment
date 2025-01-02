@@ -1,0 +1,113 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+1. **Total Masa Kerja Relevan**:
+   - Isi form "total masa kerja relevan" dengan menghitung total masa kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor cv secara proporsional sesuai dengan relevansi pengalaman.
+
+2. **Keterampilan (Skills)**:
+   - Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor cv secara proporsional.
+
+3. **Kelebihan dan Kekurangan**:
+   - Isi form "kelebihan" dan "kekurangan" dengan memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor cv.
+
+4. **Penilaian CV (Skor CV)**:
+   - **skor cv** harus selalu diisi berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar. Jangan biarkan skor_cv kosong atau default ke 0.00 kecuali CV benar-benar tidak relevan. 
+   - Pastikan skor cv memiliki 2 angka di belakang koma (float). 
+   - Jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, berikan skor cv yang rendah, misalnya di bawah 10.00, tetapi tetap harus mencerminkan penilaian yang logis dan sesuai.
+
+5. **Kesimpulan**:
+   - Isi form "kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+6. **Kesesuaian**:
+   - Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+     - **jobRoleOverview**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobQualification**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobResponsibility**: Berikan "true" jika sesuai, "false" jika tidak.
+
+7. **Alasan**:
+   - Isi form "alasan" berdasarkan kecocokan kandidat dengan kriteria_pekerjaan dan job description.
+
+8. **Saran Job Posisi Lain (Suggestion)**:
+   - Isi form "suggestion" berdasarkan CV kandidat dan kecocokannya terhadap suggested_job_role, berikan alasan dan persentase kecocokan (match_percentage).
+
+**Format Pengisian**:
+Isilah form berikut tanpa ada tambahan kata darimu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang dilamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor cv : [0.00/100.00]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+
+------
+Description: Design, develop and build highly scalable, cross-platform, and high-performance web/mobile applications using React and React-Native. Apply design patterns and design principles to produce maintainable and easy to extend code. Perform issue analysis, root-cause analysis, and issue resolution. Write and manage technical documentation.
+------
+Kriteria Pekerjaan:
+Requirements: Strong proficiency in Typescript
+Outstanding skills in React and React Native Strong understanding of user-friendly experience & interface, pay attention to details, and proficiency in HTML5, CSS3, React Native styling, and animation
+Experience in responsive web and PWA
+Extensive knowledge in using RESTful and GraphQL
+Experience working with Redux, Redux-Saga, Redux-Thunk, or MobX
+Have experience/exposure to cloud services (AWS/GCP)
+Extensive knowledge in unit testing
+Ability to effectively communicate problems and solutions to the different team members
+Firm grasp in object-oriented, functional, or event-driven programming practices
+Good cross-team collaboration and communication skills
+Willingness to learn and adapt to different technologies
+Preferred: Experience in Native Modules development with Java/ Kotlin or Swift
+Understands web and mobile applications profiling and able to improve the performance of components
+Experienced in Agile/Scrum development.
+------
+CV:
+JOSEPH GIBSONBUSINESS ANALYST INTERNCONTACTj.gibson@email.com(123) 456-7890Bloomington, INLinkedInEDUCATIONBachelor of ScienceBusiness with a major inBusiness AnalyticsIndiana UniversityBloomingtonSeptember 2020 - currentBloomington, INRelevant coursesData Analysis and VisualizationBusiness StatisticsData Mining and PredictiveAnalyticsMarketing AnalyticsSKILLSJIRAMicrosoft ExcelConfluenceMicrosoft VisioVersionOneBalsamiqCAREER OBJECTIVEI’m seeking an engaging business analyst internship at Salesforce, where I canutilize my experience in data analysis and predictive modeling to optimizeoperations. Excited to apply my proficiency with tools like Balsamiq andConfluence to present valuable insights that fuel Salesforce's innovation anddrive revenue growth.WORK EXPERIENCEStockerKroger January 2020 - current / Bloomington, INMaintained optimal shelf availability by efficiently stocking 500+ productunits daily.Reduced out-of-stock incidents by 32% with strategic inventorymanagement in Microsoft Excel.Extended shelf life of perishable items by 27% through effective stockingrotation techniques.Implemented off-peak hours stocking system, improving overall storeefficiency by 18%.PROJECTSRevenue Forecasting2022 - 2023Built a revenue forecasting model for dropshipping side business inMicrosoft Excel, resulting in 27% more effective budgeting.Integrated market trends and seasonality into predictive model, reducingforecast errors by 22%.Applied advanced statistical analysis to historical sales data, producing an89% accuracy rate in future demand predictions.Tracked the development of predictive models using VersionOne forimproved adherence to project timelines.Marketing Analytics2021 - 2022Led a team of 8 classmates to plan a targeted marketing campaign for alocal mattress store.Analyzed transaction data to uncover cross-selling opportunities, leadingto new product bundles and a 24% increase in revenue.Collaborated with team in Confluence to document task progress,improving productivity by 16%.Designed product bundle mockups in Balsamiq to collect early customerfeedback, boosting cross-sell revenue by 36%.
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: name : JOSEPH GIBSON
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak memiliki pengalaman kerja yang relevan dengan posisi yang dilamar."}
+--- Field Separator ---
+skills : ['JIRA', 'Microsoft Excel', 'Confluence', 'Microsoft Visio', 'VersionOne', 'Balsamiq']
+--- Field Separator ---
+kelebihan : ['Mempunyai kemampuan analisis data yang baik', 'Mempunyai kemampuan statistik yang baik', 'Mampu bekerja dalam tim', 'Mampu menggunakan beberapa tools seperti JIRA, Microsoft Excel, Confluence, dan lainnya', 'Mempunyai kemampuan presentasi yang baik']
+--- Field Separator ---
+kekurangan : ['Tidak memiliki pengalaman kerja yang relevan dengan posisi yang dilamar', 'Tidak memiliki pengetahuan tentang React dan React Native', 'Tidak memiliki pengetahuan tentang Typescript', 'Tidak memiliki pengalaman dalam menggunakan teknologi cloud', 'Tidak memiliki pengalaman dalam menggunakan Redux, Redux-Saga, Redux-Thunk, atau MobX']
+--- Field Separator ---
+skor cv : [12.50/100.00]
+--- Field Separator ---
+alasan : Kandidat ini tidak memiliki pengalaman kerja yang relevan dengan posisi yang dilamar. Meskipun memiliki kemampuan analisis data yang baik, tetapi tidak memiliki pengetahuan tentang teknologi yang dibutuhkan.
+--- Field Separator ---
+kesimpulan : Kandidat ini tidak memiliki pengalaman kerja yang relevan dengan posisi yang dilamar. Oleh karena itu, kandidat ini tidak cocok untuk posisi yang dilamar.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Strong proficiency in Typescript', 'Outstanding skills in React and React Native', 'Strong understanding of user-friendly experience & interface', 'Experience in responsive web and PWA', 'Extensive knowledge in using RESTful and GraphQL', 'Experience working with Redux, Redux-Saga, Redux-Thunk, or MobX', 'Have experience/exposure to cloud services (AWS/GCP)']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['Business Analyst', 'Data Analyst', 'Operations Research Analyst'], "match_percentage" : 75, "reasons" : ['Kandidat memiliki kemampuan analisis data yang baik', 'Kandidat memiliki kemampuan statistik yang baik', 'Kandidat mampu bekerja dalam tim']}
+{'completion_tokens': 585, 'prompt_tokens': 1848, 'total_tokens': 2433, 'completion_time': 2.342029816, 'prompt_time': 0.461758143, 'queue_time': 0.23754796299999997, 'total_time': 2.803787959}
+----------------

@@ -1,0 +1,86 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+Isi form "total_masa_kerja_relevan" dengan Hitung total masa kerja relevan, yaitu pengalaman kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor_cv secara drastis.
+
+Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor_cv.
+Kelebihan dan Kekurangan:
+
+Isi form "kelebihan dan kekurangan" dengan Memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor_cv.
+
+Isi form "skor_cv" dengan berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar, pastikan skor_cv memiliki 2 angka di belakang koma (float), jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, rendahkan "skor_cv". Jika benar-benar tidak relevan, berikan skor_cv di bawah 10.
+
+Isi form "Kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+jobRoleOverview: Berikan "true" jika sesuai, "false" jika tidak.
+jobQualification: Berikan "true" jika sesuai, "false" jika tidak.
+jobResponsibility: Berikan "true" jika sesuai, "false" jika tidak.
+
+Isi form "alasan" berdasarkan cv kandidat tersebut kecocokan dia dengan kriteria_pekerjaan dan job description.
+Isi form "suggestion" berdasarkan cv kandidat dan kecocokannya terhadap suggested_job_role dan berikan reasons nya, pertimbangkan juga match_percentage dari CV kandidat terkait suggested_job_role.
+
+Format Pengisian:
+Isilah form berikut tanpa ada tambahan kata darimu:
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+------
+Responsible for installing, configuring, testing, maintaining all system infrastructure availability, performance, and security Monitor existing systems to ensure structural integrity Oversee the development and installation of new hardware and software Install and configure operating systems and other software and routinely test installed software for glitch detection and other issues Provide technical direction to IT support staff Ensure constant availability of technical resources Design and implement security systems and redundant backups to maintain data safety Write custom scripts to reduce the need for human intervention
+------
+Kriteria Pekerjaan:
+Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: name : ANGGA PRIHANTORO
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar sebagai System Engineer."}
+--- Field Separator ---
+skills : ['Python', 'SQL', 'Tensorflow', 'Tableu', 'Looker', 'MySQL', 'Deep Learning']
+--- Field Separator ---
+kelebihan : ['Has experience in deep learning models', 'Has experience in android application development', 'Has certification in Tensorflow Developer', 'Has knowledge in data analytics', 'Has experience in teamwork and critical thinking']
+--- Field Separator ---
+kekurangan : ['No experience as a System Engineer', 'Limited knowledge in system infrastructure availability and security', 'No experience in Oracle WebLogic', 'No experience in CICD Tools and microservices technology', 'Limited knowledge in network and security concepts']
+--- Field Separator ---
+skor_cv : 55.00
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : The candidate has limited experience and knowledge in system infrastructure availability and security, but has potential in deep learning models and android application development.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['At least 1 Year(s) of working experience as a System Engineer', 'Having experience in using Oracle WebLogic as a System Engineer', 'Willing to work in shifting', 'Hands on experience of OS (Linux, Windows, and Mainframe)', 'Has knowledge about network and security concepts and tuning techniques and system performance configuration']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['Junior Data Analyst', 'Junior Software Developer'], "match_percentage" : 60, "reasons" : ['Has experience in data analytics', 'Has knowledge in programming languages', 'Has potential in deep learning models']}
+--- Field Separator ---
+{'completion_tokens': 426, 'prompt_tokens': 1913, 'total_tokens': 2339, 'completion_time': 1.33070843, 'prompt_time': 0.128699503, 'queue_time': 0.004583672000000011, 'total_time': 1.459407933}
+----------------

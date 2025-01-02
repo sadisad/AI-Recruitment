@@ -1,0 +1,66 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+Berikan ranking, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk job vacancy yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan/plus yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan form berformat berikut :
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Vacancy : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 1
+Name : Dummy Name 1
+Total Masa Kerja Relevan : 3 tahun relevan yaitu ...
+Skills : 1. Python, 2. Tableau, 3. etc
+Kelebihan : 1. Bagus dalam teknis, 2. berpengalaman banyak, 3.
+Kekurangan : 1. tidak percaya diri, 2. etc, 3.
+Skor : 0/100
+Alasan : Dia layak rank 1 karena dia..
+Kesimpulan : Secara keseluruhan, dia cocok dan..
+--- Field Separator ---
+Ranking : RANK 2
+Name : 
+Skills : 1. SQL, 2. Akuntan, 3. etc
+Total Masa Kerja Relevan : 2.5 tahun, yaitu..
+Kelebihan :
+Kekurangan :
+Alasan :
+Skor : 45/100
+Kesimpulan : 
+--- Field Separator ---
+------
+Job Vacancy:
+Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: --- Field Separator ---
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Vacancy : Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+--- Field Separator ---
+Ranking : RANK 5
+Name : ANGGA PRIHANTORO
+Total Masa Kerja Relevan : 1 tahun relevan, yaitu sebagai Machine Learning trainee di Bangkit Academy dan Practicum Assistant di Dasar Komputer Laboratory
+Skills : 1. SQL, 2. Python, 3. TensorFlow, 4. Tableau, 5. Excel
+Kelebihan : 1. Berpengalaman dalam membuat aplikasi android, 2. Memiliki kemampuan dalam deep learning, 3. Memiliki kemampuan critical thinking dan active listening, 4. Berpengalaman dalam mengajar, 5. Memiliki kemampuan programming logic
+Kekurangan : 1. Tidak memiliki pengalaman relevan sebagai Accounting Manager, 2. Tidak memiliki kemampuan dalam bidang akuntansi, 3. Tidak memiliki kemampuan dalam membuat laporan keuangan, 4. Tidak memiliki kemampuan dalam mengelola proyek, 5. Tidak memiliki kemampuan dalam mengelola tim
+Skor : 80/100
+Alasan : Dia tidak memiliki pengalaman dan kemampuan yang relevan dengan Accounting Manager, sehingga dia tidak layak untuk di ranking yang lebih tinggi.
+Kesimpulan : Secara keseluruhan, dia tidak cocok untuk menjadi Accounting Manager karena tidak memiliki pengalaman dan kemampuan yang relevan.
+{'completion_tokens': 428, 'prompt_tokens': 1907, 'total_tokens': 2335, 'completion_time': 1.3645343859999999, 'prompt_time': 0.136674433, 'queue_time': None, 'total_time': 1.501208819}
+----------------

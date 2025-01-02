@@ -1,0 +1,119 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari beberapa String CV.
+
+Contoh Job Requirements:
+1. Bachelor’s degree in computer engineering or computer science or any related studies
+2. Proven work experience as a system analyst minimum 3 years
+3. At least 1 year of working experiences as programmer
+4. Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation
+5. Strong knowledge of business information system
+6. Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend)
+7. Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing,
+8. Familiarity with Enterprise application platform using .NET/Java/PHP & BI
+9. Preferably have experience in Banking, Insurance, Finance
+10. Having experience as Integration Analyst will likely be processed faster:
+11. Analysis of surrounding needs (Requirements stage)
+12. Create integration & technical flow specifications (Development Stage)
+13. Create data preparation and debugging (Testing Stage)
+14. Become a coordinator during the migration process, starting from documents to production testing (Migration Stage)
+15. Ability to explain technical details
+16. Excellent analytical skills
+17. Good English proficiency, especially in writing
+18. Fast learner, good problem solving, teamwork and analytical skills"
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut, untuk Job Requirements. yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5), 1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Isilah 5 kelebihan, dan 5 kekurangan di form berdasarkan Job Requirements. Pilih lah ranking yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Contoh untuk CV Ranking 1
+Ranking : Ranking 1
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar 5 kelebihan kandidat]
+Kekurangan : [Daftar 5 kekurangan kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Contoh untuk CV Ranking 2
+Ranking : Ranking 2
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar kelebihan]
+Kekurangan : [Daftar kekurangan]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc. An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: Job Title : System Analyst
+--- Field Separator ---
+Job Requirements : 
+1. Bachelor’s degree in computer engineering or computer science or any related studies
+2. Proven work experience as a system analyst minimum 3 years
+3. At least 1 year of working experiences as programmer
+4. Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation
+5. Strong knowledge of business information system
+6. Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend)
+7. Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing,
+8. Familiarity with Enterprise application platform using .NET/Java/PHP & BI
+9. Preferably have experience in Banking, Insurance, Finance
+10. Having experience as Integration Analyst will likely be processed faster:
+11. Analysis of surrounding needs (Requirements stage)
+12. Create integration & technical flow specifications (Development Stage)
+13. Create data preparation and debugging (Testing Stage)
+14. Become a coordinator during the migration process, starting from documents to production testing (Migration Stage)
+15. Ability to explain technical details
+16. Excellent analytical skills
+17. Good English proficiency, especially in writing
+18. Fast learner, good problem solving, teamwork and analytical skills
+--- Field Separator ---
+Ranking : 5/5
+Name : Chris Taylor
+Total Masa Kerja Relevan : 0 tahun
+Skills : None
+Kelebihan : 
+1. Memiliki pengalaman dalam bidang kepolisian
+2. Memiliki pengalaman dalam memimpin tim
+3. Memiliki kemampuan komunikasi yang baik
+4. Memiliki kemampuan analisis yang baik
+5. Memiliki pengalaman dalam membuat keputusan cepat
+Kekurangan : 
+1. Tidak memiliki pengalaman sebagai system analyst
+2. Tidak memiliki pengalaman dalam pengembangan software
+3. Tidak memiliki pengetahuan tentang SDLC, Solution Architecture, dan Software Development
+4. Tidak memiliki pengalaman dalam menggunakan bahasa pemrograman seperti Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend
+5. Tidak memiliki pengalaman dalam membuat dokumentasi seperti FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram
+Skor : 0/100
+Alasan : Kandidat tidak memiliki pengalaman dan pengetahuan yang relevan dengan sistem analis
+Kesimpulan : Kandidat tidak cocok untuk posisi system analyst
+
+--- Field Separator ---
+(Please input another CV string to proceed)
+{'completion_tokens': 365, 'prompt_tokens': 2381, 'total_tokens': 2746, 'completion_time': 1.156750615, 'prompt_time': 0.171357519, 'queue_time': 0.0016257999999999828, 'total_time': 1.328108134}
+----------------

@@ -1,0 +1,67 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih lah Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Urutkan skala Ranking berdasarkan Skor, dengan skor tertinggi diberikan kepada kandidat yang paling cocok. Misalnya, Peringkat 1/5 berarti kandidat tersebut adalah yang paling cocok, sedangkan Peringkat 5/5 berarti paling tidak cocok. Jika ada 6 CV, berarti akan ada peringkat dari 1/6 hingga 6/6.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Lebih dari 5 tahun pengalaman dalam mengembangkan dan mengirimkan aplikasi berbasis Flutter Pengalaman dalam penyebaran dan optimasi aplikasi mobile di iOS dan/atau Android Pemahaman yang baik tentang manajemen state, Flutter flavors, dan arsitektur aplikasi Familiar dengan alat pengujian otomatis seperti Appium & Flutter Integration Test Pengalaman dengan sistem kontrol versi, seperti Git Pengalaman dalam pipeline CI/CD dengan menggunakan Jenkins, JIRA, Sonar Qube, dll. Pengetahuan mendalam tentang seluruh siklus hidup pengembangan aplikasi mobile Pemahaman tentang praktik terbaik arsitektur aplikasi lintas platform Pengetahuan tentang pedoman antarmuka pengguna Pengetahuan tentang REST API dan pemahaman tentang arsitektur microservice Keterampilan komunikasi dan delegasi yang sangat baik Kemampuan pemecahan masalah dan analitis yang luar biasa
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: Job Title : Mobile Application Developer
+--- Field Separator ---
+Job Requirements : Menguembangkan dan mengirimkan aplikasi berbasis Flutter, pengalaman penyebaran dan optimasi aplikasi mobile, pemahaman manajemen state, Flutter flavors, dan arsitektur aplikasi
+--- Field Separator ---
+Ranking : 1/1
+Name : Tidak Ada
+Total Masa Kerja Relevan : 0 tahun
+Skills : Tidak Ada
+Kelebihan : Tidak Ada
+Kekurangan : Tidak memiliki pengalaman dan keterampilan yang relevan dengan job requirements
+Skor : 0/100
+Alasan : Kandidat tidak memiliki pengalaman dan keterampilan yang relevan dengan job requirements
+Kesimpulan : Kandidat tidak memenuhi kriteria pekerjaan sebagai Mobile Application Developer
+{'completion_tokens': 507, 'prompt_tokens': 2187, 'total_tokens': 2694, 'completion_time': 1.689999289, 'prompt_time': 0.198995418, 'queue_time': 0.0013598209999999833, 'total_time': 1.8889947070000002}
+----------------

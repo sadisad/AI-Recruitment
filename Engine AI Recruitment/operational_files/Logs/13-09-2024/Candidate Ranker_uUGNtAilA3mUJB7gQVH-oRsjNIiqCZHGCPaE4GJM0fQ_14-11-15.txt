@@ -1,0 +1,94 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title, Job Requirements, dan Responsibilities/Job Description. Jawaban harus disampaikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari kandidat yang paling sesuai dengan Job Title, Job Requirements, dan Responsibilities/Job Description.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama, prioritaskan kandidat dengan Total Masa Kerja Relevan yang lebih lama. Jika durasi sama, pertimbangkan skills spesifik yang sangat relevan untuk posisi.
+
+2. Skor:
+
+- Skor ditentukan berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title, Job Requirements, dan Responsibilities/Job Description.
+- Berikan Skor rendah jika CV tidak relevan dengan ketiga parameter tersebut.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai dengan Job Requirements
+
+3. Total Masa Kerja Relevan:
+
+- Evaluasi durasi pengalaman kerja yang relevan dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkan dengan Job Requirements serta Job Description.
+- Berikan Skor tambahan untuk skills yang sangat relevan dengan pekerjaan, misalnya Flask untuk REST API Development atau SQL untuk RDBMS.
+- Pertimbangkan relevansi antara skills yang berbeda, misalnya penggunaan SQL Server yang mungkin menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus dijelaskan secara deskriptif dan integratif, tidak dalam bentuk daftar.
+- Penjelasan harus relevan dengan kemampuan kandidat dalam memenuhi Job Title, Job Requirements, dan Responsibilities, serta diuraikan secara mendalam.
+- Hindari penggunaan format daftar, dan fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan kelebihan, kekurangan, dan alasan yang mendukung penentuan Ranking dan Skor.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian kandidat dengan Job Title, Job Requirements, dan Responsibilities.
+- Jelaskan mengapa kandidat ditempatkan dalam Ranking tersebut, termasuk saran atau rekomendasi jika ada.
+
+Untuk setiap kandidat, gunakan format berikut secara berurutan tanpa batasan jumlah kandidat:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Responsibilities : [Deskripsi Tanggung Jawab Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking N]
+Name : [Nama Kandidat N]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Kelebihan Kandidat dalam konteks posisi ini]
+Kekurangan : [Kekurangan Kandidat dalam konteks posisi ini]
+Skor : [Skor untuk kandidat ini, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking ini]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat ini]
+--- Field Separator ---
+------
+Job Title: Project Manager
+Job Requirements:
+More than 3 years of overall technical experience working on multiple Software Development platforms. Strong verbal and written communication skills and ability to coordinate with multiple technical and business teams Should have significant experience with developing or supporting enterprise applications from end-to-end. Experience in Software Development Project from scratch and exposure to many technology platforms is a must Required Skill(s): Programming skill, System/Business Analyst Skill, SDLC, Software Development, UML, Java Tech, Business Analyst, System Analyst, Project Management, SCRUM, Agile, Waterfall, Highly Organized Communication & Presentation Skill, Negotiation, Ability to managed others. Good English proficiency, especially in writing Understand business processes especially mobile apps Prefer have experience in Banking
+Job Description:
+Oversee the IT project organization portfolio, provide input and monitor the progress of the project, and make reports (both in the form of power point presentations or other media) regarding the status of the project Lead the project team and carry out the best practices of project management in managing projects and related programs to ensure the success of a project Analyze project data and information to identify risks, issues, and present information to senior management for decision making Compile periodic project reports to be given to all stakeholders and senior management Coordinate with relevant stakeholders to solve project problems and analyze solutions provided by related teams to get decisions from related teams and senior management
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+Tenant: tan001
+Source: PostmanRuntime/7.41.2
+Company: admtan001
+system: Job Title : Project Manager
+--- Field Separator ---
+Job Requirements : 
+More than 3 years of overall technical experience working on multiple Software Development platforms. Strong verbal and written communication skills and ability to coordinate with multiple technical and business teams Should have significant experience with developing or supporting enterprise applications from end-to-end. Experience in Software Development Project from scratch and exposure to many technology platforms is a must Required Skill(s): Programming skill, System/Business Analyst Skill, SDLC, Software Development, UML, Java Tech, Business Analyst, System Analyst, Project Management, SCRUM, Agile, Waterfall, Highly Organized Communication & Presentation Skill, Negotiation, Ability to managed others. Good English proficiency, especially in writing Understand business processes especially mobile apps Prefer have experience in Banking
+--- Field Separator ---
+Responsibilities : 
+Oversee the IT project organization portfolio, provide input and monitor the progress of the project, and make reports (both in the form of power point presentations or other media) regarding the status of the project Lead the project team and carry out the best practices of project management in managing projects and related programs to ensure the success of a project Analyze project data and information to identify risks, issues, and present information to senior management for decision making Compile periodic project reports to be given to all stakeholders and senior management Coordinate with relevant stakeholders to solve project problems and analyze solutions provided by related teams to get decisions from related teams and senior management
+--- Field Separator ---
+Ranking : 1
+Name : Ahmad Aminullah Alfiyanto
+Total Masa Kerja Relevan : 2 tahun
+Skills : Python, Java, UML, SDLC, Project Management, SCRUM, Agile, Waterfall, Communication & Presentation Skill, Database Management, Microsoft Office
+Kelebihan : Ahmad memiliki pengalaman yang relevan sebagai IT Support dan Network Support, serta memiliki kemampuan yang kuat dalam comunicating dan coordinating dengan tim teknis dan bisnis. Dia juga memiliki kemampuan analitis yang baik dalam menganalisis data proyek dan mengidentifikasi risiko dan isu.
+Kekurangan : Ahmad memiliki sedikit pengalaman dalam pengembangan proyek	from scratch dan kurang memiliki kemampuan dalam menggunakan Java Tech. Dia juga kurang memiliki pengalaman dalam industri perbankan.
+Skor : 85/100
+Alasan : Ahmad memiliki combinations skills yang relevan dan memiliki pengalaman yang cukup dalam projek IT. Namun, dia kurang memiliki pengalaman dalam beberapa aspek penting seperti pengembangan proyek dari awal dan industri perbankan.
+{'completion_tokens': 536, 'prompt_tokens': 2373, 'total_tokens': 2909, 'completion_time': 1.6465595469999998, 'prompt_time': 0.21438071, 'queue_time': 0.514181857, 'total_time': 1.860940257}
+----------------

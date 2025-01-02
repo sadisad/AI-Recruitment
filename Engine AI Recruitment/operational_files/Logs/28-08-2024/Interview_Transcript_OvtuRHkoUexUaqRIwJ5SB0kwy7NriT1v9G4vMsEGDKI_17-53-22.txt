@@ -1,0 +1,8 @@
+system: Selamat sore, Irsyad Zulfikar. Saya LIA, Lawencon Intelligent Assistant, dan saya akan menjadi interviewer untuk posisi LLM Python Developer. Terima kasih telah hadir di sesi interview ini.
+
+Sebelum kita mulai, saya ingin memperkenalkan diri dan menjelaskan bahwa saya akan menanyakan pertanyaan-pertanyaan yang relevan dengan job requirement LLM Python Developer. Saya juga ingin memastikan bahwa Anda memahami bahwa ini adalah sesi interview yang serius dan saya akan mengevaluasi jawaban Anda dengan seksama.
+
+Pertanyaan pertama saya adalah: Dalam pengalaman Anda sebagai AI Engineer, bagaimana Anda mengembangkan solusi AI yang inovatif dan efisien? Bisa Anda berikan contoh proyek yang Anda kerjakan sebelumnya?
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+{'completion_tokens': 129, 'prompt_tokens': 213, 'total_tokens': 342, 'completion_time': 0.401206712, 'prompt_time': 0.018861763, 'queue_time': 0.005765097, 'total_time': 0.420068475}
+----------------

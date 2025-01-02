@@ -1,0 +1,11 @@
+system: === Pertanyaan 1 ===
+Question : Bagaimana cara supaya karyawan semangat bekerja?
+Jawaban : (Tidak ada jawaban spesifik, lanjut ke topik lain)
+--- Field Separator ---
+=== Pertanyaan 2 ===
+Question : Bagaimana cara meningkatkan semangat karyawan pada sore hari?
+Jawaban : (Tidak ada jawaban spesifik, karena hanya diskusi)
+--- Field Separator ---
+(Tidak ada pertanyaan lain yang berhubungan dengan HRIS)
+{'completion_tokens': 115, 'prompt_tokens': 778, 'total_tokens': 893, 'completion_time': 0.34506061, 'prompt_time': 0.078918636, 'queue_time': None, 'total_time': 0.423979246}
+----------------

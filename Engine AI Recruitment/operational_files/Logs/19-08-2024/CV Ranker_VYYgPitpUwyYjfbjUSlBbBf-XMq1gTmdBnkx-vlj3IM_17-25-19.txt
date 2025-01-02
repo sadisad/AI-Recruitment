@@ -1,0 +1,69 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih lah Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc. An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+------
+CV:
+ProfileI am a passionate and hard working person. I love developing mobile applications, I am always eager to see results of my efforts in the form of working products. I am focused on quality.I enjoy exploring possibilities of new technologies so that I can see their integration into everyday work and life.Professional experience (10+ years, 2011 - 2022)Tech Lead / Senior Android Developer - Tapptic January 2016 - Present (6 years)• As a tech lead, I am responsible for development, architectural designand quality of our applications. I lead development processes from atechnical perspective and coordinate efforts of developers.• I have introduced multi-platform solutions into our tech stack (KotlinNative and Flutter)• As a senior developer, I'm responsible for development of mobileapplications for our Clients in Sport, Media and Health industries. Overmy 6+ years in the Company, I have developed and led developmentof several applications reaching millions of users.• Tech stack: Android, Kotlin, Java, Kotlin Native, FlutterSenior Android Developer / Contractor - Sii  January 2016 - December 2017• Senior Android Developer - Sii contractor• Outsourced to Tapptic, later transferred to TappticAndroid developer / Freelancer - SuperVisor October 2015 - March 2016 (Part time contract)• I developed an in-house, B2B solution, using beacons, for presencecontrol inside vehicles.• Tech stack: AndroidAndroid Developer / Contractor  - Connectis (Outsourced to Blue Services) July 2015 - December 2015 (Contract)• I developed an Android banking application for one of Polish Banks. Ithandled most of day to day banking operations: transfers, basicaccount management, new product offers, simple messaging withcustomer support, etc• Tech stack: AndroidAndroid Developer - BetterSolutions December 2014 - June 2015 (Contract)• I was working on a Map & Navigation system for our B2B Customers.• I enabled our Android application to connect to the truck's onboardcomputer and exchange information.• Tech stack: AndroidPage  of 12• Kotlin & Java• Android SDK• Kotlin Native• Flutter• Swift• Java EE (Spring boot,Hibernate, PostgreSQL)• GitEducation:Bachelor's degree in Computer Science, Gdańsk University of Technology SENIOR ANDROID DEVELOPER Professional experience - continuationJava Developer - SuperVisor October 2014 - November 2014 (Contract)• Deployment and integration of Open Street Map (custom map tileserver) for company's vehicle tracking solution• Tech stack: Java EE, Linux, OSMAndroid Developer - Samsung Electronics Poland July 2014 - September 2014• I was working on development of SDK related to S-Pen• Tech stack: Android, Java, Maven, S-Pen SDK (Samsung's library)Android Developer - BetterSolutions November 2012 - June 2014• Development of mobile application with offline navigation capabilitiesfor B2B Client• I was responsible for custom integration of Open Street Map,extending and adapting the OsmAnd open source project for Client'srequirements.• Tech stack: Java, Android, Web services, Linux & Bash, OSM,OsmAnd open source project (Android)• Tech stack: Android, Java (Backend)Junior PHP Developer - KurJerzy.pl March 2011 - December 2011• https://www.kurjerzy.pl• I developed new features for existing products, maintained backendand frontend applications• Tech stack: PHP, JavaScript, JQuery, MySQL, HTML, Web FrontendPage  of 22GDPR note: Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+system: Job Title : Flutter Mobile App Developer
+--- Field Separator ---
+Job Requirements : 5+ years of experience developing and delivering Flutter based apps, mobile app deployment and optimization, state management, Flutter flavors and app architecture, automated testing tools, version control systems, CI/CD pipeline, cross-platform application architecture, user interface guidelines, REST API's, microservice architecture, communication and delegation skills, problem-solving and analytical abilities
+--- Field Separator ---
+Ranking : 1
+Name : Senior Android Developer/Tech Lead
+Total Masa Kerja Relevan : 10 years
+Skills : Android, Kotlin, Java, Kotlin Native, Flutter, Swift, Java EE, Git, Android SDK, Kotlin Native
+Kelebihan : Experienced in developing and delivering mobile applications, knowledgeable in Flutter and Kotlin, has experience in leading development processes and teams, familiar with automated testing tools and CI/CD pipeline.
+Kekurangan : No direct experience in developing Flutter-based apps, but has experience in Android and Kotlin development.
+Skor : 95/100
+Alasan : The candidate has a strong background in mobile app development and experience in leading development processes, making them a strong fit for the position.
+Kesimpulan : The candidate's experience in mobile app development and leadership makes them a strong contender for the position, despite lack of direct experience in Flutter-based apps.
+
+--- Field Separator ---
+{'completion_tokens': 280, 'prompt_tokens': 1821, 'total_tokens': 2101, 'completion_time': 0.914424086, 'prompt_time': 0.128531275, 'queue_time': 0.0011434529999999887, 'total_time': 1.042955361}
+----------------

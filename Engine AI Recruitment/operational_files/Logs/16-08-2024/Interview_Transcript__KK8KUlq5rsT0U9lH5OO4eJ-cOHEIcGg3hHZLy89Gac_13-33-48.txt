@@ -1,0 +1,18 @@
+system: Ingat, Anda adalah interviewer dari perusahaan Lawencon. Selamat pagi Ahmad Aminullah Alfiyanto, terima kasih telah hadir di sesi wawancara hari ini untuk posisi Web Developer di Lawencon. Saya adalah AI Interviewer dari Lawencon, dan saya akan membantu mengetahui apakah Anda memiliki kualifikasi dan kemampuan yang sesuai dengan job requirement kami.
+
+Mari kita mulai dengan pertanyaan pertama. Dalam job requirement, kita membutuhkan seseorang yang dapat "Develops code and creates customized applications to enhance product based on business needs." Bisa Anda jelaskan bagaimana Anda mengembangkan kode dan membuat aplikasi kustom untuk memenuhi kebutuhan bisnis? Berikan contoh konkret dari pengalaman Anda sebelumnya.
+system: Selamat pagi! Terima kasih atas kesempatan untuk mewawancarai posisi Web Developer di Lawencon.
+
+Saya senang menjawab pertanyaan Anda. Dalam mengembangkan kode dan membuat aplikasi kustom untuk memenuhi kebutuhan bisnis, saya memiliki pengalaman yang cukup dalam menggunakan berbagai bahasa pemrograman dan framework.
+
+Dalam projek saya sebelumnya, saya pernah bekerja sebagai Web Developer di perusahaan e-commerce. Pada saat itu, kita perlu membuat aplikasi kustom untuk meningkatkan pengalaman pelanggan dalam memesan produk online. Saya menggunakan teknologi ReactJS, NodeJS, dan MongoDB untuk mengembangkan aplikasi tersebut.
+
+Saya membuat sebuah aplikasi yang dapat mengintegrasikan dengan API dari penyedia jasa pengiriman untuk menghitung biaya pengiriman secara akurat. Aplikasi ini juga dapat memprediksi waktu pengiriman berdasarkan lokasi pelanggan dan Availability produk.
+
+Dalam proses pengembangan, saya melakukan penelitian terhadap kebutuhan bisnis dan pelanggan, serta berdiskusi dengan tim product manager dan designer untuk menentukan fitur-fitur yang dibutuhkan. Saya juga melakukan testing dan debugging untuk memastikan aplikasi tersebut stabil dan dapat digunakan oleh pelanggan.
+
+Hasilnya, aplikasi kustom tersebut dapat meningkatkan konversi penjualan sebanyak 20% dan mengurangi waktu pengiriman rata-rata sebanyak 30%. Saya yakin bahwa pengalaman saya dalam mengembangkan aplikasi kustom untuk memenuhi kebutuhan bisnis dapat membantu Lawencon dalam meningkatkan efisiensi dan efektivitas operasional.
+
+Itulah contoh konkret dari pengalaman saya sebelumnya. Saya siap untuk berdiskusi lebih lanjut dan mempelajari lebih dalam tentang kebutuhan bisnis Lawencon.
+{'completion_tokens': 422, 'prompt_tokens': 187, 'total_tokens': 609, 'completion_time': 1.4129688360000001, 'prompt_time': 0.015849728, 'queue_time': 0.004800339000000001, 'total_time': 1.428818564}
+----------------

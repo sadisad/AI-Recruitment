@@ -1,0 +1,10 @@
+{
+    "cors-api-dev" : "https://api-dev-airecruitment.linovhr.com",
+    "cors-local-risgi" : "http://localhost:4200",
+    "cors-dev5-linov-hr" : "https://dev5.linovhr.com",
+    "cors-hcms-linovhr" : "https://hcms.linovhr.com",
+    "cors-dev-job-portal2" : "https://dev-jobportal2.linovhr.com",
+    "cors-job-portal2" : "https://jobportal2.linovhr.com",
+    "cors-linovhr" : "https://*.linovhr.com",
+    "cors-local-syd" : "http://172.31.48.31:54321"
+}

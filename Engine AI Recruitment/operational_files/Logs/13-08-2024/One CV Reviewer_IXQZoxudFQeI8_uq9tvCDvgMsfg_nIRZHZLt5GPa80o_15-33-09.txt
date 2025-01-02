@@ -1,0 +1,91 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk job vacancy nya.
+- Berikan total masa kerja relevan, skills, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Yang Dilamar yang diberikan sebelumnya.
+- Dari semua bobot penilaian, utamakan lah relevansi si kandidat dengan Job Yang Dilamar yang di berikan. 
+- Total Masa Kerja Relevan adalah masa kerja yang relevan dengan Job Yang Dilamar yang di berikan. Jika di cv nya ia tidak memiliki pekerjaan yang sama dengan Job Yang Dilamar yang diberikan di awal, turunkan Skor CV secara drastis.
+- Misal, Job Yang Dilamar di awal adalah Senior Salesman. Namun di CV kandidat hanya berhubungan dengan IT, atau desainer. Maka sudah bisa di anggap tidak relevan. Kurangi Skor CV. Dan jangan di anggap Total Masa Kerja Relevan 
+- Misal, cv kandidat hanya memiliki pekerjaan IT. Sedangkan job yang di lamar adalah Staff Logistic. Maka tidak berhubungan, dan form Total Masa Kerja Relevan isi saja dengan 0.
+- Semakin relevan dan lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan Skor CV nya.
+- Perhatikan juga skill, proyek, serta latar belakang pendidikannya yang relevan untuk menjadi bahan pertimbangan penilaian.
+- Tambahkan Skor CV nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+- Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+- Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Berikanlah Skor CV yang sejujur nya, dengan pertimbangan kelebihan dan kekurangan nya.
+- Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+- Untuk peniliannya, pastikan memiliki 2 angka di belakang koma. (Float, bukan integer)
+- Jika kandidat tidak memiliki pengalaman kerja yang relevan atau jika keterampilan yang mereka miliki tidak sesuai dengan yang dibutuhkan oleh posisi tersebut, rendahkan saja Skor CV nya. Jika benar-benar tidak relevan, bisa diberikan Skor CV dibawah 10.
+- Untuk Form Name, jangan di tuliskan gelar nya. Cukup Nama nya saja.
+- Jangan ragu untuk memberikan nilai 0 untuk Total Masa Kerja Relevan, dan Skor CV. Periksalah baik-baik apakah kandidat pernah bekerja di role yang sama dengan Job Yang Dilamar.
+- Relevannya itu benar-benar relevan, misal kandidat pernah jadi Front End Developer, tapi Job Yang Dilamar di awal adalah Data Scientist, walaupun sama-sama IT Related, tapi itu dianggap tidak relevan. Jika begitu, tidak termasuk ke perhitungan Total Masa Kerja Relevan.
+- Total Masa Kerja Relevan yang di hitung itu adalah pengalaman kandidat di CV nya yang benar-benar sama pekerjaannya dengan Job Yang Dilamar.
+- Total Masa Kerja Relevan adalah pengalaman kerja kandidat yang membutuhkan pengetahuan dan pengalaman dalam job requirement yang sama dengan Job Yang Dilamar.
+- Berikan nilai 0 untuk form Total Masa Kerja Relevan jika ia tidak pernah bekerja dan berpengalaman dengan pekerjaan yang dilamar. 
+- Pastikan kandidat punya ilmu nya, tidak hanya tools nya untuk job yang di lamar. Harus spesifik, tidak hanya relevan.
+- Total Masa Kerja Relevan sudah pasti 0, kecuali cv kandidat punya title yang sama dengan Job yang Di Lamar di awal. Jika tidak ada, berikan 0. BERIKAN 0 jika tidak ada.
+- Jika kandidat tidak ideal untuk job yang di lamar, apalagi kurang berpengalaman, kurangi secara drastis Skor CV nya. Kurangi secara maksimal, berikan nilai maksimal 20 dari 100.
+- Jika tidak ada bukti ia pernah bekerja atau berpengalaman sesuai dengan Job yang di lamar, kurangi secara drastis Total Masa Kerja Relevan. Kurangi secara drastis Skor CV nya.
+- Jika Background Pendidikannya tidak sesuai dengan Job yang di lamar, kurangi Skor CV secara drastis, banyak pengurangan.
+- Kebutuhan pekerjaan dan menekankan bahwa kandidat harus memiliki pengalaman langsung dan spesifik dalam bidang yang sama. 
+- Misalnya, Anda bisa menekankan bahwa kandidat harus memiliki pengalaman langsung dalam Job vacancy yang di lamar
+- Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
+- Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
+
+Isilah dengan form berformat berikut tanpa ada tambahan kata darimu
+
+cukup form yang ada di bawah ini saja, jangan ada kata "heres filled form " dari mu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : 70.3/100
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'v', "jobQualification" : "true", "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+
+- untuk mengisi form "kesesuaian" contohnya seperti ini 
+
+- jadi intinya untuk mengisi form "kesesuaian" itu dari cv ada yang sesuai tidak dengan job description
+- jadi contohnya isi jobRoleOverview harus dirangkum jika cv yang diberikan sesuai dengan job role overview yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobQualification harus dirangkum jika cv yang diberikan sesuai dengan job qualification yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobResponsibility harus dirangkum jika cv yang diberikan sesuai dengan job responsibility yang ada maka berikan "true", jika tidak sesuai berikan "false"
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job description nya :
+------
+Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+------
+CV:
+Irsyad Zulfikar  South Jakarta • (+62) 8528-2130-793 • zulfikarirsyad@gmail.com  Innovative AI Engineer with extensive experience in data analysis, machine learning, and AI-driven solutions. Proven track record in enhancing recruitment processes and developing advanced AI models. Dedicated to leveraging AI technologies to drive innovation and operational efficiency. E x per i ence  APRIL 2024 – PRESENT AI Engineer | Lawencon International | South Jakarta, Indonesia • Led AI projects, improving candidate shortlisting accuracy by 25%. • Developed CV parsing and scoring systems, reducing manual review time by 50%. • Enhanced recruitment workflow with a live coding assessment platform, reducing assessment time by 30%. • Created AI chatbots handling over 1,000 candidate interactions monthly. • Created a Virtual Assistant for managing absences and supporting HRIS functions. AUGUST 2023 – FEBRUARY 2024 Junior AI Engineer| Indonesia AI | Jakarta, Indonesia • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications.  • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions.  • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives.  • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.             FEBRUARY 2023 – AUGUST 2023 Computer Vision Bootcamp Batch 1| Indonesia AI | Jakarta, Indonesia I participated in the Computer Vision Bootcamp Batch 1, where I gained advanced skills in Machine Learning and Deep Learning algorithms. At Indonesia AI, my role involved a range of cutting-edge AI projects, where I applied my expertise to develop innovative solutions using these technologies. • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging.  • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing.  • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques. JULY 2022 – FEBRUARY 2023 Full Stack Data Science Academy | Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) | Jakarta, Indonesia • Proficient in data science fundamentals, including business understanding, data analysis with Python, data wrangling, SQL for data science, and data visualization. • Completed real-world projects in customer segmentation, classification, and regression. FEBRUARY 2022 – JULY 2022 Introduction AI For Gen Z| Orbit Future Academy | Jakarta, Indonesia Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura. K ey  Sk i l l s  a nd E x per ti s e • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition.  • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions.  • Experience in managing and executing AI projects with a successful track record in delivering solutions.  • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [Prompt Compression and Query Optimization courses from DeepLearning.AI] to stay abreast of the latest advancements in AI and machine learning.  E duca ti o n  SEPTEMBER 2019 – MARCH 2023 Bachelor of Computer Software Engineering | Telkom University Purwokerto  GPA: 3.8 Cer fi ti ca ti o ns  Building Systems with the ChatGPT API • Data Wrangling with Python • Exploratory Data Analysis with Python for Beginners • Prompt Engineering with Llama 2&3 • Full Stack Data Science Academy • AI Career Bootcamp for Computer Vision • Supervised Machine Learning: Regression and Classification • Database Programmer (BNSP) 
+system: name : Irsyad Zulfikar
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar sebagai Application Specialist."}
+--- Field Separator ---
+skills : ['Python', 'OpenCV', 'NumPy', 'PyTorch', 'TensorFlow', 'Computer Vision', 'Machine Learning', 'AI']
+--- Field Separator ---
+kelebihan : ['Memiliki pengalaman dalam pengembangan AI-driven solutions', 'Berhasil meningkatkan akurasi candidate shortlisting', 'Pengalaman dalam pengembangan CV parsing dan scoring systems', 'Mampu mengembangkan AI chatbots', 'Memiliki kemampuan analisis data dan visualisasi data']
+--- Field Separator ---
+kekurangan : ['Tidak memiliki pengalaman langsung sebagai Application Specialist', 'Tidak memiliki pengalaman dalam pengembangan Functional Specification & UAT plan', 'Tidak memiliki pengalaman dalam mengkoordinasikan produksi dengan programmers', 'Tidak memiliki pengalaman dalam mengontrol solusi dengan mengatur spesifikasi', 'Tidak memiliki pengalaman dalam menghadapi masalah kompleks dan troubleshooting']
+--- Field Separator ---
+skor_cv : 20.0/100
+--- Field Separator ---
+alasan : Kandidat tidak memiliki pengalaman langsung sebagai Application Specialist dan tidak memiliki kemampuan pengembangan Functional Specification & UAT plan. Kemampuan kandidat dalam pengembangan AI-driven solutions dan analisis data tidak relevan dengan job requirement.
+--- Field Separator ---
+kesimpulan : Kandidat tidak sesuai dengan job requirement sebagai Application Specialist.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "false", "jobResponsibility" : "false"}
+{'completion_tokens': 398, 'prompt_tokens': 2990, 'total_tokens': 3388, 'completion_time': 1.423321786, 'prompt_time': 0.416528215, 'queue_time': None, 'total_time': 1.839850001}
+----------------

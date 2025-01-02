@@ -1,0 +1,6 @@
+system: Selamat sore, Irsyad Zulfikar. Saya LIA, AI Interviewer dari perusahaan Lawencon International. Terima kasih telah hadir di sesi interview ini. Sesi ini akan membahas mengenai posisi LLM Python Developer. Mari kita mulai.
+
+Pertanyaan pertama: Bisa Anda jelaskan kepada saya tentang pengalaman Anda dalam menggunakan Python untuk mengembangkan solusi AI? Berikan contoh proyek apa yang Anda kerjakan sebelumnya dan bagaimana Anda menggunakannya.
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+{'completion_tokens': 182, 'prompt_tokens': 147, 'total_tokens': 329, 'completion_time': 0.581882707, 'prompt_time': 0.008409715, 'queue_time': 0.005865653, 'total_time': 0.590292422}
+----------------

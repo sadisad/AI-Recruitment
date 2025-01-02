@@ -1,0 +1,68 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama kamu adalah memberikan peringkat untuk beberapa CV berdasarkan kecocokan dengan job vacancy yang diberikan.
+- Berikan peringkat, kesimpulan, kelebihan, kekurangan, serta alasan untuk setiap CV yang dinilai.
+- Gunakan skala peringkat dengan angka 1 untuk yang paling cocok, dan seterusnya (Contoh: Peringkat: 1/5). Peringkat 1/5 berarti paling cocok, Peringkat 5/5 berarti paling tidak cocok. Jika ada 6 CV, maka menjadi 1/6, dan seterusnya.
+- Setelah memberikan peringkat, urutkan hasil CV dari peringkat 1 sampai yang terakhir.
+- Berikan nilai tambahan kepada CV yang memiliki Total Masa Kerja Relevan lebih lama dibandingkan yang lainnya.
+- Semakin lama masa kerja yang relevan dengan job title yang diberikan di awal, semakin tinggi nilai yang harus diberikan.
+- Pertimbangkan juga skill, proyek, serta latar belakang pendidikan untuk menentukan penilaian.
+- Tambahkan nilai jika terdapat skill yang relevan dengan job requirement. Misalnya, Flask atau Laravel relevan dengan REST API, API Development, dan sebagainya. Atau, SQL yang relevan dengan RDBMS, Query, dll.
+- Periksa relevansi skill tersebut dengan teliti. Misalnya, jika seseorang pernah menggunakan SQL Server, maka kemungkinan besar mereka juga bisa PostgreSQL karena kesamaan dalam penggunaan SQL.
+- Berikan minimal 5 kelebihan dan 5 kekurangan pada setiap form penilaian. Pilih peringkat yang benar berdasarkan pertimbangan kelebihan dan kekurangan tersebut.
+- Hasil penilaian harus disampaikan dalam bahasa Indonesia, tanpa ada teks lain dari Anda, cukup kembalikan form yang telah diisi.
+
+Format yang harus diikuti:
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Vacancy : [Deskripsi Pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Daftar Kelebihan]
+Kekurangan : [Daftar Kekurangan]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: --- Field Separator ---
+Job Title : Web Developer
+--- Field Separator ---
+Job Vacancy : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : 5/1
+Name : Chris Taylor
+Total Masa Kerja Relevan : 0 years
+Skills : None
+Kelebihan : 
+1. Has a strong background in leadership
+2. Experienced in community policing initiatives
+3. Skilled in investigation and evidence collection
+4. Has a strong commitment to public safety
+5. Recognized for excellence in service
+
+Kekurangan : 
+1. Lacks experience in web development
+2. No skills in programming languages or web technologies
+3. No experience in software development life cycle (SDLC)
+4. No knowledge of web architecture or scalability
+5. Not familiar with technical practices in web development
+
+Skor : 20
+Alasan : Kandidat ini tidak memiliki background atau kemampuan yang relevan dengan pekerjaan web developer.
+
+Kesimpulan : Kandidat ini tidak memiliki kemampuan atau pengalaman yang relevan dengan pekerjaan web developer, sehingga tidak sesuai untuk posisi ini.
+{'completion_tokens': 494, 'prompt_tokens': 1910, 'total_tokens': 2404, 'completion_time': 1.6506354239999999, 'prompt_time': 0.185167916, 'queue_time': 0.005302964000000021, 'total_time': 1.83580334}
+----------------

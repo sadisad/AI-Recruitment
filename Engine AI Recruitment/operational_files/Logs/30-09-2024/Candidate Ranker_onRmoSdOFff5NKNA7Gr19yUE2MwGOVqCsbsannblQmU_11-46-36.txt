@@ -1,0 +1,104 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title dan Job Requirements, jawaban harus diberikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari yang paling sesuai dengan Job Title dan Job Requirements.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama: Kandidat akan diurutkan berdasarkan Total Masa Kerja Relevan terlebih dahulu. Jika Total Masa Kerja Relevan juga sama, maka pertimbangkan skills spesifik yang sangat relevan untuk menentukan urutan.
+
+2. Skor:
+
+- Skor dihitung berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title dan Job Requirements.
+- Berikan Skor rendah jika isi CV tidak relevan dengan Job Title dan Job Requirements.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai.
+- Kandidat dengan relevansi tinggi, pengalaman kerja yang sesuai, dan keahlian yang dibutuhkan akan menerima skor yang lebih tinggi.
+
+3. Total Masa Kerja Relevan:
+
+- Isi sesuai pengalaman kerja yang sesuai dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkannya dengan Job Requirements.
+- Berikan skor tambahan jika ada Skills yang relevan dengan Job Requirements, contohnya Flask atau Laravel untuk REST API dan API Development, atau SQL untuk RDBMS dan Query.
+- Periksa relevansi dan kesamaan antara Skills yang berbeda, contohnya penggunaan SQL Server yang dapat menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus disampaikan secara deskriptif dan terintegrasi, bukan dalam bentuk daftar. Kelebihan dan kekurangan ini harus dijelaskan dalam konteks kemampuan kandidat dalam memenuhi Job Requirements yang telah ditentukan. 
+- Deskripsikan kelebihan dan kekurangan tersebut secara jelas dan detail, sehingga dapat membantu menentukan Ranking dan Skor secara lebih akurat. Hindari penggunaan format daftar atau poin; fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan Kelebihan, kekurangan, dan alasan yang mendukung Ranking dan Skor kandidat.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian keseluruhan kandidat dengan Job Title dan Job Requirements.
+- Jelaskan mengapa kandidat berada di posisi tersebut dalam Ranking, termasuk saran atau rekomendasi jika ada.
+
+Format Output:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Job Title: AI Engineer
+Job Requirements:
+Bachelor’s or Master’s degree in Computer Science, Artificial Intelligence, Machine Learning, or a related field. Minimum of 1-5 years of experience in AI engineering or related fields (Junior-Middle-Senior Level). Proven track record of successful AI model development and deployment. Design, develop, and deploy AI models and algorithms for TTS, LLM, RAG, and ASR. Collaborate with product managers, software engineers, and data scientists to integrate AI solutions into existing and new products. Conduct research to stay updated with the latest advancements in AI and implement innovative techniques. Optimize and fine-tune AI models for performance, scalability, and accuracy. Develop and maintain documentation for AI models and their implementation processes. Provide technical support and guidance to team members on AI-related projects. Participate in code reviews, testing, and debugging to ensure high-quality AI solutions. Continuously monitor and evaluate the performance of AI models, making improvements as necessary.
+Job Description:
+As an AI Engineer at Jatis Mobile, you will play a crucial role in designing, developing, and implementing AI-driven solutions, focusing on Text-to-Speech (TTS), Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and Automatic Speech Recognition (ASR). You will collaborate with cross-functional teams to integrate these technologies into our products, enhancing our service offerings and driving customer satisfaction.
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: Job Title: AI Engineer
+---
+Job Requirements:
+Bachelor’s or Master’s degree in Computer Science, Artificial Intelligence, Machine Learning, atau bidang terkait. Minimal 1-5 tahun pengalaman dalam bidang AI engineering atau bidang terkait (Junior-Middle-Senior Level). Proven track record pengembangan dan implementasi model AI yang sukses. Desain, kembangkan, dan implementasikan model AI dan algoritma untuk TTS, LLM, RAG, dan ASR. Berkolaborasi dengan manajer produk, insinyur perangkat lunak, dan ilmuwan data untuk mengintegrasikan solusi AI ke dalam produk yang ada dan baru. Lakukan penelitian untuk tetap terupdate dengan perkembangan terkini dalam AI dan implementasikan teknik inovatif. Optimalkan dan sesuaikan model AI untuk kinerja, skalabilitas, dan akurasi. Kembangkan dan pertahankan dokumentasi untuk model AI dan proses implementasinya. Berikan dukungan teknis dan bimbingan kepada anggota tim pada proyek yang terkait dengan AI. Berpartisipasi dalam code review, pengujian, dan debugging untuk memastikan kualitas solusi AI yang tinggi. Terus pantau dan evaluasi kinerja model AI, membuat perbaikan jika perlu.
+
+---
+Ranking: 1
+Name: Angga Prihantoro
+Total Masa Kerja Relevan: 1 tahun (tidak sepenuhnya relevan)
+Skills: Python, SQL, TensorFlow, Tableau, Looker
+Kelebihan: Angga memiliki pengalaman dalam pengembangan aplikasi android, terutama dalam proyek "Foodrism" dan "Glaucomation App". Ia juga memiliki keahlian dalam menggunakan TensorFlow dan SQL. Selain itu, ia memiliki pengalaman sebagai praktikum asisten dan logistik staff di Dasar Komputer Laboratory.
+Kekurangan: Angga tidak memiliki pengalaman langsung dalam bidang AI engineering, namun ia memiliki pengalaman dalam pengembangan aplikasi android yang terkait dengan AI. Ia juga belum memiliki pengalaman dalam bekerja dengan tim yang besar dan kompleks.
+Skor: 70/100
+Alasan: Angga memiliki keahlian yang relevan dengan job requirements, terutama dalam pengembangan aplikasi android dan penggunaan TensorFlow. Namun, ia belum memiliki pengalaman langsung dalam bidang AI engineering, sehingga skornya tidak terlalu tinggi.
+Kesimpulan: Angga memiliki potensi yang besar dalam menjadi AI Engineer, namun ia perlu meningkatkan pengalaman dan keahlian dalam bidang AI engineering. Ia juga perlu mengembangkan keahlian dalam bekerja dengan tim yang besar dan kompleks.
+
+---
+(Tidak ada kandidat lain)
+{'completion_tokens': 717, 'prompt_tokens': 2575, 'total_tokens': 3292, 'completion_time': 2.871138115, 'prompt_time': 0.64669703, 'queue_time': 0.005784561999999993, 'total_time': 3.5178351450000003}
+----------------

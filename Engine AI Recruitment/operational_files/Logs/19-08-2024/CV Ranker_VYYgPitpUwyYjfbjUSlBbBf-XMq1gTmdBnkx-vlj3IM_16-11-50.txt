@@ -1,0 +1,78 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari beberapa String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut, berdasarkan Job Requirements yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5), 1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah 5 kelebihan, dan 5 kekurangan di form berdasarkan Job Requirements yang diberikan sebelumnya. Pilih lah Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Contoh untuk CV Ranking 1
+Ranking : Ranking 1
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar 5 kelebihan kandidat]
+Kekurangan : [Daftar 5 kekurangan kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Contoh untuk CV Ranking 2
+Ranking : Ranking 2
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar kelebihan]
+Kekurangan : [Daftar kekurangan]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc. An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Job Title : Flutter Developer
+--- Field Separator ---
+Job Requirements : 5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc. An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+--- Field Separator ---
+Ranking : Ranking 5
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 0 tahun
+Skills : Python, SQL
+Kelebihan : 
+1. Memiliki pengalaman sebagai Machine Learning trainee dan Practicum Assistant
+2. Memiliki proyek-proyek yang relevan seperti Glaucomation App dan Foodrism App
+3. Memiliki sertifikasi Tensorflow Developer Certification
+4. Memiliki kemampuan komunikasi dan delegasi yang baik
+5. Memiliki kemampuan analitis yang baik
+Kekurangan : 
+1. Tidak memiliki pengalaman dalam pengembangan dan pengiriman aplikasi Flutter
+2. Tidak memiliki pengalaman dalam deployment dan optimasi aplikasi mobile di iOS dan/atau Android
+3. Tidak memiliki pengalaman dalam penggunaan automated testing tools seperti Appium dan Flutter Integration Test
+4. Tidak memiliki pengalaman dalam CI/CD pipeline menggunakan Jenkins, JIRA, Sonar Qube, dll.
+5. Tidak memiliki pengetahuan yang mendalam tentang pengembangan aplikasi mobile dan arsitektur aplikasi cross-platform
+Skor : 60/100
+Alasan : Angga Prihantoro tidak memiliki pengalaman yang relevan dalam pengembangan aplikasi Flutter dan tidak memiliki kemampuan yang sesuai dengan kriteria pekerjaan.
+Kesimpulan : Angga Prihantoro tidak cocok untuk posisi Flutter Developer karena tidak memiliki pengalaman yang relevan dan kemampuan yang sesuai dengan kriteria pekerjaan.
+{'completion_tokens': 488, 'prompt_tokens': 2098, 'total_tokens': 2586, 'completion_time': 1.612871262, 'prompt_time': 0.236180584, 'queue_time': -0.007650162999999988, 'total_time': 1.849051846}
+----------------

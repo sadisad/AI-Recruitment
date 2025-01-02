@@ -1,0 +1,539 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documents" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / pasport, jadi isinya contohnya seperti ini "documents" : "ktp" jika di cv, orang tersebut mencantumkan ktp / pasport, jadi isinya cont bahwa dia memliki dokumen tersebut
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      email : "" ,
+      company : ""
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTSalex.johnson@example.comalex-johnson+12345678901New York, NYSKILLSData AnalysisStatistical ModelingData VisualizationSQL & PythonMachine Learning BasicsBusiness Intelligence ToolsA/B TestingData WarehousingReport GenerationEDUCATIONMaster of Science in Data ScienceColumbia University | New York, NY2017 – 2019Bachelor of Science in Computer ScienceNew York University | New York, NY2013 – 2017Alex JohnsonData AnalystData AnalystLed the analytics team to optimize business processes, resulting in a 20% increase inoperational efficiency.Data AnalystDeveloped and implemented a new data visualization strategy that improved reportingtimes by 30%.Junior Data AnalystAssisted in the development of a predictive model that reduced customer churn by 15%.Data Analysis InternSupported the data analysis team in conducting market research that informed newproduct development.Data Analysis InternContributed to the improvement of data collection methods, enhancing data quality by25%.Alex Johnson is a dedicated and analytical Data Analyst with 5 years of experience.Specializing in statistical modeling, data visualization, and strategic data analysis, Alexhas consistently driven business growth and efficiency through insightful data analysis.With a strong foundation in SQL, Python, and business intelligence tools, Alex is well-equipped to tackle complex data challenges and deliver actionable insights.EXPERIENCEDataWise Solutions | New York, NY1 yearOperational Efficiency IncreaseJan 2023 – Dec 2023TechTrend Analytics | New York, NY1 yearReporting Time ImprovementJan 2022 – Dec 2022Insight Enterprises | New York, NY1 yearCustomer Churn ReductionJan 2021 – Dec 2021MarketMinds | New York, NY1 yearMarket Research SupportJan 2020 – Dec 2020FutureData | New York, NY1 yearData Collection ImprovementJan 2019 – Dec 2019ABOUT
+system: --- Field Separator --- 
+fullName: Alex Johnson
+--- Field Separator --- 
+salutation:
+--- Field Separator --- 
+homeAddress: {
+  "houseStatus": "",
+  "note": "",
+  "country": "USA",
+  "state": "New York",
+  "city": "New York",
+  "subdistrict": "",
+  "village": "",
+  "address": "New York, NY",
+  "postalCode": "",
+  "since": ""
+}
+--- Field Separator --- 
+domicileAddress: {
+  "houseStatus": "",
+  "note": "",
+  "country": "USA",
+  "state": "New York",
+  "city": "New York",
+  "subdistrict": "",
+  "village": "",
+  "address": "New York, NY",
+  "postalCode": "",
+  "since": ""
+}
+--- Field Separator --- 
+frontTitle:
+--- Field Separator --- 
+endTitle:
+--- Field Separator --- 
+currentOccupation: {
+  "isWorking": "",
+  "occupationName": "Data Analyst",
+  "position": "",
+  "lastWorking": ""
+}
+--- Field Separator --- 
+status:
+--- Field Separator --- 
+gender:
+--- Field Separator --- 
+birthplace:
+--- Field Separator --- 
+birthdate:
+--- Field Separator --- 
+religion:
+--- Field Separator --- 
+nationality:
+--- Field Separator --- 
+ethnicity:
+--- Field Separator --- 
+maritalStatus:
+--- Field Separator --- 
+marital: {
+  "mariedDate": "",
+  "separationDate": ""
+}
+--- Field Separator --- 
+medicalStatus:
+--- Field Separator --- 
+bloodType:
+--- Field Separator --- 
+height:
+--- Field Separator --- 
+weight:
+--- Field Separator --- 
+note:
+--- Field Separator --- 
+country:
+--- Field Separator --- 
+state:
+--- Field Separator --- 
+city:
+--- Field Separator --- 
+subDistrict:
+--- Field Separator --- 
+village:
+--- Field Separator --- 
+postalCode:
+--- Field Separator --- 
+since:
+--- Field Separator --- 
+phones: [
+  {
+    "phoneCode": "+1",
+    "phoneNumber": "2345678901",
+    "type": "mobile",
+    "primary": "true"
+  }
+]
+--- Field Separator --- 
+emails: [
+  {
+    "email": "alex.johnson@example.com",
+    "type": "personal",
+    "notification": ""
+  }
+]
+--- Field Separator --- 
+socialMedias: [
+  {
+    "socialMediaPlatform": "linkedin",
+    "url": "alex-johnson"
+  }
+]
+--- Field Separator --- 
+workExperience: [
+  {
+    "company": "DataWise Solutions",
+    "address": "New York, NY",
+    "totalEmployee": "",
+    "position": "Data Analyst",
+    "exitReason": "",
+    "startDate": "2023-01",
+    "current": "true",
+    "endDate": "",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Operational Efficiency Increase"
+  },
+  {
+    "company": "TechTrend Analytics",
+    "address": "New York, NY",
+    "totalEmployee": "",
+    "position": "Data Analyst",
+    "exitReason": "",
+    "startDate": "2022-01",
+    "current": "false",
+    "endDate": "2022-12",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Reporting Time Improvement"
+  },
+  {
+    "company": "Insight Enterprises",
+    "address": "New York, NY",
+    "totalEmployee": "",
+    "position": "Data Analyst",
+    "exitReason": "",
+    "startDate": "2021-01",
+    "current": "false",
+    "endDate": "2021-12",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Customer Churn Reduction"
+  },
+  {
+    "company": "MarketMinds",
+    "address": "New York, NY",
+    "totalEmployee": "",
+    "position": "Data Analyst",
+    "exitReason": "",
+    "startDate": "2020-01",
+    "current": "false",
+    "endDate": "2020-12",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Market Research Support"
+  },
+  {
+    "company": "FutureData",
+    "address": "New York, NY",
+    "totalEmployee": "",
+    "position": "Data Analyst",
+    "exitReason": "",
+    "startDate": "2019-01",
+    "current": "false",
+    "endDate": "2019-12",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Data Collection Improvement"
+  }
+]
+--- Field Separator --- 
+reference: []
+--- Field Separator --- 
+formalEducation: [
+  {
+    "country": "USA",
+    "state": "New York",
+    "educationLevel": "Master",
+    "institution": "Columbia University",
+    "city": "New York",
+    "major": "Data Science",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "false",
+    "startYear": "2017",
+    "endYear": "2019",
+    "graduateDate": "",
+    "gpa": "",
+    "graduate": "true",
+    "description": ""
+  },
+  {
+    "country": "USA",
+    "state": "New York",
+    "educationLevel": "Bachelor",
+    "institution": "New York University",
+    "city": "New York",
+    "major": "Computer Science",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "false",
+    "startYear": "2013",
+    "endYear": "2017",
+    "graduateDate": "",
+    "gpa": "",
+    "graduate": "true",
+    "description": ""
+  }
+]
+--- Field Separator --- 
+informalEducation: []
+--- Field Separator --- 
+hobbiesAndOtherActivities: []
+--- Field Separator --- 
+languages: []
+--- Field Separator --- 
+emergencyContacts: []
+--- Field Separator --- 
+relationships: []
+--- Field Separator --- 
+vehicles: []
+--- Field Separator --- 
+isStudent:
+--- Field Separator --- 
+educationLevelName: Master
+--- Field Separator --- 
+institutionName: Columbia University
+--- Field Separator --- 
+majorName: Data Science
+--- Field Separator --- 
+noteInstitution:
+--- Field Separator --- 
+skills: ["Data Analysis", "Statistical Modeling", "Data Visualization", "SQL & Python", "Machine Learning Basics", "Business Intelligence Tools", "A/B Testing", "Data Warehousing", "Report Generation"]
+--- Field Separator --- 
+documentType:
+--- Field Separator --- 
+suitableJobPosition: Data Analyst
+--- Field Separator --- 
+socialActivities: []
+{'completion_tokens': 1471, 'prompt_tokens': 2276, 'total_tokens': 3747, 'completion_time': 4.754366435, 'prompt_time': 0.140156429, 'queue_time': 0.008007348999999997, 'total_time': 4.894522864}
+----------------

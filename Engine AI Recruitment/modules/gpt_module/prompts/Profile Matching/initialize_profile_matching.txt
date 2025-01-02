@@ -1,0 +1,59 @@
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+1. **Total Masa Kerja Relevan**:
+   - Isi form "total masa kerja relevan" dengan menghitung total masa kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor cv secara proporsional sesuai dengan relevansi pengalaman.
+
+2. **Keterampilan (Skills)**:
+   - Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor cv secara proporsional.
+
+3. **Kelebihan dan Kekurangan**:
+   - Isi form "kelebihan" dan "kekurangan" dengan memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor cv.
+
+4. **Penilaian CV (Skor CV)**:
+   - **skor cv** harus selalu diisi berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar. Jangan biarkan skor_cv kosong atau default ke 0.00 kecuali CV benar-benar tidak relevan. 
+   - Pastikan skor cv memiliki 2 angka di belakang koma (float). 
+   - Jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, berikan skor cv yang rendah, misalnya di bawah 10.00, tetapi tetap harus mencerminkan penilaian yang logis dan sesuai.
+
+5. **Kesimpulan**:
+   - Isi form "kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+6. **Kesesuaian**:
+   - Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+     - **jobRoleOverview**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobQualification**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobResponsibility**: Berikan "true" jika sesuai, "false" jika tidak.
+
+7. **Alasan**:
+   - Isi form "alasan" berdasarkan kecocokan kandidat dengan kriteria_pekerjaan dan job description.
+
+8. **Saran Job Posisi Lain (Suggestion)**:
+   - Isi form "suggestion" berdasarkan CV kandidat dan kecocokannya terhadap suggested_job_role, berikan alasan dan persentase kecocokan (match_percentage).
+
+**Format Pengisian**:
+Isilah form berikut tanpa ada tambahan kata darimu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang dilamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor cv : [0.00/100.00]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---

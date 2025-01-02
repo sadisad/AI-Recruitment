@@ -1,0 +1,90 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Anda bertugas memberikan "Ranking" pada beberapa String CV berdasarkan kesesuaian dengan "Job Vacancy" yang diberikan sebelumnya. Setiap CV harus diberi "Ranking", "Kesimpulan", "Kelebihan", "Kekurangan", dan "Alasan". Ranking diberikan dalam skala yang dimulai dari 1 untuk yang paling cocok, hingga ranking terakhir sesuai jumlah CV yang diberikan. (Contoh: "Ranking: 1/5" untuk yang paling cocok dan "Ranking: 5/5" untuk yang paling tidak cocok).
+
+Aturan Pemberian Ranking:
+
+Setiap Ranking harus unik: Tidak boleh ada dua CV dengan ranking yang sama, terutama untuk ranking 1. Jika terdapat dua CV yang hampir setara, gunakan kriteria tambahan seperti total masa kerja relevan, pengalaman khusus, atau keahlian tambahan untuk menentukan ranking yang lebih tepat.
+Ranking 1: Berikan kepada CV yang paling sesuai dengan job vacancy.
+Perhitungan "Skor":
+
+"Skor" harus sesuai dengan ranking yang diberikan. CV dengan "Ranking 1" diberi skor tertinggi, dan skor menurun sesuai dengan penurunan ranking.
+Gunakan rentang skor sebagai berikut:
+Ranking 1: Skor tertinggi (misal 90-100)
+Ranking 2: Skor menengah (misal 80-89)
+Ranking 3: Skor lebih rendah (misal 70-79), dan seterusnya.
+Penentuan skor harus mempertimbangkan relevansi CV terhadap job vacancy, dengan memperhatikan "Skills", pengalaman kerja, dan latar belakang pendidikan.
+Pertimbangan Tambahan:
+
+Kandidat dengan "Total Masa Kerja Relevan" yang lebih lama dan keterampilan yang lebih relevan akan mendapatkan skor lebih tinggi.
+Semakin tinggi relevansi "Skills", pengalaman, dan latar belakang pendidikan dengan "Job Vacancy", semakin tinggi skor yang diberikan.
+Detail yang Harus Diisi:
+
+Kelebihan: Sebutkan minimal 5 kelebihan untuk setiap kandidat.
+Kekurangan: Sebutkan minimal 5 kekurangan untuk setiap kandidat.
+Ranking: Setiap ranking harus unik dan hanya diberikan kepada satu CV.
+Kesimpulan: Berikan kesimpulan yang jelas berdasarkan penilaian Anda.
+Alasan: Jelaskan mengapa Anda memberikan ranking tertentu pada kandidat tersebut.
+
+Format yang Harus Digunakan:
+Job Title: Accounting Manager
+--- Field Separator ---
+Job Vacancy: Lorem Ipsum etc
+--- Field Separator ---
+Ranking: RANK 1
+Name: Dummy Name 1
+Total Masa Kerja Relevan: 3 tahun relevan yaitu ...
+Skills: 1. Python, 2. Tableau, 3. etc
+Kelebihan: 1. Bagus dalam teknis, 2. berpengalaman banyak, 3. etc
+Kekurangan: 1. Tidak percaya diri, 2. etc, 3. etc
+Skor: 95/100
+Alasan: Dia layak rank 1 karena dia ...
+Kesimpulan: Secara keseluruhan, dia sangat cocok untuk posisi ini ...
+--- Field Separator ---
+Ranking: RANK 2
+Name: Dummy Name 2
+Total Masa Kerja Relevan: 2.5 tahun, yaitu ...
+Skills: 1. SQL, 2. Akuntan, 3. etc
+Kelebihan: 1. Berpengalaman dalam akuntansi, 2. etc, 3. etc
+Kekurangan: 1. Kurang pengalaman dalam teknologi terbaru, 2. etc, 3. etc
+Skor: 85/100
+Alasan: Dia layak rank 2 karena dia ...
+Kesimpulan: Secara keseluruhan, dia cukup cocok ...
+--- Field Separator ---
+Ranking: RANK 3
+Name: Dummy Name 3
+Total Masa Kerja Relevan: 1.5 tahun, yaitu ...
+Skills: 1. Excel, 2. Tableau, 3. etc
+Kelebihan: 1. Cepat belajar, 2. etc, 3. etc
+Kekurangan: 1. Kurang pengalaman, 2. etc, 3. etc
+Skor: 75/100
+Alasan: Dia layak rank 3 karena dia ...
+Kesimpulan: Secara keseluruhan, dia kurang cocok ...
+--- Field Separator ---
+
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Job Title: Web Developer
+--- Field Separator ---
+Job Vacancy: Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking: RANK 1
+Name: Angga Prihantoro
+Total Masa Kerja Relevan: 1 tahun relevan yaitu Machine Learning trainee di Bangkit Academy dan Practicum Assistant di Dasar Komputer Laboratory
+Skills: 1. Python, 2. SQL, 3. TensorFlow, 4. Excel
+Kelebihan: 1. Mempunyai latar belakang pendidikan di bidang Teknik Telekomunikasi, 2. Mempunyai pengalaman sebagai Machine Learning trainee dan Practicum Assistant, 3. Mempunyai sertifikasi sebagai Tensorflow Developer, 4. Mempunyai kemampuan komunikasi yang baik
+Kekurangan: 1. Kurang pengalaman dalam pengembangan web, 2. Belum mempunyai pengalaman dalam menulis dokumentasi SDLC, 3. Belum mempunyai pengalaman dalam melakukan analisis sistem bisnis, 4. Belum mempunyai pengalaman dalam menggunakan teknologi web terkini
+Skor: 80/100
+Alasan: Dia layak rank 1 karena dia mempunyai latar belakang pendidikan yang relevan dan pengalaman yang sesuai dengan kebutuhan job vacancy, serta memiliki kemampuan komunikasi yang baik.
+Kesimpulan: Secara keseluruhan, dia sangat berpotensi untuk menjadi Web Developer yang handal.
+{'completion_tokens': 437, 'prompt_tokens': 2383, 'total_tokens': 2820, 'completion_time': 1.423668314, 'prompt_time': 0.136975011, 'queue_time': 0.00530360299999999, 'total_time': 1.560643325}
+----------------

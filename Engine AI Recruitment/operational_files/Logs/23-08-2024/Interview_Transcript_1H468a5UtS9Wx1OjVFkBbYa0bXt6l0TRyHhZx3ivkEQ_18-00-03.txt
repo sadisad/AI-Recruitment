@@ -1,0 +1,18 @@
+user: siapakah jokowidodo?
+system: Joko Widodo, commonly known as Jokowi, is the 7th President of Indonesia. He has been serving as the President of Indonesia since October 20, 2014, and was re-elected for a second term in 2019.
+
+Before becoming the President, Jokowi was the Mayor of Surakarta (Solo) from 2005 to 2012 and the Governor of Jakarta from 2012 to 2014.
+
+Jokowi is known for his humble and down-to-earth personality, as well as his efforts to promote democracy, transparency, and accountability in Indonesia. During his presidency, he has implemented several reforms and policies aimed at improving the country's economy, infrastructure, and social welfare.
+
+Some of his notable achievements include:
+
+1. Implementing the tax amnesty program to increase tax revenue and encourage repatriation of Indonesian assets abroad.
+2. Launching the "One Belt One Road" (OBOR) initiative to improve Indonesia's infrastructure and connectivity with other countries.
+3. Implementing the Universal Health Coverage (JKN) program to provide health insurance to all Indonesian citizens.
+4. Increasing investment in education and human resource development to improve the country's competitiveness.
+5. Strengthening Indonesia's diplomatic relations with other countries, particularly in the Asia-Pacific region.
+
+Jokowi is also known for his simplicity and humility, often being seen wearing casual clothes and riding public transportation. He is widely regarded as one of the most popular and influential leaders in Southeast Asia.
+{'completion_tokens': 303, 'prompt_tokens': 19, 'total_tokens': 322, 'completion_time': 0.967439524, 'prompt_time': 0.000475805, 'queue_time': 0.012508645, 'total_time': 0.967915329}
+----------------

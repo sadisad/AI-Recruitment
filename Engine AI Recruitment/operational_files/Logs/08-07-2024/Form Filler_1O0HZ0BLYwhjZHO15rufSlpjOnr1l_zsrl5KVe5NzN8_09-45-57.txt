@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+name : 
+--- Field Separator ---
+summary : 
+--- Field Separator ---
+phone_number : 
+--- Field Separator ---
+birth_of_date : 
+--- Field Separator ---
+address : 
+--- Field Separator ---
+email : 
+--- Field Separator ---
+experiences : 
+--- Field Separator ---
+educations : 
+--- Field Separator ---
+projects/portfolios : 
+--- Field Separator ---
+certifications : 
+--- Field Separator ---
+awards : 
+--- Field Separator ---
+publications : 
+--- Field Separator ---
+volunteers : 
+--- Field Separator ---
+languages : 
+--- Field Separator ---
+
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CHRONOLOGICAL (HUMAN/SOCIAL SERVICE)  Melina Whittlesey X 3083 North South Street, Apt. A-1 (308) 308-3083 Grand Island, Nebraska 68803 imasample10@xxxx.net OBJECTIVESeeking Position in Human/Social Service Administration or related field utilizing strong academic background, experience and excellent interpersonal skills  EDUCATION BS in Human & Social Service Administration, Bellevue University, Bellevue, NE (Jan 20xx)  Dean’s Scholar GPA: 3.81/4.00 AAS in Human Services (Dec 19xx), 75-Hr Basic Nursing Assistant Program (Jan 20xx) Central Community College—Hastings Campus, Hastings, NE  WORK HISTORY Day Rehabilitation Specialist, Greater NE Goodwill Industries, Grand Island, NE (June 20xx – Present)  Manage a caseload of twenty consumers, assist them in setting and reaching individual plans  Facilitate group sessions on Mental Illness, Stress Management and Healthy Relationships  Plan and implement social activities for consumers  Coordinate and conduct team meetings  Process billings, manage petty cash fund, and oversee operations in supervisor’s absence Assistant Receptionist, Tiffany Square Care Center, Grand Island, NE (Jan – June 20xx)  Arranged and facilitated weekend activities for residents  Contacted families to set up dates and times to review and discuss care plans  Delivered and read mail to residents, providing companionship and social interaction  Filed confidential paperwork and provided receptionist/administrative support for the Center Employment Trainer, Central NE Goodwill Industries, Grand Island, NE (Aug 19xx – May 20xx)  Managed a caseload of twenty consumers and provided on-the-job coaching to help them succeed  Conducted group job search training sessions and assisted consumers with completion of job applications, cover letters and resumes  Criminal Justice/Shelter Advocate, Crisis Center Inc & Family Violence Coalition, Grand Island, NE (July 20xx – Oct 20xx)  Responded to crisis calls and provided support  to victims of domestic abuse  Completed paperwork to document circumstances surrounding alleged abuse for judicial review Social Services Assistant, Tiffany Square Care Center, Grand Island, NE (Jan 20xx – Sept 20xx)  Conducted tours, provided orientation and general assistance for new residents  Completed social histories, inventoried clothing, and met one-on-one with residents to help them understand their rights and responsibilities  Assisted the Center in meeting critical staffing needs during peak times by working as a certified nursing assistant, dietary aide, receptionist and van driver  COMMUNITY SERVICE Volunteer, Women’s Health Services, Grand Island, NE (Fall 20xx – present)  Assisted professional staff and participated in one-on-one discussions with women seeking advice on health-related issues  Observed group training sessions to develop the skills needed to facilitate groups in the future  
+system: name : Melina Whittlesey
+--- Field Separator ---
+summary : Seeking Position in Human/Social Service Administration or related field utilizing strong academic background, experience and excellent interpersonal skills
+--- Field Separator ---
+phone_number : (308) 308-3083
+--- Field Separator ---
+birth_of_date : -
+--- Field Separator ---
+address : 3083 North South Street, Apt. A-1, Grand Island, Nebraska 68803
+--- Field Separator ---
+email : imasample10@xxxx.net
+--- Field Separator ---
+experiences : [{"title" : "Day Rehabilitation Specialist", "description" : "Manage a caseload of twenty consumers, assist them in setting and reaching individual plans", "duration" : "June 20xx – Present"}, {"title" : "Assistant Receptionist", "description" : "Arranged and facilitated weekend activities for residents", "duration" : "Jan – June 20xx"}, {"title" : "Employment Trainer", "description" : "Managed a caseload of twenty consumers and provided on-the-job coaching to help them succeed", "duration" : "Aug 19xx – May 20xx"}, {"title" : "Criminal Justice/Shelter Advocate", "description" : "Responded to crisis calls and provided support  to victims of domestic abuse", "duration" : "July 20xx – Oct 20xx"}, {"title" : "Social Services Assistant", "description" : "Conducted tours, provided orientation and general assistance for new residents", "duration" : "Jan 20xx – Sept 20xx"}]
+--- Field Separator ---
+educations : [{"title" : "BS in Human & Social Service Administration", "description" : "", "duration" : "Jan 20xx"}, {"title" : "AAS in Human Services", "description" : "", "duration" : "Dec 19xx"}, {"title" : "75-Hr Basic Nursing Assistant Program", "description" : "", "duration" : "Jan 20xx"}]
+--- Field Separator ---
+projects/portfolios : -
+--- Field Separator ---
+certifications : -
+--- Field Separator ---
+awards : -
+--- Field Separator ---
+publications : -
+--- Field Separator ---
+volunteers : [{"title" : "Volunteer", "description" : "Assisted professional staff and participated in one-on-one discussions with women seeking advice on health-related issues", "duration" : "Fall 20xx – present"}]
+--- Field Separator ---
+languages : -
+--- Field Separator ---
+{'completion_tokens': 512, 'prompt_tokens': 1069, 'total_tokens': 1581, 'completion_time': 1.462857143, 'prompt_time': 0.200488959, 'queue_time': None, 'total_time': 1.663346102}
+----------------

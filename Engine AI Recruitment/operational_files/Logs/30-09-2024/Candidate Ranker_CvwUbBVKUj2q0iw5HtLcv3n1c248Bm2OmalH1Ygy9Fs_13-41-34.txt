@@ -1,0 +1,99 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title dan Job Requirements, jawaban harus diberikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari yang paling sesuai dengan Job Title dan Job Requirements.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama: Kandidat akan diurutkan berdasarkan Total Masa Kerja Relevan terlebih dahulu. Jika Total Masa Kerja Relevan juga sama, maka pertimbangkan skills spesifik yang sangat relevan untuk menentukan urutan.
+
+2. Skor:
+
+- Skor dihitung berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title dan Job Requirements.
+- Berikan Skor rendah jika isi CV tidak relevan dengan Job Title dan Job Requirements.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai.
+- Kandidat dengan relevansi tinggi, pengalaman kerja yang sesuai, dan keahlian yang dibutuhkan akan menerima skor yang lebih tinggi.
+
+3. Total Masa Kerja Relevan:
+
+- Isi sesuai pengalaman kerja yang sesuai dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkannya dengan Job Requirements.
+- Berikan skor tambahan jika ada Skills yang relevan dengan Job Requirements, contohnya Flask atau Laravel untuk REST API dan API Development, atau SQL untuk RDBMS dan Query.
+- Periksa relevansi dan kesamaan antara Skills yang berbeda, contohnya penggunaan SQL Server yang dapat menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus disampaikan secara deskriptif dan terintegrasi, bukan dalam bentuk daftar. Kelebihan dan kekurangan ini harus dijelaskan dalam konteks kemampuan kandidat dalam memenuhi Job Requirements yang telah ditentukan. 
+- Deskripsikan kelebihan dan kekurangan tersebut secara jelas dan detail, sehingga dapat membantu menentukan Ranking dan Skor secara lebih akurat. Hindari penggunaan format daftar atau poin; fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan Kelebihan, kekurangan, dan alasan yang mendukung Ranking dan Skor kandidat.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian keseluruhan kandidat dengan Job Title dan Job Requirements.
+- Jelaskan mengapa kandidat berada di posisi tersebut dalam Ranking, termasuk saran atau rekomendasi jika ada.
+
+Format Output:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Job Title: Machine Learning Engineer
+Job Requirements:
+Hands-on experience in building ML models deployed into real-world business applications or research. Working knowledge of ML/DL algorithms (classification, regression, clustering, hyperparameter tuning, etc). Proficiency with Python and libraries for machine learning such as scikit-learn and pandas. Good understanding of Deep learning frameworks such as Tensorflow, Keras, PyTorch, MXNet, etc. Experience in using computer vision libraries such as OpenCV, PIL.  PREFERRED: Experience working with cloud services platform (AWS or GCP) to build ML/DL pipelines.﻿ Experience in multi-GPU model training with CUDA. Experience in ML experiment tracking tools (e.g. WandB, Neptune, TensorBoard). Experience in model deployment using Docker (e.g. AWS SageMaker, Google Kubernetes Engine). Experience in model compression or quantization for on-edge-device inference. Experience with Continuous Integration and Continuous Delivery(CI/CD). Relevant certifications in machine learning and cloud technologies (e.g., AWS, Coursera) would be a plus.
+Job Description:
+A Machine Learning Engineer trains, validates and evaluates machine learning and deep learning models which perform predictive tasks in various domains such as computer vision, natural language understanding and time-series analysis. Some examples include visual recognition models, activity detection using sensor data and demand forecasting. Translate and refine business goals into appropriate machine learning objectives. Design and implement ML/DL solutions and integrate them with various Big Data platforms and architectures. Create and maintain ML pipelines that are scalable, robust, and ready for production. Collaborate with domain experts, software developers, and data scientists. Troubleshoot ML/DL model issues, including recommendations for retrain, re-validate, and improvements/optimization.
+------
+CV:
+Irsyad Zulfikar  South Jakarta • (+62) 8528-2130-793 • zulfikarirsyad@gmail.com  Innovative AI Engineer with extensive experience in data analysis, machine learning, and AI-driven solutions. Proven track record in enhancing recruitment processes and developing advanced AI models. Dedicated to leveraging AI technologies to drive innovation and operational efficiency. E x per i ence  APRIL 2024 – PRESENT AI Engineer | Lawencon International | South Jakarta, Indonesia • Led AI projects, improving candidate shortlisting accuracy by 25%. • Developed CV parsing and scoring systems, reducing manual review time by 50%. • Enhanced recruitment workflow with a live coding assessment platform, reducing assessment time by 30%. • Created AI chatbots handling over 1,000 candidate interactions monthly. • Created a Virtual Assistant for managing absences and supporting HRIS functions. AUGUST 2023 – FEBRUARY 2024 Junior AI Engineer| Indonesia AI | Jakarta, Indonesia • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications.  • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions.  • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives.  • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.             FEBRUARY 2023 – AUGUST 2023 Computer Vision Bootcamp Batch 1| Indonesia AI | Jakarta, Indonesia I participated in the Computer Vision Bootcamp Batch 1, where I gained advanced skills in Machine Learning and Deep Learning algorithms. At Indonesia AI, my role involved a range of cutting-edge AI projects, where I applied my expertise to develop innovative solutions using these technologies. • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging.  • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing.  • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques. JULY 2022 – FEBRUARY 2023 Full Stack Data Science Academy | Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) | Jakarta, Indonesia • Proficient in data science fundamentals, including business understanding, data analysis with Python, data wrangling, SQL for data science, and data visualization. • Completed real-world projects in customer segmentation, classification, and regression. FEBRUARY 2022 – JULY 2022 Introduction AI For Gen Z| Orbit Future Academy | Jakarta, Indonesia Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura. K ey  Sk i l l s  a nd E x per ti s e • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition.  • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions.  • Experience in managing and executing AI projects with a successful track record in delivering solutions.  • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [Prompt Compression and Query Optimization courses from DeepLearning.AI] to stay abreast of the latest advancements in AI and machine learning.  E duca ti o n  SEPTEMBER 2019 – MARCH 2023 Bachelor of Computer Software Engineering | Telkom University Purwokerto  GPA: 3.8 Cer fi ti ca ti o ns  Building Systems with the ChatGPT API • Data Wrangling with Python • Exploratory Data Analysis with Python for Beginners • Prompt Engineering with Llama 2&3 • Full Stack Data Science Academy • AI Career Bootcamp for Computer Vision • Supervised Machine Learning: Regression and Classification • Database Programmer (BNSP) 
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: Job Title : Machine Learning Engineer
+--- Field Separator ---
+Job Requirements : Hands-on experience in building ML models deployed into real-world business applications or research. Working knowledge of ML/DL algorithms (classification, regression, clustering, hyperparameter tuning, etc). Proficiency with Python and libraries for machine learning such as scikit-learn and pandas. Good understanding of Deep learning frameworks such as Tensorflow, Keras, PyTorch, MXNet, etc. Experience in using computer vision libraries such as OpenCV, PIL.  PREFERRED: Experience working with cloud services platform (AWS or GCP) to build ML/DL pipelines.﻿ Experience in multi-GPU model training with CUDA. Experience in ML experiment tracking tools (e.g. WandB, Neptune, TensorBoard). Experience in model deployment using Docker (e.g. AWS SageMaker, Google Kubernetes Engine). Experience in model compression or quantization for on-edge-device inference. Experience with Continuous Integration and Continuous Delivery(CI/CD). Relevant certifications in machine learning and cloud technologies (e.g., AWS, Coursera) would be a plus.
+--- Field Separator ---
+Ranking : 1
+Name : Irsyad Zulfikar
+Total Masa Kerja Relevan : 2 tahun
+Skills : Python, OpenCV, NumPy, PyTorch, TensorFlow, scikit-learn, pandas, Deep Learning, Computer Vision
+Kelebihan : Irsyad memiliki pengalaman yang luas dalam bidang AI dan machine learning, termasuk pengembangan model ML yang efektif dan penggunaan library seperti OpenCV dan PyTorch. Ia juga memiliki pengetahuan yang baik tentang Deep Learning dan komputer visi. Selain itu, ia memiliki pengalaman dalam mengembangkan proyek-proyek AI yang berbasis pada aplikasi nyata.
+Kekurangan : Irsyad tidak memiliki pengalaman langsung dalam bekerja dengan teknologi cloud seperti AWS atau GCP, meskipun ia memiliki pengetahuan tentang penggunaan Docker dan model deployment.
+Skor : 90/100
+Alasan : Irsyad memiliki pengalaman yang luas dalam bidang AI dan machine learning, serta pengetahuan yang baik tentang Deep Learning dan komputer visi. Ia juga memiliki pengalaman dalam mengembangkan proyek-proyek AI yang berbasis pada aplikasi nyata. Meskipun ia tidak memiliki pengalaman langsung dalam bekerja dengan teknologi cloud, ia memiliki potensi untuk belajar dan beradaptasi dengan cepat.
+Kesimpulan : Irsyad Zulfikar adalah kandidat yang sangat kuat untuk posisi Machine Learning Engineer. Ia memiliki pengalaman yang luas dalam bidang AI dan machine learning, serta pengetahuan yang baik tentang Deep Learning dan komputer visi. Meskipun ia tidak memiliki pengalaman langsung dalam bekerja dengan teknologi cloud, ia memiliki potensi untuk belajar dan beradaptasi dengan cepat. Ia dapat menjadi aset yang berharga bagi tim kita.
+{'completion_tokens': 499, 'prompt_tokens': 2640, 'total_tokens': 3139, 'completion_time': 1.996, 'prompt_time': 0.688730254, 'queue_time': 0.004919313000000036, 'total_time': 2.6847302539999998}
+----------------

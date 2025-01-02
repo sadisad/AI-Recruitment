@@ -1,0 +1,94 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title dan Job Requirements, jawaban harus diberikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari yang paling sesuai dengan Job Title dan Job Requirements.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama: Kandidat akan diurutkan berdasarkan Total Masa Kerja Relevan terlebih dahulu. Jika Total Masa Kerja Relevan juga sama, maka pertimbangkan skills spesifik yang sangat relevan untuk menentukan urutan.
+
+2. Skor:
+
+- Skor dihitung berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title dan Job Requirements.
+- Berikan Skor rendah jika isi CV tidak relevan dengan Job Title dan Job Requirements.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai.
+- Kandidat dengan relevansi tinggi, pengalaman kerja yang sesuai, dan keahlian yang dibutuhkan akan menerima skor yang lebih tinggi.
+
+3. Total Masa Kerja Relevan:
+
+- Isi sesuai pengalaman kerja yang sesuai dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkannya dengan Job Requirements.
+- Berikan skor tambahan jika ada Skills yang relevan dengan Job Requirements, contohnya Flask atau Laravel untuk REST API dan API Development, atau SQL untuk RDBMS dan Query.
+- Periksa relevansi dan kesamaan antara Skills yang berbeda, contohnya penggunaan SQL Server yang dapat menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus disampaikan secara deskriptif dan terintegrasi, bukan dalam bentuk daftar. Kelebihan dan kekurangan ini harus dijelaskan dalam konteks kemampuan kandidat dalam memenuhi Job Requirements yang telah ditentukan. 
+- Deskripsikan kelebihan dan kekurangan tersebut secara jelas dan detail, sehingga dapat membantu menentukan Ranking dan Skor secara lebih akurat. Hindari penggunaan format daftar atau poin; fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan Kelebihan, kekurangan, dan alasan yang mendukung Ranking dan Skor kandidat.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian keseluruhan kandidat dengan Job Title dan Job Requirements.
+- Jelaskan mengapa kandidat berada di posisi tersebut dalam Ranking, termasuk saran atau rekomendasi jika ada.
+
+Format Output:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+
+------
+Kriteria Pekerjaan:
+SQL Developer Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication), Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent. 3 years of experience as a SQL Developer or similar role Excellent understanding of T-SQL programming Excellent understanding of Oracle Good knowledge of HTML and JavaScript Experience with Transparent Data Encryption (TDE) Have experience with ETL Platform Have experience with SAS Familiarity with the practical application of NoSQL\NewSQL databases Preferably having knowledge of Data SLIK OJK Sense of ownership and pride in your performance and its impact on company’s success Critical thinker and problem-solving skills Team player Good time-management skills Great interpersonal and communication skills
+------
+CV:
+CONTACTSdr.jordan.lee@example.comdr-jordan-lee+12345678903Los Angeles, CASKILLSPatient Care & ManagementDiagnostic ExpertiseSurgical ProceduresEmergency ResponseHealthcare AdministrationMedical Research & EducationClinical LeadershipHealth Policy AdvocacyEDUCATIONDoctor of Medicine (MD)University of California, Los Angeles(UCLA) | Los Angeles, CA2006 – 2013Bachelor of Science in BiologyStanford University | Stanford, CA2002 – 2006Dr. Jordan LeeMedical DoctorAttending PhysicianLed the emergency department, significantly reducing patient wait times and improvingcare outcomes.Medical DoctorProvided comprehensive care to a diverse patient population, with a focus on preventivemedicine and patient education.Resident DoctorSpecialized in internal medicine, participating in groundbreaking research oncardiovascular health.Junior DoctorGained extensive experience in pediatrics and emergency care, contributing to thedevelopment of new pediatric care protocols.Intern DoctorCompleted rotations in various departments, excelling in surgery and receivingcommendations for patient care excellence.Dr. Jordan Lee is a highly skilled and dedicated Medical Doctor with 10 years ofexperience across various healthcare settings. Specializing in patient care management,diagnostic procedures, and emergency response, Dr. Lee has demonstrated excellencein healthcare delivery and medical education. With a strong commitment to advancingmedical research and healthcare policy, Dr. Lee is recognized for leadership in clinicalsettings and contributions to medical science.EXPERIENCEPacific Medical Center | Los Angeles, CA2 yearsEmergency Department LeadershipJan 2022 – PresentCity Health Clinic | Los Angeles, CA2 yearsPreventive Medicine FocusJan 2020 – Dec 2021Grand Valley Hospital | Los Angeles, CA2 yearsCardiovascular Research ParticipationJan 2018 – Dec 2019Metropolitan Health | Los Angeles, CA2 yearsPediatrics and Emergency Care ExperienceJan 2016 – Dec 2017Sunshine General Hospital | Los Angeles, CA2 yearsSurgery Excellence CommendationJan 2014 – Dec 2015ABOUT
+system: Job Title : SQL Developer
+--- Field Separator ---
+Job Requirements : SQL Developer Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication), Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent. 3 years of experience as a SQL Developer or similar role Excellent understanding of T-SQL programming Excellent understanding of Oracle Good knowledge of HTML and JavaScript Experience with Transparent Data Encryption (TDE) Have experience with ETL Platform Have experience with SAS Familiarity with the practical application of NoSQL\NewSQL databases Preferably having knowledge of Data SLIK OJK Sense of ownership and pride in your performance and its impact on company’s success Critical thinker and problem-solving skills Team player Good time-management skills Great interpersonal and communication skills
+--- Field Separator ---
+Ranking : 0
+Name : Dr. Jordan Lee
+Total Masa Kerja Relevan : 0 year
+Skills : None
+Kelebihan : Highly skilled and dedicated Medical Doctor with 10 years of experience across various healthcare settings, demonstrated excellence in healthcare delivery and medical education.
+Kekurangan : No experience or skills relevant to SQL development, database management, and programming languages such as T-SQL, Oracle, HTML, and JavaScript.
+Skor : 10/100
+Alasan : The candidate lacks the required skills and experience in SQL development, and the majority of their experience is in the medical field, which is not relevant to the job requirements.
+Kesimpulan : Dr. Jordan Lee is not a suitable candidate for the SQL Developer position due to the lack of relevant experience and skills.
+{'completion_tokens': 505, 'prompt_tokens': 2212, 'total_tokens': 2717, 'completion_time': 1.6269105640000001, 'prompt_time': 0.12895506, 'queue_time': 0.004695455999999987, 'total_time': 1.7558656240000001}
+----------------

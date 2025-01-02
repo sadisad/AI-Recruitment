@@ -1,0 +1,62 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Name : Angga Prihantoro
+--- Field Separator ---
+high_turnover : Safe
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Safe
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Safe
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe
+--- Field Separator ---
+durasi_pendidikan : Safe
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 : Safe
+--- Field Separator ---
+inconsistent_career_path : Safe
+--- Field Separator ---
+non-progressive_career_path : Safe
+{'completion_tokens': 147, 'prompt_tokens': 1658, 'total_tokens': 1805, 'completion_time': 0.468085974, 'prompt_time': 0.133806163, 'queue_time': 0.004794415999999996, 'total_time': 0.601892137}
+----------------

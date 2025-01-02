@@ -1,0 +1,78 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama Anda adalah memberikan "Ranking" dari beberapa String CV. Berikan "Ranking", "Kesimpulan", "Kelebihan", "Kekurangan", serta "Alasan" untuk semua CV tersebut, sesuai dengan "Job Vacancy" yang diberikan sebelumnya. Berikan skala "Ranking" 1 untuk yang paling cocok, dan seterusnya (contoh: "Ranking" : 1/5). 1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 CV, berarti jadi 1/6, dan seterusnya. Pastikan bahwa setiap ranking hanya diberikan kepada satu CV, terutama untuk ranking 1. Jika dua CV memiliki kualifikasi yang sangat mirip, gunakan kriteria tambahan seperti masa kerja relevan atau pengalaman khusus untuk menentukan peringkat yang lebih tepat.
+
+Perhitungan "Skor":
+
+"Skor" harus mencerminkan posisi CV dalam "Ranking". CV dengan "Ranking 1" diberikan skor tertinggi, sedangkan skor menurun seiring dengan penurunan ranking. Gunakan rentang skor yang konsisten, seperti berikut:
+
+Ranking 1: Skor tertinggi (misal 90-100)
+Ranking 2: Skor menengah (misal 80-89)
+Ranking 3: Skor lebih rendah (misal 70-79), dan seterusnya.
+Setiap skor harus disesuaikan dengan posisi ranking dan relevansi CV terhadap job vacancy. Jika ada dua CV yang hampir setara, gunakan kriteria tambahan seperti total masa kerja relevan, pengalaman khusus, atau keahlian tambahan untuk membedakan ranking mereka.
+
+Perhatikan bahwa kandidat dengan "Total Masa Kerja Relevan" yang lebih lama dan keterampilan yang lebih relevan akan mendapatkan skor lebih tinggi. Semakin tinggi relevansi "Skills", pengalaman, dan latar belakang pendidikan dengan "Job Vacancy", semakin tinggi skor yang diberikan.
+
+Berikan minimal 5 "Kelebihan" dan 5 "Kekurangan" di form. Pilihlah ranking yang benar dengan mempertimbangkan kelebihan dan kekurangan masing-masing kandidat. Pastikan setiap ranking hanya diberikan kepada satu CV. Hasil akhir harus ditulis dalam bahasa Indonesia, tanpa ada teks lain dari Anda, cukup kembalikan form yang telah diisi.
+
+Contoh form berformat berikut:
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Vacancy : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 1
+Name : Dummy Name 1
+Total Masa Kerja Relevan : 3 tahun relevan yaitu ...
+Skills : 1. Python, 2. Tableau, 3. etc
+Kelebihan : 1. Bagus dalam teknis, 2. berpengalaman banyak, 3.
+Kekurangan : 1. tidak percaya diri, 2. etc, 3.
+Skor : 95/100
+Alasan : Dia layak rank 1 karena dia..
+Kesimpulan : Secara keseluruhan, dia sangat cocok untuk posisi ini..
+--- Field Separator ---
+Ranking : RANK 2
+Name : Dummy Name 2
+Total Masa Kerja Relevan : 2.5 tahun, yaitu..
+Skills : 1. SQL, 2. Akuntan, 3. etc
+Kelebihan : 1. Berpengalaman dalam akuntansi, 2. etc, 3.
+Kekurangan : 1. Kurang pengalaman dalam teknologi terbaru, 2. etc, 3.
+Skor : 85/100
+Alasan : Dia layak rank 2 karena dia..
+Kesimpulan : Secara keseluruhan, dia cukup cocok..
+--- Field Separator ---
+Ranking : RANK 3
+Name : Dummy Name 3
+Total Masa Kerja Relevan : 1.5 tahun, yaitu..
+Skills : 1. Excel, 2. Tableau, 3. etc
+Kelebihan : 1. Cepat belajar, 2. etc, 3.
+Kekurangan : 1. Kurang pengalaman, 2. etc, 3.
+Skor : 75/100
+Alasan : Dia layak rank 3 karena dia..
+Kesimpulan : Secara keseluruhan, dia kurang cocok..
+--- Field Separator ---
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: --- Field Separator ---
+Job Title : Software Developer
+--- Field Separator ---
+Job Vacancy : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : RANK 1
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 1.5 tahun relevan sebagai Machine Learning trainee dan Practicum Assistant
+Skills : 1. Python, 2. SQL, 3. Excel, 4. Tensorflow, 5. Tableau
+Kelebihan : 1. Berpengalaman dalam machine learning, 2. Mempunyai sertifikasi Tensorflow Developer, 3. Memiliki keterampilan programming C dan Python, 4. Berpengalaman dalam membuat aplikasi android, 5. Mempunyai keterampilan data analysis
+Kekurangan : 1. Fresh graduate, 2. Kurang pengalaman dalam software development, 3. Belum memiliki pengalamankerja di industri, 4. Kurang memiliki keterampilan dalam technical writing, 5. Belum memiliki keterampilan dalam membuat dokumentasi SDLC
+Skor : 90/100
+Alasan : Dia layak rank 1 karena memiliki keterampilan machine learning dan programming yang relevan, serta memiliki pengalaman dalam membuat aplikasi android.
+Kesimpulan : Secara keseluruhan, dia sangat cocok untuk posisi Software Developer karena memiliki keterampilan dan pengalaman yang relevan.
+{'completion_tokens': 442, 'prompt_tokens': 2352, 'total_tokens': 2794, 'completion_time': 1.499336891, 'prompt_time': 0.127774011, 'queue_time': 0.0067954290000000195, 'total_time': 1.627110902}
+----------------

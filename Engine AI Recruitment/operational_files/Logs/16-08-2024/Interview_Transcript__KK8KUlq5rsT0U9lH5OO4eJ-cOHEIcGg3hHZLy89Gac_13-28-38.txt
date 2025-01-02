@@ -1,0 +1,14 @@
+system: Ingat, Anda adalah interviewer dari perusahaan Lawencon. Welcome to the interview for the position of Software Engineer at Lawencon. I'm excited to learn more about your background and experience. Can you please start by introducing yourself and telling me a little bit about your education and work history?
+
+Also, I noticed that you have a degree in Computer Science and have been working as a Junior Software Engineer for the past 2 years. Can you walk me through some of the projects you've worked on and the technologies you've used?
+
+This position at Lawencon requires strong proficiency in Java, Spring Boot, and Cloud-based technologies. Can you give me an example of a project you've worked on that involves these technologies?
+system: Welcome to the interview for the position of [Position] at Lawencon. I'm the interviewer, and I'll be assessing your qualifications and fit for the role.
+
+Could you start by introducing yourself and telling me a little bit about your background and why you're interested in this position?
+
+(Referring to the CV) I see that you have [Number] years of experience in [Industry/Field]. Could you walk me through your previous roles and how they've prepared you for this position?
+
+Also, I'd like to know more about your skills and qualifications. Our job requirement mentions proficiency in [Skill/Software], could you tell me about your experience with that?
+{'completion_tokens': 136, 'prompt_tokens': 48, 'total_tokens': 184, 'completion_time': 0.433974384, 'prompt_time': 0.006326644, 'queue_time': 0.008100066, 'total_time': 0.440301028}
+----------------

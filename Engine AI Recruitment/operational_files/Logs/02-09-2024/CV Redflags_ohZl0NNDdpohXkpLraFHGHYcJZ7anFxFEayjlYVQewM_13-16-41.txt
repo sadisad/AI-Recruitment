@@ -1,0 +1,64 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Job Requirements:  Candidates must possess at least Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication) or equivalent Having experiences 3 years in Software Documentation (BRD, FSD, TSD, UAT Scenarios) Required skill(s): SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI Have experience in Financial Services Industry preferable Banking Project Have experience with Big Data and with other systems such as ODBC, MSSQL, MySQL Familiarity with Spark, machine learning, Query with use hive and Impala Have a risk management certification with the level of applicable regulations Have background knowledge about risk management or data management Good Communication and Personality Good English proficiency, especially in writing Experience as Business Analyst is required Experience in the finance industry or digital business is preferable
+------
+CV:
+Janna Gardner  4567 Main Street, Chicago, Illinois 98052 • (716) 555-0100 • janna@example.com  Human Resources Generalist with 6+ years of experience assisting with and fulfilling organization staffing needs and requirements. A proven track record of using my excellent personal, communication and organization skills to lead and improve HR departments, recruit excellent personnel, and improve department efficiencies. Team player with excellent communication skills, high quality of work, driven and highly self-motivated. Strong negotiating skills and business acumen and able to work independently. E x per i ence  20XX – PRESENT Human Resources Generalist | Lamna Healthcare Company | Chicago, Illinois Review, update, and revise company hiring practices, vacation, and other human resources policies to ensure compliance with OSHA and all local, state, and federal labor regulations. By creating and maintaining a positive and responsive work environment, we raised employee retention rates by over 10% to achieve a greater than 90% employee retention over a 2-year period. Developed recruitment programs to successfully increase minority recruitment and meet affirmative action requirements. Led development team to build and deploy a dedicated recruitment website which reduced year-over-year recruitment costs by 14%. JUNE 20XX – AUGUST 20XX Human Resources Intern | Wholeness Healthcare | Boomtown, Ohio Assisted in recruitment outreach to prospective employees. Organized and conducted several seminars for hospital employees to educate and update them regarding available employment benefit options. Arranged hospital-wide guest speakers symposia to educate management about new employment laws and workplace confidence and morale building techniques. Administrative tasks. Sk i l l s Type 96 words per minute • Proficient with project management software • Team player • Excellent time management skills • Conflict management • Public speaking • Data analytics  E duca ti o n  MAY 20XX Bachelor of Arts Human Resources Management | Jasper University | Ft. Lauderdale, FL 3.8 GPA • Member of university’s Honor Society Acti v i ti es  Literature • Environmental conservation • Art • Yoga • Skiing • Travel 
+system: Here is the evaluation of the CV based on the provided criteria:
+
+Name : Janna Gardner
+--- Field Separator ---
+high_turnover : Safe
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Red Flag <-> Background is in Human Resources, but applying for a Software Development position.
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Safe
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe
+--- Field Separator ---
+durasi_pendidikan : Safe
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 : Safe
+--- Field Separator ---
+inconsistent_career_path : Red Flag <-> Moving from HR to a Software Development position, a significant change in career path.
+--- Field Separator ---
+non-progressive_career_path : Safe
+{'completion_tokens': 189, 'prompt_tokens': 1420, 'total_tokens': 1609, 'completion_time': 0.586120016, 'prompt_time': 0.085469971, 'queue_time': 0.006140459000000001, 'total_time': 0.671589987}
+----------------

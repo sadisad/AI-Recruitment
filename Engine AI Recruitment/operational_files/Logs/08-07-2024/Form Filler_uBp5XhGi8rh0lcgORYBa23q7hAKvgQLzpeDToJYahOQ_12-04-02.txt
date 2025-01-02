@@ -1,0 +1,272 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+Berikan juga separator '--- Field Separator ---' sebagai pemisah setiap field di formnya.
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+dan jika di cv tidak ada data seperti di bawah ini maka kosongkan saja.
+
+isilah form dibawah ini sesuai dengan data cv yang kamu extract
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "photo": "",
+  "status": "",
+  "tag": "",
+  "gender": "",
+  "documentType": "",
+  "idNumber": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+------
+CV:
+CHRONOLOGICAL (INTERNSHIP)  Kelly Dean II   4321 South 55 Street Bellevue, Nebraska 68005 (402) 291-5432 imasample2@xxx.com   OBJECTIVE: Internship or Part-time Position in Marketing, Public Relations or related field utilizing strong academic background and excellent communication skills   EDUCATION: BS  in Business Administration with Marketing Emphasis  Bellevue University, Bellevue, NE  Expected Graduation Date:  June, 20xx  GPA to date:  3.56/4.00  Relevant Coursework  Principles of Marketing Business Communication  Internet Marketing Consumer Behavior  Public Relations Business Policy & Stretegy  WORK HISTORY: Aacademic Tutor (20xx to present)  Bellevue University, Bellevue, NE  Assist college students in overcoming deficiencies and successfully mastering academic coursework.  Senior Accounts Receivable Clerk (20xx-20xx)  Lincoln Financial Group, Omaha, NE  Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter.  Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members.  Managed and recorded daily accounts receivable deposits of up to $450,000.  Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks.  COMMUNITY   SERVICE: Advertising Coordinator, The Vue (20xx to present)  Bellevue University Student Newspaper  Volunteer, Publicity Committee (20xx, 20xx)  Brushup Nebraska Paint-A-Thon  ADDED VALUE: Language Skills: Bilingual (English/Spanish)  Computer Skills: MS Office (Word, Excel, PowerPoint), PhotoShop  REFERENCES: Available Upon Request 
+system: ---
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "Kelly Dean II",
+  "firstName": "Kelly",
+  "vendor": "",
+  "lastName": "Dean II",
+  "nickname": "",
+  "position": "",
+  "photo": "",
+  "status": "",
+  "tag": "",
+  "gender": "",
+  "documentType": "",
+  "idNumber": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "Nebraska",
+  "city": "Bellevue",
+  "subDistrict": "",
+  "village": "",
+  "address": "4321 South 55 Street",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "402 291-5432",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "imasample2@xxx.com",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [],
+  "workExperience": [
+    {
+      "company": "Bellevue University",
+      "address": "",
+      "totalEmployee": "",
+      "position": "Aacademic Tutor",
+      "exitReason": "",
+      "startDate": "20xx",
+      "current": "present",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Assist college students in overcoming deficiencies and successfully mastering academic coursework."
+    },
+    {
+      "company": "Lincoln Financial Group",
+      "address": "Omaha, NE",
+      "totalEmployee": "",
+      "position": "Senior Accounts Receivable Clerk",
+      "exitReason": "",
+      "startDate": "20xx",
+      "current": "",
+      "endDate": "20xx",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": "Researched story ideas, wrote articles and participated in the publication of a weekly in-house newsletter. Assisted customers and staff members in resolving problems and balancing accounts; trained new staff members. Managed and recorded daily accounts receivable deposits of up to $450,000. Conducted extensive research to recover lost checks and organized system to stop payment and replace all checks."
+    }
+  ],
+  "reference": [],
+  "formalEducation": [
+    {
+      "educationLevel": "BS",
+      "institution": "Bellevue University",
+      "city": "Bellevue, NE",
+      "major": "Business Administration with Marketing Emphasis",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "20xx",
+      "graduateDate": "June, 20xx",
+      "gpa": "3.56/4.00",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+---
+{'completion_tokens': 783, 'prompt_tokens': 1363, 'total_tokens': 2146, 'completion_time': 2.237142857, 'prompt_time': 0.237451756, 'queue_time': None, 'total_time': 2.474594613}
+----------------

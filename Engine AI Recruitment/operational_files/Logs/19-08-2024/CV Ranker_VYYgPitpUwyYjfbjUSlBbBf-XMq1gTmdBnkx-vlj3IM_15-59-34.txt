@@ -1,0 +1,116 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+
+Contoh Job Requirements:
+- "Bachelor’s degree in computer engineering or computer science or any related studies
+- Proven work experience as a system analyst minimum 3 years
+- At least 1 year of working experiences as programmer
+- Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation
+- Strong knowledge of business information system
+- Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend)
+- Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing,
+- Familiarity with Enterprise application platform using .NET/Java/PHP & BI
+- Preferably have experience in Banking, Insurance, Finance
+- Having experience as Integration Analyst will likely be processed faster:
+- Analysis of surrounding needs (Requirements stage)
+- Create integration & technical flow specifications (Development Stage)
+- Create data preparation and debugging (Testing Stage)
+- Become a coordinator during the migration process, starting from documents to production testing (Migration Stage)
+- Ability to explain technical details
+- Excellent analytical skills
+- Good English proficiency, especially in writing
+- Fast learner, good problem solving, teamwork and analytical skills"
+
+Berikan ranking, kesimpulan, kelebihan, kekurangan untuk semua CV tersebut, untuk Job Requirements. yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5), 1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form berdasarkan Job Requirements. Pilih lah ranking yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan contoh form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Contoh untuk CV Ranking 1.
+Ranking : Ranking 1
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar 5 kelebihan kandidat]
+Kekurangan : [Daftar 5 kekurangan kandidat]
+Skor : [Skor tertinggi untuk RANK 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di RANK 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Contoh untuk CV Ranking 2
+Ranking : Ranking 2
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar kelebihan]
+Kekurangan : [Daftar kekurangan]
+Skor : [Skor yang lebih rendah dari RANK 1]
+Alasan : [Alasan mengapa kandidat berada di RANK 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+5+ years of experience developing and delivering Flutter based apps Experience with mobile app deployment and optimization in iOS and/or Android Good understanding of state management, Flutter flavors and app architecture Familiarity with automated testing tools such Appium & Flutter Integration Test Experience with version control systems, such as Git Experience in CI/CD pipeline by using Jenkins, JIRA, Sonar Qube etc. An in-depth knowledge of the entire mobile development life cycle Understanding of cross-platform application architecture best practices Knowledge of user interface guidelines Knowledge on REST API's and familiarity with microservice architecture Excellent communication and delegation skills Exceptional problem-solving and analytical abilities
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Job Title : System Analyst
+--- Field Separator ---
+Job Requirements : 
+- Bachelor’s degree in computer engineering or computer science or any related studies
+- Proven work experience as a system analyst minimum 3 years
+- At least 1 year of working experiences as programmer
+- Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation
+- Strong knowledge of business information system
+- Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend)
+- Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing,
+- Familiarity with Enterprise application platform using .NET/Java/PHP & BI
+- Preferably have experience in Banking, Insurance, Finance
+- Having experience as Integration Analyst will likely be processed faster:
+- Analysis of surrounding needs (Requirements stage)
+- Create integration & technical flow specifications (Development Stage)
+- Create data preparation and debugging (Testing Stage)
+- Become a coordinator during the migration process, starting from documents to production testing (Migration Stage)
+- Ability to explain technical details
+- Excellent analytical skills
+- Good English proficiency, especially in writing
+- Fast learner, good problem solving, teamwork and analytical skills
+--- Field Separator ---
+Ranking : Ranking 6
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 0 tahun
+Skills : SQL, Python, Excel, Tensorflow, Tableu, Looker
+Kelebihan : 
+1. Memiliki pengalaman sebagai asisten praktikum di laboratorium Dasar Komputer
+2. Memiliki kemampuan dalam mengembangkan aplikasi android menggunakan deep learning
+3. Memiliki kemampuan dalam mengumpulkan data menggunakan web scraping
+4. Memiliki sertifikasi Tensorflow Developer Certification
+5. Memiliki kemampuan dalam berkomunikasi dan bekerja dalam tim
+Kekurangan : 
+1. Belum memiliki pengalaman sebagai system analyst ataupun programmer
+2. Belum memiliki pengalaman dalam mengembangkan software development
+3. Belum memiliki pengalaman dalam membuat dokumentasi seperti FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram
+4. Belum memiliki pengalaman dalam menggunakan SDLC, Solution Architecture, Software Development
+5. Belum memiliki pengalaman dalam mengembangkan aplikasi enterprise menggunakan .NET/Java/PHP & BI
+Skor : 40/100
+Alasan : Kandidat belum memiliki pengalaman yang relevan dengan job requirements.
+Kesimpulan : Kandidat memiliki kemampuan dalam mengembangkan aplikasi android menggunakan deep learning, namun belum memiliki pengalaman yang relevan dengan job requirements sebagai system analyst.
+{'completion_tokens': 617, 'prompt_tokens': 2370, 'total_tokens': 2987, 'completion_time': 2.036584742, 'prompt_time': 0.21186408, 'queue_time': 0.005309544999999999, 'total_time': 2.248448822}
+----------------

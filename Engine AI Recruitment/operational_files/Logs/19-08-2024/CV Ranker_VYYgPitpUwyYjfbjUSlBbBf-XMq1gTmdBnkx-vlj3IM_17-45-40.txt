@@ -1,0 +1,70 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Berikan lah Skor tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan Skor nya.
+Perhatikan juga Skills, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada Skills yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi Skills tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Bachelor’s degree in computer engineering or computer science or any related studies Proven work experience as a system analyst minimum 3 years At least 1 year of working experiences as programmer Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation Strong knowledge of business information system Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend) Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing, Familiarity with Enterprise application platform using .NET/Java/PHP & BI Preferably have experience in Banking, Insurance, Finance Having experience as Integration Analyst will likely be processed faster: Analysis of surrounding needs (Requirements stage) Create integration & technical flow specifications (Development Stage) Create data preparation and debugging (Testing Stage) Become a coordinator during the migration process, starting from documents to production testing (Migration Stage) Ability to explain technical details Excellent analytical skills Good English proficiency, especially in writing Fast learner, good problem solving, teamwork and analytical skills
+------
+CV:
+ProfileI am a passionate and hard working person. I love developing mobile applications, I am always eager to see results of my efforts in the form of working products. I am focused on quality.I enjoy exploring possibilities of new technologies so that I can see their integration into everyday work and life.Professional experience (10+ years, 2011 - 2022)Tech Lead / Senior Android Developer - Tapptic January 2016 - Present (6 years)• As a tech lead, I am responsible for development, architectural designand quality of our applications. I lead development processes from atechnical perspective and coordinate efforts of developers.• I have introduced multi-platform solutions into our tech stack (KotlinNative and Flutter)• As a senior developer, I'm responsible for development of mobileapplications for our Clients in Sport, Media and Health industries. Overmy 6+ years in the Company, I have developed and led developmentof several applications reaching millions of users.• Tech stack: Android, Kotlin, Java, Kotlin Native, FlutterSenior Android Developer / Contractor - Sii  January 2016 - December 2017• Senior Android Developer - Sii contractor• Outsourced to Tapptic, later transferred to TappticAndroid developer / Freelancer - SuperVisor October 2015 - March 2016 (Part time contract)• I developed an in-house, B2B solution, using beacons, for presencecontrol inside vehicles.• Tech stack: AndroidAndroid Developer / Contractor  - Connectis (Outsourced to Blue Services) July 2015 - December 2015 (Contract)• I developed an Android banking application for one of Polish Banks. Ithandled most of day to day banking operations: transfers, basicaccount management, new product offers, simple messaging withcustomer support, etc• Tech stack: AndroidAndroid Developer - BetterSolutions December 2014 - June 2015 (Contract)• I was working on a Map & Navigation system for our B2B Customers.• I enabled our Android application to connect to the truck's onboardcomputer and exchange information.• Tech stack: AndroidPage  of 12• Kotlin & Java• Android SDK• Kotlin Native• Flutter• Swift• Java EE (Spring boot,Hibernate, PostgreSQL)• GitEducation:Bachelor's degree in Computer Science, Gdańsk University of Technology SENIOR ANDROID DEVELOPER Professional experience - continuationJava Developer - SuperVisor October 2014 - November 2014 (Contract)• Deployment and integration of Open Street Map (custom map tileserver) for company's vehicle tracking solution• Tech stack: Java EE, Linux, OSMAndroid Developer - Samsung Electronics Poland July 2014 - September 2014• I was working on development of SDK related to S-Pen• Tech stack: Android, Java, Maven, S-Pen SDK (Samsung's library)Android Developer - BetterSolutions November 2012 - June 2014• Development of mobile application with offline navigation capabilitiesfor B2B Client• I was responsible for custom integration of Open Street Map,extending and adapting the OsmAnd open source project for Client'srequirements.• Tech stack: Java, Android, Web services, Linux & Bash, OSM,OsmAnd open source project (Android)• Tech stack: Android, Java (Backend)Junior PHP Developer - KurJerzy.pl March 2011 - December 2011• https://www.kurjerzy.pl• I developed new features for existing products, maintained backendand frontend applications• Tech stack: PHP, JavaScript, JQuery, MySQL, HTML, Web FrontendPage  of 22GDPR note: Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+system: Job Title : System Analyst
+--- Field Separator ---
+Job Requirements : Bachelor’s degree in computer engineering or computer science or any related studies, Proven work experience as a system analyst minimum 3 years, At least 1 year of working experiences as programmer, Experience with software development, creating FSD, TSD, Database Relationship Diagram, Sequence Diagram, Application Architecture Diagram and other required documentation, Strong knowledge of business information system, Required Skill(s): SDLC, Solution Architecture, Software Development in one of these programming language (Java, PHP, Full stack, ASP.net, .NET, Visual Basic, C#, Android, Frontend), Familiar with MVC, OOP, UML, FSD, TSD, UAT, Software Testing, Familiarity with Enterprise application platform using .NET/Java/PHP & BI, Preferably have experience in Banking, Insurance, Finance, Having experience as Integration Analyst will likely be processed faster
+--- Field Separator ---
+Ranking : 1
+Name : Senior Android Developer
+Total Masa Kerja Relevan : 10+ years
+Skills : Android, Kotlin, Java, Kotlin Native, Flutter, Swift, Java EE, Git
+Kelebihan : Experienced in mobile application development, Has experience as Tech Lead, Familiar with various programming languages, Has experience in banking industry
+Kekurangan : No direct experience as System Analyst, No experience with Enterprise application platform using .NET/Java/PHP & BI
+Skor : 80/100
+Alasan : The candidate has extensive experience in mobile application development, but lacks direct experience as a System Analyst. However, the candidate's skills in various programming languages and experience in the banking industry make them a strong contender.
+Kesimpulan : The candidate has the potential to be a System Analyst, but may require additional training or experience to fully meet the job requirements.
+
+---
+
+Note: The candidate's skills and experience are mostly focused on mobile application development, but they lack direct experience as a System Analyst. However, their skills in various programming languages and experience in the banking industry make them a strong contender.
+{'completion_tokens': 427, 'prompt_tokens': 1918, 'total_tokens': 2345, 'completion_time': 1.450898215, 'prompt_time': 0.148356368, 'queue_time': 0.03958257600000001, 'total_time': 1.599254583}
+----------------

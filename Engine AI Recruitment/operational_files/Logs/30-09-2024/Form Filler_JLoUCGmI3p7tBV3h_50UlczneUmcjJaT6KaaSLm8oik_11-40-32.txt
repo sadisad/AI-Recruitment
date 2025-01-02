@@ -1,0 +1,606 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documentType" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / passport, jadi contohnya seperti ini "documentType" : "ktp" jika di cv, orang tersebut mencantumkan ktp atau "documentType" : "passport" passport, jadi isinya cont bahwa dia memliki dokumen tersebut.
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+jika di cv tidak terdapat apa saja yang di butuhkan untuk emergencyContacts isi dengan string kosong saja " "
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      name : "",
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      company : "",
+      email : "" ,
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+system: --- Field Separator ---
+fullName: Ahmad Aminullah Alfiyanto, S.Kom.
+--- Field Separator ---
+salutation:
+--- Field Separator ---
+homeAddress: {
+  "houseStatus": "",
+  "note": "",
+  "country": "Indonesia",
+  "state": "DKI Jakarta",
+  "city": "Kota Administrasi Jakarta Selatan",
+  "subdistrict": "Tebet",
+  "village": "Tebet Utara",
+  "address": "Pakuwon Tower",
+  "postalCode": "1135",
+  "since": "May 1996",
+}
+--- Field Separator ---
+domicileAddress: {
+  "houseStatus": "",
+  "note": "",
+  "country": "Indonesia",
+  "state": "DKI Jakarta",
+  "city": "Kota Administrasi Jakarta Selatan",
+  "subdistrict": "Tebet",
+  "village": "Tebet Utara",
+  "address": "Pakuwon Tower",
+  "postalCode": "1135",
+  "since": "May 1996",
+}
+--- Field Separator ---
+frontTitle: S.Kom.
+--- Field Separator ---
+endTitle:
+--- Field Separator ---
+firstName: Ahmad Aminullah
+--- Field Separator ---
+lastName: Alfiyanto
+--- Field Separator ---
+vendor:
+--- Field Separator ---
+nickname:
+--- Field Separator ---
+currentOccupation: {
+  "isWorking": "",
+  "occupationName": "IT Support",
+  "position": "",
+  "lastWorking": "",
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: Male
+--- Field Separator ---
+birthplace: Surakarta
+--- Field Separator ---
+birthdate: April 2001
+--- Field Separator ---
+religion: Moslem
+--- Field Separator ---
+nationality: Indonesia
+--- Field Separator ---
+ethnicity: Asian
+--- Field Separator ---
+maritalStatus: Single
+--- Field Separator ---
+marital: {
+  "mariedDate": "",
+  "separationDate": "",
+}
+--- Field Separator ---
+medicalStatus: K/2
+--- Field Separator ---
+bloodType: AB
+--- Field Separator ---
+height: 164 cm
+--- Field Separator ---
+weight: 83 kg
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: Indonesia
+--- Field Separator ---
+state: DKI Jakarta
+--- Field Separator ---
+city: Kota Administrasi Jakarta Selatan
+--- Field Separator ---
+subDistrict: Tebet
+--- Field Separator ---
+village: Tebet Utara
+--- Field Separator ---
+postalCode: 1135
+--- Field Separator ---
+since: May 1996
+--- Field Separator ---
+phones: [
+  {
+    "phoneCode": "+1",
+    "phoneNumber": "1234567890",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator ---
+emails: [
+  {
+    "email": "dany.ferdy@gmail.com",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: [
+  {
+    "socialMediaPlatform": "LinkedIn",
+    "url": "linked.in/aaminullahh"
+  },
+  {
+    "socialMediaPlatform": "Instagram",
+    "url": "Instagram.com/aaminvllah"
+  }
+]
+--- Field Separator ---
+workExperience: [
+  {
+    "company": "Google",
+    "address": "California",
+    "totalEmployee": "",
+    "position": "IT Support",
+    "exitReason": "",
+    "startDate": "Jul 2020",
+    "current": "",
+    "endDate": "May 2022",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Developed a system for remote access and secure remote connections, allowing for remote working capabilities. Provided technical training and onboarding to new staff, resulting in a X% reduction in training time Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents."
+  },
+  {
+    "company": "Amazon",
+    "address": "Washington",
+    "totalEmployee": "",
+    "position": "Network Support",
+    "exitReason": "",
+    "startDate": "Aug 2022",
+    "current": "",
+    "endDate": "Apr 2023",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance Documented customer support processes and procedures, resulting in a X% reduction in customer support errors Provided training and product support to customers, resulting in a X% reduction in customer support inquiries"
+  },
+  {
+    "company": "Alibaba",
+    "address": "Hangzhou",
+    "totalEmployee": "",
+    "position": "Technical Support Engineer",
+    "exitReason": "",
+    "startDate": "Jun 2023",
+    "current": "",
+    "endDate": "Jun 2024",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate Troubleshot technical issues and provided on-site technical support Provided technical support for end-users and resolved escalated technical issues"
+  }
+]
+--- Field Separator ---
+reference: [
+  {
+    "name": "Alpi Syahdan",
+    "companyName": "Lawencon",
+    "position": "Software Developer",
+    "relation": "Team Lead",
+    "phone": "+1 75753294"
+  }
+]
+--- Field Separator ---
+formalEducation: [
+  {
+    "country": "USA",
+    "state": "",
+    "educationLevel": "Bachelor",
+    "institution": "Stanford University",
+    "city": "Stanford, California",
+    "major": "Computer Science",
+    "frontTitle": "",
+    "endTitle": "S.Kom.",
+    "current": "",
+    "startYear": "2014",
+    "endYear": "2018",
+    "graduateDate": "May 2018",
+    "gpa": "3.89",
+    "graduate": "",
+    "description": "Relevant Courses: Data Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp."
+  },
+  {
+    "country": "USA",
+    "state": "",
+    "educationLevel": "Master",
+    "institution": "MIT Cambridge",
+    "city": "",
+    "major": "Computer Science",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "2018",
+    "endYear": "2020",
+    "graduateDate": "August 2020",
+    "gpa": "3.76",
+    "graduate": "",
+    "description": "Dissertation: \"Quantum Computing and Its Applications in Cryptography\". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics"
+  }
+]
+--- Field Separator ---
+informalEducation: [
+  {
+    "country": "",
+    "state": "",
+    "institution": "Staditek (IT)",
+    "subject": "",
+    "city": "Bintaro, Tangerang Selatan",
+    "startDate": "Nov 2019",
+    "endDate": "Feb 2020",
+    "current": "",
+    "graduate": "",
+    "graduateDate": "Feb 2020",
+    "score": "100",
+    "description": "Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling. Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites. Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design."
+  }
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: [
+  "Robotics: Building and programming robots using kits like LEGO Mindstorms or Arduino.",
+  "Coding and Programming: Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications."
+]
+--- Field Separator ---
+languages: [
+  {
+    "languageName": "English",
+    "ratingListening": "8.9",
+    "gradeListening": "A-",
+    "ratingWriting": "7.5",
+    "gradeWriting": "A",
+    "ratingReading": "8.6",
+    "gradeReading": "A",
+    "ratingSpeaking": "9.4",
+    "gradeSpeaking": "A+"
+  }
+]
+--- Field Separator ---
+emergencyContacts: [
+  {
+    "name": "John Smith",
+    "relation": "Friend",
+    "phone": "+1 75753294",
+    "address": "Elm Street Springfield (1135)",
+    "company": "Alibaba",
+    "email": "john.smith@gmail.com"
+  }
+]
+--- Field Separator ---
+relationships: [
+  {
+    "relationshipName": "",
+    "idPatient": "",
+    "name": "Leonardo",
+    "isPassedAway": "",
+    "birthPlace": "",
+    "birthDate": "12 Aug 1996",
+    "address": "Elm Street Springfield (1135)",
+    "contact": "+1 75753294",
+    "ocupationId": "",
+    "nik": "567152762",
+    "position": "Web Developer",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+  }
+]
+--- Field Separator ---
+vehicles: [
+  {
+    "vehicleName": "Car",
+    "merk": "Honda Mobilio",
+    "year": "2018",
+    "lovOwnedVhclName": "",
+    "note": "-"
+  }
+]
+--- Field Separator ---
+isStudent: 
+--- Field Separator ---
+educationLevelName: Master
+--- Field Separator ---
+institutionName: MIT Cambridge
+--- Field Separator ---
+majorName: Computer Science
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["Computer Troubleshooting (expert)", "Computer Networking (experienced)", "Microsoft Office (experienced)"]
+--- Field Separator ---
+documentType: Passport
+--- Field Separator ---
+suitableJobPosition: IT Support
+--- Field Separator ---
+socialActivities: []
+{'completion_tokens': 2240, 'prompt_tokens': 4155, 'total_tokens': 6395, 'completion_time': 8.969323437, 'prompt_time': 1.017965951, 'queue_time': 0.005634685999999833, 'total_time': 9.987289388}
+----------------

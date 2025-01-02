@@ -1,0 +1,19 @@
+user: siapakah jokowidodo?
+system: Joko Widodo, also known as Jokowi, is an Indonesian politician who has been the President of Indonesia since 2014. He is the seventh president of Indonesia and the first one to come from a humble background, not being from the elite or aristocratic class.
+
+Jokowi was born on June 21, 1961, in Surakarta, Central Java, Indonesia. He studied forestry at the University of Gadjah Mada and later earned a degree in engineering from the Jakarta State Polytechnic. Before entering politics, he worked as a furniture exporter and later became the mayor of Surakarta (2005-2012) and then the governor of Jakarta (2012-2014).
+
+In 2014, Jokowi ran for president and won the election, defeating Prabowo Subianto, a former general and son-in-law of Indonesia's second president, Suharto. He was re-elected in 2019, again defeating Prabowo.
+
+During his presidency, Jokowi has focused on infrastructure development, economic growth, and social welfare programs. Some of his notable achievements include:
+
+1. Infrastructure development: Jokowi has launched several massive infrastructure projects, such as the construction of new railways, toll roads, and airports, as well as the development of seaports and irrigation systems.
+2. Economic growth: Indonesia has experienced steady economic growth during Jokowi's presidency, with GDP growth rates averaging around 5% per year.
+3. Social welfare: Jokowi has implemented several social welfare programs, including a national health insurance program, a cash transfer program for low-income families, and a program to provide free education for all students.
+4. Corruption eradication: Jokowi has taken steps to combat corruption, including the establishment of a corruption eradication commission and the imprisonment of several high-ranking officials accused of corruption.
+
+Despite his achievements, Jokowi's presidency has not been without controversy. Some critics have accused him of being too authoritarian, and there have been concerns about human rights abuses, particularly in Papua and other regions with separatist movements. Additionally, Jokowi has faced criticism for his handling of environmental issues, including deforestation and haze pollution.
+
+Overall, Jokowi is widely regarded as a popular and influential figure in Indonesian politics, known for his humble background, down-to-earth demeanor, and commitment to improving the lives of ordinary Indonesians.
+{'completion_tokens': 490, 'prompt_tokens': 19, 'total_tokens': 509, 'completion_time': 1.535153491, 'prompt_time': 0.000667014, 'queue_time': 0.013631655999999999, 'total_time': 1.535820505}
+----------------

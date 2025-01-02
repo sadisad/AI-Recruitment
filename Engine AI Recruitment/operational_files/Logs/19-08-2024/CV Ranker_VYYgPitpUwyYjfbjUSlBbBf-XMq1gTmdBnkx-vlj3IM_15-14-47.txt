@@ -1,0 +1,80 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan peringkat dari beberapa String CV berdasarkan kecocokan dengan job requirements yang diberikan.
+
+Instruksi:
+1. Peringkat:
+- Berikan peringkat dari 1 hingga yang terakhir, di mana 1/5 berarti paling cocok dan 5/5 berarti paling tidak cocok. Jika ada 6 CV, peringkatnya akan menjadi 1/6, 2/6, dan seterusnya.
+- Pastikan peringkat mencerminkan jumlah total kandidat. Misalnya, jika ada 3 kandidat, maka peringkat harus ditulis sebagai 1/3, 2/3, dan 3/3.
+- Setelah menilai, urutkan CV berdasarkan peringkat dari yang paling cocok (peringkat 1) hingga yang paling tidak cocok.
+2. Pertimbangan Penilaian:
+- Masa Kerja Relevan: Berikan nilai tambahan kepada kandidat dengan masa kerja yang lebih lama dan relevan dengan job title yang diberikan.
+- Keterampilan dan Pengalaman: Pertimbangkan keterampilan, proyek, serta latar belakang pendidikan yang relevan dengan persyaratan pekerjaan.
+- Relevansi Skill: Berikan nilai tambahan jika kandidat memiliki keterampilan yang relevan dengan job requirements. Misalnya, Flask atau Laravel relevan dengan REST API dan API Development, sementara SQL relevan dengan RDBMS dan Query. Pertimbangkan juga hubungan relevansi antara keterampilan yang dimiliki kandidat dengan kebutuhan pekerjaan.
+3. Kelebihan dan Kekurangan:
+- Pastikan setiap CV memiliki minimal 5 kelebihan dan 5 kekurangan yang diisi. Kelebihan dan kekurangan harus relevan dengan job requirements/kriteria pekerjaan.
+- Pilih peringkat yang tepat berdasarkan analisis kelebihan dan kekurangan tersebut.
+4. Format Pengisian:
+- Jawaban harus diberikan dalam bahasa Indonesia tanpa ada tambahan teks lain dari Anda. Cukup isi form penilaian dengan format yang ditentukan.
+
+Contoh Kriteria Pekerjaan/Job Requirements:
+- Candidates must possess at least Bachelor's Degree in Engineering (Computer/Telecommunication), Computer Science/Information Technology or equivalent.
+- At least 1 year of working experience in the related field is required for this position.
+- Experience in the field of business intelligence, application development, database development, and ETL and/or data analysis domains with extensive SQL knowledge.
+- Required Skill(s): .NET, ASP.NET, VB, C#, SQL Server, JQUERY, MVC, HTML, CSS, Javascript, Bootstrap, Talend, Microsoft SSIS, Entity Frame Work Core.
+- Experienced in SQL Server/PostgreSQL and Stored Procedure (SP).
+- Having knowledge of Object-Oriented Programming.
+- Preferably have experience in NHibernate/C# and ASP.NET.
+- Good in communication & interpersonal skills.
+
+Format Penilaian:
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat, misalnya 1/3, 2/3, atau 3/3]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Minimal 5 kelebihan yang relevan dengan job requirements]
+Kekurangan : [Minimal 5 kekurangan yang relevan dengan job requirements]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent Have in total at least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry. Familiar with the following banking products: CASA, Loan, Deposit Account, Credit Card, Bancassurance Preferable have at least 2 years’ experience in operates ETL Tools such as Talend or Microsoft SSIS or IBM DataStage Have a good understanding on Programming Concept, especially Python Understand ETL Concept, Automation Scheduling, & Data Pipelines internal At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset Fluent in using Jira. Have experiences in agile project delivery Understand data mapping / data journey, and carry out impact analysis on changes related to data mapping / data journey Have a good understanding of data modelling and big data stacks Excellent communication and interpersonal skills (A good problem-solving attitude) Have a good command in English and Bahasa (actively)
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+system: Job Title : Data Analyst/Engineer
+--- Field Separator ---
+Job Requirements : Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent Have in total at least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry. Familiar with the following banking products: CASA, Loan, Deposit Account, Credit Card, Bancassurance Preferable have at least 2 years’ experience in operates ETL Tools such as Talend or Microsoft SSIS or IBM DataStage Have a good understanding on Programming Concept, especially Python Understand ETL Concept, Automation Scheduling, & Data Pipelines internal At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset Fluent in using Jira. Have experiences in agile project delivery Understand data mapping / data journey, and carry out impact analysis on changes related to data mapping / data journey Have a good understanding of data modelling and big data stacks Excellent communication and interpersonal skills (A good problem-solving attitude) Have a good command in English and Bahasa (actively)
+--- Field Separator ---
+Ranking : 1/1
+Name : Ahmad Aminullah Alfiyanto
+Total Masa Kerja Relevan : 3 tahun (2020-2022: IT Support, 2022-2023: Network Support, 2023-2024: Technical Support Engineer)
+Skills : Computer Troubleshooting (expert), Computer Networking (experienced), Microsoft Office (experienced), Python, JavaScript, HTML, CSS
+Kelebihan :
+1. memiliki pengalaman dalam menggunakan ETL Tools (tidak secara langsung, tapi dapat diimplikasikan dari pengalaman sebagai IT Support dan Network Support)
+2. memiliki kemampuan dalam menggunakan SQL dan NoSQL databases dari latar belakang pendidikan dan program magister
+3. memiliki kemampuan dalam menggunakan programming languages seperti Python, JavaScript, dan Scratch
+4. memiliki kemampuan dalam menggunakan Microsoft Office dan memiliki pengalaman dalam menggunakan Jira
+5. memiliki kemampuan dalam berkomunikasi dan memiliki kemampuan interpersonal yang baik
+Kekurangan :
+1. kurang memiliki pengalaman dalam menggunakan Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset
+2. kurang memiliki pengalaman dalam menggunakan ETL Tools seperti Talend atau Microsoft SSIS atau IBM DataStage
+3. kurang memiliki pengalaman dalam menggunakan programming languages seperti Python, especially dalam konteks ETL Concept dan Automation Scheduling
+4. kurang memiliki pengalaman dalam menggunakan data modelling dan big data stacks
+5. kurang memiliki pengalaman dalam menggunakan agile project delivery dan memiliki kemampuan dalam menggunakan Jira
+Skor : 70
+Alasan : Kandidat memiliki pengalaman dan kemampuan yang relevan dengan job requirements, tapi kurang memiliki pengalaman dalam menggunakan teknologi big data dan ETL Tools yang spesifik.
+Kesimpulan : Kandidat ini memiliki potensi besar untuk dijadikan Data Analyst/Engineer, tapi perlu mendapatkan pelatihan dan pengembangan dalam menggunakan teknologi big data dan ETL Tools yang spesifik.
+{'completion_tokens': 695, 'prompt_tokens': 2294, 'total_tokens': 2989, 'completion_time': 2.246250913, 'prompt_time': 0.195959142, 'queue_time': 0.001483863000000002, 'total_time': 2.442210055}
+----------------

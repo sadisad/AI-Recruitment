@@ -1,0 +1,5 @@
+system: There are no questions and answers related to HRIS in the provided transcript. The conversation appears to be about employee motivation and work habits, but it does not involve HRIS (Human Resource Information System) topics such as troubleshooting, usage, or guides.
+
+If you have a different transcript, I'd be happy to help you with creating a rekap of HRIS-related questions and answers.
+{'completion_tokens': 78, 'prompt_tokens': 778, 'total_tokens': 856, 'completion_time': 0.234858327, 'prompt_time': 0.082339759, 'queue_time': None, 'total_time': 0.317198086}
+----------------

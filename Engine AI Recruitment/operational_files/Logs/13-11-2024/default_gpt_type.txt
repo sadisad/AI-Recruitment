@@ -1,0 +1,86 @@
+assistant: Here is a reformatted and polished version of your resume:
+
+**Irsyad Z.**
+
+**Contact Information:**
+
+* Email: [zulfikarirsyad@gmail.com](mailto:zulfikarirsyad@gmail.com)
+* LinkedIn: linkedin.com/in/irsyadzulfikar
+
+**Summary:**
+Experienced AI Engineer with 2+ years of expertise in Computer Vision, Machine Learning, and Python. Proven track record of delivering 90% of projects and improving model performance by 80% on average in 1 year. Strong team leadership skills, with 95% positive feedback from cross-functional teams.
+
+**Work Experience:**
+
+**AI Engineer, Lawencon Internasional (South Jakarta, Jakarta, Indonesia)**
+April 2024 - Present
+
+* Current project details not available
+
+**AI Engineer, Upwork (Remote)**
+February 2024 - Present
+
+* Specializing in Computer Vision and Machine Learning projects
+* Utilizing Python for project development
+
+**Junior AI Engineer (Computer Vision), Indonesia AI (PT. Teknologi Artifisial Indonesia)**
+February 2023 - February 2024
+
+* Completed Computer Vision Bootcamp Batch 1
+* Successfully finished three significant projects: Face Recognition, Person Tracking, and Self-Driving Car
+* Demonstrated expertise in managing AI projects, including planning, coordination, and evaluation
+* Delivered projects within deadlines and evaluated performance against objectives and requirements
+
+**Full Stack Data Science Academy, Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA)**
+July 2022 - February 2023
+
+* Enrolled in and successfully finished the academy
+* Gained hands-on experience in data science fundamentals, including business understanding, data analysis, and more
+
+**Education:**
+
+* **Bachelor's degree in Computer Software Engineering, Institut Teknologi Telkom**
+	+ GPA: 3.8/4.00
+	+ September 2019 - March 2023
+	+ Completed a thesis titled "VGG16NET Hybrid Algorithm with Support Vector Machine in Determining Waste Types"
+
+**Certifications:**
+
+* **IBM Introduction to Artificial Intelligence (AI)**, July 2023 - Present
+* **Supervised Machine Learning: Regression and Classification**, July 2023 - Present
+* **Full Stack Data Science Academy**, July 2022 - Present
+* **Data Wrangling Python**, April 2022 - Present
+* **Exploratory Data Analysis with Python for Beginner**, April 2022 - Present
+* **Data Visualization with Python Matplotlib for Beginner - Part 1**, April 2022 - Present
+* **Python for Data Professional Beginner - Part 1**, February 2022 - Present
+* **Introduction to Data Science with Python**, February 2022 - Present
+* **Database Programmer**, November 2022 - December 2025
+* **Badan Nasional Sertifikasi Profesi (BNSP)**
+* **Python Fundamental for Data Science**
+
+**Skills:**
+
+* Artificial Intelligence (AI)
+* Computer Vision
+* Data Analysis
+* Data Science
+* Data Visualization
+* Deep Learning
+* Machine Learning
+* MongoDB
+* Natural Language Processing (NLP)
+* NoSQL
+* Object Detection
+* Object Tracking
+* PostgresSQL
+* Prompt Engineering
+* Python (Programming Language)
+* PyTorch
+* RAG
+* RDBMS
+* Supervised Learning
+* TensorFlow
+* Transformer Models
+* YOLO
+{'completion_tokens': 724, 'prompt_tokens': 911, 'total_tokens': 1635, 'completion_time': 2.068571429, 'prompt_time': 0.047184081, 'queue_time': 0.026221149, 'total_time': 2.11575551}
+----------------

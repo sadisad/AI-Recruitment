@@ -1,0 +1,53 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+
+Berikan peringkat untuk beberapa String CV berdasarkan kriteria pekerjaan yang diberikan. Sertakan peringkat, kesimpulan, kelebihan, kekurangan, serta alasan mengapa setiap CV diberi peringkat tersebut.
+
+Instruksi:
+
+1. Ranking: Berikan peringkat untuk setiap CV dengan skala di mana "1" adalah yang paling cocok, dan seterusnya. Contoh: "Peringkat: 1/5" berarti CV tersebut adalah yang paling cocok dari 5 CV yang dievaluasi. Jika ada 6 CV, urutkan dari 1/6 hingga 6/6.
+2. Masa Kerja Relevan: Berikan nilai tambahan untuk CV yang memiliki Total Masa Kerja Relevan lebih lama dari yang lain. Semakin lama durasi masa kerja yang sesuai dengan Job Title, semakin tinggi nilai yang diberikan.
+3. Penilaian Skill: Periksa relevansi skill yang dimiliki dengan kriteria pekerjaan. Misalnya, jika kriteria mencakup REST API Development, skill seperti Flask dan Laravel relevan. Periksa juga apakah skill yang dimiliki kandidat bisa berhubungan dengan kriteria pekerjaan (contoh: SQL relevan dengan RDBMS, Query, dll.).
+4. Kelebihan dan Kekurangan: Identifikasi minimal 5 kelebihan dan 5 kekurangan dari setiap CV yang relevan dengan job description.
+5. Kesimpulan dan Alasan: Berikan kesimpulan dan alasan mengapa CV tersebut diberi peringkat tertentu berdasarkan kriteria pekerjaan.
+Format Pengisian:
+
+- Job Title: [Judul Pekerjaan]
+- Job Vacancy: [Deskripsi Pekerjaan]
+- Ranking: [Peringkat]
+- Name: [Nama Kandidat]
+- Total Masa Kerja Relevan: [Durasi Total Masa Kerja Relevan]
+- Skills: [Daftar Skills]
+- Kelebihan: [Minimal 5 kelebihan yang relevan dengan job description]
+- Kekurangan: [Minimal 5 kekurangan yang relevan dengan job description]
+- Skor: [Nilai dari 0-100]
+- Alasan: [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+- Kesimpulan: [Kesimpulan Penilaian]
+Catatan:
+
+Isilah form tersebut dalam bahasa Indonesia.
+Jangan tambahkan teks lain di luar format yang telah ditentukan.
+------
+Kriteria Pekerjaan:
+Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent Have in total at least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry. Familiar with the following banking products: CASA, Loan, Deposit Account, Credit Card, Bancassurance Preferable have at least 2 years’ experience in operates ETL Tools such as Talend or Microsoft SSIS or IBM DataStage Have a good understanding on Programming Concept, especially Python Understand ETL Concept, Automation Scheduling, & Data Pipelines internal At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset Fluent in using Jira. Have experiences in agile project delivery Understand data mapping / data journey, and carry out impact analysis on changes related to data mapping / data journey Have a good understanding of data modelling and big data stacks Excellent communication and interpersonal skills (A good problem-solving attitude) Have a good command in English and Bahasa (actively)
+------
+CV:
+CONTACTSchris.taylor@example.comchris-taylor-police+12345678904Miami, FLSKILLSLaw Enforcement & Public SafetyCrime PreventionEmergency ResponseInvestigation & Evidence CollectionCommunity PolicingConflict ResolutionFirearms ProficiencyDefensive TacticsEDUCATIONBachelor of Science in Criminal JusticeFlorida International University | Miami, FL2010 – 2013Officer Chris TaylorPolice OfficerPolice OfficerLead officer in community policing initiatives, significantly reducing crime rates intargeted neighborhoods.DetectiveSpecialized in narcotics investigations, resulting in numerous high-profile drug busts andconvictions.Patrol OfficerEnhanced public safety through proactive patrols and effective crime response.Police CadetCompleted rigorous training and engaged in various law enforcement duties undersupervision.Officer Chris Taylor is a dedicated and skilled law enforcement professional with 10years of experience in policing diverse communities. Known for exceptional leadership incommunity policing, investigative prowess, and commitment to public safety, Chris hasplayed a pivotal role in crime prevention and response. With a strong background in lawenforcement tactics and an unwavering dedication to duty, Chris is recognized forexcellence in service and has received multiple awards for bravery and outstandingperformance.EXPERIENCECity of Miami Police Department | Miami, FL2.5 yearsCommunity Policing LeadershipJan 2021 – PresentMiami-Dade Police Department | Miami, FL2.5 yearsNarcotics InvestigationsAug 2018 – Dec 2020Miami Beach Police Department | Miami Beach, FL2.5 yearsProactive PatrolsMar 2016 – Jul 2018Coral Gables Police Department | Coral Gables, FL2 yearsLaw Enforcement TrainingJan 2014 – Feb 2016ABOUT
+system: - Job Title: Data Analyst/Engineer
+- Job Vacancy: Menganalisis data dan membuat keputusan berdasarkan data di industri perbankan
+- Ranking: 5/5
+- Name: Chris Taylor
+- Total Masa Kerja Relevan: 0 tahun
+- Skills: Law Enforcement & Public Safety, Crime Prevention, Emergency Response, Investigation & Evidence Collection, Community Policing, Conflict Resolution, Firearms Proficiency, Defensive Tactics
+- Kelebihan: - Mempunyai pengalaman lider dalam inisiatif kepolisian masyarakat, - Mempunyai kemampuan penyelidikan yang baik, - Mempunyai komitmen yang kuat terhadap keselamatan publik, - Mempunyai latar belakang pendidikan yang sesuai, - Mempunyai penghargaan untuk keberanian dan kinerja yang sangat baik
+- Kekurangan: - Tidak mempunyai pengalaman di industri perbankan, - Tidak mempunyai kemampuan programming concept, - Tidak mempunyai pengalaman menggunakan ETL Tools, - Tidak mempunyai pengalaman menggunakan big data stacks, - Tidak mempunyai kemampuan menggunakan Jira
+- Skor: 40
+- Alasan: Kandidat tidak mempunyai pengalaman di industri perbankan dan tidak mempunyai kemampuan yang sesuai dengan kriteria pekerjaan. Meskipun kandidat mempunyai pengalaman dan kemampuan yang baik di bidang kepolisian, namun tidak relevan dengan kriteria pekerjaan.
+- Kesimpulan: Kandidat tidak memenuhi kriteria pekerjaan yang diperlukan untuk posisi Data Analyst/Engineer.
+{'completion_tokens': 362, 'prompt_tokens': 2007, 'total_tokens': 2369, 'completion_time': 1.185763084, 'prompt_time': 0.119273239, 'queue_time': 0.0045971399999999996, 'total_time': 1.305036323}
+----------------

@@ -1,0 +1,10 @@
+system: Here is the rekap of the conversation related to HRIS:
+
+=== Pertanyaan 1 ===
+Question : Bagaimana cara meningkatkan semangat karyawan dalam bekerja?
+Jawaban : Tidak ada jawaban spesifik, namun percakapan berlanjut.
+--- Field Separator ---
+
+(Note: There are no specific questions or answers related to HRIS in the provided transcript. The conversation seems to be general and not related to HRIS. If you provide more transcript, I'll be happy to help you rekap the questions and answers related to HRIS.)
+{'completion_tokens': 123, 'prompt_tokens': 778, 'total_tokens': 901, 'completion_time': 0.376748892, 'prompt_time': 0.078953192, 'queue_time': None, 'total_time': 0.455702084}
+----------------

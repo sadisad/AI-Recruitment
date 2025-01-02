@@ -1,0 +1,20 @@
+user: siapakah jokowidodo?
+system: Joko Widodo, commonly known as Jokowi, is the 7th President of Indonesia. He has been serving as the President of Indonesia since October 20, 2014, and was re-elected for a second term in 2019.
+
+Before becoming the President, Jokowi was the Mayor of Surakarta (Solo) from 2005 to 2012 and the Governor of Jakarta from 2012 to 2014.
+
+Jokowi is known for his humble and down-to-earth personality, as well as his efforts to promote democracy, transparency, and accountability in Indonesia. During his presidency, he has implemented several reforms and policies aimed at improving the country's economy, infrastructure, and social welfare.
+
+Some of his notable achievements include:
+
+1. Implementing the tax amnesty program to increase tax revenue and encourage repatriation of Indonesian assets abroad.
+2. Launching the "One Belt One Road" (OBOR) initiative to improve Indonesia's infrastructure and connectivity with other countries.
+3. Implementing the Universal Health Coverage (JKN) program to provide health insurance to all Indonesian citizens.
+4. Increasing investment in education and human resource development to improve the country's competitiveness.
+5. Strengthening Indonesia's diplomatic relations with other countries, particularly in the Asia-Pacific region.
+
+Jokowi is also known for his simplicity and humility, often being seen wearing casual clothes and riding public transportation. He is widely regarded as one of the most popular and influential leaders in Southeast Asia.
+user: siapakah jokowidodo?
+system: Jokowi, atau lengkapnya Joko Widodo, adalah Presiden ke-7 Republik Indonesia. Ia menjabat sebagai Presiden sejak 20 Oktober 2014 dan terpilih kembali untuk masa jabatan kedua pada 2019. Sebelum menjadi Presiden, Jokowi pernah menjabat sebagai Wali Kota Surakarta (Solo) dari 2005 hingga 2012 dan Gubernur Jakarta dari 2012 hingga 2014.
+{'completion_tokens': 105, 'prompt_tokens': 345, 'total_tokens': 450, 'completion_time': 0.334154243, 'prompt_time': 0.021018811, 'queue_time': 0.004589889000000003, 'total_time': 0.355173054}
+----------------

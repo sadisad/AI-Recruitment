@@ -1,0 +1,62 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Job Requirements:  Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication), Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent. 3 years of experience as a SQL Developer or similar role Excellent understanding of T-SQL programming Excellent understanding of Oracle Good knowledge of HTML and JavaScript Experience with Transparent Data Encryption (TDE) Have experience with ETL Platform Have experience with SAS Familiarity with the practical application of NoSQL\NewSQL databases Preferably having knowledge of Data SLIK OJK Sense of ownership and pride in your performance and its impact on company’s success Critical thinker and problem-solving skills Team player Good time-management skills Great interpersonal and communication skills
+------
+CV:
+Irsyad Zulfikar  South Jakarta • (+62) 8528-2130-793 • zulfikarirsyad@gmail.com  Innovative AI Engineer with extensive experience in data analysis, machine learning, and AI-driven solutions. Proven track record in enhancing recruitment processes and developing advanced AI models. Dedicated to leveraging AI technologies to drive innovation and operational efficiency. E x per i ence  APRIL 2024 – PRESENT AI Engineer | Lawencon International | South Jakarta, Indonesia • Led AI projects, improving candidate shortlisting accuracy by 25%. • Developed CV parsing and scoring systems, reducing manual review time by 50%. • Enhanced recruitment workflow with a live coding assessment platform, reducing assessment time by 30%. • Created AI chatbots handling over 1,000 candidate interactions monthly. • Created a Virtual Assistant for managing absences and supporting HRIS functions. AUGUST 2023 – FEBRUARY 2024 Junior AI Engineer| Indonesia AI | Jakarta, Indonesia • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications.  • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions.  • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives.  • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.             FEBRUARY 2023 – AUGUST 2023 Computer Vision Bootcamp Batch 1| Indonesia AI | Jakarta, Indonesia I participated in the Computer Vision Bootcamp Batch 1, where I gained advanced skills in Machine Learning and Deep Learning algorithms. At Indonesia AI, my role involved a range of cutting-edge AI projects, where I applied my expertise to develop innovative solutions using these technologies. • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging.  • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing.  • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques. JULY 2022 – FEBRUARY 2023 Full Stack Data Science Academy | Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) | Jakarta, Indonesia • Proficient in data science fundamentals, including business understanding, data analysis with Python, data wrangling, SQL for data science, and data visualization. • Completed real-world projects in customer segmentation, classification, and regression. FEBRUARY 2022 – JULY 2022 Introduction AI For Gen Z| Orbit Future Academy | Jakarta, Indonesia Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura. K ey  Sk i l l s  a nd E x per ti s e • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition.  • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions.  • Experience in managing and executing AI projects with a successful track record in delivering solutions.  • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [Prompt Compression and Query Optimization courses from DeepLearning.AI] to stay abreast of the latest advancements in AI and machine learning.  E duca ti o n  SEPTEMBER 2019 – MARCH 2023 Bachelor of Computer Software Engineering | Telkom University Purwokerto  GPA: 3.8 Cer fi ti ca ti o ns  Building Systems with the ChatGPT API • Data Wrangling with Python • Exploratory Data Analysis with Python for Beginners • Prompt Engineering with Llama 2&3 • Full Stack Data Science Academy • AI Career Bootcamp for Computer Vision • Supervised Machine Learning: Regression and Classification • Database Programmer (BNSP) 
+system: Name : Irsyad Zulfikar
+--- Field Separator ---
+high_turnover : Safe
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Safe
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Safe
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe
+--- Field Separator ---
+durasi_pendidikan : Safe
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 : Safe
+--- Field Separator ---
+inconsistent_career_path : Red Flag <-> Sering berganti profesi, tidak stabil pada jalur karir nya. (Computer Vision Bootcamp Batch 1, Full Stack Data Science Academy, Introduction AI For Gen Z)
+--- Field Separator ---
+non-progressive_career_path : Safe
+{'completion_tokens': 187, 'prompt_tokens': 2006, 'total_tokens': 2193, 'completion_time': 0.601390818, 'prompt_time': 0.10881145, 'queue_time': 0.004504459000000002, 'total_time': 0.710202268}
+----------------

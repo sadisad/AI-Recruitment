@@ -1,0 +1,13 @@
+system: Here is the rekap of questions and answers related to HRIS:
+
+=== Pertanyaan 1 ===
+Question : Bagaimana cara mengubah informasi karyawan?
+Jawaban : Anda dapat mengubah informasi karyawan melalui menu HR > Employee Management > Edit Employee. Pilih karyawan yang ingin diubah informasinya, kemudian klik Edit dan lakukan perubahan yang diperlukan. Jangan lupa untuk menyimpan perubahan setelah selesai.
+--- Field Separator ---
+
+=== Pertanyaan 2 ===
+Question : Apa yang harus dilakukan jika tidak bisa mengakses sistem HRIS?
+Jawaban : Jika Anda tidak bisa mengakses sistem HRIS, coba langkah-langkah berikut: Pastikan koneksi internet Anda stabil. Cek apakah username dan password yang dimasukkan sudah benar. Jika masih tidak bisa mengakses, hubungi tim IT untuk memeriksa apakah ada masalah dengan server atau jaringan.
+--- Field Separator ---
+{'completion_tokens': 217, 'prompt_tokens': 597, 'total_tokens': 814, 'completion_time': 0.673617739, 'prompt_time': 0.066495192, 'queue_time': None, 'total_time': 0.740112931}
+----------------

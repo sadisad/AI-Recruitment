@@ -1,0 +1,97 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+1. **Total Masa Kerja Relevan**:
+   - Isi form "total masa kerja relevan" dengan menghitung total masa kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor cv secara proporsional sesuai dengan relevansi pengalaman.
+
+2. **Keterampilan (Skills)**:
+   - Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor cv secara proporsional.
+
+3. **Kelebihan dan Kekurangan**:
+   - Isi form "kelebihan" dan "kekurangan" dengan memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor cv.
+
+4. **Penilaian CV (Skor CV)**:
+   - **skor cv** harus selalu diisi berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar. Jangan biarkan skor_cv kosong atau default ke 0.00 kecuali CV benar-benar tidak relevan. 
+   - Pastikan skor cv memiliki 2 angka di belakang koma (float). 
+   - Jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, berikan skor cv yang rendah, misalnya di bawah 10.00, tetapi tetap harus mencerminkan penilaian yang logis dan sesuai.
+
+5. **Kesimpulan**:
+   - Isi form "kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+6. **Kesesuaian**:
+   - Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+     - **jobRoleOverview**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobQualification**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobResponsibility**: Berikan "true" jika sesuai, "false" jika tidak.
+
+7. **Alasan**:
+   - Isi form "alasan" berdasarkan kecocokan kandidat dengan kriteria_pekerjaan dan job description.
+
+8. **Saran Job Posisi Lain (Suggestion)**:
+   - Isi form "suggestion" berdasarkan CV kandidat dan kecocokannya terhadap suggested_job_role, berikan alasan dan persentase kecocokan (match_percentage).
+
+**Format Pengisian**:
+Isilah form berikut tanpa ada tambahan kata darimu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang dilamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor cv : [0.00/100.00]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+
+------
+Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+------
+Kriteria Pekerjaan:
+Job Requirements:  Candidates must possess at least Bachelor's Degree, Computer Science/Information Technology, Engineering (Computer/Telecommunication) or equivalent Having experiences 3 years in Software Documentation (BRD, FSD, TSD, UAT Scenarios) Required skill(s): SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI Have experience in Financial Services Industry preferable Banking Project Have experience with Big Data and with other systems such as ODBC, MSSQL, MySQL Familiarity with Spark, machine learning, Query with use hive and Impala Have a risk management certification with the level of applicable regulations Have background knowledge about risk management or data management Good Communication and Personality Good English proficiency, especially in writing Experience as Business Analyst is required Experience in the finance industry or digital business is preferable
+------
+CV:
+Janna Gardner  4567 Main Street, Chicago, Illinois 98052 • (716) 555-0100 • janna@example.com  Human Resources Generalist with 6+ years of experience assisting with and fulfilling organization staffing needs and requirements. A proven track record of using my excellent personal, communication and organization skills to lead and improve HR departments, recruit excellent personnel, and improve department efficiencies. Team player with excellent communication skills, high quality of work, driven and highly self-motivated. Strong negotiating skills and business acumen and able to work independently. E x per i ence  20XX – PRESENT Human Resources Generalist | Lamna Healthcare Company | Chicago, Illinois Review, update, and revise company hiring practices, vacation, and other human resources policies to ensure compliance with OSHA and all local, state, and federal labor regulations. By creating and maintaining a positive and responsive work environment, we raised employee retention rates by over 10% to achieve a greater than 90% employee retention over a 2-year period. Developed recruitment programs to successfully increase minority recruitment and meet affirmative action requirements. Led development team to build and deploy a dedicated recruitment website which reduced year-over-year recruitment costs by 14%. JUNE 20XX – AUGUST 20XX Human Resources Intern | Wholeness Healthcare | Boomtown, Ohio Assisted in recruitment outreach to prospective employees. Organized and conducted several seminars for hospital employees to educate and update them regarding available employment benefit options. Arranged hospital-wide guest speakers symposia to educate management about new employment laws and workplace confidence and morale building techniques. Administrative tasks. Sk i l l s Type 96 words per minute • Proficient with project management software • Team player • Excellent time management skills • Conflict management • Public speaking • Data analytics  E duca ti o n  MAY 20XX Bachelor of Arts Human Resources Management | Jasper University | Ft. Lauderdale, FL 3.8 GPA • Member of university’s Honor Society Acti v i ti es  Literature • Environmental conservation • Art • Yoga • Skiing • Travel 
+system: name : Janna Gardner
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak memiliki pengalaman yang relevan dengan kriteria pekerjaan sebagai Business Analyst."}
+--- Field Separator ---
+skills : ['Project Management', 'Conflict Management', 'Public Speaking', 'Data Analytics', 'Time Management']
+--- Field Separator ---
+kelebihan : ['Excellent Communication Skills', 'Strong Negotiating Skills', 'Business Acumen', 'Team Player', 'High Quality of Work']
+--- Field Separator ---
+kekurangan : ['Lack of Experience in Business Analysis', 'No Experience in Financial Services Industry', 'No Knowledge of Risk Management', 'No Familiarity with SDLC and .NET', 'No Certification in Risk Management']
+--- Field Separator ---
+skor cv : 20.00
+--- Field Separator ---
+alasan : Kandidat tidak memiliki pengalaman yang relevan dengan kriteria pekerjaan sebagai Business Analyst dan tidak memiliki keterampilan yang sesuai dengan kriteria pekerjaan.
+--- Field Separator ---
+kesimpulan : Kandidat tidak sesuai dengan kriteria pekerjaan sebagai Business Analyst karena tidak memiliki pengalaman yang relevan dan keterampilan yang sesuai.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Bachelor's Degree in Computer Science/Information Technology', '3+ years of experience in Software Documentation', 'SDLC, Analytical, Finance, Banking, .NET, VB, ASP.Net, Java, SQL Server, BI', 'Experience in Financial Services Industry', 'Experience with Big Data and ODBC, MSSQL, MySQL', 'Familiarity with Spark, machine learning, Query with use hive and Impala', 'Risk management certification', 'Background knowledge about risk management or data management', 'Good Communication and Personality', 'Good English proficiency']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['Human Resources Generalist', 'HR Coordinator'], "match_percentage" : 30, "reasons" : ['Lack of experience in Business Analysis', 'No skills in SDLC and .NET', 'No certification in Risk Management']}
+{'completion_tokens': 483, 'prompt_tokens': 1810, 'total_tokens': 2293, 'completion_time': 1.505581928, 'prompt_time': 0.100510217, 'queue_time': 0.072943101, 'total_time': 1.6060921449999999}
+----------------

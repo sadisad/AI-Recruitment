@@ -1,0 +1,567 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documentType" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / passport, jadi contohnya seperti ini "documentType" : "ktp" jika di cv, orang tersebut mencantumkan ktp atau "documentType" : "passport" passport, jadi isinya cont bahwa dia memliki dokumen tersebut.
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+jika di cv tidak terdapat apa saja yang di butuhkan untuk emergencyContacts isi dengan string kosong saja " "
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      name : "",
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      company : "",
+      email : "" ,
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+JOSEPH GIBSONBUSINESS ANALYST INTERNCONTACTj.gibson@email.com(123) 456-7890Bloomington, INLinkedInEDUCATIONBachelor of ScienceBusiness with a major inBusiness AnalyticsIndiana UniversityBloomingtonSeptember 2020 - currentBloomington, INRelevant coursesData Analysis and VisualizationBusiness StatisticsData Mining and PredictiveAnalyticsMarketing AnalyticsSKILLSJIRAMicrosoft ExcelConfluenceMicrosoft VisioVersionOneBalsamiqCAREER OBJECTIVEI’m seeking an engaging business analyst internship at Salesforce, where I canutilize my experience in data analysis and predictive modeling to optimizeoperations. Excited to apply my proficiency with tools like Balsamiq andConfluence to present valuable insights that fuel Salesforce's innovation anddrive revenue growth.WORK EXPERIENCEStockerKroger January 2020 - current / Bloomington, INMaintained optimal shelf availability by efficiently stocking 500+ productunits daily.Reduced out-of-stock incidents by 32% with strategic inventorymanagement in Microsoft Excel.Extended shelf life of perishable items by 27% through effective stockingrotation techniques.Implemented off-peak hours stocking system, improving overall storeefficiency by 18%.PROJECTSRevenue Forecasting2022 - 2023Built a revenue forecasting model for dropshipping side business inMicrosoft Excel, resulting in 27% more effective budgeting.Integrated market trends and seasonality into predictive model, reducingforecast errors by 22%.Applied advanced statistical analysis to historical sales data, producing an89% accuracy rate in future demand predictions.Tracked the development of predictive models using VersionOne forimproved adherence to project timelines.Marketing Analytics2021 - 2022Led a team of 8 classmates to plan a targeted marketing campaign for alocal mattress store.Analyzed transaction data to uncover cross-selling opportunities, leadingto new product bundles and a 24% increase in revenue.Collaborated with team in Confluence to document task progress,improving productivity by 16%.Designed product bundle mockups in Balsamiq to collect early customerfeedback, boosting cross-sell revenue by 36%.
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+------
+CV:
+JOSEPH GIBSONBUSINESS ANALYST INTERNCONTACTj.gibson@email.com(123) 456-7890Bloomington, INLinkedInEDUCATIONBachelor of ScienceBusiness with a major inBusiness AnalyticsIndiana UniversityBloomingtonSeptember 2020 - currentBloomington, INRelevant coursesData Analysis and VisualizationBusiness StatisticsData Mining and PredictiveAnalyticsMarketing AnalyticsSKILLSJIRAMicrosoft ExcelConfluenceMicrosoft VisioVersionOneBalsamiqCAREER OBJECTIVEI’m seeking an engaging business analyst internship at Salesforce, where I canutilize my experience in data analysis and predictive modeling to optimizeoperations. Excited to apply my proficiency with tools like Balsamiq andConfluence to present valuable insights that fuel Salesforce's innovation anddrive revenue growth.WORK EXPERIENCEStockerKroger January 2020 - current / Bloomington, INMaintained optimal shelf availability by efficiently stocking 500+ productunits daily.Reduced out-of-stock incidents by 32% with strategic inventorymanagement in Microsoft Excel.Extended shelf life of perishable items by 27% through effective stockingrotation techniques.Implemented off-peak hours stocking system, improving overall storeefficiency by 18%.PROJECTSRevenue Forecasting2022 - 2023Built a revenue forecasting model for dropshipping side business inMicrosoft Excel, resulting in 27% more effective budgeting.Integrated market trends and seasonality into predictive model, reducingforecast errors by 22%.Applied advanced statistical analysis to historical sales data, producing an89% accuracy rate in future demand predictions.Tracked the development of predictive models using VersionOne forimproved adherence to project timelines.Marketing Analytics2021 - 2022Led a team of 8 classmates to plan a targeted marketing campaign for alocal mattress store.Analyzed transaction data to uncover cross-selling opportunities, leadingto new product bundles and a 24% increase in revenue.Collaborated with team in Confluence to document task progress,improving productivity by 16%.Designed product bundle mockups in Balsamiq to collect early customerfeedback, boosting cross-sell revenue by 36%.
+system: --- Field Separator --- 
+fullName: Joseph Gibson
+--- Field Separator --- 
+salutation: 
+--- Field Separator --- 
+homeAddress : 
+{
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "IN",
+  "city" : "Bloomington",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+}
+--- Field Separator --- 
+domicileAddress : {
+}
+--- Field Separator --- 
+frontTitle: 
+--- Field Separator --- 
+endTitle: 
+--- Field Separator --- 
+firstName: Joseph
+--- Field Separator --- 
+lastName: Gibson
+--- Field Separator --- 
+vendor: 
+--- Field Separator --- 
+nickname: 
+--- Field Separator --- 
+currentOccupation: 
+{
+  "isWorking": "",
+  "occupationName": "",
+  "position": "",
+  "lastWorking": "",
+}
+--- Field Separator --- 
+status: 
+--- Field Separator --- 
+gender: 
+--- Field Separator --- 
+birthplace: 
+--- Field Separator --- 
+birthdate: 
+--- Field Separator --- 
+religion: 
+--- Field Separator --- 
+nationality: 
+--- Field Separator --- 
+ethnicity: 
+--- Field Separator --- 
+maritalStatus: 
+--- Field Separator --- 
+marital: 
+{
+  "mariedDate": "",
+  "separationDate": "",
+}
+--- Field Separator --- 
+medicalStatus: 
+--- Field Separator --- 
+bloodType: 
+--- Field Separator --- 
+height: 
+--- Field Separator --- 
+weight: 
+--- Field Separator --- 
+note: 
+--- Field Separator --- 
+country: 
+--- Field Separator --- 
+state: 
+--- Field Separator --- 
+city: 
+--- Field Separator --- 
+subDistrict: 
+--- Field Separator --- 
+village: 
+--- Field Separator --- 
+postalCode: 
+--- Field Separator --- 
+since: 
+--- Field Separator --- 
+phones: 
+[
+  {
+    "phoneCode": "",
+    "phoneNumber": "(123) 456-7890",
+    "type": "",
+    "primary": ""
+  }
+]
+--- Field Separator --- 
+emails: 
+[
+  {
+    "email": "j.gibson@email.com",
+    "type": "",
+    "notification": ""
+  }
+]
+--- Field Separator --- 
+socialMedias: 
+[
+  {
+    "socialMediaPlatform": "LinkedIn",
+    "url": ""
+  }
+]
+--- Field Separator --- 
+workExperience: 
+[
+  {
+    "company": "Kroger",
+    "address": "Bloomington, IN",
+    "totalEmployee": "",
+    "position": "Stocker",
+    "exitReason": "",
+    "startDate": "January 2020",
+    "current": "yes",
+    "endDate": "",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Maintained optimal shelf availability by efficiently stocking 500+ product units daily, Reduced out-of-stock incidents by 32% with strategic inventory management in Microsoft Excel, Extended shelf life of perishable items by 27% through effective stocking rotation techniques, Implemented off-peak hours stocking system, improving overall store efficiency by 18%"
+  }
+]
+--- Field Separator --- 
+reference: 
+[
+  {
+    "name": "",
+    "companyName": "",
+    "position": "",
+    "relation": "",
+    "phone": ""
+  }
+]
+--- Field Separator --- 
+formalEducation: 
+[
+  {
+    "country": "",
+    "state": "",
+    "educationLevel": "Bachelor",
+    "institution": "Indiana University",
+    "city": "Bloomington",
+    "major": "Business Analytics",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "yes",
+    "startYear": "September 2020",
+    "endYear": "",
+    "graduateDate": "",
+    "gpa": "",
+    "graduate": "",
+    "description": ""
+  }
+]
+--- Field Separator --- 
+informalEducation: 
+[
+  {
+    "country": "",
+    "state": "",
+    "institution": "",
+    "subject": "",
+    "city": "",
+    "startDate": "",
+    "endDate": "",
+    "current": "",
+    "graduate": "",
+    "graduateDate": "",
+    "score": "",
+    "description": ""
+  }
+]
+--- Field Separator --- 
+hobbiesAndOtherActivities: 
+[
+  ""
+]
+--- Field Separator --- 
+languages: 
+[
+  {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+]
+--- Field Separator --- 
+emergencyContacts: 
+[
+  {
+    "name": "",
+    "relation": "",
+    "phone": "",
+    "address": "",
+    "company": "",
+    "email": ""
+  }
+]
+--- Field Separator --- 
+relationships: 
+[
+  {
+    "relationshipName": "",
+    "idPatient": "",
+    "name": "",
+    "isPassedAway": "",
+    "birthPlace": "",
+    "birthDate": "",
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+  }
+]
+--- Field Separator --- 
+vehicles: 
+[
+  {
+    "vehicleName": "",
+    "merk": "",
+    "year": "",
+    "lovOwnedVhclName": "",
+    "note": ""
+  }
+]
+--- Field Separator --- 
+isStudent: 
+--- Field Separator --- 
+educationLevelName: Bachelor
+--- Field Separator --- 
+institutionName: Indiana University
+--- Field Separator --- 
+majorName: Business Analytics
+--- Field Separator --- 
+noteInstitution: 
+--- Field Separator --- 
+skills: ["JIRA", "Microsoft Excel", "Confluence", "Microsoft Visio", "VersionOne", "Balsamiq"]
+--- Field Separator --- 
+documentType: 
+--- Field Separator --- 
+suitableJobPosition: Business Analyst
+--- Field Separator --- 
+socialActivities: 
+[
+  {
+    "organizationName": "",
+    "activityType": "",
+    "position": "",
+    "year": ""
+  }
+]
+{'completion_tokens': 1362, 'prompt_tokens': 2835, 'total_tokens': 4197, 'completion_time': 5.451026952, 'prompt_time': 0.753791808, 'queue_time': 0.006612426999999976, 'total_time': 6.20481876}
+----------------

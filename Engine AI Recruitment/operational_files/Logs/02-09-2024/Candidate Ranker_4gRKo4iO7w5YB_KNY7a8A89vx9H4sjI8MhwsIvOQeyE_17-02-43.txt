@@ -1,0 +1,67 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Berikan lah Skor tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan Skor nya.
+Perhatikan juga Skills, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada Skills yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi Skills tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Job Requirements:  Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication), Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent. 3 years of experience as a SQL Developer or similar role Excellent understanding of T-SQL programming Excellent understanding of Oracle Good knowledge of HTML and JavaScript Experience with Transparent Data Encryption (TDE) Have experience with ETL Platform Have experience with SAS Familiarity with the practical application of NoSQL\NewSQL databases Preferably having knowledge of Data SLIK OJK Sense of ownership and pride in your performance and its impact on company’s success Critical thinker and problem-solving skills Team player Good time-management skills Great interpersonal and communication skills
+------
+CV:
+Irsyad Zulfikar  South Jakarta • (+62) 8528-2130-793 • zulfikarirsyad@gmail.com  Innovative AI Engineer with extensive experience in data analysis, machine learning, and AI-driven solutions. Proven track record in enhancing recruitment processes and developing advanced AI models. Dedicated to leveraging AI technologies to drive innovation and operational efficiency. E x per i ence  APRIL 2024 – PRESENT AI Engineer | Lawencon International | South Jakarta, Indonesia • Led AI projects, improving candidate shortlisting accuracy by 25%. • Developed CV parsing and scoring systems, reducing manual review time by 50%. • Enhanced recruitment workflow with a live coding assessment platform, reducing assessment time by 30%. • Created AI chatbots handling over 1,000 candidate interactions monthly. • Created a Virtual Assistant for managing absences and supporting HRIS functions. AUGUST 2023 – FEBRUARY 2024 Junior AI Engineer| Indonesia AI | Jakarta, Indonesia • Developed and applied sophisticated algorithms for artificial intelligence projects, with a focus on enhancing the accuracy and reliability of automated systems used in real-world applications.  • Spearheaded the creation of an advanced vehicle detection system, resulting in highly accurate vehicle identification with a success rate of over 86%, contributing to safer and more efficient traffic management solutions.  • Innovated a waste sorting AI system that distinguishes between types of waste, which achieved an accuracy rate of over 82% in identifying organic, inorganic, and hazardous materials, supporting environmental management initiatives.  • Collaborated effectively with a diverse team of professionals, leveraging collective expertise to deliver technology solutions that improve company operations and drive innovation.             FEBRUARY 2023 – AUGUST 2023 Computer Vision Bootcamp Batch 1| Indonesia AI | Jakarta, Indonesia I participated in the Computer Vision Bootcamp Batch 1, where I gained advanced skills in Machine Learning and Deep Learning algorithms. At Indonesia AI, my role involved a range of cutting-edge AI projects, where I applied my expertise to develop innovative solutions using these technologies. • Automatic Segmentation & Classification of Cardiac MRI: Developed an automatic segmentation and classification system using 2D UNet and a modified approach, coupled with a 2D CNN with ReLU activation for classification, enhancing the diagnostic accuracy of cardiac imaging.  • Face Recognition System: Implemented a state-of-the-art face recognition system using the CelebA dataset, applying advanced convolutional neural networks to achieve high-precision identification. • Person Tracking Initiative: Led the development of a person tracking project, leveraging the COCO dataset to create robust tracking algorithms capable of real-time processing.  • Self-Driving Car Algorithms: Contributed to the creation of autonomous driving algorithms, focusing on real-world application and safety enhancements through computer vision techniques. JULY 2022 – FEBRUARY 2023 Full Stack Data Science Academy | Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) | Jakarta, Indonesia • Proficient in data science fundamentals, including business understanding, data analysis with Python, data wrangling, SQL for data science, and data visualization. • Completed real-world projects in customer segmentation, classification, and regression. FEBRUARY 2022 – JULY 2022 Introduction AI For Gen Z| Orbit Future Academy | Jakarta, Indonesia Created a classification system for detecting diseases in strawberry leaves using the MobileNetV2 transfer learning technique. Conducted sentiment analysis on app reviews using data processing and machine learning techniques. Developed a web-based facial attendance application with Flask and deep learning models, ensuring a 100% success rate for PT Orbit Ventura. K ey  Sk i l l s  a nd E x per ti s e • Advanced proficiency in Python, with extensive experience in specialized AI libraries including OpenCV for image processing, NumPy for numerical data manipulation, PyTorch and TensorFlow for machine learning model development.  • Expertise in Computer Vision with proven skills in Image Classification, Object Detection, and Face Recognition.  • Strong foundation in Data Science with a track record of performing complex data analytics, predictive modeling, and creating insightful data visualizations that drive strategic decisions.  • Experience in managing and executing AI projects with a successful track record in delivering solutions.  • Deep understanding of Deep Learning techniques and their application in real-world scenarios. • Commitment to professional development, recently completed [Prompt Compression and Query Optimization courses from DeepLearning.AI] to stay abreast of the latest advancements in AI and machine learning.  E duca ti o n  SEPTEMBER 2019 – MARCH 2023 Bachelor of Computer Software Engineering | Telkom University Purwokerto  GPA: 3.8 Cer fi ti ca ti o ns  Building Systems with the ChatGPT API • Data Wrangling with Python • Exploratory Data Analysis with Python for Beginners • Prompt Engineering with Llama 2&3 • Full Stack Data Science Academy • AI Career Bootcamp for Computer Vision • Supervised Machine Learning: Regression and Classification • Database Programmer (BNSP) 
+system: --- Field Separator ---
+Job Title : SQL Developer
+--- Field Separator ---
+Job Requirements : Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication), Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent. 3 years of experience as a SQL Developer or similar role Excellent understanding of T-SQL programming Excellent understanding of Oracle Good knowledge of HTML and JavaScript Experience with Transparent Data Encryption (TDE) Have experience with ETL Platform Have experience with SAS Familiarity with the practical application of NoSQL\NewSQL databases Preferably having knowledge of Data SLIK OJK Sense of ownership and pride in your performance and its impact on company’s success Critical thinker and problem-solving skills Team player Good time-management skills Great interpersonal and communication skills
+--- Field Separator ---
+Ranking : 1
+Name : Irsyad Zulfikar
+Total Masa Kerja Relevan : 2 tahun
+Skills : Python, OpenCV, NumPy, PyTorch, TensorFlow, Deep Learning, Computer Vision
+Kelebihan : Mempunyai pengalaman yang luas dalam pengembangan AI, memiliki kemampuan dalam pengolahan data dan analisis, mempunyai kemampuan dalam mendesain sistem yang lebih efisien.
+Kekurangan : Kurang memiliki pengalaman langsung dalam pengembangan SQL, tidak memiliki pengalaman dalam penggunaan Oracle dan T-SQL.
+Skor : 80/100
+Alasan : Kandidat ini memiliki kemampuan yang luas dalam pengembangan AI dan pengolahan data, namun kurang memiliki pengalaman langsung dalam pengembangan SQL dan Oracle.
+Kesimpulan : Kandidat ini sangat potensial untuk menjadi SQL Developer, namun perlu untuk meningkatkan kemampuan dalam pengembangan SQL dan Oracle.
+{'completion_tokens': 394, 'prompt_tokens': 1948, 'total_tokens': 2342, 'completion_time': 1.233423381, 'prompt_time': 0.102641382, 'queue_time': 0.0044206569999999945, 'total_time': 1.336064763}
+----------------

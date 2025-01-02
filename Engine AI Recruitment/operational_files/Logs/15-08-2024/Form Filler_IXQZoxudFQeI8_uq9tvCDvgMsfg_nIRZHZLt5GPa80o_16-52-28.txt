@@ -1,0 +1,596 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+teliti dan pisahkan informal education dan formal education untuk mengisi "educationLevelName", "institutionName", "majorName", "noteInstitution": "", isikan dengan pendidikan terakhir jika ada.
+
+untuk mengisi "documents" isi jika di dalam cv mencantumkan bahwa orang tersebut mencantumkan ktp / pasport, jadi isinya contohnya seperti ini "documents" : "ktp" jika di cv, orang tersebut mencantumkan ktp / pasport, jadi isinya cont bahwa dia memliki dokumen tersebut
+
+untuk mengisi homeAddress isi jika di dalam cv mencantumkan data tersebut
+
+untuk mengisi domicileAddress isi form tersebut menggunakan data yang sama seperti homeAddress jika ada, jika tidak ada kosongkan saja
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+
+pastikan responsenya memiliki form yang persis seperti ini jangan ada yang kamu kurangi. harus mirip seperti ini, jika ada yang tidak ada maka kosongkan saja tanpa menghapus key nya.
+pastikan untuk responsenya memiliki key yang sama seperti dibawah ini.
+
+pastikan jawabannya menggunakan key yang saya berikan dibawah ini dengan konsisten tanpa menghilangkan key yang saya berikan di bwaha ini.
+
+untuk "suitableJobPosition" isi berdasarkan cv yang ada isi sesuai job position yang cocok menurut cv yang ada
+
+pastikan tidak ada informasi yang hilang, terutama firstName dan lastName
+
+jangan hilangkan firstName dan lastName
+
+jangan ada kata kata tambahan darimu, cukup isi yang ada di bawah ini
+
+jika mengisi tanggal, hanya isi bulan dan tahunnya saja, tidak perlu ada tanggalnya. untuk bulannya gunakan bulan dalam bahasa inggris
+
+isi juga bagian "socialActivities" jika ada yang relevan sesuai di cv yang diberikan, jika tidak ada yang relevan, cukup tampilkan tetapi isi valuenya kosong.
+
+untuk weight dan height tamplikan dengan satuan kg dan cm
+
+{
+  "salutation": "",
+  homeAddress : {
+    
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "",
+  "state" : "",
+  "city" : "",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "",
+  "postalCode" : "",
+  "since" : "",
+
+  },
+  "domicileAddress" : { "" },
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "lastName": "",
+  "vendor": "",
+  "nickname": "",
+  "currentOccupation": {
+    "isWorking": "",
+    "occupationName": "",
+    "position": "",
+    "lastWorking": "",
+  },
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "marital": {
+    "mariedDate": "",
+    "separationDate": "",
+  },
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+
+  ],
+  "informalEducation": [
+
+    {
+      "country": "",
+      "state": "",
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+
+  ],
+  "hobbiesAndOtherActivities": [""],
+  "languages": [
+
+    {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+    }
+
+  ],
+  "emergencyContacts": [
+    {
+      relation : "" ,
+      phone : "" ,
+      address : "" ,
+      email : "" ,
+      company : ""
+    }
+  ],
+  "relationships" : [
+    {
+    "relationshipName" : "",
+    "idPatient" : "", 
+    "name" : "", 
+    "isPassedAway" : "", 
+    "birthPlace" : "", 
+    "birthDate" : "" ,
+    "address": "",
+    "contact": "",
+    "ocupationId": "",
+    "nik": "",
+    "position": "",
+    "lastWorking": "",
+    "marriedDate": "",
+    "isWorking": "",
+    "separationDate": "",
+    "isStudent": "",
+    "educationLevel": "",
+    "institutionName": "",
+    "noteInstitution": "",
+    "majorName": ""
+    }
+  ],
+  "vehicles" : [
+    {
+    "vehicleName" : "", 
+    "merk" : "", 
+    "year" : "", 
+    "lovOwnedVhclName": "", 
+    "note" : ""
+    }
+  ],
+  "isStudent": "",
+  "educationLevelName" : "",
+  "institutionName" : "",
+  "majorName" : "",
+  "noteInstitution": "",
+  "skills": ["", ""]
+  "documentType": "",
+  "suitableJobPosition" : "",
+  "socialActivities": [
+    {
+      "organizationName" : "PMI",
+      "activityType" : "donor darah",
+      "position: "panitia",
+      "year": "2023"
+    }
+  ],
+}
+
+
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+jadi contohnya seperti ini
+--- Field Separator --- 
+fullName:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTStaylor.smith@example.comtaylor-smith+12345678902Chicago, ILSKILLSExceptional CommunicationMultitasking & OrganizationCustomer Service ExcellenceProficient in MS Office & Front DeskSoftwareData Entry & ManagementProblem Solving & Conflict ResolutionEvent Coordination & SchedulingEDUCATIONAssociate Degree in BusinessAdministrationChicago Community College | Chicago, IL2012 – 2014Taylor SmithReceptionistReceptionistManaged the front desk of a busy corporate office, enhancing customer serviceprotocols.Front Desk AssociateProvided exceptional service in a fast-paced hotel environment, significantly improvingguest satisfaction scores.Administrative AssistantSupported daily administrative tasks, contributing to a 20% increase in office efficiency.ReceptionistCoordinated all front desk operations, streamlining communication betweendepartments.Office AssistantAssisted with various office duties and customer inquiries, facilitating a positive workenvironment.Junior ReceptionistGreeted patients and managed appointment schedules, improving the patientexperience.Taylor Smith is a proficient and dedicated Receptionist with 9 years of experienceproviding high-quality administrative support and customer service in various settings.Known for exceptional communication skills and the ability to manage multiple tasksefficiently, Taylor has consistently demonstrated the capacity to improve operationalprocesses and enhance customer satisfaction. With a strong background in officeadministration and a commitment to creating a welcoming and efficient environment,Taylor is an invaluable asset to any front desk or administrative team.EXPERIENCECorporate Solutions Inc. | Chicago, IL1.5 yearsCustomer Service EnhancementJan 2022 – Jun 2023Hotel Grand Vista | Chicago, IL1.5 yearsGuest Satisfaction ImprovementJul 2020 – Dec 2021GreenLeaf Wellness Center | Chicago, IL1.5 yearsOffice Efficiency IncreaseJan 2019 – Jun 2020Tech Innovations Co. | Chicago, IL1.5 yearsCommunication StreamliningJul 2017 – Dec 2018Creative Designs Ltd. | Chicago, IL1.5 yearsPositive Environment FacilitationJan 2016 – Jun 2017HealthPlus Clinics | Chicago, IL1.5 yearsPatient Experience ImprovementJul 2014 – Dec 2015ABOUT
+system: --- Field Separator ---
+salutation: 
+--- Field Separator ---
+homeAddress: 
+{
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "USA",
+  "state" : "IL",
+  "city" : "Chicago",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "Chicago, IL",
+  "postalCode" : "",
+  "since" : ""
+}
+--- Field Separator ---
+domicileAddress: 
+{ 
+  "houseStatus" : "",
+  "note" : "",
+  "country" : "USA",
+  "state" : "IL",
+  "city" : "Chicago",
+  "subdistrict": "",
+  "village" : "",
+  "address" : "Chicago, IL",
+  "postalCode" : "",
+  "since" : ""
+}
+--- Field Separator ---
+frontTitle: 
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+fullName: Taylor Smith
+--- Field Separator ---
+firstName: Taylor
+--- Field Separator ---
+lastName: Smith
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+currentOccupation: 
+{
+  "isWorking": "",
+  "occupationName": "Receptionist",
+  "position": "Receptionist",
+  "lastWorking": ""
+}
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+marital: 
+{
+  "mariedDate": "",
+  "separationDate": ""
+}
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: 
+--- Field Separator ---
+state: 
+--- Field Separator ---
+city: 
+--- Field Separator ---
+subDistrict: 
+--- Field Separator ---
+village: 
+--- Field Separator ---
+postalCode: 
+--- Field Separator ---
+since: 
+--- Field Separator ---
+phones: 
+[
+  {
+    "phoneCode": "+123",
+    "phoneNumber": "4567890",
+    "type": "mobile",
+    "primary": "true"
+  }
+]
+--- Field Separator ---
+emails: 
+[
+  {
+    "email": "taylor.smith@example.com",
+    "type": "personal",
+    "notification": ""
+  }
+]
+--- Field Separator ---
+socialMedias: 
+[
+  {
+    "socialMediaPlatform": "",
+    "url": ""
+  }
+]
+--- Field Separator ---
+workExperience: 
+[
+  {
+    "company": "Corporate Solutions Inc.",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jan 2022",
+    "current": "",
+    "endDate": "Jun 2023",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Customer Service Enhancement"
+  },
+  {
+    "company": "Hotel Grand Vista",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jul 2020",
+    "current": "",
+    "endDate": "Dec 2021",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Guest Satisfaction Improvement"
+  },
+  {
+    "company": "GreenLeaf Wellness Center",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jan 2019",
+    "current": "",
+    "endDate": "Jun 2020",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Office Efficiency Increase"
+  },
+  {
+    "company": "Tech Innovations Co.",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jul 2017",
+    "current": "",
+    "endDate": "Dec 2018",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Communication Streamlining"
+  },
+  {
+    "company": "Creative Designs Ltd.",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jan 2016",
+    "current": "",
+    "endDate": "Jun 2017",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Positive Environment Facilitation"
+  },
+  {
+    "company": "HealthPlus Clinics",
+    "address": "Chicago, IL",
+    "totalEmployee": "",
+    "position": "Receptionist",
+    "exitReason": "",
+    "startDate": "Jul 2014",
+    "current": "",
+    "endDate": "Dec 2015",
+    "firstSalary": "",
+    "lastSalary": "",
+    "currency": "",
+    "companyType": "",
+    "responsibility": "Patient Experience Improvement"
+  }
+]
+--- Field Separator ---
+reference: 
+[
+  {
+    "name": "",
+    "companyName": "",
+    "position": "",
+    "relation": "",
+    "phone": ""
+  }
+]
+--- Field Separator ---
+formalEducation: 
+[
+  {
+    "country": "USA",
+    "state": "IL",
+    "educationLevel": "Associate Degree",
+    "institution": "Chicago Community College",
+    "city": "Chicago",
+    "major": "Business Administration",
+    "frontTitle": "",
+    "endTitle": "",
+    "current": "",
+    "startYear": "2012",
+    "endYear": "2014",
+    "graduateDate": "",
+    "gpa": "",
+    "graduate": "",
+    "description": ""
+  }
+]
+--- Field Separator ---
+informalEducation: 
+[
+]
+--- Field Separator ---
+hobbiesAndOtherActivities: 
+[
+]
+--- Field Separator ---
+languages: 
+[
+  {
+    "languageName": "",
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+]
+--- Field Separator ---
+emergencyContacts: 
+[
+  {
+    "relation": "",
+    "phone": "",
+    "address": "",
+    "email": "",
+    "company": ""
+  }
+]
+--- Field Separator ---
+relationships: 
+[
+]
+--- Field Separator ---
+vehicles: 
+[
+]
+--- Field Separator ---
+isStudent: 
+--- Field Separator ---
+educationLevelName: Associate Degree
+--- Field Separator ---
+institutionName: Chicago Community College
+--- Field Separator ---
+majorName: Business Administration
+--- Field Separator ---
+noteInstitution: 
+--- Field Separator ---
+skills: ["Exceptional Communication", "Multitasking & Organization", "Customer Service Excellence", "Proficient in MS Office & Front Desk", "Software", "Data Entry & Management", "Problem Solving & Conflict Resolution", "Event Coordination & Scheduling"]
+--- Field Separator ---
+documentType: 
+--- Field Separator ---
+suitableJobPosition: Receptionist
+--- Field Separator ---
+socialActivities: 
+[
+]
+--- Field Separator ---
+{'completion_tokens': 1625, 'prompt_tokens': 2336, 'total_tokens': 3961, 'completion_time': 5.174671577, 'prompt_time': 0.185105961, 'queue_time': 0.0017061789999999744, 'total_time': 5.359777538}
+----------------

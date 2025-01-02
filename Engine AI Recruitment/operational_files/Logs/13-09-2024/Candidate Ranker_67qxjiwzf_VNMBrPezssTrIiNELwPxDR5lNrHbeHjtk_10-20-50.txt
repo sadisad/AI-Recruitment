@@ -1,0 +1,97 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi Utama:
+Tugas utama Anda adalah memberikan Ranking untuk sejumlah CV berdasarkan kesesuaian dengan Job Title dan Job Requirements, jawaban harus diberikan dalam Bahasa Indonesia.
+
+Panduan Penilaian pengisian Format Output:
+
+1. Ranking:
+
+- Berikan Ranking untuk setiap CV, dimulai dari yang paling sesuai dengan Job Title dan Job Requirements.
+- Pertimbangkan kelebihan, kekurangan, serta durasi Total Masa Kerja Relevan dalam menentukan Ranking.
+- Jika terdapat kandidat dengan Skor yang sama: Kandidat akan diurutkan berdasarkan Total Masa Kerja Relevan terlebih dahulu. Jika Total Masa Kerja Relevan juga sama, maka pertimbangkan skills spesifik yang sangat relevan untuk menentukan urutan.
+
+2. Skor:
+
+- Skor dihitung berdasarkan kelebihan, kekurangan, dan relevansi dengan Job Title dan Job Requirements.
+- Berikan Skor rendah jika isi CV tidak relevan dengan Job Title dan Job Requirements.
+- Tambahkan Skor untuk kandidat dengan Masa Kerja Relevan yang lebih lama atau skills yang sangat sesuai.
+- Kandidat dengan relevansi tinggi, pengalaman kerja yang sesuai, dan keahlian yang dibutuhkan akan menerima skor yang lebih tinggi.
+
+3. Total Masa Kerja Relevan:
+
+- Isi sesuai pengalaman kerja yang sesuai dengan Job Title dan Job Requirements.
+- Semakin lama durasi Masa Kerja Relevan, semakin tinggi Skor yang diberikan.
+
+4. Skills:
+
+- Evaluasi Skills yang tercantum di CV dan hubungkannya dengan Job Requirements.
+- Berikan skor tambahan jika ada Skills yang relevan dengan Job Requirements, contohnya Flask atau Laravel untuk REST API dan API Development, atau SQL untuk RDBMS dan Query.
+- Periksa relevansi dan kesamaan antara Skills yang berbeda, contohnya penggunaan SQL Server yang dapat menunjukkan kemampuan dalam PostgreSQL.
+
+5. Kelebihan dan Kekurangan:
+
+- Kelebihan dan Kekurangan kandidat harus disampaikan secara deskriptif dan terintegrasi, bukan dalam bentuk daftar. Kelebihan dan kekurangan ini harus dijelaskan dalam konteks kemampuan kandidat dalam memenuhi Job Requirements yang telah ditentukan. 
+- Deskripsikan kelebihan dan kekurangan tersebut secara jelas dan detail, sehingga dapat membantu menentukan Ranking dan Skor secara lebih akurat. Hindari penggunaan format daftar atau poin; fokus pada deskripsi yang mendalam dan relevan dengan posisi yang dilamar.
+
+6. Kesimpulan:
+
+- Kesimpulan dibuat berdasarkan Kelebihan, kekurangan, dan alasan yang mendukung Ranking dan Skor kandidat.
+- Kesimpulan harus memberikan ringkasan mengenai kesesuaian keseluruhan kandidat dengan Job Title dan Job Requirements.
+- Jelaskan mengapa kandidat berada di posisi tersebut dalam Ranking, termasuk saran atau rekomendasi jika ada.
+
+Format Output:
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+
+------
+Kriteria Pekerjaan:
+PROJECT MANAGER Responsibilities:  Oversee the IT project organization portfolio, provide input and monitor the progress of the project, and make reports (both in the form of power point presentations or other media) regarding the status of the project Lead the project team and carry out the best practices of project management in managing projects and related programs to ensure the success of a project Analyze project data and information to identify risks, issues, and present information to senior management for decision making Compile periodic project reports to be given to all stakeholders and senior management Coordinate with relevant stakeholders to solve project problems and analyze solutions provided by related teams to get decisions from related teams and senior management   Job Requirements:  More than 3 years of overall technical experience working on multiple Software Development platforms. Strong verbal and written communication skills and ability to coordinate with multiple technical and business teams Should have significant experience with developing or supporting enterprise applications from end-to-end. Experience in Software Development Project from scratch and exposure to many technology platforms is a must Required Skill(s): Programming skill, System/Business Analyst Skill, SDLC, Software Development, UML, Java Tech, Business Analyst, System Analyst, Project Management, SCRUM, Agile, Waterfall, Highly Organized Communication & Presentation Skill, Negotiation, Ability to managed others. Good English proficiency, especially in writing Understand business processes especially mobile apps Prefer have experience in Banking
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+Tenant: tan001
+Source: PostmanRuntime/7.41.2
+Company: admtan001
+system: Job Title : PROJECT MANAGER
+--- Field Separator ---
+Job Requirements : More than 3 years of overall technical experience working on multiple Software Development platforms. Strong verbal and written communication skills and ability to coordinate with multiple technical and business teams. Should have significant experience with developing or supporting enterprise applications from end-to-end. Experience in Software Development Project from scratch and exposure to many technology platforms is a must. Required Skill(s): Programming skill, System/Business Analyst Skill, SDLC, Software Development, UML, Java Tech, Business Analyst, System Analyst, Project Management, SCRUM, Agile, Waterfall, Highly Organized Communication & Presentation Skill, Negotiation, Ability to managed others. Good English proficiency, especially in writing. Understand business processes especially mobile apps. Prefer have experience in Banking
+--- Field Separator ---
+Ranking : 1
+Name : ANGGA PRIHANTORO
+Total Masa Kerja Relevan : 0 tahun (Fresh Graduate)
+Skills : Python, SQL, Excel, Tensorflow, Tableu, Looker
+Kelebihan : ANGGA PRIHANTORO has experience in developing android applications, specifically the Glaucomation App and Foodrism App, which shows his ability to work on projects from scratch. He has also demonstrated his skills in machine learning and deep learning models. Moreover, he has taken modules in Google Cloud Skills Boost - Data Analyst Learning Path and Udemy - MySQL for Data Analytics and Business Intelligence, which shows his willingness to learn and adapt to new technologies.
+Kekurangan : Despite his experience in developing android applications, ANGGA PRIHANTORO lacks overall technical experience working on multiple Software Development platforms, which is a key requirement for the PROJECT MANAGER position. He also lacks experience in project management, software development, and business analysis, which are essential skills for the role.
+Skor : 60/100
+Alasan : ANGGA PRIHANTORO has some relevant skills and experience, but he lacks the overall technical experience and specific skills required for the PROJECT MANAGER position.
+Kesimpulan : ANGGA PRIHANTORO shows some potential with his experience in developing android applications and his willingness to learn new technologies. However, he requires more experience and skills in project management, software development, and business analysis to be a strong candidate for the PROJECT MANAGER position.
+{'completion_tokens': 448, 'prompt_tokens': 2544, 'total_tokens': 2992, 'completion_time': 1.40067972, 'prompt_time': 0.18421237, 'queue_time': 0.004544063000000015, 'total_time': 1.5848920899999999}
+----------------

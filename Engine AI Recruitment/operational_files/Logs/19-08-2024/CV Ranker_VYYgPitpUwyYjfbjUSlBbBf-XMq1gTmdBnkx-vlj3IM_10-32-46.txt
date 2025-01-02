@@ -1,0 +1,71 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan "Ranking" dari beberapa String CV.
+Berikan "Ranking", "Kesimpulan", "Kelebihan", "Kekurangan" serta "Alasan" mu untuk semua CV tersebut, untuk "Job Vacancy" yang diberikan sebelumnya. 
+Berikan skala "Ranking" 1 untuk yang paling cocok, dan seterusnya (Contoh : "Ranking" : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 CV, berarti jadi 1/6, dan seterusnya.
+Jika sudah di "Ranking", urutkan hasil CV nya dari "Ranking" 1 sampai terakhir.
+
+Perhitungan "Skor":
+
+"Skor" harus dihitung sebagai rata-rata dari seluruh CV yang dikirimkan. Ini berarti setiap CV akan memiliki nilai "Skor" yang merupakan rata-rata dari semua "Skor" CV yang telah dinilai.
+Untuk menghitung "Skor", perhatikan jumlah dan relevansi dari "Kelebihan" serta "Kekurangan". Kelebihan menambah nilai, sedangkan Kekurangan menguranginya.
+
+Berikan lah nilai tambahan/plus yang "Total Masa Kerja Relevan" nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan "Job title" yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga "Skills", proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada "Skills" yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi "skills" nya.
+Bisa jadi "Skills" tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 "Kelebihan", dan 5 "Kekurangan" di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan contoh form berformat berikut :
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Vacancy : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 1
+Name : Dummy Name 1
+Total Masa Kerja Relevan : 3 tahun relevan yaitu ...
+Skills : 1. Python, 2. Tableau, 3. etc
+Kelebihan : 1. Bagus dalam teknis, 2. berpengalaman banyak, 3.
+Kekurangan : 1. tidak percaya diri, 2. etc, 3.
+Skor : 0/100
+Alasan : Dia layak rank 1 karena dia..
+Kesimpulan : Secara keseluruhan, dia cocok dan..
+--- Field Separator ---
+Ranking : RANK 2
+Name : 
+Skills : 1. SQL, 2. Akuntan, 3. etc
+Total Masa Kerja Relevan : 2.5 tahun, yaitu..
+Kelebihan :
+Kekurangan :
+Alasan :
+Skor : 45/100
+Kesimpulan : 
+--- Field Separator ---
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: Job Title : Software Developer
+--- Field Separator ---
+Job Vacancy : Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+--- Field Separator ---
+Ranking : RANK 1
+Name : ANGGA PRIHANTORO
+Total Masa Kerja Relevan : 0 tahun relevan
+Skills : 1. SQL, 2. Python, 3. Excel, 4. Tensorflow, 5. Tableau, 6. Looker
+Kelebihan : 1. Fresh graduate dengan-background Telecommunication Engineering, 2. Pengalaman sebagai Machine Learning trainee, 3. Memiliki sertifikasi Tensorflow Developer Certification, 4. Terampil dalam SQL dan Python, 5. Memiliki pengalaman dalam membuat proyek android
+Kekurangan : 1. Tidak memiliki pengalaman yang relevan dengan software development, 2. Kurang memiliki pengalaman dalam membuat dokumentasi SDLC, 3. Belum memiliki pengalaman dalam menginvestigasi dan menyelesaikan masalah end-user, 4. Kurang memiliki pengalaman dalam membuat arsitektur aplikasi, 5. Tidak memiliki pengalaman dalam membuat analisis sistem bisnis
+Alasan : Dia layak menjadi Rank 1 karena memiliki latar belakang yang relevan dan memiliki pengalaman dalam membuat proyek android serta memiliki sertifikasi Tensorflow Developer Certification.
+Skor : 60/100
+Kesimpulan : Secara keseluruhan, dia memiliki potensi yang besar dalam menjadi Software Developer.
+{'completion_tokens': 419, 'prompt_tokens': 1657, 'total_tokens': 2076, 'completion_time': 1.359387412, 'prompt_time': 0.401803331, 'queue_time': 0.0019260540000000104, 'total_time': 1.761190743}
+----------------

@@ -1,0 +1,64 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah menilai redflag dari sebuah CV String.
+Tolong evaluasi resume ini berdasarkan potensi red flag.
+Berikut adalah kriteria nya :
+
+Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
+--- Field Separator ---
+high_turnover (Jika kandidat memiliki banyak pekerjaan yang singkat (kecuali magang/internship) atau sering pindah-pindah.) : 
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan (Jika kualifikasi, pengalaman atau background pendidikan yang dicantumkan tidak relevan dengan posisi yang dilamar. Misal mendaftar menjadi IT Developer, tapi background pengalaman dan pendidikannya pertanian, itu Red Flag.) : 
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan (Ketika seorang kandidat tercatat memiliki pekerjaan di lebih dari satu tempat dalam periode waktu yang sama tanpa klarifikasi yang memadai.) : 
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun (Jika dalam periode waktu 1 tahun kandidat tidak bekerja tanpa penjelasan yang memadai, ini bisa menimbulkan pertanyaan tentang alasan di balik kesenjangan tersebut dan potensi dampaknya terhadap keterampilan atau komitmen kandidat.) : 
+--- Field Separator ---
+durasi_pendidikan (Untuk level master, ia lulus di bawah 2.5 tahun di masa studi master nya. Untuk level sarjana, ia lulus di bawah 4.5 tahun di masa studi sarjana nya. Untuk level diploma, ia lulus di bawah 3.5 tahun di masa studi diploma nya.) : 
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 (Minimal IPK atau GPA adalah 3.00 dari 4.00. Jika IPK rendah disebabkan oleh alasan yang dapat dijelaskan dan kandidat memiliki kualifikasi dan kemampuan lain yang sesuai, maka IPK tersebut mungkin tidak menjadi masalah besar. Jika tidak mencantumkan IPK, anggap Redflag.) : 
+--- Field Separator ---
+inconsistent_career_path (Jalur karier yang inkonsisten. Sering berganti profesi, tidak stabil pada jalur karir nya. Jika Redflag, urutkan berdasarkan waktu nya.) : 
+--- Field Separator ---
+non-progressive_career_path (Jika ada indikasi bahwa kandidat tidak naik jabatan dalam waktu yang lama atau mengalami demosi, anggap ini sebagai red flag.) : 
+--- Field Separator ---
+
+
+Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
+Jika terdapat 'Red Flag', mohon jelaskan secara detil.
+Jika 'Red Flag', berikan format berikut :
+
+Red Flag <-> Penjelasan Red Flag
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+------
+Job Vacancy:
+Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+------
+CV:
+CONTACTStaylor.smith@example.comtaylor-smith+12345678902Chicago, ILSKILLSExceptional CommunicationMultitasking & OrganizationCustomer Service ExcellenceProficient in MS Office & Front DeskSoftwareData Entry & ManagementProblem Solving & Conflict ResolutionEvent Coordination & SchedulingEDUCATIONAssociate Degree in BusinessAdministrationChicago Community College | Chicago, IL2012 – 2014Taylor SmithReceptionistReceptionistManaged the front desk of a busy corporate office, enhancing customer serviceprotocols.Front Desk AssociateProvided exceptional service in a fast-paced hotel environment, significantly improvingguest satisfaction scores.Administrative AssistantSupported daily administrative tasks, contributing to a 20% increase in office efficiency.ReceptionistCoordinated all front desk operations, streamlining communication betweendepartments.Office AssistantAssisted with various office duties and customer inquiries, facilitating a positive workenvironment.Junior ReceptionistGreeted patients and managed appointment schedules, improving the patientexperience.Taylor Smith is a proficient and dedicated Receptionist with 9 years of experienceproviding high-quality administrative support and customer service in various settings.Known for exceptional communication skills and the ability to manage multiple tasksefficiently, Taylor has consistently demonstrated the capacity to improve operationalprocesses and enhance customer satisfaction. With a strong background in officeadministration and a commitment to creating a welcoming and efficient environment,Taylor is an invaluable asset to any front desk or administrative team.EXPERIENCECorporate Solutions Inc. | Chicago, IL1.5 yearsCustomer Service EnhancementJan 2022 – Jun 2023Hotel Grand Vista | Chicago, IL1.5 yearsGuest Satisfaction ImprovementJul 2020 – Dec 2021GreenLeaf Wellness Center | Chicago, IL1.5 yearsOffice Efficiency IncreaseJan 2019 – Jun 2020Tech Innovations Co. | Chicago, IL1.5 yearsCommunication StreamliningJul 2017 – Dec 2018Creative Designs Ltd. | Chicago, IL1.5 yearsPositive Environment FacilitationJan 2016 – Jun 2017HealthPlus Clinics | Chicago, IL1.5 yearsPatient Experience ImprovementJul 2014 – Dec 2015ABOUT
+system: Here is the evaluation of the CV:
+
+Name : Taylor Smith
+--- Field Separator ---
+high_turnover : Red Flag <-> Taylor Smith has a high turnover rate, having worked in 6 different companies in the past 9 years, with an average tenure of 1.5 years.
+--- Field Separator ---
+kualifikasi_atau_pendidikan_yang_tidak_relevan : Safe
+--- Field Separator ---
+employment_overlap_bekerja_di_beberapa_tempat_secara_bersamaan : Safe
+--- Field Separator ---
+employment_gap_celah_ketenagakerjaan_selama_minimal_1_tahun : Safe
+--- Field Separator ---
+durasi_pendidikan : Safe
+--- Field Separator ---
+gpa_above_3_ipk_minimal_3 : Red Flag <-> The GPA is not mentioned in the CV.
+--- Field Separator ---
+inconsistent_career_path : Safe
+--- Field Separator ---
+non-progressive_career_path : Safe
+{'completion_tokens': 195, 'prompt_tokens': 1368, 'total_tokens': 1563, 'completion_time': 0.626043072, 'prompt_time': 0.083608697, 'queue_time': 0.00497175200000001, 'total_time': 0.709651769}
+----------------

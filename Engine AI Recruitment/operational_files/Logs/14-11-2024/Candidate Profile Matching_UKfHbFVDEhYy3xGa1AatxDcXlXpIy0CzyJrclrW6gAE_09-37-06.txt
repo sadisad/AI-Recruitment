@@ -1,0 +1,101 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama:
+Memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk kriteria_pekerjaan yang diberikan.
+
+Instruksi:
+
+1. **Total Masa Kerja Relevan**:
+   - Isi form "total masa kerja relevan" dengan menghitung total masa kerja yang benar-benar sesuai dengan Job Yang Dilamar. Jika tidak ada pengalaman yang relevan, berikan nilai 0 untuk Total Masa Kerja Relevan dan turunkan skor cv secara proporsional sesuai dengan relevansi pengalaman.
+
+2. **Keterampilan (Skills)**:
+   - Isi form "skills" dengan mengevaluasi keterampilan yang relevan dengan job requirement. Berikan penilaian lebih tinggi jika skill tersebut relevan. Misalnya, SQL relevan dengan RDBMS, Query, dll. Jika skill tidak relevan, kurangi skor cv secara proporsional.
+
+3. **Kelebihan dan Kekurangan**:
+   - Isi form "kelebihan" dan "kekurangan" dengan memberikan minimal 5 kelebihan dan 5 kekurangan. Pertimbangkan kelebihan dan kekurangan ini dalam menentukan skor cv.
+
+4. **Penilaian CV (Skor CV)**:
+   - **skor cv** harus selalu diisi berdasarkan relevansi pengalaman kerja, keterampilan, dan pendidikan dengan Job Yang Dilamar. Jangan biarkan skor_cv kosong atau default ke 0.00 kecuali CV benar-benar tidak relevan. 
+   - Pastikan skor cv memiliki 2 angka di belakang koma (float). 
+   - Jika kandidat tidak memiliki pengalaman atau keterampilan yang relevan, berikan skor cv yang rendah, misalnya di bawah 10.00, tetapi tetap harus mencerminkan penilaian yang logis dan sesuai.
+
+5. **Kesimpulan**:
+   - Isi form "kesimpulan" dengan menyampaikan kesimpulan Anda mengenai kecocokan CV dengan kriteria_pekerjaan.
+
+6. **Kesesuaian**:
+   - Isi form "kesesuaian" dengan mengevaluasi apakah CV sesuai dengan job description dan kriteria_pekerjaan:
+     - **jobRoleOverview**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobQualification**: Berikan "true" jika sesuai, "false" jika tidak.
+     - **jobResponsibility**: Berikan "true" jika sesuai, "false" jika tidak.
+
+7. **Alasan**:
+   - Isi form "alasan" berdasarkan kecocokan kandidat dengan kriteria_pekerjaan dan job description.
+
+8. **Saran Job Posisi Lain (Suggestion)**:
+   - Isi form "suggestion" berdasarkan CV kandidat dan kecocokannya terhadap suggested_job_role, berikan alasan dan persentase kecocokan (match_percentage).
+
+**Format Pengisian**:
+Isilah form berikut tanpa ada tambahan kata darimu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang dilamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor cv : [0.00/100.00]
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['first suggested_job_role','second suggested_job_role', '3. etc', ...], "match_percentage" : , "reasons" : ['', '', ...]}
+--- Field Separator ---
+
+------
+Job Description Research and development of deep learning-based technologies and algorithms Research on image processing and analysis models Development of solutions using Generative AI and Large Language Models (LLM) Fine-tuning of LLM models and design of custom datasets Research and development of Retrieval-Augmented Generation(RAG) systems
+------
+Kriteria Pekerjaan:
+Requirements: Bachelor’s degree in Computer Science, Engineering, or related field Proficiency in Python Experience with deep learning framework such as Pytorch or TensorFlow Ability to implement solutions based on academic papers and technical research Prior research experience in Generative AI and LLMs
+Availability for an online assessment (with screen and camera recording)    Preferred Qualifications: Experience with Natural Language Processing (NLP) libraries such as Hugging Face Transformers Publications or contributions to open-source project in AI/ML fields Knowledge of MLOps principles for scaling machine learning workflows and automation Passion for the AI / Security List Additional qualifications: Adaptability and eagerness to learn Strong teamwork and collaboration skills Proactive and quick learner
+------
+CV:
+Irsyad Z.South Jakarta, Jakarta • zulfikarirsyad@gmail.com • linkedin.com/in/irsyadzulfikarAI EngineerExperienced AI Engineer with 2+ years specializing in Computer Vision, Machine Learning,and Python. Completed 90% of projects and improved model performance by 80% onaverage in 1 year. Led a cross-functional team with 95% positive feedback.WORK EXPERIENCELawencon Internasional • South Jakarta, Jakarta, Indonesia · On-site • 04/2024 - PresentAI EngineerUpwork • Remote • 02/2024 - PresentComputer Vision | Machine LearningIndonesia AI (PT. Teknologi Artifisial Indonesia) • Jakarta, Indonesia · Remote •02/2023 - 02/2024Junior AI Engineer (Computer Vision)Computer Vision Bootcamp Batch 1Full Stack Bangalore (PT SINAR TEKNOLOGI BANGSA) • Jakarta, Indonesia · Remote •07/2022 - 02/2023Full Stack Data Science AcademyEnrolled in and successfully finished Indonesia AI's revolutionary Computer VisionBootcamp Batch 1,•a pioneering program designed to assist enthusiasts in understanding cutting-edgeComputer Vision technology.•I have completed three significant tasks: Face Recognition, Person Tracking, and SelfDriving Car.•And also experienced in managing AI projects, including planning, coordination, andevaluation. Delivered projects within deadlines and evaluated performance againstobjectives and requirements.•Overall Success: The bootcamp provided me with hands-on experience, which helpedme complete 90% of my projects and enhance model performance by 80% on average.•Collaborative Spirit: Led a cross-functional team that received 95% favorable groupfeedback, emphasizing effective teamwork and improved learning dynamics.•This experience not only improved my technical skills but also fueled my desire to pushthe frontiers of computer vision. This bootcamp's transformative experiences will continueto motivate my quest of building relevant solutions in the tech world.•Grade : 87•Proficient in data science fundamentals, including business understanding, data analysiswith•Orbit Future Academy • Remote • 02/2022 - 07/2022Introduction AI For Gen ZEDUCATIONBachelor's degree in Computer Software EngineeringInstitut Teknologi Telkom • GPA: 3.8/4.00 • 09/2019 - 03/2023Completing a thesis with the title : VGG16NET Hybrid Algorithm with Support Vector Machinein Determining Waste TypesCERTIFICATIONSIBM Introduction to Artificial Intelligence (AI) • 07/2023 - PresentCourseraSupervised Machine Learning: Regression and Classification • 07/2023 - PresentDeepLearning.AIFull Stack Data Science Academy • 07/2022 - PresentFullstack BangaloreData Wrangling Python • 04/2022 - PresentDQLabExploratory Data Analysis with Python for Beginner • 04/2022 - PresentDQLabData Visualization with Python Matplotlib for Beginner - Part 1 • 04/2022 - PresentDQLabPython for Data Professional Beginner - Part 1 • 02/2022 - PresentDQLabIntroduction to Data Science with Python • 02/2022 - PresentDQLabDatabase Programmer • 11/2022 - 12/2025Badan Nasional Sertifikasi Profesi (BNSP)Python Fundamental for Data ScienceDQLabPython, data wrangling, SQL for data science, and data visualization. Completed real-world•projects in customer segmentation, classification, and regression.•Certified Independent Study•In this certified independent study, I have undertaken several mini projects in the fields ofcomputer vision, natural language processing, data science, and a final project.•SKILLSArtificial Intelligence (AI), C#, Chatbot Development, Computer Vision, Data Analysis,Database Programmer, Data Science, Data Visualization, Deep Learning, Gradient Descent,Jobs, Kecerdasan Buatan (AI), Large Language Models (LLM), Linear Regression, LlamaIndex,Logistic Regression for Classification, Machine Learning, MongoDB, Natural LanguageProcessing (NLP), NoSQL, Object Detection, Object Tracking, Pemrograman Basis Data,PostgreSQL, Prompt Engineering, Python (Programming Language), PyTorch, RAG, RDBMS,Regularization to Avoid Overfitting, SQL, Supervised Learning, TensorFlow, Transformer Models,YOLO
+Tenant: law003
+Source: PostmanRuntime/7.41.2
+Company: admlaw003
+system: name : Irsyad Z
+--- Field Separator ---
+total masa kerja relevan : {"relevant_year" : 2, "desc" : "Ia memiliki pengalaman bekerja di posisi terkait AI dan Computer Vision selama 2 tahun."}
+--- Field Separator ---
+skills : ['Computer Vision', 'Machine Learning', 'Python', 'PyTorch', 'TensorFlow', 'Deep Learning', 'Natural Language Processing (NLP)', 'Generative AI', 'Large Language Models (LLM)']
+--- Field Separator ---
+kelebihan : ['Experienced AI Engineer with 2+ years specializing in Computer Vision and Machine Learning', 'Completed 90% of projects and improved model performance by 80% on average in 1 year', 'Led a cross-functional team with 95% positive feedback', 'Proficient in data science fundamentals, including business understanding, data analysis with Python', 'Has experience with Natural Language Processing (NLP) libraries such as Hugging Face Transformers']
+--- Field Separator ---
+kekurangan : ['Limited experience in working with Retrieval-Augmented Generation(RAG) systems', 'No publications or contributions to open-source project in AI/ML fields', 'No explicit experience with MLOps principles for scaling machine learning workflows and automation', 'No specific mention of experience with image processing and analysis models', 'Limited experience in fine-tuning of LLM models and design of custom datasets']
+--- Field Separator ---
+skor cv : [75.00/100.00]
+--- Field Separator ---
+alasan : Irsyad Z memiliki latar belakang yang kuat dalam AI dan Computer Vision, serta memiliki pengalaman bekerja dalam projek-projek terkait. Namun, ia masih perlu memperluaspengalaman dalam beberapa aspek khusus seperti RAG systems dan MLOps.
+--- Field Separator ---
+kesimpulan : Irsyad Z memiliki potensi yang kuat untuk menjadi AI Engineer, tetapi masih perlu memperluas pengalaman dan kemampuan dalam beberapa aspek khusus.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'true', "jobQualification" : "true", "jobResponsibility" : "true"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Bachelor’s degree in Computer Science, Engineering, or related field', 'Proficiency in Python', 'Experience with deep learning framework such as Pytorch or TensorFlow', 'Ability to implement solutions based on academic papers and technical research', 'Prior research experience in Generative AI and LLMs']
+--- Field Separator ---
+suggestion : {"suggested_job_role" : ['AI Engineer', 'Computer Vision Engineer', 'Machine Learning Engineer'], "match_percentage" : 85, "reasons" : ['Has experience in AI and Computer Vision', 'Proficient in Python and deep learning frameworks', 'Has research experience in Generative AI and LLMs']}
+{'completion_tokens': 609, 'prompt_tokens': 2246, 'total_tokens': 2855, 'completion_time': 1.74, 'prompt_time': 0.105775643, 'queue_time': 0.008155899999999994, 'total_time': 1.845775643}
+----------------

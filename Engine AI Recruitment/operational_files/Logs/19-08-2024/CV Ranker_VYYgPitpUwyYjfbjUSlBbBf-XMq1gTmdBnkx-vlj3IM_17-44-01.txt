@@ -1,0 +1,66 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan Ranking dari banyak String CV.
+
+Berikan Ranking, Kesimpulan, Kelebihan, Kekurangan untuk semua CV tersebut.
+Berikan lah Skor tambahan untuk kandidat yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan Skor nya.
+Perhatikan juga Skills, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada Skills yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. 
+Contoh lain misalkan SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi Skills tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa Postgre juga karena memiliki kesamaan menggunakan SQL.
+Isilah Kelebihan, dan Kekurangan di Contoh Form berdasarkan Job Requirements yang diberikan sebelumnya. 
+Pilih Ranking yang benar, dengan pertimbangan Kelebihan dan Kekurangan nya.
+Hasil nya harus dengan bahasa Indonesia, tanpa ada text lain darimu, cukup isi form seperti Contoh Form yang saya berikan.
+
+Contoh Form berformat berikut :
+
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Requirements : [Kriteria Pekerjaan]
+--- Field Separator ---
+Ranking : [Ranking 1]
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan, misalnya 3 tahun]
+Skills : [Skill yang dimiliki, misalnya Python, SQL, dll.]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor tertinggi untuk Ranking 1, misalnya 90/100]
+Alasan : [Alasan mengapa kandidat layak berada di Ranking 1]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+Ranking : [Ranking 2]
+Name : [Nama Kandidat 2]
+Total Masa Kerja Relevan : [Durasi kerja yang relevan]
+Skills : [Skill yang dimiliki]
+Kelebihan : [Daftar Kelebihan Kandidat]
+Kekurangan : [Daftar Kekurangan Kandidat]
+Skor : [Skor yang lebih rendah dari Ranking 1]
+Alasan : [Alasan mengapa kandidat berada di Ranking 2]
+Kesimpulan : [Kesimpulan penilaian untuk kandidat]
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+------
+CV:
+ProfileI am a passionate and hard working person. I love developing mobile applications, I am always eager to see results of my efforts in the form of working products. I am focused on quality.I enjoy exploring possibilities of new technologies so that I can see their integration into everyday work and life.Professional experience (10+ years, 2011 - 2022)Tech Lead / Senior Android Developer - Tapptic January 2016 - Present (6 years)• As a tech lead, I am responsible for development, architectural designand quality of our applications. I lead development processes from atechnical perspective and coordinate efforts of developers.• I have introduced multi-platform solutions into our tech stack (KotlinNative and Flutter)• As a senior developer, I'm responsible for development of mobileapplications for our Clients in Sport, Media and Health industries. Overmy 6+ years in the Company, I have developed and led developmentof several applications reaching millions of users.• Tech stack: Android, Kotlin, Java, Kotlin Native, FlutterSenior Android Developer / Contractor - Sii  January 2016 - December 2017• Senior Android Developer - Sii contractor• Outsourced to Tapptic, later transferred to TappticAndroid developer / Freelancer - SuperVisor October 2015 - March 2016 (Part time contract)• I developed an in-house, B2B solution, using beacons, for presencecontrol inside vehicles.• Tech stack: AndroidAndroid Developer / Contractor  - Connectis (Outsourced to Blue Services) July 2015 - December 2015 (Contract)• I developed an Android banking application for one of Polish Banks. Ithandled most of day to day banking operations: transfers, basicaccount management, new product offers, simple messaging withcustomer support, etc• Tech stack: AndroidAndroid Developer - BetterSolutions December 2014 - June 2015 (Contract)• I was working on a Map & Navigation system for our B2B Customers.• I enabled our Android application to connect to the truck's onboardcomputer and exchange information.• Tech stack: AndroidPage  of 12• Kotlin & Java• Android SDK• Kotlin Native• Flutter• Swift• Java EE (Spring boot,Hibernate, PostgreSQL)• GitEducation:Bachelor's degree in Computer Science, Gdańsk University of Technology SENIOR ANDROID DEVELOPER Professional experience - continuationJava Developer - SuperVisor October 2014 - November 2014 (Contract)• Deployment and integration of Open Street Map (custom map tileserver) for company's vehicle tracking solution• Tech stack: Java EE, Linux, OSMAndroid Developer - Samsung Electronics Poland July 2014 - September 2014• I was working on development of SDK related to S-Pen• Tech stack: Android, Java, Maven, S-Pen SDK (Samsung's library)Android Developer - BetterSolutions November 2012 - June 2014• Development of mobile application with offline navigation capabilitiesfor B2B Client• I was responsible for custom integration of Open Street Map,extending and adapting the OsmAnd open source project for Client'srequirements.• Tech stack: Java, Android, Web services, Linux & Bash, OSM,OsmAnd open source project (Android)• Tech stack: Android, Java (Backend)Junior PHP Developer - KurJerzy.pl March 2011 - December 2011• https://www.kurjerzy.pl• I developed new features for existing products, maintained backendand frontend applications• Tech stack: PHP, JavaScript, JQuery, MySQL, HTML, Web FrontendPage  of 22GDPR note: Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).
+system: Job Title : System Engineer
+--- Field Separator ---
+Job Requirements : Candidates must possess at least Bachelor's Degree, Master's Degree/Post Graduate Degree in Engineering (Computer/Telecommunication),Engineering (Others), Computer Science/Information Technology, Science & Technology or equivalent At least 1 Year(s) of working experience as a System Engineer Having experience in using Oracle WebLogic as a System Engineer Willing to work in shifting Hands on experience of OS (Linux, Windows, and Mainframe) Have knowledge about network and security concepts and tuning techniques and system performance configuration Familiar with backup and restore concept Have a knowledge of database structure design Have a knowledge atlassian product Have a knowledge at CICD Tools Have experience using Docker, Jenkins and or Kubernetes Have a knowledge on microservices technology Familiar with monitoring and analytical tools (Grafana, Kibana, Logtash, Zabbix) can use and set up from zero Experience and understanding minimal one programming language (Vb, Java, PHP, Golang, C#, Python) Experience with Core Banking Tools (AS400/T24) will be preferred
+--- Field Separator ---
+Ranking : 1
+Name : [Nama Kandidat 1]
+Total Masa Kerja Relevan : [10 tahun]
+Skills : Android, Kotlin, Java, Java EE, Spring boot, Hibernate, PostgreSQL, Git, Linux, OSM
+Kelebihan : Memiliki pengalaman yang luas dalam pengembangan aplikasi mobile, memiliki kemampuan dalam berbagai teknologi, memiliki pengalaman dalam menggunakan Java dan Kotlin
+Kekurangan : Tidak memiliki pengalaman dalam menggunakan Oracle WebLogic, tidak memiliki pengalaman dalam bekerja sebagai System Engineer
+Skor : 80/100
+Alasan : Kandidat memiliki pengalaman yang luas dalam pengembangan aplikasi mobile, memiliki kemampuan dalam berbagai teknologi, namun tidak memiliki pengalaman dalam menggunakan Oracle WebLogic dan tidak memiliki pengalaman dalam bekerja sebagai System Engineer
+Kesimpulan : Kandidat memiliki kemampuan yang baik dalam pengembangan aplikasi mobile, namun perlu belajar lebih lanjut tentang Oracle WebLogic dan System Engineer
+{'completion_tokens': 454, 'prompt_tokens': 1886, 'total_tokens': 2340, 'completion_time': 1.443041586, 'prompt_time': 0.140863429, 'queue_time': 0.0015067759999999875, 'total_time': 1.583905015}
+----------------

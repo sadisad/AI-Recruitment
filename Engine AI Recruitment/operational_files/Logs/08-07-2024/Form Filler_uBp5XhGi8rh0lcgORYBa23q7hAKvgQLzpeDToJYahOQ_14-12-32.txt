@@ -1,0 +1,248 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Dari string tersebut, isilah form berikut (Jika tidak ada, gunakan '-'). 
+Jangan lower kan string hasil nya.
+Jika Hasil dari Field berjumlah lebih dari satu, masukan hasilnya dalam bentuk list array [] python.
+Jika Hasil dari Field memiliki deskripsi, Ambil Title, Deskripsi, dan Tahunnya. isi dengan format seperti berikut :
+Sukarelawan : [{"title" : "AI Engineer", "description" : "Membuat Program AI", "duration" : "2020 - 2022"}]
+
+Hanya isi sesuai field yang ada di form. Jika hanya ada 1 field di form, isilah field itu saja. Jika ada 2 field, isi kedua field tersebut. Hanya isi field yang ada di form.
+Berikut adalah form yang akan kau isi :
+
+Berikut adalah form yang akan kau isi :
+{
+  "candidateId": "",
+  "salutation": "",
+  "frontTitle": "",
+  "endTitle": "",
+  "fullName": "",
+  "firstName": "",
+  "vendor": "",
+  "lastName": "",
+  "nickname": "",
+  "position": "",
+  "status": "",
+  "gender": "",
+  "birthplace": "",
+  "birthdate": "",
+  "religion": "",
+  "nationality": "",
+  "ethnicity": "",
+  "maritalStatus": "",
+  "medicalStatus": "",
+  "bloodType": "",
+  "height": "",
+  "weight": "",
+  "houseStatus": "",
+  "note": "",
+  "country": "",
+  "state": "",
+  "city": "",
+  "subDistrict": "",
+  "village": "",
+  "address": "",
+  "postalCode": "",
+  "since": "",
+  "phones": [
+    {
+      "phoneCode": "",
+      "phoneNumber": "",
+      "type": "",
+      "primary": ""
+    }
+  ],
+  "emails": [
+    {
+      "email": "",
+      "type": "",
+      "notification": ""
+    }
+  ],
+  "socialMedias": [
+    {
+      "socialMediaPlatform": "",
+      "url": ""
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "",
+      "address": "",
+      "totalEmployee": "",
+      "position": "",
+      "exitReason": "",
+      "startDate": "",
+      "current": "",
+      "endDate": "",
+      "firstSalary": "",
+      "lastSalary": "",
+      "currency": "",
+      "companyType": "",
+      "responsibility": ""
+    }
+  ],
+  "reference": [
+    {
+      "name": "",
+      "companyName": "",
+      "position": "",
+      "relation": "",
+      "phone": ""
+    }
+  ],
+  "formalEducation": [
+    {
+      "educationLevel": "",
+      "institution": "",
+      "city": "",
+      "major": "",
+      "frontTitle": "",
+      "endTitle": "",
+      "current": "",
+      "startYear": "",
+      "endYear": "",
+      "graduateDate": "",
+      "gpa": "",
+      "graduate": "",
+      "description": ""
+    }
+  ],
+  "informalEducation": [
+    {
+      "institution": "",
+      "subject": "",
+      "city": "",
+      "startDate": "",
+      "endDate": "",
+      "current": "",
+      "graduate": "",
+      "graduateDate": "",
+      "score": "",
+      "description": ""
+    }
+  ],
+  "hobbiesAndOtherActivities": "",
+  "language": {
+    "ratingListening": "",
+    "gradeListening": "",
+    "ratingWriting": "",
+    "gradeWriting": "",
+    "ratingReading": "",
+    "gradeReading": "",
+    "ratingSpeaking": "",
+    "gradeSpeaking": ""
+  }
+}
+
+saya mau setiap field dibatasi separator seperti ini 
+
+--- Field Separator ---
+
+jadi contohnya seperti ini
+--- Field Separator --- 
+candidateId:
+--- Field Separator ---
+salutation
+--- Field Separator ---
+
+Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu.
+
+isi field - field di atas berdasarkan string cv yang ada di bawah ini tanpa ada kata kata darimu
+------
+CV:
+CONTACTSdr.jordan.lee@example.comdr-jordan-lee+12345678903Los Angeles, CASKILLSPatient Care & ManagementDiagnostic ExpertiseSurgical ProceduresEmergency ResponseHealthcare AdministrationMedical Research & EducationClinical LeadershipHealth Policy AdvocacyEDUCATIONDoctor of Medicine (MD)University of California, Los Angeles(UCLA) | Los Angeles, CA2006 – 2013Bachelor of Science in BiologyStanford University | Stanford, CA2002 – 2006Dr. Jordan LeeMedical DoctorAttending PhysicianLed the emergency department, significantly reducing patient wait times and improvingcare outcomes.Medical DoctorProvided comprehensive care to a diverse patient population, with a focus on preventivemedicine and patient education.Resident DoctorSpecialized in internal medicine, participating in groundbreaking research oncardiovascular health.Junior DoctorGained extensive experience in pediatrics and emergency care, contributing to thedevelopment of new pediatric care protocols.Intern DoctorCompleted rotations in various departments, excelling in surgery and receivingcommendations for patient care excellence.Dr. Jordan Lee is a highly skilled and dedicated Medical Doctor with 10 years ofexperience across various healthcare settings. Specializing in patient care management,diagnostic procedures, and emergency response, Dr. Lee has demonstrated excellencein healthcare delivery and medical education. With a strong commitment to advancingmedical research and healthcare policy, Dr. Lee is recognized for leadership in clinicalsettings and contributions to medical science.EXPERIENCEPacific Medical Center | Los Angeles, CA2 yearsEmergency Department LeadershipJan 2022 – PresentCity Health Clinic | Los Angeles, CA2 yearsPreventive Medicine FocusJan 2020 – Dec 2021Grand Valley Hospital | Los Angeles, CA2 yearsCardiovascular Research ParticipationJan 2018 – Dec 2019Metropolitan Health | Los Angeles, CA2 yearsPediatrics and Emergency Care ExperienceJan 2016 – Dec 2017Sunshine General Hospital | Los Angeles, CA2 yearsSurgery Excellence CommendationJan 2014 – Dec 2015ABOUT
+system: --- Field Separator ---
+candidateId: dr-jordan-lee
+--- Field Separator ---
+salutation: 
+--- Field Separator ---
+frontTitle: Dr.
+--- Field Separator ---
+endTitle: 
+--- Field Separator ---
+fullName: Jordan Lee
+--- Field Separator ---
+firstName: Jordan
+--- Field Separator ---
+vendor: 
+--- Field Separator ---
+lastName: Lee
+--- Field Separator ---
+nickname: 
+--- Field Separator ---
+position: Medical Doctor
+--- Field Separator ---
+status: 
+--- Field Separator ---
+gender: 
+--- Field Separator ---
+birthplace: 
+--- Field Separator ---
+birthdate: 
+--- Field Separator ---
+religion: 
+--- Field Separator ---
+nationality: 
+--- Field Separator ---
+ethnicity: 
+--- Field Separator ---
+maritalStatus: 
+--- Field Separator ---
+medicalStatus: 
+--- Field Separator ---
+bloodType: 
+--- Field Separator ---
+height: 
+--- Field Separator ---
+weight: 
+--- Field Separator ---
+houseStatus: 
+--- Field Separator ---
+note: 
+--- Field Separator ---
+country: USA
+--- Field Separator ---
+state: CA
+--- Field Separator ---
+city: Los Angeles
+--- Field Separator ---
+subDistrict: 
+--- Field Separator ---
+village: 
+--- Field Separator ---
+address: 
+--- Field Separator ---
+postalCode: 
+--- Field Separator ---
+since: 
+--- Field Separator ---
+phones: [{"phoneCode": "+1", "phoneNumber": "2345678903", "type": "", "primary": ""}]
+--- Field Separator ---
+emails: [{"email": "dr.jordan.lee@example.com", "type": "", "notification": ""}]
+--- Field Separator ---
+socialMedias: [{"socialMediaPlatform": "", "url": ""}]
+--- Field Separator ---
+workExperience: [{"company": "Pacific Medical Center", "address": "Los Angeles, CA", "totalEmployee": "", "position": "Emergency Department Leadership", "exitReason": "", "startDate": "Jan 2022", "current": "True", "endDate": "", "firstSalary": "", "lastSalary": "", "currency": "", "companyType": "", "responsibility": ""}, 
+{"company": "City Health Clinic", "address": "Los Angeles, CA", "totalEmployee": "", "position": "Preventive Medicine Focus", "exitReason": "", "startDate": "Jan 2020", "current": "False", "endDate": "Dec 2021", "firstSalary": "", "lastSalary": "", "currency": "", "companyType": "", "responsibility": ""}, 
+{"company": "Grand Valley Hospital", "address": "Los Angeles, CA", "totalEmployee": "", "position": "Cardiovascular Research Participation", "exitReason": "", "startDate": "Jan 2018", "current": "False", "endDate": "Dec 2019", "firstSalary": "", "lastSalary": "", "currency": "", "companyType": "", "responsibility": ""}, 
+{"company": "Metropolitan Health", "address": "Los Angeles, CA", "totalEmployee": "", "position": "Pediatrics and Emergency Care Experience", "exitReason": "", "startDate": "Jan 2016", "current": "False", "endDate": "Dec 2017", "firstSalary": "", "lastSalary": "", "currency": "", "companyType": "", "responsibility": ""}, 
+{"company": "Sunshine General Hospital", "address": "Los Angeles, CA", "totalEmployee": "", "position": "Surgery Excellence Commendation", "exitReason": "", "startDate": "Jan 2014", "current": "False", "endDate": "Dec 2015", "firstSalary": "", "lastSalary": "", "currency": "", "companyType": "", "responsibility": ""}]
+--- Field Separator ---
+reference: [{"name": "", "companyName": "", "position": "", "relation": "", "phone": ""}]
+--- Field Separator ---
+formalEducation: [{"educationLevel": "Doctor of Medicine (MD)", "institution": "University of California, Los Angeles (UCLA)", "city": "Los Angeles, CA", "major": "", "frontTitle": "", "endTitle": "", "current": "", "startYear": "2006", "endYear": "2013", "graduateDate": "", "gpa": "", "graduate": "", "description": ""}, 
+{"educationLevel": "Bachelor of Science in Biology", "institution": "Stanford University", "city": "Stanford, CA", "major": "", "frontTitle": "", "endTitle": "", "current": "", "startYear": "2002", "endYear": "2006", "graduateDate": "", "gpa": "", "graduate": "", "description": ""}]
+--- Field Separator ---
+informalEducation: [{"institution": "", "subject": "", "city": "", "startDate": "", "endDate": "", "current": "", "graduate": "", "graduateDate": "", "score": "", "description": ""}]
+--- Field Separator ---
+hobbiesAndOtherActivities: 
+--- Field Separator ---
+language: {"ratingListening": "", "gradeListening": "", "ratingWriting": "", "gradeWriting": "", "ratingReading": "", "gradeReading": "", "ratingSpeaking": "", "gradeSpeaking": ""}
+--- Field Separator ---
+{'completion_tokens': 1087, 'prompt_tokens': 1423, 'total_tokens': 2510, 'completion_time': 3.105714286, 'prompt_time': 0.415494162, 'queue_time': None, 'total_time': 3.521208448}
+----------------

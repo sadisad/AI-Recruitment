@@ -1,0 +1,92 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk job vacancy nya.
+- Berikan total masa kerja relevan, skills, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Yang Dilamar yang diberikan sebelumnya.
+- Dari semua bobot penilaian, utamakan lah relevansi si kandidat dengan Job Yang Dilamar yang di berikan. 
+- Total Masa Kerja Relevan adalah masa kerja yang relevan dengan Job Yang Dilamar yang di berikan. Jika di cv nya ia tidak memiliki pekerjaan yang sama dengan Job Yang Dilamar yang diberikan di awal, turunkan Skor CV secara drastis.
+- Misal, Job Yang Dilamar di awal adalah Senior Salesman. Namun di CV kandidat hanya berhubungan dengan IT, atau desainer. Maka sudah bisa di anggap tidak relevan. Kurangi Skor CV. Dan jangan di anggap Total Masa Kerja Relevan 
+- Misal, cv kandidat hanya memiliki pekerjaan IT. Sedangkan job yang di lamar adalah Staff Logistic. Maka tidak berhubungan, dan form Total Masa Kerja Relevan isi saja dengan 0.
+- Semakin relevan dan lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan Skor CV nya.
+- Perhatikan juga skill, proyek, serta latar belakang pendidikannya yang relevan untuk menjadi bahan pertimbangan penilaian.
+- Tambahkan Skor CV nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+- Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+- Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Berikanlah Skor CV yang sejujur nya, dengan pertimbangan kelebihan dan kekurangan nya.
+- Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+- Untuk peniliannya, pastikan memiliki 2 angka di belakang koma. (Float, bukan integer)
+- Jika kandidat tidak memiliki pengalaman kerja yang relevan atau jika keterampilan yang mereka miliki tidak sesuai dengan yang dibutuhkan oleh posisi tersebut, rendahkan saja Skor CV nya. Jika benar-benar tidak relevan, bisa diberikan Skor CV dibawah 10.
+- Untuk Form Name, jangan di tuliskan gelar nya. Cukup Nama nya saja.
+- Jangan ragu untuk memberikan nilai 0 untuk Total Masa Kerja Relevan, dan Skor CV. Periksalah baik-baik apakah kandidat pernah bekerja di role yang sama dengan Job Yang Dilamar.
+- Relevannya itu benar-benar relevan, misal kandidat pernah jadi Front End Developer, tapi Job Yang Dilamar di awal adalah Data Scientist, walaupun sama-sama IT Related, tapi itu dianggap tidak relevan. Jika begitu, tidak termasuk ke perhitungan Total Masa Kerja Relevan.
+- Total Masa Kerja Relevan yang di hitung itu adalah pengalaman kandidat di CV nya yang benar-benar sama pekerjaannya dengan Job Yang Dilamar.
+- Total Masa Kerja Relevan adalah pengalaman kerja kandidat yang membutuhkan pengetahuan dan pengalaman dalam job requirement yang sama dengan Job Yang Dilamar.
+- Berikan nilai 0 untuk form Total Masa Kerja Relevan jika ia tidak pernah bekerja dan berpengalaman dengan pekerjaan yang dilamar. 
+- Pastikan kandidat punya ilmu nya, tidak hanya tools nya untuk job yang di lamar. Harus spesifik, tidak hanya relevan.
+- Total Masa Kerja Relevan sudah pasti 0, kecuali cv kandidat punya title yang sama dengan Job yang Di Lamar di awal. Jika tidak ada, berikan 0. BERIKAN 0 jika tidak ada.
+- Jika kandidat tidak ideal untuk job yang di lamar, apalagi kurang berpengalaman, kurangi secara drastis Skor CV nya. Kurangi secara maksimal, berikan nilai maksimal 20 dari 100.
+- Jika tidak ada bukti ia pernah bekerja atau berpengalaman sesuai dengan Job yang di lamar, kurangi secara drastis Total Masa Kerja Relevan. Kurangi secara drastis Skor CV nya.
+- Jika Background Pendidikannya tidak sesuai dengan Job yang di lamar, kurangi Skor CV secara drastis, banyak pengurangan.
+- Kebutuhan pekerjaan dan menekankan bahwa kandidat harus memiliki pengalaman langsung dan spesifik dalam bidang yang sama. 
+- Misalnya, Anda bisa menekankan bahwa kandidat harus memiliki pengalaman langsung dalam Job vacancy yang di lamar
+- Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
+- Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
+
+Isilah dengan form berformat berikut tanpa ada tambahan kata darimu
+
+cukup form yang ada di bawah ini saja, jangan ada kata "heres filled form " dari mu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : 70.3/100
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'v', "jobQualification" : "true", "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+
+- untuk mengisi form "kesesuaian" contohnya seperti ini 
+
+- jadi intinya untuk mengisi form "kesesuaian" itu dari cv ada yang sesuai tidak dengan job description
+- jadi contohnya isi jobRoleOverview harus dirangkum jika cv yang diberikan sesuai dengan job role overview yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobQualification harus dirangkum jika cv yang diberikan sesuai dengan job qualification yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobResponsibility harus dirangkum jika cv yang diberikan sesuai dengan job responsibility yang ada maka berikan "true", jika tidak sesuai berikan "false"
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job description nya :
+------
+Handle user requests by collecting detailed user requirements, analyze the requirement, and can give proposed solutions Controls solution by establishing specifications; coordinating production with programmers Produce Functional Specification & UAT plan, prepare case tests and assist in user training and deployment preparation for the end users Define application problem conferring with clients; evaluation procedures, and processes. Provide necessary troubleshooting and production supports when a breakdown occurs, and to immediately remedy the system when flaws are encountered Ensure operation by training client personnel
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: name : ANGGA PRIHANTORO
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['Machine Learning', 'Tensorflow', 'Python', 'SQL', 'Excel', 'Tableau', 'Looker', 'Deep Learning', 'C Language']
+--- Field Separator ---
+kelebihan : ['Punya pengalaman sebagai Machine Learning trainee', 'Punya pengalaman membuat aplikasi android', 'Punya sertifikasi Tensorflow Developer', 'Punya pengalaman dengan C language', 'Punya kemampuan analisis']
+--- Field Separator ---
+kekurangan : ['Tidak punya pengalaman langsung di posisi yang dilamar', 'Tidak punya pengalaman dengan Functional Specification & UAT plan', 'Tidak punya pengalaman dengan user training and deployment preparation', 'Tidak punya pengalaman dengan troubleshooting system', 'Tidak punya pengalaman dengan production supports']
+--- Field Separator ---
+skor_cv : 30.4/100
+--- Field Separator ---
+alasan : Kandidat tidak punya pengalaman langsung di posisi yang dilamar dan tidak punya pengalaman dengan beberapa kemampuan yang dibutuhkan oleh pekerjaan tersebut.
+--- Field Separator ---
+kesimpulan : Kandidat tidak ideal untuk posisi ini karena tidak punya pengalaman langsung dan tidak punya kemampuan yang sesuai dengan job description.
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+{'completion_tokens': 376, 'prompt_tokens': 2582, 'total_tokens': 2958, 'completion_time': 1.207880302, 'prompt_time': 0.249321525, 'queue_time': 0.0013579149999999873, 'total_time': 1.457201827}
+----------------

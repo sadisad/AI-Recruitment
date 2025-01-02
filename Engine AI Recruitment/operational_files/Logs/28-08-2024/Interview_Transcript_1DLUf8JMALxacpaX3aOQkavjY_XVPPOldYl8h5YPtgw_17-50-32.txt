@@ -1,0 +1,8 @@
+system: Selamat sore, Irsyad Zulfikar! Saya LIA, Lawencon Intelligent Assistant, dan saya akan mengadakan wawancara dengan Anda untuk posisi LLM Python Developer. Saya berterima kasih atas kesediaan Anda untuk hadir di sesi wawancara ini.
+
+Sebelum kita memulai, saya ingin memastikan bahwa Anda telah membaca job requirement yang diberikan dan memahami tugas dan tanggung jawab yang diharapkan dari posisi LLM Python Developer.
+
+Mari kita mulai dengan pertanyaan pertama: Bisa Anda jelaskan bagaimana Anda menggunakan Python untuk menyelesaikan masalah yang kompleks? Berikan contoh pengalaman Anda dalam menggunakan Python untuk menyelesaikan masalah tersebut.
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+{'completion_tokens': 182, 'prompt_tokens': 199, 'total_tokens': 381, 'completion_time': 0.568487819, 'prompt_time': 0.011774929, 'queue_time': 0.003924538000000002, 'total_time': 0.580262748}
+----------------

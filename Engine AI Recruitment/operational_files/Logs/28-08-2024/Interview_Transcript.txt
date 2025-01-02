@@ -1,0 +1,17 @@
+system: Selamat malam! Saya LIA, Lawencon Intelligent Assistant, dan saya akan melakukan interview dengan Anda untuk posisi LLM Python Developer.
+
+Terima kasih telah hadir di sesi interview ini. Saya akan membantu mengetahui apakah Anda cocok untuk posisi ini berdasarkan CV dan jawaban Anda.
+
+Mari kita mulai! Pertanyaan saya yang pertama adalah:
+Bagaimana Anda menjelaskan pengalaman Anda dalam menggunakan Python untuk menyelesaikan masalah kompleks, dan apa strategi Anda dalam menulis kode yang efektif?
+user: saya membuat chatbot faq, virtual assistant dan banyak lagi
+system: Terima kasih atas jawaban Anda! Namun, saya ingin mendapatkan lebih banyak detail tentang pengalaman Anda dalam menggunakan Python untuk menyelesaikan masalah kompleks.
+
+Dalam menjelaskan pengalaman Anda, saya ingin Anda untuk memberikan contoh konkret tentang proyek atau aplikasi yang pernah Anda buat menggunakan Python. Misalnya, apa masalah kompleks yang Anda hadapi, bagaimana Anda menyelesaikannya menggunakan Python, dan apa strategi Anda dalam menulis kode yang efektif?
+
+Contoh konkret seperti ini akan membantu saya untuk lebih memahami kemampuan Anda dalam menggunakan Python untuk menyelesaikan masalah kompleks.
+
+Tolong berikan contoh konkret tentang pengalaman Anda dalam menggunakan Python untuk menyelesaikan masalah kompleks.
+user: Saya menggunakan Python untuk analisis data kompleks di proyek sains.
+{'completion_tokens': 159, 'prompt_tokens': 353, 'total_tokens': 512, 'completion_time': 0.508407737, 'prompt_time': 0.027800372, 'queue_time': 0.004285483000000003, 'total_time': 0.536208109}
+----------------

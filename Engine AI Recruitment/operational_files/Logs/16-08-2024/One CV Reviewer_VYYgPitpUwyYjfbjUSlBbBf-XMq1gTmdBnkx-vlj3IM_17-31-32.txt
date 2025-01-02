@@ -1,0 +1,100 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Job Yang Dilamar. Berikanlah nilai kelayakan CV tersebut untuk job vacancy nya.
+- Berikan total masa kerja relevan, skills, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Yang Dilamar yang diberikan sebelumnya.
+- Dari semua bobot penilaian, utamakan lah relevansi si kandidat dengan Job Yang Dilamar yang di berikan. 
+- Total Masa Kerja Relevan adalah masa kerja yang relevan dengan Job Yang Dilamar yang di berikan. Jika di cv nya ia tidak memiliki pekerjaan yang sama dengan Job Yang Dilamar yang diberikan di awal, turunkan Skor CV secara drastis.
+- Misal, Job Yang Dilamar di awal adalah Senior Salesman. Namun di CV kandidat hanya berhubungan dengan IT, atau desainer. Maka sudah bisa di anggap tidak relevan. Kurangi Skor CV. Dan jangan di anggap Total Masa Kerja Relevan 
+- Misal, cv kandidat hanya memiliki pekerjaan IT. Sedangkan job yang di lamar adalah Staff Logistic. Maka tidak berhubungan, dan form Total Masa Kerja Relevan isi saja dengan 0.
+- Semakin relevan dan lama masa kerja nya yang sama dengan Job title yang diberikan di awal, semakin tinggi kan Skor CV nya.
+- Perhatikan juga skill, proyek, serta latar belakang pendidikannya yang relevan untuk menjadi bahan pertimbangan penilaian.
+- Tambahkan Skor CV nya jika ada skill yang relevan dengan job requirement. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+- Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan job requirement. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+- Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Berikanlah Skor CV yang sejujur nya, dengan pertimbangan kelebihan dan kekurangan nya.
+- Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+- Untuk peniliannya, pastikan memiliki 2 angka di belakang koma. (Float, bukan integer)
+- Jika kandidat tidak memiliki pengalaman kerja yang relevan atau jika keterampilan yang mereka miliki tidak sesuai dengan yang dibutuhkan oleh posisi tersebut, rendahkan saja Skor CV nya. Jika benar-benar tidak relevan, bisa diberikan Skor CV dibawah 10.
+- Untuk Form Name, jangan di tuliskan gelar nya. Cukup Nama nya saja.
+- Jangan ragu untuk memberikan nilai 0 untuk Total Masa Kerja Relevan, dan Skor CV. Periksalah baik-baik apakah kandidat pernah bekerja di role yang sama dengan Job Yang Dilamar.
+- Relevannya itu benar-benar relevan, misal kandidat pernah jadi Front End Developer, tapi Job Yang Dilamar di awal adalah Data Scientist, walaupun sama-sama IT Related, tapi itu dianggap tidak relevan. Jika begitu, tidak termasuk ke perhitungan Total Masa Kerja Relevan.
+- Total Masa Kerja Relevan yang di hitung itu adalah pengalaman kandidat di CV nya yang benar-benar sama pekerjaannya dengan Job Yang Dilamar.
+- Total Masa Kerja Relevan adalah pengalaman kerja kandidat yang membutuhkan pengetahuan dan pengalaman dalam job requirement yang sama dengan Job Yang Dilamar.
+- Berikan nilai 0 untuk form Total Masa Kerja Relevan jika ia tidak pernah bekerja dan berpengalaman dengan pekerjaan yang dilamar. 
+- Pastikan kandidat punya ilmu nya, tidak hanya tools nya untuk job yang di lamar. Harus spesifik, tidak hanya relevan.
+- Total Masa Kerja Relevan sudah pasti 0, kecuali cv kandidat punya title yang sama dengan Job yang Di Lamar di awal. Jika tidak ada, berikan 0. BERIKAN 0 jika tidak ada.
+- Jika kandidat tidak ideal untuk job yang di lamar, apalagi kurang berpengalaman, kurangi secara drastis Skor CV nya. Kurangi secara maksimal, berikan nilai maksimal 20 dari 100.
+- Jika tidak ada bukti ia pernah bekerja atau berpengalaman sesuai dengan Job yang di lamar, kurangi secara drastis Total Masa Kerja Relevan. Kurangi secara drastis Skor CV nya.
+- Jika Background Pendidikannya tidak sesuai dengan Job yang di lamar, kurangi Skor CV secara drastis, banyak pengurangan.
+- Kebutuhan pekerjaan dan menekankan bahwa kandidat harus memiliki pengalaman langsung dan spesifik dalam bidang yang sama. 
+- Misalnya, Anda bisa menekankan bahwa kandidat harus memiliki pengalaman langsung dalam Job vacancy yang di lamar
+- Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
+- Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
+
+Isilah dengan form berformat berikut tanpa ada tambahan kata darimu
+
+cukup form yang ada di bawah ini saja, jangan ada kata "heres filled form " dari mu:
+
+name : Dummy Name 1
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
+--- Field Separator ---
+skills : ['First Skill', 'Second Skill', '3. etc', ...]
+--- Field Separator ---
+kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+--- Field Separator ---
+kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+--- Field Separator ---
+skor_cv : 70.3/100
+--- Field Separator ---
+alasan : 
+--- Field Separator ---
+kesimpulan : 
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'v', "jobQualification" : "true", "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['First Job_requirement', 'Second Job_requirement', '3. etc', ...]
+--- Field Separator ---
+
+- untuk mengisi form "kesesuaian" contohnya seperti ini 
+
+- jadi intinya untuk mengisi form "kesesuaian" itu dari cv ada yang sesuai tidak dengan job description
+- jadi contohnya isi jobRoleOverview harus dirangkum jika cv yang diberikan sesuai dengan job role overview yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobQualification harus dirangkum jika cv yang diberikan sesuai dengan job qualification yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobResponsibility harus dirangkum jika cv yang diberikan sesuai dengan job responsibility yang ada maka berikan "true", jika tidak sesuai berikan "false"
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job description nya :
+------
+Collaborates with Scrum Master, Delivery Manager, Development Manager, Business Analyst, System Analyst, Developer and users to produce software design. Provides data design documentation, includes but not limited to Functional Specification Document (FSD), Technical Specification Document (TSD), Epic, User Story, Data Dictionary, and Data Mapping Document. Processes, designs, and presents data in ways to help people, businesses, and organizations make better decisions. Provides testing data and its documentation. Ensures the quality and accuracy of data. Analyze and interpret all complex data on all target systems and analyze and provide resolutions to all data issues and coordinate with data analyst to validate all requirements, perform interviews with all users and developers Perform tests and validate all data flows and prepare all ETL processes according to business requirements and incorporate all business requirements into all design specifications Develop all data warehouse models and prepare reports for all meta data integration into systems and draft all ETL scripts and prepare required reports for all end users Collaborate with all developers and business users to gather required data and execute all ETL programs and scripts on systems and implement all data warehouse activities and prepare reports for same Develop and perform tests on all ETL codes for system data and analyze all data and design all data mapping techniques for all data models in systems Document all test procedures for systems and processes and coordinate with business analysts and users to resolve all requirement issues and maintain quality for same
+------
+Kriteria Pekerjaan:
+Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent Have in total at least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry
+Familiar with the following banking products: CASA, Loan, Deposit Account, Credit Card, Bancassurance Preferable have at least 2 years’ experience in operates ETL Tools such as Talend or Microsoft SSIS or IBM DataStage Have a good understanding on Programming Concept, especially Python Understand ETL Concept, Automation Scheduling, & Data Pipelines internal At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset Fluent in using Jira
+Have experiences in agile project delivery Understand data mapping / data journey, and carry out impact analysis on changes related to data mapping / data journey Have a good understanding of data modelling and big data stacks Excellent communication and interpersonal skills (A good problem-solving attitude) Have a good command in English and Bahasa (actively)
+------
+CV:
+Ahmad Aminullah Alfiyanto, S.Kom., IT Support Pahlawan Street Number 01, (3641)  |  (+1) 1234567890  | dany.ferdy@gmail.com About  I am a male Indonesia citizen born on April 24, 2001, in Surakarta. I identify as Moslem and am of Asian ethnicity. I am single and  have medical status K/2  with blood type AB. I stand at 164 cm tall and weigh 83 kg. I was leave in Indonesia, DKI Jakarta, Kota Administrasi Jakarta Selatan, Tebet, Tebet Utara in Pakuwon Tower since 20 May 1996.  I have a document Passport.  Profile  Highly skilled Office Administrator with an impressive background specializing in administrative work and office support. Known for utilizing strong communication skills to communicate well with other staff members and employees. Bringing forth the ability to support and stimulate office stability   Employment History  1. IT SUPPORT, Google (California)                                                        Jul 2020 - May 2022 ● Developed a system for remote access and secure remote connections, allowing for remote working capabilities. ● Provided technical training and onboarding to new staff, resulting in a X% reduction in training time ● Set up and maintained secure networks, firewalls and antivirus systems, resulting in a X% decrease in security incidents.  2. Network Support , Amazon (Washington)                                            Aug 2022 - Apr 2023 ● Developed a system for monitoring and managing network traffic, resulting in a X% increase in network performance ● Documented customer support processes and procedures, resulting in a X% reduction in customer support errors ● Provided training and product support to customers, resulting in a X% reduction in customer support inquiries         3.  Technical Support Engineer , Alibaba (Hangzhou)                                Jun 2023 - Jun 2024 ● Provided technical support to customers over the phone and via email, resulting in a X% customer satisfaction rate ● Troubleshot technical issues and provided on-site technical support ● Provided technical support for end-users and resolved escalated technical issues  Education  Jun 2014 - May 2018     Bachelor of Science in Computer Science, Stanford University                  Stanford, California. Graduated: May 2018 with final score 3.89 and get title Bachelor  .Relevant Courses: Data    Structures, Algorithms, Operating Systems, Database Systems, Artificial Intelligence. Capstone Project: Developed a machine learning algorithm to predict housing prices using Python and scikit-learn . Activities: Member of the Computer Science Club, Volunteer at local coding bootcamp.  Aug 2018 - May 2020    Master's of Science in Computer Science,  MIT Cambridge. Graduated: August 2020 with final score 3.76 and get title Master  Dissertation: "Quantum Computing and Its Applications in Cryptography". Research Assistant: Conducted experiments on quantum entanglement and published findings in peer-reviewed journals. Teaching Assistant: Assisted in teaching undergraduate courses in Quantum Mechanics and Statistical Physics  Informal Edication  Nov 2019 - Feb 2020     Staditek (IT)                                                          Bintaro, Tangerang Selatan  Graduated: Feb 2020 with final score 100 ,  Programming Fundamentals: Understanding key programming concepts, including variables, data types, control structures, functions, and error handling.Web Development: Learning HTML, CSS, and JavaScript to build dynamic and responsive websites.Database Management: Introduction to SQL and NoSQL databases, data modeling, and database design.  Skills  1. Computer Troubleshooting ( expert ). 2. Computer Networking ( experienced ). 3. Microsoft Office ( experienced ).   Hobbies  Robotics : Building and programming robots using kits like LEGO Mindstorms or Arduino. Coding and Programming :  Learning programming languages like Python, JavaScript, or Scratch. Creating small projects such as games or simple applications.  Reference  Name       : Alpi Syahdan                                                                Phone    : (+1) 75753294 Company : Lawencon                                                                     Position : Software Developer Relation   : Team Lead   Language  1. English  a. Rating Listening : 8.9 b. Rating Writing   : 7.5 c. Rating Speaking : 9.4 d. Rating Reading   : 8.6 e. Grade Listening  : A- f. Grade Reading    : A g. Grade Writing     : A h. Grade Speaking  : A+  Link  1. LinkedIn   : linked.in/aaminullahh 2. Instagram : Instagram.com/aaminvllah               Emergency Contact Name       : John Smith                                                         Phone    : (+1) 75753294 Company : Alibaba                                                              Adrress  : Elm Street Springfield (1135) Relation   : Friend                                                                 Email     : john.smith@gmail.com  Family Relationship Name       : Leonardo                                                       Contact      : (+1) 75753294 NIK         : 567152762                                                       Adrress      : Elm Street Springfield (1135) Relation   : Brother                                                           Email        : leonardo@gmail.com Position   : Web Developer                                               Birth Date  : 12 Aug 1996  Vehicle Name       : Car                                                                      Owned        : true Merk        : Honda Mobilio                                                   Note           : - Year         : 2018                                        
+system: name : Ahmad Aminullah Alfiyanto
+--- Field Separator ---
+total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi Data Analyst atau Data Engineer."}
+--- Field Separator ---
+skills : ['Computer Troubleshooting', 'Computer Networking', 'Microsoft Office', 'Python', 'JavaScript', 'HTML', 'CSS']
+--- Field Separator ---
+kelebihan : ['Having a strong educational background in Computer Science', 'Having experience in IT support and network support', 'Having a good command in English and Bahasa', 'Having a good understanding of computer programming concepts', 'Having a good understanding of data structures and algorithms']
+--- Field Separator ---
+kekurangan : ['Lack of experience in ETL Tools such as Talend or Microsoft SSIS or IBM DataStage', 'Lack of experience in Cloudera Hadoop Big Data, Apache Airflow, Apache Spark, and Microsoft SQL Server', 'Lack of experience in agile project delivery', 'Lack of experience in data mapping and data journey', 'Lack of experience in data modelling and big data stacks']
+--- Field Separator ---
+skor_cv : 40.5/100
+--- Field Separator ---
+alasan : "Kandidat tidak memiliki pengalaman langsung sebagai Data Analyst atau Data Engineer, dan keterampilan yang dimiliki tidak sesuai dengan kebutuhan pekerjaan."
+--- Field Separator ---
+kesimpulan : "Kandidat tidak sesuai untuk posisi Data Analyst atau Data Engineer karena keterampilan dan pengalaman yang dimiliki tidak sesuai dengan kebutuhan pekerjaan."
+--- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'false', "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent', 'At least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry', 'Familiar with ETL Tools such as Talend or Microsoft SSIS or IBM DataStage', 'Have a good understanding of Programming Concept', 'Have a good understanding of ETL Concept, Automation Scheduling, & Data Pipelines internal', 'At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server', 'Fluent in using Jira', 'Have experiences in agile project delivery', 'Have a good understanding of data mapping / data journey', 'Have a good understanding of data modelling and big data stacks', 'Excellent communication and interpersonal skills']
+{'completion_tokens': 563, 'prompt_tokens': 3497, 'total_tokens': 4060, 'completion_time': 1.8384522890000001, 'prompt_time': 0.251937127, 'queue_time': 0.005251670000000042, 'total_time': 2.090389416}
+----------------

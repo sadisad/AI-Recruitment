@@ -1,0 +1,111 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+**Fungsi Utama:**
+Tugas utama Anda adalah memberikan peringkat untuk beberapa CV berdasarkan kecocokan dengan lowongan pekerjaan yang diberikan.
+
+### Instruksi:
+1. **Peringkat:**
+   - Berikan peringkat dari 1 hingga yang terakhir, di mana **1/5** berarti paling cocok dan **5/5** berarti paling tidak cocok. Jika ada 6 CV, peringkatnya akan menjadi **1/6**, **2/6**, dan seterusnya.
+   - Setelah menilai, urutkan CV berdasarkan peringkat dari yang paling cocok (peringkat 1) hingga yang paling tidak cocok.
+
+2. **Pertimbangan Penilaian:**
+   - **Masa Kerja Relevan:** Berikan nilai tambahan kepada kandidat dengan masa kerja yang lebih lama dan relevan dengan job title yang diberikan.
+   - **Keterampilan dan Pengalaman:** Pertimbangkan keterampilan, proyek, dan latar belakang pendidikan yang relevan dengan persyaratan pekerjaan.
+   - **Relevansi Skill:** Berikan nilai tambahan jika kandidat memiliki keterampilan yang relevan dengan job requirement. Misalnya, Flask atau Laravel relevan dengan REST API dan API Development, sementara SQL relevan dengan RDBMS dan Query. Pertimbangkan hubungan relevansi antara keterampilan yang dimiliki kandidat dengan kebutuhan pekerjaan.
+
+3. **Kelebihan dan Kekurangan:**
+   - Setiap CV harus dievaluasi dengan minimal **5 kelebihan** dan **5 kekurangan**.
+   - Pilih peringkat yang tepat berdasarkan analisis kelebihan dan kekurangan tersebut.
+
+4. **Format Pengisian:**
+   - Jawaban harus diberikan dalam bahasa Indonesia tanpa ada tambahan teks lain dari Anda. Cukup isi form penilaian dengan format yang ditentukan.
+
+**Format Penilaian:**
+
+Berdasarkan hasil yang Anda berikan, tampaknya ada beberapa masalah dengan bagaimana output tersebut diproses atau diformat oleh sistem. Berikut beberapa saran untuk memastikan bahwa output sesuai dengan format yang diinginkan:
+
+1. Perbaiki Masalah Peringkat:
+Masalah utama yang terlihat adalah format peringkat. Format yang dihasilkan : 1/1, : 2/1, dan : 5/1 tidak sesuai dengan jumlah kandidat yang ada.
+Pastikan peringkat dihasilkan sesuai dengan jumlah total kandidat. Sebagai contoh, jika ada 3 kandidat, maka peringkat harus 1/3, 2/3, dan 3/3.
+2. Lengkapi Kelebihan dan Kekurangan:
+Bagian "kelebihan" dan "kekurangan" tampaknya tidak diisi dengan informasi yang relevan. Pastikan bahwa setiap kandidat memiliki minimal 5 kelebihan dan 5 kekurangan yang dievaluasi.
+Pastikan prompt mengarahkan sistem untuk mengisi bagian ini secara menyeluruh.
+3. Konsistensi Bahasa dan Format:
+Pastikan semua bagian, termasuk "alasan", "kelebihan", "kekurangan", dan "kesimpulan", konsisten dalam bahasa Indonesia jika itu yang diinginkan.
+Verifikasi bahwa format yang Anda gunakan dalam Markdown benar-benar dipahami oleh sistem pemrosesan yang Anda gunakan.
+4. Memperbaiki Prompt untuk Output yang Diinginkan:
+Anda mungkin perlu lebih eksplisit dalam prompt untuk memastikan bahwa setiap bagian diisi dengan data yang sesuai. Berikut adalah contoh perbaikan prompt:
+markdown
+Copy code
+**Fungsi Utama:**
+Tugas utama Anda adalah memberikan peringkat untuk beberapa CV berdasarkan kecocokan dengan lowongan pekerjaan yang diberikan.
+
+### Instruksi:
+1. **Peringkat:**
+   - Berikan peringkat dari 1 hingga yang terakhir, di mana **1/5** berarti paling cocok dan **5/5** berarti paling tidak cocok. Jika ada 6 CV, peringkatnya akan menjadi **1/6**, **2/6**, dan seterusnya.
+   - Setelah menilai, urutkan CV berdasarkan peringkat dari yang paling cocok (peringkat 1) hingga yang paling tidak cocok.
+
+2. **Pertimbangan Penilaian:**
+   - **Masa Kerja Relevan:** Berikan nilai tambahan kepada kandidat dengan masa kerja yang lebih lama dan relevan dengan job title yang diberikan.
+   - **Keterampilan dan Pengalaman:** Pertimbangkan keterampilan, proyek, dan latar belakang pendidikan yang relevan dengan persyaratan pekerjaan.
+   - **Relevansi Skill:** Berikan nilai tambahan jika kandidat memiliki keterampilan yang relevan dengan job requirement. Misalnya, Flask atau Laravel relevan dengan REST API dan API Development, sementara SQL relevan dengan RDBMS dan Query. Pertimbangkan hubungan relevansi antara keterampilan yang dimiliki kandidat dengan kebutuhan pekerjaan.
+
+3. **Kelebihan dan Kekurangan:**
+   - Setiap CV harus dievaluasi dengan minimal **5 kelebihan** dan **5 kekurangan**.
+   - Pilih peringkat yang tepat berdasarkan analisis kelebihan dan kekurangan tersebut.
+
+4. **Format Pengisian:**
+   - Jawaban harus diberikan dalam bahasa Indonesia tanpa ada tambahan teks lain dari Anda. Cukup isi form penilaian dengan format yang ditentukan.
+
+**Format Penilaian:**
+Job Title : [Judul Pekerjaan]
+--- Field Separator ---
+Job Vacancy : [Deskripsi Pekerjaan]
+--- Field Separator ---
+Ranking : [Peringkat]
+Name : [Nama Kandidat]
+Total Masa Kerja Relevan : [Durasi Total Masa Kerja Relevan]
+Skills : [Daftar Skills]
+Kelebihan : [Minimal 5 kelebihan yang relevan dengan job requirement]
+Kekurangan : [Minimal 5 kekurangan yang relevan dengan job requirement]
+Skor : [Nilai dari 0-100]
+Alasan : [Alasan Mengapa Kandidat Diberi Peringkat Tersebut]
+Kesimpulan : [Kesimpulan Penilaian]
+--- Field Separator ---
+
+### 5. **Testing dan Iterasi:**
+   - Lakukan pengujian ulang dengan prompt yang telah disempurnakan ini.
+   - Perhatikan hasilnya, dan jika masih ada ketidaksesuaian, lakukan iterasi lebih lanjut untuk memastikan semua bagian diisi dengan benar.
+------
+Job Vacancy:
+Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: **Job Title:** Web Developer
+**Job Vacancy:** Develops code and creates customized applications to enhance product based on business needs. Investigates and resolves matters of significance for end-user problems and escalates if necessary. Provides support for business system analysis and process definition to enhance site functionality. Researches new web technologies to provide clients with state of the art web capabilities. Develop documentation throughout the software development life cycle (SDLC) Apply good technical practices and contribute to the application architecture with a focus on scalability, maintainability, security, and performance
+**Ranking:** 2/1
+**Name:** Angga Prihantoro
+**Total Masa Kerja Relevan:** 1 tahun 5 bulan
+**Skills:** Python, SQL, Tensorflow, Tableu, Looker, Excel
+**Kelebihan:**
+1. Fresh graduate with a strong educational background in Telecommunication Engineering.
+2. Has experience in machine learning and deep learning models.
+3. Proficient in several programming languages, including Python and SQL.
+4. Has experience in working with data analytics and visualization tools, such as Tableu and Looker.
+5. Certified Tensorflow Developer.
+**Kekurangan:**
+1. Limited work experience in the field of web development.
+2. Lacks experience in working with business system analysis and process definition.
+3. No experience in researching new web technologies.
+4. Limited experience in developing documentation throughout the software development life cycle (SDLC).
+5. No experience in contributing to application architecture.
+**Skor:** 70
+**Alasan:** Angga has a strong educational background and some experience in machine learning and deep learning models. However, he lacks experience in web development and other relevant skills required for the job.
+**Kesimpulan:** Angga has some potential, but he needs to gain more experience and skills in web development to be a strong candidate for the position.
+{'completion_tokens': 507, 'prompt_tokens': 2860, 'total_tokens': 3367, 'completion_time': 1.6841516090000002, 'prompt_time': 0.178420985, 'queue_time': 0.0016551549999999915, 'total_time': 1.862572594}
+----------------

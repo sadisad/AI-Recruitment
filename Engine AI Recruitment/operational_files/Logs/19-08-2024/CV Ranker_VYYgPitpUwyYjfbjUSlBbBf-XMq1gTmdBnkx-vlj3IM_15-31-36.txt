@@ -1,0 +1,69 @@
+user: Hai Chat, Kau bukanlah chatgpt.
+Kau adalah AI HR Assistant dari perusahaan Lawencon. 
+Kau berfungsi untuk menerima inputan CV String.
+Fungsi utama mu adalah mengisi form dari sebuah CV String.
+Jika saya bertanya yang selain berhubungan dengan CV atau resume, jangan dihiraukan.
+Cukup tampilkan dengan format seperti di bawah, jangan ada kata tambahan darimu.
+Fungsi utama mu adalah memberikan ranking dari beberapa String CV.
+Berikan ranking, kesimpulan, kelebihan, kekurangan serta alasan mu untuk semua CV tersebut, untuk Job Requirements. yang diberikan sebelumnya. 
+Berikan skala ranking 1 untuk yang paling cocok, dan seterusnya (Contoh : Peringkat : 1/5). 
+1/5 berarti paling cocok, 5/5 berarti paling tidak cocok. Jika ada 6 cv, berarti jadi 1/6, dan seterusnya.
+Jika sudah di ranking, urutkan hasil CV nya dari ranking 1 sampai terakhir.
+Berikan lah nilai tambahan/plus yang Total Masa Kerja Relevan nya durasi nya lebih lama dari lainnya.
+Semakin lama masa kerja nya yang sama dengan Job Title yang diberikan di awal, semakin tinggi kan nilai nya.
+Perhatikan juga skill, proyek, serta latar belakang pendidikannya untuk menjadi bahan pertimbangan penilaian.
+Tambahkan nilai nya jika ada skill yang relevan dengan Job Requirements. Misal Flask, Laravel berarti relevan dengan REST API, API Development, dan sebagai nya. Contoh lain misal SQL, berarti relevan dengan RDBMS, Query, dll. Periksalah relevansi skill nya.
+Bisa jadi skill tersebut memiliki hubungan dan masih relevan dengan Job Requirements. Misal pernah menggunakan SQL Server, berarti bisa jadi dia bisa PostGre juga karena memiliki kesamaan menggunakan SQL.
+Berikan minimal 5 kelebihan, dan 5 kekurangan di form nya. Pilih lah rank yang benar, dengan pertimbangan kelebihan dan kekurangan nya.
+Isilah hasil nya dengan bahasa Indonesia, tanpa ada text lain darimu, cukup kembalikan form yang telah diisi.
+
+Isilah dengan contoh form berformat berikut :
+Job Title : Accounting Manager
+--- Field Separator ---
+Job Requirements : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 1
+Name : Dummy Name 1
+Total Masa Kerja Relevan : 3 tahun relevan yaitu ...
+Skills : 1. Python, 2. Tableau, 3. etc
+Kelebihan : 1. Bagus dalam teknis, 2. berpengalaman banyak, 3.
+Kekurangan : 1. tidak percaya diri, 2. etc, 3.
+Skor : 0/100
+Alasan : Dia layak rank 1 karena dia..
+Kesimpulan : Secara keseluruhan, dia cocok dan..
+--- Field Separator ---
+Ranking : RANK 2
+Name : 
+Skills : 1. SQL, 2. Akuntan, 3. etc
+Total Masa Kerja Relevan : 2.5 tahun, yaitu..
+Kelebihan :
+Kekurangan :
+Alasan :
+Skor : 45/100
+Kesimpulan : 
+--- Field Separator ---
+------
+Kriteria Pekerjaan:
+Bachelor Degree from reputable University with education background from Computer Science / Information Technology, Science & Technology, Business Studies / Management or equivalent Have in total at least 2-5 years’ experience as Data Analyst or Data Engineer in banking industry. Familiar with the following banking products: CASA, Loan, Deposit Account, Credit Card, Bancassurance Preferable have at least 2 years’ experience in operates ETL Tools such as Talend or Microsoft SSIS or IBM DataStage Have a good understanding on Programming Concept, especially Python Understand ETL Concept, Automation Scheduling, & Data Pipelines internal At least 2 years experience of using Cloudera Hadoop Big Data, Apache Airflow, Apache Spark & Microsoft SQL Server, Apache Druid, Kafka, Apache Superset Fluent in using Jira. Have experiences in agile project delivery Understand data mapping / data journey, and carry out impact analysis on changes related to data mapping / data journey Have a good understanding of data modelling and big data stacks Excellent communication and interpersonal skills (A good problem-solving attitude) Have a good command in English and Bahasa (actively)
+------
+CV:
+ANGGA PRIHANTORO0895391942881 | anggaprihantoro3@gmail.com | https://www.linkedin.com/in/angga-prihantoro-7b7120235/Fresh graduate from Telecommunication Engineering, Telkom University. I am eager to learn about new things especially about technologyWork ExperiencesPT Presentologics - Bangkit Academy -  Bandung, IndonesiaFeb 2022 - Jul 2022Machine Learning traineeBangkit Academy 2022 is a program affiliated with Kampus Merdeka and is a career readiness program led by Google and supported by industry practitioners from GoTo, Traveloka, and Deeptech Foundatoin. This program offers intensive training in the form of verified courses, synchrounous learning, interactive and collaborative workshops available in several learning pathsas well as final project.As a trainee at Bangkit Academy, we work together in a team for a capstone project entitled "Foodrism", an android application that can detect traditional Indonesian food, I was responsible for collecting datasets by web scraping and creating deep learning models that can detect traditional Indonesian food.Dasar Komputer Laboratory -  Bandung, IndonesiaAug 2020 - Aug 2022Practicum AssistantA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As practicum assistants, we are responsible for teaching the C programming language to first-year students of the Faculty of Electrical Engineering to get to know the basics of programming and programming logic.Education LevelUniversitas Telkom - Bandung, IndonesiaAug 2019 - Aug 2023Bachelor Degree in Bachelor Degree in Telecommunication Engineering, 3.53/4.00Successfully created a final project in the form of an android application called Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model) Glaucomation is an app that can detect glaucomic eyes by taking fundus image.Organisational ExperienceDasar Komputer Laboratory - Bandung, IndonesiaAug 2020 - Aug 2022Logistics StaffA laboratory that is responsible for teaching C language to 1st year students of Faculty of Electrical Engineering, Telkom University.As a member of logistics staff, responsible for ensuring and maintaining practicum equipment so that practicum runs smoothly by preparing links for collecting assignments, maintaining discord channels, carrying out plagiarism of final assignment and  troubleshooting related to hardware and software used by practicum assistants.Skills, Achievements & Other ExperienceProjects (2023): Glaucomation App (Android-based Glaucoma detection application with Deep Learning Model)Projects (2022): Foodrism App (Android-based Indonesian traditional food detection application with Deep Learning Model)Certification (2022): Tensorflow Developer CertificationHard Skills: SQL, Python, Excel, Tensorflow, Tableu, LookerInterpersonal Skills: Critical Thinking, Active Listening, TeamworkModules Taken (2023): Google Cloud Skills Boost - Data Analyst Learning Path, Udemy - MySQL for Data Analytics and Business  Intelligence
+system: --- Field Separator ---
+Job Title : Data Analyst
+--- Field Separator ---
+Job Requirements : Lorem Ipsum etc
+--- Field Separator ---
+Ranking : RANK 4
+Name : Angga Prihantoro
+Total Masa Kerja Relevan : 1 tahun relevan yaitu Machine Learning trainee di Bangkit Academy
+Skills : 1. Python, 2. SQL, 3. Tableau, 4. Excel, 5. Tensorflow, 6. Looker
+Kelebihan : 1. Fresh graduate dari Telecommunication Engineering, Telkom University, 2. memiliki pengalaman sebagai Machine Learning trainee, 3. memiliki certification Tensorflow Developer, 4. memiliki project Glaucomation App dan Foodrism App, 5. memiliki kemampuan SQL dan Python yang relevan dengan job requirement
+Kekurangan : 1. kurang memiliki pengalaman sebagai Data Analyst, 2. tidak memiliki pengalaman menggunakan ETL Tools seperti Talend atau Microsoft SSIS, 3. tidak memiliki pengalaman menggunakan Cloudera Hadoop Big Data, Apache Airflow, Apache Spark, Microsoft SQL Server, Apache Druid, Kafka, Apache Superset, 4. tidak memiliki pengalaman menggunakan Jira, 5. belum memiliki pengalaman dalam agile project delivery
+Alasan : Dia tidak layak di rank 1 karena kurang memiliki pengalaman sebagai Data Analyst dan tidak memiliki pengalaman menggunakan beberapa tools yang dibutuhkan.
+Skor : 60/100
+Kesimpulan : Secara keseluruhan, dia memiliki potensi untuk menjadi Data Analyst, tetapi perlu untuk meningkatkan pengalaman dan kemampuan dalam menggunakan tools yang dibutuhkan.
+
+--- Field Separator ---
+(Please input another CV string to rank)
+{'completion_tokens': 588, 'prompt_tokens': 2101, 'total_tokens': 2689, 'completion_time': 1.9169311100000002, 'prompt_time': 0.180985596, 'queue_time': 0.005484622999999994, 'total_time': 2.097916706}
+----------------
