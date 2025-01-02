@@ -32,62 +32,68 @@ class GPTEngine:
                 "presence_penalty": credentials['presence_penalty']}
     
     def read_json_file(self, file_name):
-        f = open(self.dir_path + '\\' + file_name)
+        f = open(self.dir_path + '/' + file_name)
         file_content = json.load(f)
         f.close()
         return file_content
     
     def read_excel_file(self, file_name):
-        df = pd.read_excel(self.dir_path + '\\' + file_name)
+        df = pd.read_excel(self.dir_path + '/' + file_name)
         return df
     
     def read_intro_prompt(self, file_name):
-        f = open(self.dir_path + '\\' + file_name, "r", encoding="utf8")
+        f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")
         str_prompt = f.read()
         f.close()
         return str_prompt
     
     def initialize_faq_cosine(self):
-        path_prompt_faq = 'prompts\\FAQ Functional\\faq_cosine_'
+        path_prompt_faq = 'prompts/FAQ Functional/faq_cosine_'
         starting_prompt = self.read_intro_prompt(path_prompt_faq + 'intro.txt')
+        
+        current_time_str = datetime.now().time().strftime("%H:%M:%S")
+        starting_prompt += '\n------\ncurrent time:\n' + current_time_str
+        
         self.faq_cosine_below_threshold = self.read_intro_prompt(path_prompt_faq + 'below_threshold.txt')
         self.faq_cosine_false_response = self.read_intro_prompt(path_prompt_faq + 'false.txt')
         self.faq_cosine_true_response = self.read_intro_prompt(path_prompt_faq + 'true.txt')
-        self.faq_chat_manual = self.read_intro_prompt('prompts\\FAQ Functional\\faq_knowledge_from_manual_chat.txt')
+        self.faq_chat_manual = self.read_intro_prompt('prompts/FAQ Functional/faq_knowledge_from_manual_chat.txt')
 
-        faq_data = self.read_excel_file('prompts\\FAQ Functional\\faq.xlsx')
-        self.faq_questions, self.faq_answers = faq_data['Question'], faq_data['Answer']
+        faq_data = self.read_excel_file('prompts/FAQ Functional/faq.xlsx')
+        self.faq_questions, self.faq_answers, self.faq_module = faq_data['Question'], faq_data['Answer'], faq_data['Module']
         self.question_vectorizer_id = TfidfVectorizer(stop_words=self.indonesian_stopwords)
         self.vectorized_questions_id = self.question_vectorizer_id.fit_transform(self.faq_questions)
 
         return starting_prompt
     
     def faq_cosine_similarity(self, user_query, rank_default=5):
-        query_vec = self.question_vectorizer_id.transform([user_query]) ## --> Embeding gantii disini
+        query_vec = self.question_vectorizer_id.transform([user_query])
         similarities = cosine_similarity(query_vec, self.vectorized_questions_id)
         
-        # argsort sorts the indices based on the similarity scores in descending order
-        sorted_indices = np.argsort(similarities[0])[::-1]    # Initialize the results dictionary
+        sorted_indices = np.argsort(similarities[0])[::-1]
         results = []
 
         for rank, idx in enumerate(sorted_indices, start=1): 
             temp_dict = {
-                'rank' : rank,
+                'rank': rank,
+                'module': self.faq_module.iloc[idx],
                 'question': self.faq_questions.iloc[idx],
                 'answer': self.faq_answers.iloc[idx],
                 'similarity_score': similarities[0][idx]
             }
-
             results.append(temp_dict)
-            
             if rank == rank_default:
                 break
 
         list_cosine, question_str = [], ''
-
         for idx, i in enumerate(results, 0):
             question_str += str(idx) + ' - ' + i['question'] + '\n'
-            list_cosine.append({'question' : i['question'], 'answer' : i['answer']})
+            list_cosine.append({
+                'module': i['module'], 
+                'question': i['question'], 
+                'answer': i['answer'], 
+                'similarity_score': i['similarity_score']
+            })
 
         text_result = self.faq_cosine_below_threshold.replace('<-> User Question <->', user_query)
         text_result = text_result.replace('<-> FAQ Question <->', question_str)
@@ -202,10 +208,72 @@ class GPTEngine:
         
         df = pd.DataFrame(dict_form)
         
-        datatoexcel = pd.ExcelWriter(self.dir_path + '\\prompts\\FAQ Functional\\Manual Knowledge.xlsx')
+        datatoexcel = pd.ExcelWriter(self.dir_path + '/prompts/FAQ Functional/Manual Knowledge.xlsx')
         df.to_excel(datatoexcel, sheet_name='Knowledge')
         datatoexcel.close()
 
         print('Knowlegde Written Successfully.')
         
         return dict_form, dict_form
+    
+    def intialize_sentiment_analysis(self, list_of_sentiment):
+        introductory = self.read_intro_prompt('prompts/FAQ Functional/sentiment_analysis.txt')
+        introductory += '\n------\n' + list_of_sentiment
+    
+        return introductory
+    
+    def format_sentiment_analysis(self, answer):
+        dict_form = {
+            'positive': "",
+            'negative': "",
+            'neutral': "",
+            'overallRating': '',
+            'summary': ''
+            }
+        
+        result = answer.split('--- Field Separator ---')
+        
+        for i in result:
+            sentiment_section = i.split('\n')
+            for j in sentiment_section:
+                print(j)
+                if 'Positive' in j:
+                    dict_form['positive'] = (j.replace('Positive:', '').strip())
+                
+                if 'Negative' in j:
+                    dict_form['negative'] = (j.replace('Negative:', '').strip())
+                
+                if 'Neutral' in j:
+                    dict_form['neutral'] = (j.replace('Neutral:', '').strip())
+                    
+                if 'Overall Rating' in j:
+                    dict_form['overallRating'] = j.replace('Overall Rating:', '').strip()
+                
+                if 'Summary' in j:
+                    dict_form['summary'] = j.replace('Summary:', '').strip()
+                    
+        return dict_form
+    
+    def initialize_evaluate_user_question(self, chat_transcripts):
+        path_prompt_faq = 'prompts/FAQ Functional/faq_evaluate_'
+        starting_prompt = self.read_intro_prompt(path_prompt_faq + 'question.txt')
+    
+        starting_prompt += '\n------\n:\n' + chat_transcripts
+        return starting_prompt
+    
+    def format_evaluate_user_question(self, answer):
+        dict_form = {}
+        result = answer.split('--- Field Separator ---')
+
+        for i in result:
+
+            if i:
+                key, value = i.split(':', 1)
+                key, value = key.strip('\n').strip(), value.strip('\n').strip()
+    
+                try:
+                    dict_form[key] = ast.literal_eval(value)
+                except:
+                    dict_form[key] = value
+
+        return dict_form

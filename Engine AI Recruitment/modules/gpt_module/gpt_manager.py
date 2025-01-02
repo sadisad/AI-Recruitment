@@ -1,5 +1,5 @@
 from datetime import date, datetime
-import time, os, json, requests, openai, warnings
+import time, os, json, requests, warnings
 from operator import itemgetter
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
@@ -14,7 +14,9 @@ import numpy as np
 import pandas as pd
 from nltk.corpus import stopwords
 from groq import Groq
-
+import ast 
+import json
+import re
 
 class GPTEngine:
     def __init__(self):
@@ -32,82 +34,14 @@ class GPTEngine:
                 "presence_penalty": credentials['presence_penalty']}
     
     def read_json_file(self, file_name):
-        f = open(self.dir_path + '\\' + file_name)
+        f = open(self.dir_path + '/' + file_name)
         file_content = json.load(f)
         f.close()
         return file_content
     
     def read_excel_file(self, file_name):
-        df = pd.read_excel(self.dir_path + '\\' + file_name)
+        df = pd.read_excel(self.dir_path + '/' + file_name)
         return df
-    
-    def read_intro_prompt(self, file_name):
-        f = open(self.dir_path + '\\' + file_name, "r", encoding="utf8")
-        str_prompt = f.read()
-        f.close()
-        return str_prompt
-    
-    def initialize_interview(self, str_cv='', str_job_req=''):
-        prompt = self.read_intro_prompt('prompts\\Interview\\interview_intro.txt')
-        job_req = self.read_intro_prompt('prompts\\Interview\\job_requirement.txt')
-        cv_dummy = self.read_intro_prompt('prompts\\Interview\\cv_string_dummy.txt')
-
-        if str_cv == '':
-            prompt = prompt.replace("<-> CV String <->", cv_dummy)
-        else:
-            prompt = prompt.replace("<-> CV String <->", str_cv)
-
-        if str_job_req == '':
-            prompt = prompt.replace("<-> Job Requirement <->", job_req)
-        else:
-            prompt = prompt.replace("<-> Job Requirement <->", str_job_req)
-
-        return prompt
-    
-    def initialize_form_filler(self, list_form=[]):
-        introductory = self.read_intro_prompt('prompts\\cv_reviewer.txt')
-        prompt = introductory.replace('-- Prompt CV --', 
-                                      self.read_intro_prompt('prompts\\Form Filler\\form_filler_intro.txt'))
-        
-        if list_form == []:
-            list_form = ['name', 'summary', 'phone_number', 'birth_of_date', 'address', 'email', 'experiences', 'educations', 'projects/portfolios', 'certifications', 'awards', 
-            'publications', 'volunteers', 'languages']
-        
-        str_form = ''
-
-        for i in list_form:
-            str_form += str(i) + ' : \n--- Field Separator ---\n'
-
-        prompt = prompt.replace('<-> Form Fields <->', str_form) 
-        return prompt
-
-    def initialize_redflags(self):
-        introductory = self.read_intro_prompt('prompts\\cv_reviewer.txt')
-        redflag_keys = self.read_json_file('prompts\\Redflags\\redflag_config.json')
-
-        str_redflag = ''
-        for list_item in redflag_keys:
-            if list_item['enabled'].lower() == 'yes':
-                str_redflag += list_item['title'] + ' (' + list_item['description'] + ') : '
-                str_redflag += '\n--- Field Separator ---\n'
-
-        prompt = introductory.replace('-- Prompt CV --', 
-                                self.read_intro_prompt('prompts\\Redflags\\redflags_intro.txt'))
-        
-        prompt = prompt.replace('<-> Redflag Prompt <->', str_redflag)
-        return prompt
-    
-    def initialize_one_cv_reviewer(self):
-        introductory = self.read_intro_prompt('prompts\\cv_reviewer.txt')
-        prompt = introductory.replace('-- Prompt CV --', 
-                                      self.read_intro_prompt('prompts\\CV Reviewer (One CV)\\cv_reviewer_one_intro.txt'))
-        return prompt
-    
-    def intialize_generate_question(self):
-        introductory = self.read_intro_prompt('prompts\\question_generator.txt')
-        prompt = introductory.replace('<-> Form Fields <->', 
-                                      self.read_intro_prompt('prompts\\Interview Question\\interview_question_intro.txt'))
-        return prompt
     
     def hit_groq_api(self, session, one_time_message=''):
         if one_time_message == '' :
@@ -121,7 +55,6 @@ class GPTEngine:
         )
 
         json_response = json.loads(response.json())
-
         
         try:
             answer = json_response.get("choices")[0].get("message")["content"]
@@ -145,21 +78,12 @@ class GPTEngine:
 
         for i in range(3):
             json_response = response.json()
-            print('<<< ' + session['gpt_api_type'] + ' >>>')
-            print(json_response)
-            print('==========')
 
             if 'error' in json_response:
-
                 if 'please try again in' in json_response['error']['message'].lower():
-                    print('Sleeping, Limit.')
-                    print('==========')
                     time.sleep(int(i) * 10) # Handle Limit
                     response = requests.post(f"https://api.openai.com/v1/chat/completions", headers=self.headers, json=self.response_config)
                 elif 'request too large for' in json_response['error']['message'].lower():
-                    print('Limit, harus dihapus chat history nya.')
-                    print('==========')
-                    # answer = "Limit, harus dihapus chat history nya. To Be Fixed. Mungkin Chatnya Harus Dihapus."
                     answer = "Error, please contact administrator."
                     return answer, json_response
             else:
@@ -172,104 +96,94 @@ class GPTEngine:
         
         return answer, json_response
     
+    def read_intro_prompt(self, file_name):
+        f = open(self.dir_path + '/' + file_name, "r", encoding="utf8")
+        str_prompt = f.read()
+        f.close()
+        return str_prompt
+    
     def format_response_gpt(self, session, answer):
-        
         dict_form = {}
-        
-        # print('Interview' in session['gpt_api_type'])
-        # print('--- Field Separator ---' in answer and 'Redflags' in session['gpt_api_type'])
-        # print('--- Field Separator ---' in answer and 'Form Filler' in session['gpt_api_type'])
-        # print('--- Field Separator ---' in answer and 'One CV Reviewer' in session['gpt_api_type'])
-        # print('--- Field Separator ---' in answer and 'Questions' in session['gpt_api_type'])
-    
-        if 'Interview' in session['gpt_api_type'] :
-            answer, dict_form = self.format_interview(answer, str(session['history']))
 
-        elif '--- Field Separator ---' in answer and 'Redflags' in session['gpt_api_type'] :
-            dict_form = self.format_redflags(answer)
-        
-        elif '--- Field Separator ---' in answer and 'Form Filler' in session['gpt_api_type'] :
-            dict_form = self.format_form_filler(answer)
+        if 'Interview' in session['gpt_api_type']:
+            answer, dict_form = self.format_interview(answer, session)
 
-        elif '--- Field Separator ---' in answer and 'One CV Reviewer' in session['gpt_api_type'] :
-            dict_form = self.format_one_cv_reviewer(answer)
-            dict_form['job_title'] = session['job_title']
+        elif '--- Field Separator ---' in answer:
+            if 'Redflags' in session['gpt_api_type']:
+                dict_form = self.format_candidate_redflags(answer)
             
-        elif '--- Field Separator ---' in answer and 'Questions' in session['gpt_api_type']:
-            dict_form = self.format_interview_question(answer)
-            
-            # print(dict_form)
-            # dict_form['job_title'] = session['job_title']
+            elif 'Form Filler' in session['gpt_api_type']:
+                dict_form = self.format_form_filler(answer)
 
-        return dict_form, answer
-
-    def format_interview(self, answer, chat_transcript):
-        dict_form = {'chat_history' : str(chat_transcript),
-            'NAMA' : '',
-            'KELEBIHAN' : '', 
-            'KEKURANGAN' : '', 
-            'SKOR' : '', 
-            'STATUS' : '',
-            'ALASAN' : ''}
-
-        if '--- SELESAI INTERVIEW ---' in answer:
-            result = answer.replace('--- SELESAI INTERVIEW ---', '').split('--- Field Separator ---')
-
-            if '--- PASS ---' in answer :
-                dict_form['STATUS'] = 'PASS'
-            elif '--- FAIL ---' in answer :
-                dict_form['STATUS'] = 'FAIL'
+            elif 'Profile Matching' in session['gpt_api_type']:
+                dict_form = self.format_profile_matching(answer)
                 
-            answer = 'Sesi interview hari ini telah berakhir, dan saya ingin mengucapkan terima kasih atas waktu dan kesediaan Anda untuk berbagi tentang diri Anda serta pengalaman yang relevan dengan posisi yang kami tawarkan. Kami sangat terkesan dengan latar belakang dan keahlian Anda. Kami akan segera memproses semua informasi yang telah kami kumpulkan dari semua kandidat dan mengambil keputusan dalam waktu dekat. Kami berharap dapat memberi kabar lebih lanjut kepada Anda mengenai hasil seleksi ini. Sekali lagi, terima kasih telah meluangkan waktu Anda dan semoga kita bisa bekerja sama di masa depan.'
-        else:
-            return answer, dict_form
-
-        for i in result:
-            for key, value in dict_form.items():
-                if key.lower() in i.lower() and dict_form[key] == '':
-                    i = i.split(':', 1)
-                    dict_form[key] = i[-1].strip('\n').strip()
-                    break
-        
-        return answer, dict_form
+            elif 'Candidate Ranker' in session['gpt_api_type']:
+                dict_form = self.candidate_ranker_formatting(answer)
+                
+            elif 'Questions' in session['gpt_api_type']:
+                dict_form = self.format_interview_question(answer, session)
+        return dict_form, answer
     
-    def format_redflags(self, answer):
-            
+    def initialize_form_filler(self):
+        introductory = self.read_intro_prompt('prompts/cv_reviewer.txt')
+        prompt = introductory.replace('-- Prompt CV --', self.read_intro_prompt('prompts/Form Filler/form_filler_intro.txt'))
+        return prompt
+
+    def initialize_candidate_redflags(self):
+        introductory = self.read_intro_prompt('prompts/cv_reviewer.txt')
+        redflag_keys = self.read_json_file('prompts/Redflags/redflag_config.json')
+
+        str_redflag = ''
+        for list_item in redflag_keys:
+            if list_item['enabled'].lower() == 'yes':
+                str_redflag += list_item['title'] + ' (' + list_item['description'] + ') : '
+                str_redflag += '\n--- Field Separator ---\n'
+
+        prompt = introductory.replace('-- Prompt CV --', 
+                                self.read_intro_prompt('prompts/Redflags/redflags_intro.txt'))
+        
+        prompt = prompt.replace('<-> Redflag Prompt <->', str_redflag)
+        return prompt
+    
+    def format_candidate_redflags(self, answer):
+        
         result = answer.split('--- Field Separator ---')
         dict_form = {}
         redflag_counter, all_status_counter = 0, 0
-        
+
         for i in result:
             if i == '' or i == False:
                 continue
 
-            ### BUAT GROQ
             if 'Here is' in i and 'evaluation' in i:
                 i = i.split('\n')
                 temp_str = ''
 
-                for j in i :
-                    if 'name' in j.lower() and ':' in j :
+                for j in i:
+                    if 'name' in j.lower() and ':' in j:
                         temp_str = j
 
                 i = temp_str
-            ###
 
-            key, value = i.split(':')
-            key, value = key.strip('\n').strip(), value.strip('\n').strip()
-            if 'name' in key.lower() :
-                dict_form['name'] = value
-            elif 'safe' in value.lower():
-                all_status_counter += 1
-                dict_form[key] = {"status" : 'Safe', "desc" : '-'}
-            else:
-                all_status_counter += 1
-                redflag_counter += 1
-                status, desc = value.split('<->')
-                status = status.strip('\n').strip()
-                desc = desc.strip('\n').strip()
-                dict_form[key] = {"status" : 'Red Flag', "desc" : desc}
-        
+            # Safely attempt to split the line
+            if ':' in i:
+                key, value = i.split(':', 1)  # Only split on the first colon
+                key, value = key.strip('\n').strip(), value.strip('\n').strip()
+
+                if 'name' in key.lower():
+                    dict_form['name'] = value
+                elif 'safe' in value.lower():
+                    all_status_counter += 1
+                    dict_form[key] = {"status": 'Safe', "desc": '-'}
+                else:
+                    all_status_counter += 1
+                    redflag_counter += 1
+                    status, desc = value.split('<->', 1)
+                    status = status.strip('\n').strip()
+                    desc = desc.strip('\n').strip()
+                    dict_form[key] = {"status": 'Red Flag', "desc": desc}
+
         dict_form['redflag_percentage'] = str(round((redflag_counter / all_status_counter), 2) * 100) + '%'
         return dict_form
 
@@ -290,33 +204,155 @@ class GPTEngine:
 
         return dict_form
     
-    def format_one_cv_reviewer(self, answer):
+    def format_profile_matching(self, answer):
         result = answer.split('--- Field Separator ---')
-        dict_form = {'name' : '',
-                    'total_masa_kerja_relevan' : '',
-                    "skills" : '',
-                    "kelebihan" : '',
-                    "kekurangan" : '',
-                    "skor_cv" : '',
-                    "alasan" : '',
-                    "kesimpulan" : ''
-                    }
+        dict_form = {
+            'name': '',
+            'total_masa_kerja_relevan': '',
+            "skills": '',
+            "kelebihan": '',
+            "kekurangan": '',
+            "skor_cv": '',
+            "alasan": '',
+            "kesimpulan": '',
+            "kesesuaian": '',
+            "kriteria_pekerjaan": '',
+            'suggestion': '' 
+        }
+
+        for i in result:
+            for key in dict_form.keys():
+                if key.replace('_', ' ') in i.lower() and dict_form[key] == '':
+                    try:
+                        parts = i.split(':', 1)
+                        if len(parts) > 1:
+                            value = parts[1].strip()
+                        else:
+                            value = ""
+
+                        if key == 'total_masa_kerja_relevan':
+                            try:
+                                dict_form[key] = ast.literal_eval(value)
+                            except (ValueError, SyntaxError):
+                                dict_form[key] = json.loads(value)  # If it's already a JSON string, load it
+                        elif key == 'skor_cv':
+                            dict_form[key] = value
+                        else:
+                            try:
+                                dict_form[key] = ast.literal_eval(value)
+                            except (ValueError, SyntaxError):
+                                dict_form[key] = value
+                    except ValueError:
+                        continue
+
+        return dict_form
+    
+    def initialize_candidate_ranker(self):
+        introductory = self.read_intro_prompt('prompts/cv_reviewer.txt')
+        prompt = introductory.replace('-- Prompt CV --', 
+                                    self.read_intro_prompt('prompts/CV Ranker/cv_ranker_intro.txt'))
+        return prompt
+    
+    def candidate_ranker_formatting(self, llm_response):
+        result = {}
+
+        result['ranking'] = self.candidate_ranker_parse(llm_response, 'Ranking', '\n')
+        result['name'] = self.candidate_ranker_parse(llm_response, 'Name :', '\n')
+        result['total_masa_kerja_relevan'] = self.candidate_ranker_parse(llm_response, 'Total Masa Kerja Relevan :', '\n')
+        result['skills'] = self.candidate_ranker_parse(llm_response, 'Skills :', '\n')
+        result['kelebihan'] = self.candidate_ranker_parse(llm_response, 'Kelebihan :', '\n')
+        result['kekurangan'] = self.candidate_ranker_parse(llm_response, 'Kekurangan :', '\n')
+        result['skor'] = self.candidate_ranker_parse(llm_response, 'Skor :', '\n')
+        result['alasan'] = self.candidate_ranker_parse(llm_response, 'Alasan :', '\n')
+        result['kesimpulan'] = self.candidate_ranker_parse(llm_response, 'Kesimpulan :', '\n')
+        result['job_title'] = self.candidate_ranker_parse(llm_response, 'Job Title :', '\n')
+        result['job_requirements'] = self.candidate_ranker_parse(llm_response, 'Job Requirements :', '\n')
+
+        return result
+
+    def candidate_ranker_parse(self, text, start, end):
+        try:
+            pattern = re.escape(start) + r'\s*([\s\S]*?)\s*' + re.escape(end)
+            match = re.search(pattern, text, re.DOTALL)
+            if match:
+                return match.group(1).strip()
+            else:
+                return 'Tidak tersedia'
+        except Exception as e:
+            return 'Tidak tersedia'
+    
+    def initialize_candidate_profile_matching(self):
+        introductory = self.read_intro_prompt('prompts/cv_reviewer.txt')
+        prompt = introductory.replace('-- Prompt CV --', 
+                                    self.read_intro_prompt('prompts/Profile Matching/initialize_profile_matching.txt'))
+        return prompt
+    
+# ---------------------------------------------- Interview ---------------------------------------------------
+    
+    def initialize_interview(self, str_cv='', str_job_req=''):
+        current_hour = datetime.now().hour
         
+        if 5 <= current_hour < 12:
+            greeting = "Selamat pagi"
+        elif 12 <= current_hour < 15:
+            greeting = "Selamat siang"
+        elif 15 <= current_hour < 18:
+            greeting = "Selamat sore"
+        else:
+            greeting = "Selamat malam"
+        
+        prompt = self.read_intro_prompt('prompts/Interview/interview_intro.txt')
+        job_req = self.read_intro_prompt('prompts/Interview/job_requirement.txt')
+        cv_dummy = self.read_intro_prompt('prompts/Interview/cv_string_dummy.txt')
+        prompt = prompt.replace('<-> waktu saat ini <->', greeting)
+        
+        if str_cv == '':
+            prompt = prompt.replace("<-> CV String <->", cv_dummy)
+        else:
+            prompt = prompt.replace("<-> CV String <->", str_cv)
+
+        if str_job_req == '':
+            prompt = prompt.replace("<-> Job Requirement <->", job_req)
+        else:
+            prompt = prompt.replace("<-> Job Requirement <->", str_job_req)
+
+        return prompt
+    
+    def initialize_generate_question(self):
+        introductory = self.read_intro_prompt('prompts/question_generator.txt')
+        prompt = introductory.replace('<-> Form Fields <->', 
+                                        self.read_intro_prompt('prompts/Interview Question/interview_question_intro.txt'))
+        return prompt
+
+    def format_interview(self, answer, chat_transcript):
+        dict_form = {
+            'NAMA' : '',
+            'KELEBIHAN' : '', 
+            'KEKURANGAN' : '', 
+            'SKOR' : '', 
+            'STATUS' : '',
+            'ALASAN' : ''}
+
+        if '--- WAWANCARA SELESAI ---' in answer:
+            result = answer.replace('--- WAWANCARA SELESAI ---', '').split('--- Field Separator ---')
+
+            if '--- PASS ---' in answer :
+                dict_form['STATUS'] = 'PASS'
+            elif '--- FAIL ---' in answer :
+                dict_form['STATUS'] = 'FAIL'
+                
+            answer = 'Sesi interview hari ini telah berakhir, dan saya ingin mengucapkan terima kasih atas waktu dan kesediaan Anda untuk berbagi tentang diri Anda serta pengalaman yang relevan dengan posisi yang kami tawarkan. Kami sangat terkesan dengan latar belakang dan keahlian Anda. Kami akan segera memproses semua informasi yang telah kami kumpulkan dari semua kandidat dan mengambil keputusan dalam waktu dekat. Kami berharap dapat memberi kabar lebih lanjut kepada Anda mengenai hasil seleksi ini. Sekali lagi, terima kasih telah meluangkan waktu Anda dan semoga kita bisa bekerja sama di masa depan.'
+        else:
+            return answer, dict_form
+
         for i in result:
             for key, value in dict_form.items():
                 if key.lower() in i.lower() and dict_form[key] == '':
-                    key, value = i.split(':', 1)
-                    key, value = key.strip('\n').strip(), value.strip('\n').strip()
-        
-                    try:
-                        dict_form[key] = ast.literal_eval(value)
-                    except:
-                        dict_form[key] = value
-
+                    i = i.split(':', 1)
+                    dict_form[key] = i[-1].strip('\n').strip()
                     break
-
-
-        return dict_form
+        
+        return answer, dict_form
     
     def format_interview_question(self, answer):
         dict_form = {
@@ -340,5 +376,4 @@ class GPTEngine:
                         question = {question_num: question_text}
                         dict_form['questions'].append(question)
                         
-        # print(dict_form)
         return dict_form

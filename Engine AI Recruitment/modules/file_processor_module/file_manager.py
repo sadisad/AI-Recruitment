@@ -1,4 +1,3 @@
-
 from datetime import date, datetime
 import fitz, os, names
 from docx import Document
@@ -6,10 +5,10 @@ from docx import Document
 class FileHandler:
 
     def __init__(self):
-        self.folder_cv = 'operational_files\\CV\\'
-        self.dir_source = self.folder_cv + 'Original CVs\\'
-        self.dir_target = self.folder_cv + 'CV Strings\\'
-        self.dir_logs = 'operational_files\\Logs\\'
+        self.folder_cv = 'operational_files/CV/'
+        self.dir_source = self.folder_cv + 'Original CVs/'
+        self.dir_target = self.folder_cv + 'CV Strings/'
+        self.dir_logs = 'operational_files/Logs/'
 
         try :
             os.mkdir(self.dir_target)
@@ -40,7 +39,6 @@ class FileHandler:
         all_str = ''
         for paragraph in doc.paragraphs:
             all_str += paragraph.text
-
         all_str = all_str.replace('\n', '')
         return all_str
 
@@ -61,7 +59,7 @@ class FileHandler:
     
     def save_chat_transcript(self, dict_session):
         today = date.today().strftime("%d-%m-%Y")
-        file_path = self.dir_logs + today + '\\' + dict_session['gpt_api_type'] + '.txt'
+        file_path = self.dir_logs + today + '/' + dict_session['gpt_api_type'] + '.txt'
 
         try:
             os.mkdir(self.dir_logs + today)

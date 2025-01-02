@@ -7,22 +7,47 @@
       "chat_transcript"
     ]
   },
-  "FAQ Manual Chat": {
+  "FAQ Chat Room": {
     "table_name": "dbo.faq_manual_chat",
     "columns": [
-      "id_faq_manual_chat",
+      "user_id",
+      "user_name",
+      "functional_id",
+      "status",
+      "room_id",
       "last_updated",
       "question_context",
       "chat_transcripts"
     ]
   },
-  "FAQ Chat Room": {
-    "table_name": "dbo.faq_manual_chat",
+  "FAQ FUNCTIONALs FEEDBACK": {
+    "table_name": "dbo.faq_functionals_feedback",
     "columns": [
-      "room_id",
-      "last_updated",
-      "question_context",
-      "chat_transcripts"
+      "functional_id",
+      "feedback",
+      "last_updated"
+    ]
+  },
+  "FAQ SENTIMENT ANALYSIS" : {
+    "table_name": "dbo.sentiment_analysis",
+    "columns": [
+      "functional_id",
+      "positive",
+      "negative",
+      "neutral",
+      "overallRating",
+      "summary"
+    ]
+  },
+  "USER QUESTION EVALUATION": {
+    "table_name": "dbo.user_question_evaluation",
+    "columns": [
+      "user_id",
+      "question",
+      "response",
+      "is_valuable",
+      "context_relevant",
+      "last_updated"
     ]
   }
 }

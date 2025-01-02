@@ -6,11 +6,11 @@ from docx import Document
 class FileHandler:
     
     def __init__(self):
-        self.dir_logs = 'operational_files\\Logs\\'
+        self.dir_logs = 'operational_files/Logs/'
 
     def save_chat_transcript(self, dict_session):
         today = date.today().strftime("%d-%m-%Y")
-        file_path = self.dir_logs + today + '\\' + dict_session['gpt_api_type'] + '.txt'
+        file_path = self.dir_logs + today + '/' + dict_session['gpt_api_type'] + '.txt'
 
         try:
             os.mkdir(self.dir_logs + today)

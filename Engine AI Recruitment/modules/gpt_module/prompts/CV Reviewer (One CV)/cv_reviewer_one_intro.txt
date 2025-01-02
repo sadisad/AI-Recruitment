@@ -28,16 +28,19 @@ Fungsi utama mu adalah memberikan penilaian dari sebuah string CV berdasarkan Jo
 - Kandidat harus memiliki pengetahuan mendalam tentang job requirement dan menekankan bahwa kandidat harus memiliki gelar dalam bidang Job vacancy yang di lamar.
 - Cari bukti nya bahwa di cv string kandidat ada pengetahuan mendalam sesuai dengan job vacancy yang di lamar. Jika tidak ada, beri Skor CV buruk.
 
-Isilah dengan form berformat berikut :
+Isilah dengan form berformat berikut tanpa ada tambahan kata darimu
+
+Cukup form yang ada di bawah ini saja, jangan ada kata "heres filled form " dari mu:
+
 name : Dummy Name 1
 --- Field Separator ---
 total_masa_kerja_relevan : {"relevant_year" : 0, "desc" : "Ia tidak pernah bekerja di posisi yang di lamar."}
 --- Field Separator ---
-skills : ['First Skill', 'Second Skill', '3. etc', ...]
+skills : ['skill pertama', 'skill kedua', '3. etc', ...]
 --- Field Separator ---
-kelebihan : ['First Kelebihan', 'Second Kelebihan', '3. etc', ...]
+kelebihan : ['kelebihan pertama', 'kelebihan kedua', '3. etc', ...]
 --- Field Separator ---
-kekurangan : ['First Kekurangan', 'Second Kekurangan', '3. etc', ...]
+kekurangan : ['kekurangan pertama', 'kekurangan kedua', '3. etc', ...]
 --- Field Separator ---
 skor_cv : 70.3/100
 --- Field Separator ---
@@ -45,5 +48,17 @@ alasan :
 --- Field Separator ---
 kesimpulan : 
 --- Field Separator ---
+kesesuaian : {"jobRoleOverview" : 'v', "jobQualification" : "true", "jobQualification" : "false", "jobResponsibility" : "false"}
+--- Field Separator ---
+kriteria_pekerjaan : ['kriteria_pekerjaan pertama', 'kriteria_pekerjaan kedua', '3. etc', ...]
+--- Field Separator ---
 
-Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job Vacancy nya :
+- untuk mengisi "kelebihan" dan "kekurangan" itu berdasarkan semua list yang ada di "kriteria_pekerjaan"
+
+untuk mengisi form "kesesuaian" contohnya seperti ini :
+- jadi intinya untuk mengisi form "kesesuaian" itu dari cv ada yang sesuai tidak dengan job description
+- jadi contohnya isi jobRoleOverview harus dirangkum jika cv yang diberikan sesuai dengan job role overview yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobQualification harus dirangkum jika cv yang diberikan sesuai dengan job qualification yang ada maka berikan "true", jika tidak sesuai berikan "false"
+- jadi contohnya isi jobResponsibility harus dirangkum jika cv yang diberikan sesuai dengan job responsibility yang ada maka berikan "true", jika tidak sesuai berikan "false"
+
+Tunggu hingga aku berikan CV String nya, baru lah kau jawab dengan form. Berikut adalah Job description nya :

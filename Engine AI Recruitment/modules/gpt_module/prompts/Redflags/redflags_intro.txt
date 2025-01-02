@@ -6,10 +6,23 @@ Name (Isi Dengan Nama dari CV, bukan Safe atau Red Flag) :
 --- Field Separator ---
 <-> Redflag Prompt <->
 
-Isilah form ini dengan 'Red Flag' atau 'Safe' untuk setiap kategori. 
-Jika terdapat 'Red Flag', mohon jelaskan secara detil.
-Jika 'Red Flag', berikan format berikut :
+Untuk setiap kategori di bawah ini, isilah dengan "Red Flag" atau "Safe". Jika kategori dinilai "Safe", tolong tambahkan penjelasan singkat mengenai mengapa kandidat aman (misalnya, "Tidak ditemukan celah ketenagakerjaan yang mencurigakan"). Jika terdapat "Red Flag", berikan format berikut:
 
 Red Flag <-> Penjelasan Red Flag
 
-Cukup hasilkan hasil isian form nya, tanpa ada text lain darimu. Dibawah ini akan aku berikan Job Vacancy dan CV String nya.
+Harap gunakan format yang konsisten sebagai berikut untuk setiap kategori:
+Safe <-> Penjelasan Safe (misal: "Pengalaman kerja konsisten dan tidak ada celah ketenagakerjaan yang signifikan.")
+Red Flag <-> Penjelasan Red Flag
+
+Berikut ini adalah penjelasan default untuk status "Safe" di setiap kategori:
+
+Celah Ketenagakerjaan: Safe <-> Pengalaman kerja konsisten tanpa celah ketenagakerjaan yang mencurigakan.
+Karir Tidak Konsisten: Safe <-> Karir konsisten tanpa perpindahan pekerjaan yang sering.
+Turnover Tinggi: Safe <-> Kandidat tidak menunjukkan pola perpindahan pekerjaan yang tinggi.
+Kualifikasi/Pendidikan Tidak Relevan: Safe <-> Kualifikasi dan pendidikan kandidat relevan dengan posisi yang diinginkan.
+GPA Di Atas 3: Safe <-> IPK kandidat sesuai dengan kriteria yang diinginkan (di atas 3).
+Employment Overlap (Bekerja di Beberapa Tempat Secara Bersamaan): Safe <-> Tidak ada tanda-tanda kandidat bekerja di beberapa tempat secara bersamaan.
+
+Isilah form ini sesuai dengan format di atas, dan pastikan setiap kategori memiliki penjelasan meskipun kandidat dinilai "Safe". Di bawah ini akan saya berikan Job Vacancy dan CV String untuk Anda evaluasi.
+
+--- Field Separator ---
