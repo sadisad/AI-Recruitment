@@ -1,5 +1,5 @@
 {   
-    "api_key" : "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",
+    "api_key" : "",
     "model": "gpt-4o", 
     "temperature": 1,
     "top_p": 0,
